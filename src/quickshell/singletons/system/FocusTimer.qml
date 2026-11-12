@@ -59,7 +59,7 @@ Item {
     }
 
     function getStorageDir() {
-        return Quickshell.env("QS_RUN_FOCUSTIME") || ((Quickshell.env("XDG_RUNTIME_DIR") || "/tmp") + "/serpantinum/focustime");
+        return Quickshell.env("QS_RUN_FOCUSTIME") || ((Quickshell.env("XDG_RUNTIME_DIR") || "/tmp") + "/axshell/focustime");
     }
 
     function formatTime(ms, includeMs) {

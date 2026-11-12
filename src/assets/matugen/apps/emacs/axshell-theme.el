@@ -1,6 +1,6 @@
-;;; serpantinum-theme.el -*- lexical-binding: t -*-
+;;; axshell-theme.el -*- lexical-binding: t -*-
 
-(deftheme serpantinum "Colors from the Serpantinum shell.")
+(deftheme axshell "Colors from the AxShell shell.")
 
 (let ((class '((class color) (min-colors 89)))
       (bg "{{colors.surface.default.hex}}")
@@ -29,7 +29,7 @@
       (err-container "{{colors.error_container.default.hex}}")
       (on-err-container "{{colors.on_error_container.default.hex}}"))
   (custom-theme-set-faces
-   'serpantinum
+   'axshell
    `(default ((,class (:foreground ,fg :background ,bg))))
    `(cursor ((,class (:background ,primary))))
    `(fringe ((,class (:background ,bg))))
@@ -115,4 +115,4 @@
    `(company-tooltip-selection ((,class (:foreground ,on-secondary-container :background ,secondary-container))))
    `(company-tooltip-common ((,class (:foreground ,primary :weight bold))))))
 
-(provide-theme 'serpantinum)
+(provide-theme 'axshell)

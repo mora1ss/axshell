@@ -77,7 +77,7 @@ audio_build_from_source() {
 
 hand_over_from_easyeffects() {
     command -v serpantinum-audio >/dev/null 2>&1 || return 0
-    bash "$SERPANTINUM_DIR/scripts/migrate_easyeffects.sh" 2>/dev/null || true
+    bash "$AXSHELL_DIR/scripts/migrate_easyeffects.sh" 2>/dev/null || true
     serpantinum-audio start >/dev/null 2>&1 || true
 }
 

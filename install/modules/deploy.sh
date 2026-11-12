@@ -50,8 +50,8 @@ install_wallpapers() {
     local full_pack="${1:-true}"
     local wallpaper_dir
     wallpaper_dir=$(get_wallpaper_dir)
-    local wallpaper_repo="https://github.com/ilyamiro/shell-wallpapers.git"
-    local clone_dir="${XDG_CACHE_HOME:-"$HOME/.cache"}/serpantinum-wallpapers"
+    local wallpaper_repo="https://github.com/mora1ss/shell-wallpapers.git"
+    local clone_dir="${XDG_CACHE_HOME:-"$HOME/.cache"}/axshell-wallpapers"
 
     mkdir -p "$wallpaper_dir"
 
@@ -317,7 +317,7 @@ EOF
 
 setup_pam_service() {
     local pam_dir="/etc/pam.d"
-    local target="$pam_dir/serpantinum"
+    local target="$pam_dir/axshell"
     local base=""
 
     [ -d "$pam_dir" ] || return 0
@@ -351,15 +351,15 @@ remove_settings_desktop_entry() {
     local apps_dir="$data_home/applications"
     local icons_dir="$data_home/icons/hicolor"
 
-    if [ -f "$apps_dir/serpantinum-settings.desktop" ]; then
-        rm -f "$apps_dir/serpantinum-settings.desktop"
+    if [ -f "$apps_dir/axshell-settings.desktop" ]; then
+        rm -f "$apps_dir/axshell-settings.desktop"
         if command -v update-desktop-database >/dev/null 2>&1; then
             update-desktop-database "$apps_dir" >/dev/null 2>&1 || true
         fi
     fi
 
-    if [ -f "$icons_dir/scalable/apps/serpantinum-settings.svg" ]; then
-        rm -f "$icons_dir/scalable/apps/serpantinum-settings.svg"
+    if [ -f "$icons_dir/scalable/apps/axshell-settings.svg" ]; then
+        rm -f "$icons_dir/scalable/apps/axshell-settings.svg"
         if command -v gtk-update-icon-cache >/dev/null 2>&1; then
             gtk-update-icon-cache -qf "$icons_dir" >/dev/null 2>&1 || true
         fi
@@ -375,7 +375,7 @@ deploy_package() {
     shift 5
     local COMPOSITORS=("$@")
 
-    local TARGET_BASE="$HOME/.local/share/serpantinum"
+    local TARGET_BASE="$HOME/.local/share/axshell"
     local BIN_DIR="$HOME/.local/bin"
 
     local is_update=false
@@ -563,14 +563,14 @@ deploy_package() {
         cp "$REPO_ROOT/version.txt" "$TARGET_BASE/src/version.txt"
     fi
 
-    if [ -f "$TARGET_BASE/bin/serpantinum" ]; then
-        ln -sf "$TARGET_BASE/bin/serpantinum" "$BIN_DIR/serpantinum"
-        sudo ln -sf "$TARGET_BASE/bin/serpantinum" /usr/local/bin/serpantinum 2>/dev/null || true
+    if [ -f "$TARGET_BASE/bin/axshell" ]; then
+        ln -sf "$TARGET_BASE/bin/axshell" "$BIN_DIR/axshell"
+        sudo ln -sf "$TARGET_BASE/bin/axshell" /usr/local/bin/axshell 2>/dev/null || true
     fi
 
-    if [ -f "$TARGET_BASE/bin/serpantinumd" ]; then
-        ln -sf "$TARGET_BASE/bin/serpantinumd" "$BIN_DIR/serpantinumd"
-        sudo ln -sf "$TARGET_BASE/bin/serpantinumd" /usr/local/bin/serpantinumd 2>/dev/null || true
+    if [ -f "$TARGET_BASE/bin/axshelld" ]; then
+        ln -sf "$TARGET_BASE/bin/axshelld" "$BIN_DIR/axshelld"
+        sudo ln -sf "$TARGET_BASE/bin/axshelld" /usr/local/bin/axshelld 2>/dev/null || true
     fi
 
     remove_settings_desktop_entry

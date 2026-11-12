@@ -24,15 +24,15 @@ The shell daemon and clipboard history are launched from `config/autostart.lua`:
 hl.on("hyprland.start", function()
   hl.exec_cmd("wl-paste --type text --watch cliphist store")
   hl.exec_cmd("wl-paste --type image --watch cliphist store")
-  hl.exec_cmd("serpantinumd start")
+  hl.exec_cmd("axshelld start")
 end)
 ```
 
-`serpantinumd start` also starts the [audio engine](/audio).
+`axshelld start` also starts the [audio engine](/audio).
 
 ## Keybindings
 
-Shell overlays and controls are bound in `config/keybinds.lua` using `serpantinum msg toggle <module>`:
+Shell overlays and controls are bound in `config/keybinds.lua` using `axshell msg toggle <module>`:
 
 - `launcher` - application launcher
 - `system` - system control panel
@@ -48,15 +48,15 @@ Workspace switching is routed through the shell to update bar indicators:
 
 ```lua
 for i = 1, 10 do
-  hl.bind("SUPER + " .. (i % 10), hl.dsp.exec_cmd("serpantinum msg workspace " .. i))
-  hl.bind("SUPER + SHIFT + " .. (i % 10), hl.dsp.exec_cmd("serpantinum msg workspace " .. i .. " move"))
+  hl.bind("SUPER + " .. (i % 10), hl.dsp.exec_cmd("axshell msg workspace " .. i))
+  hl.bind("SUPER + SHIFT + " .. (i % 10), hl.dsp.exec_cmd("axshell msg workspace " .. i .. " move"))
 end
 ```
 
 Quick utility actions:
-- Lock screen: `serpantinum lock`
-- Reload shell: `serpantinum reload`
-- Bar autohide: `serpantinum msg bar autohide`
-- Screenshots: `serpantinum screenshot` (add `--edit`, `--full`, or `--full --edit`)
-- Brightness: `serpantinum brightness lower` and `serpantinum brightness raise`
-- Volume: `serpantinum volume lower`, `serpantinum volume raise`, and `serpantinum volume mute-toggle`
+- Lock screen: `axshell lock`
+- Reload shell: `axshell reload`
+- Bar autohide: `axshell msg bar autohide`
+- Screenshots: `axshell screenshot` (add `--edit`, `--full`, or `--full --edit`)
+- Brightness: `axshell brightness lower` and `axshell brightness raise`
+- Volume: `axshell volume lower`, `axshell volume raise`, and `axshell volume mute-toggle`

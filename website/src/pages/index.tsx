@@ -40,7 +40,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className={styles.secondaryButton}
-            href="https://github.com/ilyamiro/serpantinum">
+            href="https://github.com/mora1ss/axshell">
             <svg
               className={styles.githubIcon}
               width="18"
@@ -63,10 +63,10 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="Serpantinum is a customizable Wayland desktop shell for Hyprland, Sway, Niri and Mango, built for you.">
+      description="AxShell is a customizable Wayland desktop shell for Hyprland, Sway, Niri and Mango, built for you.">
       <Head>
-        <title>Serpantinum - a desktop shell built for YOU</title>
-        <meta property="og:title" content="Serpantinum - a desktop shell built for YOU" />
+        <title>AxShell - a desktop shell built for YOU</title>
+        <meta property="og:title" content="AxShell - a desktop shell built for YOU" />
         <link
           rel="preload"
           href="/img/previews/preview_1.webp"

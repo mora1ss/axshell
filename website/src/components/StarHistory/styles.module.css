@@ -41,14 +41,14 @@
   text-align: center;
 }
 
-.serpantinumGlow {
+.axshellGlow {
   color: var(--ifm-color-primary);
   font-weight: 700;
   text-shadow: 0 0 6px rgba(124, 68, 158, 0.25);
   display: inline-block;
 }
 
-[data-theme='dark'] .serpantinumGlow {
+[data-theme='dark'] .axshellGlow {
   color: #cba6f7;
   text-shadow: 0 0 6px rgba(203, 166, 247, 0.3);
 }

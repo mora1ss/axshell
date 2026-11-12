@@ -12,16 +12,16 @@ Item {
     property string matugenBaseDir: {
         let dir = "";
         if (typeof Caching !== "undefined" && Caching.qsDir) {
-            dir = Caching.serpantinumDir + "/assets/matugen";
-        } else if (typeof Caching !== "undefined" && Caching.serpantinumDir) {
-            dir = Caching.serpantinumDir + "/src/assets/matugen";
+            dir = Caching.axshellDir + "/assets/matugen";
+        } else if (typeof Caching !== "undefined" && Caching.axshellDir) {
+            dir = Caching.axshellDir + "/src/assets/matugen";
         } else {
-            dir = Quickshell.env("HOME") + "/.local/share/serpantinum/src/assets/matugen";
+            dir = Quickshell.env("HOME") + "/.local/share/axshell/src/assets/matugen";
         }
         return dir;
     }
     property string configPath: matugenBaseDir + "/config.toml"
-    readonly property string stateDir: (typeof Caching !== "undefined" && Caching.stateDir) ? Caching.stateDir : (Quickshell.env("HOME") + "/.local/state/serpantinum")
+    readonly property string stateDir: (typeof Caching !== "undefined" && Caching.stateDir) ? Caching.stateDir : (Quickshell.env("HOME") + "/.local/state/axshell")
     readonly property string palettePath: stateDir + "/matugen/palette.json"
 
     property var _pendingRequest: null

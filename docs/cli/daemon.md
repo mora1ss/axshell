@@ -1,13 +1,13 @@
 ---
 sidebar_position: 2
-title: Serpantinum daemon
-sidebar_label: Serpantinum daemon
+title: AxShell daemon
+sidebar_label: AxShell daemon
 slug: /cli/daemon
 ---
 
-# Serpantinum daemon
+# AxShell daemon
 
-`serpantinumd` is the background service daemon for the desktop shell.
+`axshelld` is the background service daemon for the desktop shell.
 
 ## Options
 
@@ -19,21 +19,21 @@ slug: /cli/daemon
 
 ### `start`
 
-- `serpantinumd start`: Start the desktop shell and background services, including the [audio engine](/audio) (default command).
+- `axshelld start`: Start the desktop shell and background services, including the [audio engine](/audio) (default command).
 
 ### `stop`
 
-- `serpantinumd stop`: Stop the running daemon and all background shell processes (`serpantinum-core screentime track`, `quickshell`).
+- `axshelld stop`: Stop the running daemon and all background shell processes (`serpantinum-core screentime track`, `quickshell`).
 
 ### `status`
 
-- `serpantinumd status`: Check whether the daemon is currently running (exit code 0 if running, 1 if stopped).
+- `axshelld status`: Check whether the daemon is currently running (exit code 0 if running, 1 if stopped).
 
 ## Autostart
 
 Compositor autostart examples:
 
-- Hyprland (`config/autostart.lua`): `hl.exec_cmd("serpantinumd start")`
-- Niri (`config/autostart.kdl`): `spawn-at-startup "serpantinumd" "start"`
-- Sway (`configDir/autostart`): `exec serpantinumd start`
-- Mango (`config/autostart.conf`): `exec_once=serpantinumd start`
+- Hyprland (`config/autostart.lua`): `hl.exec_cmd("axshelld start")`
+- Niri (`config/autostart.kdl`): `spawn-at-startup "axshelld" "start"`
+- Sway (`configDir/autostart`): `exec axshelld start`
+- Mango (`config/autostart.conf`): `exec_once=axshelld start`

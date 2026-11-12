@@ -23,25 +23,25 @@ The shell daemon and clipboard history are launched from `config/autostart.conf`
 ```ini
 exec_once=wl-paste --type text --watch cliphist store
 exec_once=wl-paste --type image --watch cliphist store
-exec_once=serpantinumd start
+exec_once=axshelld start
 ```
 
-`serpantinumd start` also starts the [audio engine](/audio).
+`axshelld start` also starts the [audio engine](/audio).
 
 ## Keybindings
 
-Shell overlays and controls are bound in `config/keybinds.conf` using `spawn,serpantinum msg toggle <module>`, with the same keys as the other compositors:
+Shell overlays and controls are bound in `config/keybinds.conf` using `spawn,axshell msg toggle <module>`, with the same keys as the other compositors:
 
 ```ini
-bind=SUPER,D,spawn,serpantinum msg toggle launcher
-bind=SUPER,B,spawn,serpantinum msg toggle system
+bind=SUPER,D,spawn,axshell msg toggle launcher
+bind=SUPER,B,spawn,axshell msg toggle system
 ```
 
 Tag switching is routed through the shell to update bar indicators. Mango has nine tags by default (`tag_num`):
 
 ```ini
-bind=SUPER,1,spawn,serpantinum msg workspace 1
-bind=SUPER+SHIFT,1,spawn,serpantinum msg workspace 1 move
+bind=SUPER,1,spawn,axshell msg workspace 1
+bind=SUPER+SHIFT,1,spawn,axshell msg workspace 1 move
 ```
 
 ## Tags

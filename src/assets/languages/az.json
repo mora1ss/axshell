@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "Yüklənir...",
       "unknown": "Naməlum",
       "version_by": "v{version} • müəllif: {author}",
@@ -20,7 +20,7 @@
         "uptime": "İşləmə müddəti",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "Xoş gəlmisiniz",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "Yazı növü",
-        "desc": "Serpantinum üçün standart yazı növünü seçin",
+        "desc": "AxShell üçün standart yazı növünü seçin",
         "select": "Seç..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "Konfiqurasiya yenilənmədi: {line}"
         },
         "hint": {
-          "select_in_app": "Tətbiqin ayarlarında Serpantinum mövzusunu seçin",
+          "select_in_app": "Tətbiqin ayarlarında AxShell mövzusunu seçin",
           "restart": "Yeni rəngləri görmək üçün açıq pəncərələri yenidən başladın",
-          "neovim": "İstifadə etmək üçün :colorscheme serpantinum işlədin",
+          "neovim": "İstifadə etmək üçün :colorscheme axshell işlədin",
           "helix": "Yeni rəngləri görmək üçün açıq redaktorlarda :config-reload işlədin",
-          "fastfetch": "İstifadə etmək üçün fastfetch -c serpantinum işlədin",
-          "spicetify": "spicetify config current_theme Serpantinum, sonra spicetify apply işlədin",
-          "discord": "Müştərinin mövzu ayarlarında Serpantinum-u aktivləşdirin",
-          "emacs": "İstifadə etmək üçün M-x load-theme serpantinum əmrini icra edin",
+          "fastfetch": "İstifadə etmək üçün fastfetch -c axshell işlədin",
+          "spicetify": "spicetify config current_theme AxShell, sonra spicetify apply işlədin",
+          "discord": "Müştərinin mövzu ayarlarında AxShell-u aktivləşdirin",
+          "emacs": "İstifadə etmək üçün M-x load-theme axshell əmrini icra edin",
           "steam": "Material-Theme-i Millennium ilə quraşdırın, sonra onun rəng ayarlarında Matugen seçin",
-          "heroic": "Heroic-də fərdi mövzular yolunu onun mövzular qovluğuna təyin edin, sonra serpantinum seçin",
+          "heroic": "Heroic-də fərdi mövzular yolunu onun mövzular qovluğuna təyin edin, sonra axshell seçin",
           "telegram": "Mövzu faylını Telegram-ın söhbət ayarlarından yükləyin"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "Hazırlayan: @{author}",
     "welcome": "Xoş gəlmisiniz",
     "tagline": "Bu iş masası mühitinin hazırlandığı şəxs",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "Parametrlər",
-      "desc": "Serpantinum parametrləri"
+      "desc": "AxShell parametrləri"
     },
     "calendar": {
       "name": "Təqvim və saat",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "İstifadə: serpantinum [command] [options...]",
+    "usage": "İstifadə: axshell [command] [options...]",
     "description": "Wayland görüntü birləşdiriciləri üçün iş masası qabığı.",
     "commands": "Əmrlər:",
     "script_commands": "Skript əmrləri:",
@@ -1880,23 +1880,23 @@
     "version_desc": "Versiya məlumatını göstər və çıx",
     "help_desc": "Bu kömək mətnini göstər və çıx",
     "examples": "Nümunələr:",
-    "daemon_stopped": "Serpantinum arxa plan xidməti dayandırıldı.",
-    "daemon_restarted": "Serpantinum arxa plan xidməti yenidən başladıldı.",
-    "starting_daemon": "Arxa plan xidməti işləmir. serpantinumd arxa planda başladılır...",
+    "daemon_stopped": "AxShell arxa plan xidməti dayandırıldı.",
+    "daemon_restarted": "AxShell arxa plan xidməti yenidən başladıldı.",
+    "starting_daemon": "Arxa plan xidməti işləmir. axshelld arxa planda başladılır...",
     "error_missing_qml": "Xəta: başladılacaq hədəf göstərilməyib.",
-    "launch_usage": "İstifadə: serpantinum launch <start> [args...]",
+    "launch_usage": "İstifadə: axshell launch <start> [args...]",
     "error_qml_not_found": "Xəta: {DIR} daxilində {NAME}.qml tapılmadı",
     "error_shell_qml_not_found": "Xəta: {DIR} daxilində shell.qml yolu tapılmadı",
     "error_unknown_command": "Xəta: naməlum əmr '{CMD}'.",
     "error_unknown_target": "Xəta: naməlum hədəf '{TARGET}'.",
     "launch_help": {
-      "usage": "İstifadə: serpantinum launch <start> [arguments...]",
+      "usage": "İstifadə: axshell launch <start> [arguments...]",
       "description": "Müstəqil tərkib hissələrini birbaşa icra rejimində başlat.",
       "available_targets": "Mövcud hədəflər:",
       "target_start": "İlkin quraşdırma interfeysini başlat"
     },
     "msg_help": {
-      "usage": "İstifadə: serpantinum msg <command|workspace> [arguments...]",
+      "usage": "İstifadə: axshell msg <command|workspace> [arguments...]",
       "description": "Düzülüş, iş sahəsi və pəncərə idarəetmə mesajlarını birbaşa göndər.",
       "available_commands": "Mövcud mesajlar:",
       "cmd_workspace": "<num> nömrəli iş sahəsinə keç (fəal pəncərəni ora köçürmək üçün 'move' əlavə et)",
@@ -1905,7 +1905,7 @@
       "cmd_close": "Qabığın hər hansı fəal üst qatını bağla"
     },
     "ipc_help": {
-      "usage": "İstifadə: serpantinum ipc call <target> <method> [arguments...]",
+      "usage": "İstifadə: axshell ipc call <target> <method> [arguments...]",
       "description": "IPC çağırışını birbaşa işləyən Quickshell nüsxəsinə göndər."
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "Ayarları oxu və dəyiş (get, set, dump, path, edit)",
     "error_unknown_language": "Xəta: naməlum dil '{CODE}'.",
     "update_available": "Yeniləmə mövcuddur: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum aktualdır ({VERSION}).",
+    "up_to_date": "AxShell aktualdır ({VERSION}).",
     "state_on": "aktiv",
     "state_off": "deaktiv",
     "error_unknown_theme": "Xəta: naməlum mövzu '{NAME}'.",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "Arxa plan xidməti artıq işləyir. Çıxılır...",
-    "shutting_down": "Serpantinum arxa plan xidməti dayandırılır...",
-    "launching": "Serpantinum arxa plan xidməti başladılır...",
+    "shutting_down": "AxShell arxa plan xidməti dayandırılır...",
+    "launching": "AxShell arxa plan xidməti başladılır...",
     "cli": {
-      "usage": "İstifadə: serpantinumd <command> [options...]",
-      "description": "Serpantinum iş masası qabığı üçün arxa plan xidməti.",
+      "usage": "İstifadə: axshelld <command> [options...]",
+      "description": "AxShell iş masası qabığı üçün arxa plan xidməti.",
       "commands": "Əmrlər:",
       "cmd_start": "Arxa plan xidmətini və arxa planda işləyən prosesləri başlat",
       "cmd_stop": "İşləyən arxa plan xidmətini dayandır",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "Çıxışın ətraflı qeydini aktivləşdir",
       "opt_version": "Versiya məlumatını göstər və çıx",
       "opt_help": "Bu kömək mətnini göstər və çıx",
-      "stopped": "Serpantinum arxa plan xidməti dayandırıldı.",
-      "status_running": "Serpantinum arxa plan xidməti işləyir (PID: {PID}).",
-      "status_stopped": "Serpantinum arxa plan xidməti işləmir.",
+      "stopped": "AxShell arxa plan xidməti dayandırıldı.",
+      "status_running": "AxShell arxa plan xidməti işləyir (PID: {PID}).",
+      "status_stopped": "AxShell arxa plan xidməti işləmir.",
       "unknown_arg": "Naməlum arqument: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects hələ də aktivdir",
-      "body": "Serpantinum artıq öz səs mühərrikinə malikdir və EasyEffects ona mane ola bilər. EasyEffects-dən yalnız Serpantinum üçün istifadə edirdinizsə, onun sistemə girişdə başlamasını söndürün."
+      "body": "AxShell artıq öz səs mühərrikinə malikdir və EasyEffects ona mane ola bilər. EasyEffects-dən yalnız AxShell üçün istifadə edirdinizsə, onun sistemə girişdə başlamasını söndürün."
     }
   },
   "installer": {
@@ -1975,7 +1975,7 @@
     },
     "os": {
       "error_root": "Xəta: bu skripti birbaşa root/sudo ilə işə salmayın. Adi istifadəçi kimi işə salın.",
-      "error_unsupported": "Dəstəklənməyən əməliyyat sistemi ({os}). Serpantinum yalnız Arch Linux və onun törəmələrini dəstəkləyir.",
+      "error_unsupported": "Dəstəklənməyən əməliyyat sistemi ({os}). AxShell yalnız Arch Linux və onun törəmələrini dəstəkləyir.",
       "error_not_found": "Əməliyyat sistemini müəyyən etmək mümkün deyil. /etc/os-release tapılmadı.",
       "unknown_cpu": "Naməlum CPU",
       "unknown_gpu": "Naməlum / virtual maşın",
@@ -1989,8 +1989,6 @@
       "target_version": "Quraşdırılacaq versiya:",
       "install_mode": "Quraşdırma rejimi:",
       "github": "GitHub:",
-      "twitter": "Twitter:",
-      "reddit": "Reddit:",
       "telegram": "Telegram:",
       "donate": "İanə et:",
       "donate_sub": "(Layihəni dəstəkləyin!)",
@@ -2016,7 +2014,6 @@
       "menu_overview": "Paket quraşdırılmasının icmalı ({count} əsas paket)",
       "menu_sddm": "SDDM giriş idarəedicisi",
       "menu_wallpapers": "Fon şəkilləri toplusu",
-      "menu_telemetry": "Anonim telemetriya",
       "menu_update": "Yenilə",
       "menu_reinstall": "Yenidən quraşdır",
       "menu_install": "Quraşdır",
@@ -2025,9 +2022,9 @@
       "tagline": "Sizin üçün hazırlanmış iş masası mühiti",
       "support_creator": "Müəllifə dəstək olun:",
       "buy_coffee": "Layihə xoşunuza gəlirsə, mənə bir fincan qəhvə almaqla dəstək ola bilərsiniz!",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) uğurla quraşdırıldı.",
+      "installed_success": "✔ AxShell {ver} ({commit}) uğurla quraşdırıldı.",
       "failed_packages": "Aşağıdakı paketlərin quraşdırılması zamanı xətalar baş verdi:",
-      "restart_prompt": "Başlamaq üçün görüntü birləşdiricisini yenidən başladın və ya 'serpantinumd start' əmrini icra edin.",
+      "restart_prompt": "Başlamaq üçün görüntü birləşdiricisini yenidən başladın və ya 'axshelld start' əmrini icra edin.",
       "ask_reboot": "Yenidən başlatmaq istəyirsiniz? [y/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "Bu sistem üçün hazır səs mühərriki yoxdur, mənbədən qurulur...",
       "checksum_failed": "Səs mühərriki yükləməsi yoxlama cəmi yoxlamasından keçmədi, keçilir.",
-      "download_failed": "Serpantinum səs mühərriki yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-audio ünvanından quraşdıra bilərsiniz.",
-      "installed": "Serpantinum səs mühərriki {version} quraşdırıldı",
-      "install_failed": "Serpantinum səs mühərriki quraşdırıla bilmədi. Ekvalayzer github.com/ilyamiro/serpantinum-audio ünvanından quraşdırılana qədər işləməyəcək.",
-      "installing": "Serpantinum səs mühərriki quraşdırılır...",
-      "up_to_date": "-> Serpantinum səs mühərriki {version} artıq quraşdırılıb."
+      "download_failed": "AxShell səs mühərriki yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-audio ünvanından quraşdıra bilərsiniz.",
+      "installed": "AxShell səs mühərriki {version} quraşdırıldı",
+      "install_failed": "AxShell səs mühərriki quraşdırıla bilmədi. Ekvalayzer github.com/ilyamiro/serpantinum-audio ünvanından quraşdırılana qədər işləməyəcək.",
+      "installing": "AxShell səs mühərriki quraşdırılır...",
+      "up_to_date": "-> AxShell səs mühərriki {version} artıq quraşdırılıb."
     },
     "core": {
       "checksum_failed": "Əsas xidmətlərin yüklənməsi yoxlama cəmi yoxlamasından keçmədi, keçilir.",
-      "download_failed": "Serpantinum əsas xidmətləri yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-core ünvanından quraşdıra bilərsiniz.",
-      "installed": "Serpantinum əsas xidmətləri {version} quraşdırıldı",
-      "install_failed": "Serpantinum əsas xidmətləri quraşdırıla bilmədi. Sistem istifadəsi, klaviatura kilidi göstəriciləri və mübadilə buferi github.com/ilyamiro/serpantinum-core ünvanından quraşdırılana qədər işləməyəcək.",
-      "installing": "Serpantinum əsas xidmətləri quraşdırılır...",
+      "download_failed": "AxShell əsas xidmətləri yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-core ünvanından quraşdıra bilərsiniz.",
+      "installed": "AxShell əsas xidmətləri {version} quraşdırıldı",
+      "install_failed": "AxShell əsas xidmətləri quraşdırıla bilmədi. Sistem istifadəsi, klaviatura kilidi göstəriciləri və mübadilə buferi github.com/ilyamiro/serpantinum-core ünvanından quraşdırılana qədər işləməyəcək.",
+      "installing": "AxShell əsas xidmətləri quraşdırılır...",
       "unsupported_arch": "Əsas xidmətlərin hazır paketləri yalnız x86_64 üçün mövcuddur, keçilir.",
-      "up_to_date": "-> Serpantinum əsas xidmətləri {version} artıq quraşdırılıb."
+      "up_to_date": "-> AxShell əsas xidmətləri {version} artıq quraşdırılıb."
     },
     "gamma": {
       "checksum_failed": "Mavi işıq filtrinin yüklənməsi yoxlama cəmi yoxlamasından keçmədi, keçilir.",
-      "download_failed": "Serpantinum mavi işıq filtri yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-gamma ünvanından quraşdıra bilərsiniz.",
-      "installed": "Serpantinum mavi işıq filtri {version} quraşdırıldı",
-      "install_failed": "Serpantinum mavi işıq filtri quraşdırıla bilmədi. github.com/ilyamiro/serpantinum-gamma ünvanından quraşdırılana qədər işləməyəcək.",
-      "installing": "Serpantinum mavi işıq filtri quraşdırılır...",
+      "download_failed": "AxShell mavi işıq filtri yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-gamma ünvanından quraşdıra bilərsiniz.",
+      "installed": "AxShell mavi işıq filtri {version} quraşdırıldı",
+      "install_failed": "AxShell mavi işıq filtri quraşdırıla bilmədi. github.com/ilyamiro/serpantinum-gamma ünvanından quraşdırılana qədər işləməyəcək.",
+      "installing": "AxShell mavi işıq filtri quraşdırılır...",
       "unsupported_arch": "Mavi işıq filtrinin hazır paketləri yalnız x86_64 üçün mövcuddur, keçilir.",
-      "up_to_date": "-> Serpantinum mavi işıq filtri {version} artıq quraşdırılıb."
+      "up_to_date": "-> AxShell mavi işıq filtri {version} artıq quraşdırılıb."
     },
     "ski": {
       "checksum_failed": "Ski yüklənməsi yoxlama cəmi yoxlamasından keçmədi, keçilir.",

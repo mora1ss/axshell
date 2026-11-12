@@ -55,5 +55,5 @@ ShaderEffect {
     property vector2d cursor: Qt.vector2d(cursorPos.x, cursorPos.y)
     property vector4d sampleBounds: Qt.vector4d(validRect.x, validRect.y, validRect.x + validRect.width, validRect.y + validRect.height)
 
-    fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/effects/liquid_glass.frag.qsb"
+    fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/effects/liquid_glass.frag.qsb"
 }

@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-if [ -z "${SERPANTINUM_DIR:-}" ]; then
+if [ -z "${AXSHELL_DIR:-}" ]; then
     SCRIPT_DIR="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
-    export SERPANTINUM_DIR="$(dirname "$SCRIPT_DIR")"
+    export AXSHELL_DIR="$(dirname "$SCRIPT_DIR")"
 fi
 
-export QS_DIR="$SERPANTINUM_DIR/quickshell"
+export QS_DIR="$AXSHELL_DIR/quickshell"
 export MAIN_QML="$QS_DIR/Shell.qml"
-export IPC_SOCKET="${XDG_RUNTIME_DIR:-/tmp}/serpantinum.sock"
+export IPC_SOCKET="${XDG_RUNTIME_DIR:-/tmp}/axshell.sock"
 
-export QS_CACHE_DIR="$HOME/.cache/serpantinum"
-export QS_STATE_DIR="$HOME/.local/state/serpantinum"
-export QS_RUN_DIR="${XDG_RUNTIME_DIR:-/tmp}/serpantinum"
+export QS_CACHE_DIR="$HOME/.cache/axshell"
+export QS_STATE_DIR="$HOME/.local/state/axshell"
+export QS_RUN_DIR="${XDG_RUNTIME_DIR:-/tmp}/axshell"
 export QS_LOG_DIR="$QS_RUN_DIR/logs"
-export QS_SETTINGS="$HOME/.config/serpantinum/settings.json"
+export QS_SETTINGS="$HOME/.config/axshell/settings.json"
 
 [[ -d "$QS_LOG_DIR" && -d "$QS_CACHE_DIR" && -d "$QS_STATE_DIR" ]] || mkdir -p "$QS_CACHE_DIR" "$QS_STATE_DIR" "$QS_RUN_DIR" "$QS_LOG_DIR"
 
@@ -46,22 +46,22 @@ fi
 
 qs_ensure_cache "focustime"
 
-if [ -z "${SERPANTINUM_INSTALLER:-}" ]; then
+if [ -z "${AXSHELL_INSTALLER:-}" ]; then
     ver=""
-    if [ -f "$SERPANTINUM_DIR/version.txt" ]; then
-        ver="$(cat "$SERPANTINUM_DIR/version.txt" 2>/dev/null | xargs)"
-    elif [ -f "$(dirname "$SERPANTINUM_DIR")/version.txt" ]; then
-        ver="$(cat "$(dirname "$SERPANTINUM_DIR")/version.txt" 2>/dev/null | xargs)"
+    if [ -f "$AXSHELL_DIR/version.txt" ]; then
+        ver="$(cat "$AXSHELL_DIR/version.txt" 2>/dev/null | xargs)"
+    elif [ -f "$(dirname "$AXSHELL_DIR")/version.txt" ]; then
+        ver="$(cat "$(dirname "$AXSHELL_DIR")/version.txt" 2>/dev/null | xargs)"
     fi
     if [ ! -f "$QS_STATE_DIR/version" ]; then
-        [ -z "$ver" ] && ver="${SERPANTINUM_VERSION:-2.0.0}"
-        echo "SERPANTINUM_VERSION=\"$ver\"" > "$QS_STATE_DIR/version"
-    elif [ -n "$ver" ] && ! grep -qxF "SERPANTINUM_VERSION=\"$ver\"" "$QS_STATE_DIR/version"; then
+        [ -z "$ver" ] && ver="${AXSHELL_VERSION:-2.0.0}"
+        echo "AXSHELL_VERSION=\"$ver\"" > "$QS_STATE_DIR/version"
+    elif [ -n "$ver" ] && ! grep -qxF "AXSHELL_VERSION=\"$ver\"" "$QS_STATE_DIR/version"; then
         tmp="$QS_STATE_DIR/version.tmp.$$"
-        if grep -q '^SERPANTINUM_VERSION=' "$QS_STATE_DIR/version"; then
-            sed "s|^SERPANTINUM_VERSION=.*|SERPANTINUM_VERSION=\"$ver\"|" "$QS_STATE_DIR/version" > "$tmp"
+        if grep -q '^AXSHELL_VERSION=' "$QS_STATE_DIR/version"; then
+            sed "s|^AXSHELL_VERSION=.*|AXSHELL_VERSION=\"$ver\"|" "$QS_STATE_DIR/version" > "$tmp"
         else
-            { echo "SERPANTINUM_VERSION=\"$ver\""; cat "$QS_STATE_DIR/version"; } > "$tmp"
+            { echo "AXSHELL_VERSION=\"$ver\""; cat "$QS_STATE_DIR/version"; } > "$tmp"
         fi
         mv -f "$tmp" "$QS_STATE_DIR/version"
     fi

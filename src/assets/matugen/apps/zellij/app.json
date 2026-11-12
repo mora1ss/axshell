@@ -9,15 +9,15 @@
   },
   "templates": [
     {
-      "input": "serpantinum.kdl",
-      "output": "$XDG_CONFIG_HOME/zellij/themes/serpantinum.kdl"
+      "input": "axshell.kdl",
+      "output": "$XDG_CONFIG_HOME/zellij/themes/axshell.kdl"
     }
   ],
   "integrate": [
     {
       "type": "line",
       "file": "$XDG_CONFIG_HOME/zellij/config.kdl",
-      "line": "theme \"serpantinum\"",
+      "line": "theme \"axshell\"",
       "comment": "//",
       "disable": "^theme\\s+\"",
       "create": true

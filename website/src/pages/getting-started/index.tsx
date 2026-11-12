@@ -245,7 +245,7 @@ export default function GettingStarted(): ReactNode {
   return (
     <Layout
       title="Getting started"
-      description="Getting started with the Serpantinum desktop shell">
+      description="Getting started with the AxShell desktop shell">
       <div className={styles.pageWrapper}>
         <FluidBackground />
         <div className={styles.headerSection}>
@@ -257,7 +257,7 @@ export default function GettingStarted(): ReactNode {
               Documentation
             </Link>
             <Link
-              href="https://github.com/ilyamiro/serpantinum/issues"
+              href="https://github.com/mora1ss/axshell/issues"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.surfaceButton}>

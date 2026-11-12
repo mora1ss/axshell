@@ -184,6 +184,6 @@ Item {
             live: true
         }
 
-        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/effects/curtain_wipe.frag.qsb"
+        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/effects/curtain_wipe.frag.qsb"
     }
 }

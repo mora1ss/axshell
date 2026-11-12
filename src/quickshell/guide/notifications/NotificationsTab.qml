@@ -210,8 +210,8 @@ GuideTab {
         id: soundsLoader
         running: false
         command: {
-            let assetsPath = Caching.serpantinumDir ? (Caching.serpantinumDir + "/assets/sounds/notifications") : (Caching.qsDir ? (Caching.qsDir + "/../assets/sounds/notifications") : "");
-            let userPath = Caching.stateDir ? (Caching.stateDir + "/sounds/notifications") : (Caching.home + "/.local/state/serpantinum/sounds/notifications");
+            let assetsPath = Caching.axshellDir ? (Caching.axshellDir + "/assets/sounds/notifications") : (Caching.qsDir ? (Caching.qsDir + "/../assets/sounds/notifications") : "");
+            let userPath = Caching.stateDir ? (Caching.stateDir + "/sounds/notifications") : (Caching.home + "/.local/state/axshell/sounds/notifications");
             let script =
                 "mkdir -p \"" + userPath + "\"; " +
                 "python3 -c '\n" +
@@ -270,7 +270,7 @@ GuideTab {
 
     function installSound(filePath, fileName) {
         if (!filePath || filePath.trim() === "" || !fileName || fileName.trim() === "") return;
-        let userSoundsPath = Caching.stateDir ? (Caching.stateDir + "/sounds/notifications") : (Caching.home + "/.local/state/serpantinum/sounds/notifications");
+        let userSoundsPath = Caching.stateDir ? (Caching.stateDir + "/sounds/notifications") : (Caching.home + "/.local/state/axshell/sounds/notifications");
         let escapeBash = function(str) { return String(str).replace(/(["\\$`])/g, '\\$1'); };
 
         let script =

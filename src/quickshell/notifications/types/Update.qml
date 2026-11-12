@@ -10,7 +10,7 @@ Notification {
     id: faceRoot
 
     fullSummary: model ? (model.summary || "Update Available") : "Update Available"
-    fullBody: model && model.body !== "" ? model.body : "A new version of Serpantinum is available."
+    fullBody: model && model.body !== "" ? model.body : "A new version of AxShell is available."
     accentColor: ThemeBackend.green
     overrideClick: true
 
@@ -24,7 +24,7 @@ Notification {
                 }
             }
         }
-        Quickshell.execDetached(["bash", Caching.serpantinumDir + "/scripts/settings.sh", "open", "about"]);
+        Quickshell.execDetached(["bash", Caching.axshellDir + "/scripts/settings.sh", "open", "about"]);
         doClose();
     }
 
@@ -52,7 +52,7 @@ Notification {
         Text {
             Layout.fillWidth: true
             horizontalAlignment: I18n.textAlignment
-            text: model ? (model.displayName || model.appName || "Serpantinum Updater") : "Serpantinum Updater"
+            text: model ? (model.displayName || model.appName || "AxShell Updater") : "AxShell Updater"
             font.family: ThemeBackend.fontFamily
             font.weight: Font.Bold
             font.pixelSize: s(11)

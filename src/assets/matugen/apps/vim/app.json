@@ -11,8 +11,8 @@
   },
   "templates": [
     {
-      "input": "serpantinum.vim",
-      "output": "$HOME/.vim/colors/serpantinum.vim"
+      "input": "axshell.vim",
+      "output": "$HOME/.vim/colors/axshell.vim"
     }
   ]
 }

@@ -1633,14 +1633,14 @@ PanelWindow {
     function performQrScan() {
         Quickshell.execDetached(["rm", "-f", Caching.getRunDir("screenshot") + "/qr_result"]);
         root.isScanningQr = true; root.showQrPopup = false; qrModel.clear();
-        let cmd = `bash ${Caching.serpantinumDir}/scripts/screenshot.sh --geometry "${root.geometryString}" --scan-qr`;
+        let cmd = `bash ${Caching.axshellDir}/scripts/screenshot.sh --geometry "${root.geometryString}" --scan-qr`;
         cmd += root.frozenSourceArgs();
         Quickshell.execDetached(["bash", "-c", cmd]);
         qrWaitTimer.start();
     }   
 
     function performOcr() {
-        let cmd = `bash ${Caching.serpantinumDir}/scripts/screenshot.sh --geometry "${root.geometryString}" --ocr`;
+        let cmd = `bash ${Caching.axshellDir}/scripts/screenshot.sh --geometry "${root.geometryString}" --ocr`;
         let useFrozen = root.frozenSourceArgs() !== "";
         if (useFrozen) {
             cmd += root.frozenSourceArgs();
@@ -1673,7 +1673,7 @@ PanelWindow {
     }
 
     function executeCapture(openEditor, isRecord) {
-        let cmd = `bash ${Caching.serpantinumDir}/scripts/screenshot.sh --geometry "${root.geometryString}"`;
+        let cmd = `bash ${Caching.axshellDir}/scripts/screenshot.sh --geometry "${root.geometryString}"`;
         let useFrozen = !isRecord && root.frozenSourceArgs() !== "";
         if (useFrozen) {
             cmd += root.frozenSourceArgs();

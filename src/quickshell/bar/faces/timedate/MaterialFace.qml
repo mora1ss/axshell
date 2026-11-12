@@ -87,8 +87,8 @@ Item {
 
     FontLoader {
         id: clockFontLoader
-        source: (typeof Caching !== "undefined" && Caching.serpantinumDir && Caching.serpantinumDir !== "")
-            ? ("file://" + Caching.serpantinumDir + "/assets/fonts/GoogleSansFlex.ttf")
+        source: (typeof Caching !== "undefined" && Caching.axshellDir && Caching.axshellDir !== "")
+            ? ("file://" + Caching.axshellDir + "/assets/fonts/GoogleSansFlex.ttf")
             : Qt.resolvedUrl("../../../../assets/fonts/GoogleSansFlex.ttf")
     }
 

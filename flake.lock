@@ -19,22 +19,22 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "serpantinum-wallpapers": "serpantinum-wallpapers",
+        "axshell-wallpapers": "axshell-wallpapers",
         "ski": "ski"
       }
     },
-    "serpantinum-wallpapers": {
+    "axshell-wallpapers": {
       "flake": false,
       "locked": {
         "lastModified": 1793124384,
         "narHash": "sha256-ffCXeC8Yd8kltn14qwq8yIJW4LoocE/2PRma4+IY3Fw=",
-        "owner": "ilyamiro",
+        "owner": "mora1ss",
         "repo": "shell-wallpapers",
         "rev": "c9baa81ce63e27582934a002f7286437db9c5708",
         "type": "github"
       },
       "original": {
-        "owner": "ilyamiro",
+        "owner": "mora1ss",
         "repo": "shell-wallpapers",
         "type": "github"
       }

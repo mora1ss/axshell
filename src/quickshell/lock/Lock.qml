@@ -126,21 +126,21 @@ Scope {
         command: [
             "bash",
             "-c",
-            "test -e \"${1:-/etc/pam.d}/serpantinum\"",
+            "test -e \"${1:-/etc/pam.d}/axshell\"",
             "pam-probe",
             pam.configDirectory
         ]
         onExited: (exitCode) => {
             if (exitCode !== 0) return;
-            pam.config = "serpantinum";
-            fpPam.config = "serpantinum";
-            root.defaultPamConfig = "serpantinum";
+            pam.config = "axshell";
+            fpPam.config = "axshell";
+            root.defaultPamConfig = "axshell";
         }
     }
 
     Process {
         id: noFpPamBuilder
-        command: ["bash", Caching.serpantinumDir + "/scripts/system/pam_without_fingerprint.sh", root.defaultPamDir, root.noFpPamDir, "serpantinum"]
+        command: ["bash", Caching.axshellDir + "/scripts/system/pam_without_fingerprint.sh", root.defaultPamDir, root.noFpPamDir, "axshell"]
         onExited: (exitCode) => root.noFpPamReady = exitCode === 0
     }
 
@@ -229,7 +229,7 @@ Scope {
     function applyPasswordConfig() {
         if (root.usesNoFpPassword()) {
             pam.configDirectory = root.noFpPamDir;
-            pam.config = "serpantinum-nofp";
+            pam.config = "axshell-nofp";
         } else {
             pam.configDirectory = root.defaultPamDir;
             pam.config = root.defaultPamConfig;
@@ -529,7 +529,7 @@ Scope {
 
     Process {
         id: suspendProcess
-        command: ["bash", Caching.serpantinumDir + "/scripts/system/suspend.sh"]
+        command: ["bash", Caching.axshellDir + "/scripts/system/suspend.sh"]
         onExited: {
             SystemInfo.fetch();
             KeyboardLayout.refresh();
@@ -540,12 +540,12 @@ Scope {
 
     Process {
         id: poweroffProcess
-        command: ["bash", Caching.serpantinumDir + "/scripts/system/poweroff.sh"]
+        command: ["bash", Caching.axshellDir + "/scripts/system/poweroff.sh"]
     }
 
     Process {
         id: reloadProcess
-        command: ["bash", Caching.serpantinumDir + "/scripts/system/reboot.sh"]
+        command: ["bash", Caching.axshellDir + "/scripts/system/reboot.sh"]
     }
 
     WlSessionLock {

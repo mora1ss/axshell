@@ -9,8 +9,8 @@
   },
   "templates": [
     {
-      "input": "serpantinum.toml",
-      "output": "$XDG_CONFIG_HOME/atuin/themes/serpantinum.toml"
+      "input": "axshell.toml",
+      "output": "$XDG_CONFIG_HOME/atuin/themes/axshell.toml"
     }
   ],
   "integrate": [
@@ -18,7 +18,7 @@
       "type": "line",
       "file": "$XDG_CONFIG_HOME/atuin/config.toml",
       "section": "theme",
-      "line": "name = \"serpantinum\"",
+      "line": "name = \"axshell\"",
       "disable": "^\\s*name\\s*=",
       "create": true
     }

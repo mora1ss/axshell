@@ -14,5 +14,5 @@ ShaderEffect {
     property color color2: color1
     property vector4d params: Qt.vector4d(1.0, 0.0, 0.0, 0.0)
 
-    fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/fluid/fluid_wave.frag.qsb"
+    fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/fluid/fluid_wave.frag.qsb"
 }

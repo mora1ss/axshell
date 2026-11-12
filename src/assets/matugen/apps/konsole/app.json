@@ -10,8 +10,8 @@
   },
   "templates": [
     {
-      "input": "Serpantinum.colorscheme",
-      "output": "$XDG_DATA_HOME/konsole/Serpantinum.colorscheme"
+      "input": "AxShell.colorscheme",
+      "output": "$XDG_DATA_HOME/konsole/AxShell.colorscheme"
     }
   ]
 }

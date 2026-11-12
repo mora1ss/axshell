@@ -61,7 +61,7 @@ Item {
             property vector4d params: Qt.vector4d(0.0, 0.0, 0.0, 0.0)
             property color trackColor: root.trackColor
 
-            fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/gauges/circular_wave_gauge_smooth.frag.qsb"
+            fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/gauges/circular_wave_gauge_smooth.frag.qsb"
         }
 
         Column {

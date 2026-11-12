@@ -18,7 +18,7 @@ pm_bootstrap_install() {
 
 pm_bootstrap_helper() {
     if ! command -v yay &>/dev/null && ! command -v paru &>/dev/null; then
-        local cache_build="${XDG_CACHE_HOME:-"$HOME/.cache"}/serpantinum-yay-bin"
+        local cache_build="${XDG_CACHE_HOME:-"$HOME/.cache"}/axshell-yay-bin"
         rm -rf "$cache_build"
         mkdir -p "$cache_build"
         git clone https://aur.archlinux.org/yay-bin.git "$cache_build"

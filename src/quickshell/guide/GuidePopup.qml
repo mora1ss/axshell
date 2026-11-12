@@ -675,7 +675,7 @@ Item {
         if (typeof masterWindow !== "undefined" && masterWindow.switchWidget) {
             masterWindow.switchWidget("hidden", "");
         } else {
-            Quickshell.execDetached(["bash", Caching.serpantinumDir + "/scripts/qs_manager.sh", "close"]);
+            Quickshell.execDetached(["bash", Caching.axshellDir + "/scripts/qs_manager.sh", "close"]);
         }
     }
 

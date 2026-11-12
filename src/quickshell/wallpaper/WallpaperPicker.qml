@@ -19,7 +19,7 @@ Item {
         return Scaler.s(val);
     }
 
-    readonly property string scriptDir: Caching.serpantinumDir + "/scripts/wallpaper"
+    readonly property string scriptDir: Caching.axshellDir + "/scripts/wallpaper"
 
     property string widgetArg: ""
     property string targetWallName: ""
@@ -840,7 +840,7 @@ Item {
             Caching.getCacheDir("wallpaper"),
             Caching.getRunDir("wallpaper"),
             Caching.logDir,
-            Caching.serpantinumDir + "/scripts/wallpaper/ddg_search.sh"
+            Caching.axshellDir + "/scripts/wallpaper/ddg_search.sh"
         ]);
         view.forceActiveFocus();
     }

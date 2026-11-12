@@ -2,7 +2,7 @@
 
 SRC_DIR="${1:-/etc/pam.d}"
 DEST_DIR="$2"
-SERVICE="${3:-serpantinum}"
+SERVICE="${3:-axshell}"
 
 [ -n "$DEST_DIR" ] || exit 1
 [ -d "$SRC_DIR" ] || exit 1
@@ -25,7 +25,7 @@ for file in "$SRC_DIR"/*; do
 done
 
 if grep -qs "pam_fprintd" "$base"; then
-    grep -v "pam_fprintd" "$base" > "$DEST_DIR/serpantinum-nofp"
+    grep -v "pam_fprintd" "$base" > "$DEST_DIR/axshell-nofp"
 else
-    cp -L "$base" "$DEST_DIR/serpantinum-nofp"
+    cp -L "$base" "$DEST_DIR/axshell-nofp"
 fi

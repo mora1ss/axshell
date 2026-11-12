@@ -606,7 +606,7 @@ ShellRoot {
                         property vector4d params: Qt.vector4d(barWindow.wipeIsVertical ? 1.0 : 0.0, barWindow.swipeDirection, barWindow.transitionSeed, 0.0)
                         property color tint: "transparent"
 
-                        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
+                        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
                     }
 
                     Item {
@@ -674,7 +674,7 @@ ShellRoot {
                         property vector4d params: Qt.vector4d(barWindow.wipeIsVertical ? 1.0 : 0.0, barWindow.swipeDirection, barWindow.transitionSeed, 0.0)
                         property color tint: "transparent"
 
-                        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
+                        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
                     }
 
                     Item {
@@ -742,7 +742,7 @@ ShellRoot {
                         property vector4d params: Qt.vector4d(0.0, 0.0, barWindow.transitionSeed, 1.0)
                         property color tint: ThemeBackend.mauve
 
-                        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
+                        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
                     }
                 }
 

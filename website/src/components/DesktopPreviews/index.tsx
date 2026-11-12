@@ -28,22 +28,22 @@ export default function DesktopPreviews(): ReactNode {
     {
       id: 1,
       src: useBaseUrl('/img/previews/preview_1.webp'),
-      alt: 'Serpantinum Desktop Preview 1',
+      alt: 'AxShell Desktop Preview 1',
     },
     {
       id: 2,
       src: useBaseUrl('/img/previews/preview_2.webp'),
-      alt: 'Serpantinum Desktop Preview 2',
+      alt: 'AxShell Desktop Preview 2',
     },
     {
       id: 3,
       src: useBaseUrl('/img/previews/preview_3.webp'),
-      alt: 'Serpantinum Desktop Preview 3',
+      alt: 'AxShell Desktop Preview 3',
     },
     {
       id: 4,
       src: useBaseUrl('/img/previews/preview_4.webp'),
-      alt: 'Serpantinum Desktop Preview 4',
+      alt: 'AxShell Desktop Preview 4',
     },
   ];
 

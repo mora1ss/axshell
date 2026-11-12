@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "正在加载...",
       "unknown": "未知",
       "version_by": "v{version} • 作者：{author}",
@@ -20,7 +20,7 @@
         "uptime": "运行时间",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "欢迎",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "字体",
-        "desc": "选择 Serpantinum 使用的默认字体",
+        "desc": "选择 AxShell 使用的默认字体",
         "select": "选择..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "无法更新配置：{line}"
         },
         "hint": {
-          "select_in_app": "在应用设置中选择 Serpantinum 主题",
+          "select_in_app": "在应用设置中选择 AxShell 主题",
           "restart": "重新启动已打开的窗口以查看新颜色",
-          "neovim": "运行 :colorscheme serpantinum 以使用",
+          "neovim": "运行 :colorscheme axshell 以使用",
           "helix": "在已打开的编辑器中运行 :config-reload 以查看新颜色",
-          "fastfetch": "运行 fastfetch -c serpantinum 以使用",
-          "spicetify": "运行 spicetify config current_theme Serpantinum，然后运行 spicetify apply",
-          "discord": "在客户端的主题设置中启用 Serpantinum",
-          "emacs": "运行 M-x load-theme serpantinum 即可使用",
+          "fastfetch": "运行 fastfetch -c axshell 以使用",
+          "spicetify": "运行 spicetify config current_theme AxShell，然后运行 spicetify apply",
+          "discord": "在客户端的主题设置中启用 AxShell",
+          "emacs": "运行 M-x load-theme axshell 即可使用",
           "steam": "使用 Millennium 安装 Material-Theme，然后在其颜色设置中选择 Matugen",
-          "heroic": "将 Heroic 的自定义主题路径设为其主题文件夹，然后选择 serpantinum",
+          "heroic": "将 Heroic 的自定义主题路径设为其主题文件夹，然后选择 axshell",
           "telegram": "在 Telegram 的聊天设置中加载主题文件"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "作者 @{author}",
     "welcome": "欢迎",
     "tagline": "专为您打造的桌面 Shell",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "设置",
-      "desc": "Serpantinum 设置"
+      "desc": "AxShell 设置"
     },
     "calendar": {
       "name": "日历与时钟",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "Usage: serpantinum [command] [options...]",
+    "usage": "Usage: axshell [command] [options...]",
     "description": "专为 Wayland 合成器打造的桌面 Shell。",
     "commands": "命令：",
     "script_commands": "脚本命令：",
@@ -1880,23 +1880,23 @@
     "version_desc": "显示版本信息并退出",
     "help_desc": "显示此帮助信息并退出",
     "examples": "示例：",
-    "daemon_stopped": "Serpantinum 守护进程已停止。",
-    "daemon_restarted": "Serpantinum 守护进程已重启。",
-    "starting_daemon": "守护进程未运行。正在后台启动 serpantinumd...",
+    "daemon_stopped": "AxShell 守护进程已停止。",
+    "daemon_restarted": "AxShell 守护进程已重启。",
+    "starting_daemon": "守护进程未运行。正在后台启动 axshelld...",
     "error_missing_qml": "错误：缺少要启动的目标。",
-    "launch_usage": "Usage: serpantinum launch <start> [args...]",
+    "launch_usage": "Usage: axshell launch <start> [args...]",
     "error_qml_not_found": "Error: could not resolve {NAME}.qml in {DIR}",
     "error_shell_qml_not_found": "Error: could not resolve path to shell.qml in {DIR}",
     "error_unknown_command": "Error: unknown command '{CMD}'.",
     "error_unknown_target": "Error: unknown target '{TARGET}'.",
     "launch_help": {
-      "usage": "Usage: serpantinum launch <start> [arguments...]",
+      "usage": "Usage: axshell launch <start> [arguments...]",
       "description": "直接在运行器模式下启动独立组件。",
       "available_targets": "可用目标：",
       "target_start": "启动初始设置引导界面"
     },
     "msg_help": {
-      "usage": "Usage: serpantinum msg <command|workspace> [arguments...]",
+      "usage": "Usage: axshell msg <command|workspace> [arguments...]",
       "description": "直接发送布局、工作区和窗口管理消息。",
       "available_commands": "可用消息：",
       "cmd_workspace": "切换至工作区 <num>（追加 'move' 将活动窗口一并移至该工作区）",
@@ -1905,7 +1905,7 @@
       "cmd_close": "关闭任何当前活动 Shell 覆盖层"
     },
     "ipc_help": {
-      "usage": "Usage: serpantinum ipc call <target> <method> [arguments...]",
+      "usage": "Usage: axshell ipc call <target> <method> [arguments...]",
       "description": "直接向正在运行的 quickshell 实例发送 IPC 调用。"
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "读取和更改设置 (get, set, dump, path, edit)",
     "error_unknown_language": "错误：未知语言 '{CODE}'。",
     "update_available": "有可用更新：{LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum 已是最新版本 ({VERSION})。",
+    "up_to_date": "AxShell 已是最新版本 ({VERSION})。",
     "state_on": "开",
     "state_off": "关",
     "error_unknown_theme": "错误：未知主题“{NAME}”。",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "守护进程已在运行。正在退出...",
-    "shutting_down": "正在关闭 serpantinum 守护进程...",
-    "launching": "正在启动 serpantinum 守护进程...",
+    "shutting_down": "正在关闭 axshell 守护进程...",
+    "launching": "正在启动 axshell 守护进程...",
     "cli": {
-      "usage": "Usage: serpantinumd <command> [options...]",
-      "description": "serpantinum 桌面 shell 的后台服务守护进程。",
+      "usage": "Usage: axshelld <command> [options...]",
+      "description": "axshell 桌面 shell 的后台服务守护进程。",
       "commands": "命令：",
       "cmd_start": "启动守护进程服务并启动后台工作程序",
       "cmd_stop": "停止正在运行的守护进程服务",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "启用详细日志输出",
       "opt_version": "显示版本信息并退出",
       "opt_help": "显示此帮助信息并退出",
-      "stopped": "Serpantinum 守护进程已停止。",
-      "status_running": "Serpantinum 守护进程正在运行 (PID: {PID})。",
-      "status_stopped": "Serpantinum 守护进程未运行。",
+      "stopped": "AxShell 守护进程已停止。",
+      "status_running": "AxShell 守护进程正在运行 (PID: {PID})。",
+      "status_stopped": "AxShell 守护进程未运行。",
       "unknown_arg": "未知参数：{ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects 仍处于启用状态",
-      "body": "Serpantinum 现在拥有自己的音频引擎，EasyEffects 可能会与其冲突。如果你只是为 Serpantinum 使用 EasyEffects，请关闭它的登录自启动。"
+      "body": "AxShell 现在拥有自己的音频引擎，EasyEffects 可能会与其冲突。如果你只是为 AxShell 使用 EasyEffects，请关闭它的登录自启动。"
     }
   },
   "installer": {
@@ -1975,7 +1975,7 @@
     },
     "os": {
       "error_root": "错误：请勿直接使用 root/sudo 运行此脚本。请以普通用户身份运行。",
-      "error_unsupported": "不支持的操作系统 ({os})。Serpantinum 仅支持 Arch Linux 及其衍生发行版。",
+      "error_unsupported": "不支持的操作系统 ({os})。AxShell 仅支持 Arch Linux 及其衍生发行版。",
       "error_not_found": "无法检测操作系统。未找到 /etc/os-release。",
       "unknown_cpu": "未知 CPU",
       "unknown_gpu": "未知显卡 / 虚拟机",
@@ -1989,8 +1989,6 @@
       "target_version": "目标版本：",
       "install_mode": "安装模式：",
       "github": "GitHub：",
-      "twitter": "Twitter：",
-      "reddit": "Reddit：",
       "telegram": "Telegram：",
       "donate": "赞助：",
       "donate_sub": "（支持本项目！）",
@@ -2016,7 +2014,6 @@
       "menu_overview": "软件包安装概览 ({count} 个核心包)",
       "menu_sddm": "SDDM 登录管理器",
       "menu_wallpapers": "壁纸包",
-      "menu_telemetry": "匿名遥测",
       "menu_update": "更新",
       "menu_reinstall": "重新安装",
       "menu_install": "安装",
@@ -2025,9 +2022,9 @@
       "tagline": "专为您打造的桌面 Shell",
       "support_creator": "支持创作者：",
       "buy_coffee": "如果您喜欢本项目，请考虑请我喝杯咖啡！",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) 安装成功。",
+      "installed_success": "✔ AxShell {ver} ({commit}) 安装成功。",
       "failed_packages": "以下软件包在安装过程中遇到错误：",
-      "restart_prompt": "重启您的合成器或运行 'serpantinumd start' 即可开始。",
+      "restart_prompt": "重启您的合成器或运行 'axshelld start' 即可开始。",
       "ask_reboot": "是否立即重启？[y/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "此系统没有预编译的音频引擎，正在从源代码构建...",
       "checksum_failed": "音频引擎下载未通过校验和检查，已跳过。",
-      "download_failed": "无法下载 Serpantinum 音频引擎，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-audio 安装。",
-      "installed": "已安装 Serpantinum 音频引擎 {version}",
-      "install_failed": "安装 Serpantinum 音频引擎失败。在从 github.com/ilyamiro/serpantinum-audio 安装之前，均衡器将无法使用。",
-      "installing": "正在安装 Serpantinum 音频引擎...",
-      "up_to_date": "-> Serpantinum 音频引擎 {version} 已安装。"
+      "download_failed": "无法下载 AxShell 音频引擎，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-audio 安装。",
+      "installed": "已安装 AxShell 音频引擎 {version}",
+      "install_failed": "安装 AxShell 音频引擎失败。在从 github.com/ilyamiro/serpantinum-audio 安装之前，均衡器将无法使用。",
+      "installing": "正在安装 AxShell 音频引擎...",
+      "up_to_date": "-> AxShell 音频引擎 {version} 已安装。"
     },
     "core": {
       "checksum_failed": "核心服务下载未通过校验和检查，已跳过。",
-      "download_failed": "无法下载 Serpantinum 核心服务，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-core 安装。",
-      "installed": "已安装 Serpantinum 核心服务 {version}",
-      "install_failed": "安装 Serpantinum 核心服务失败。在从 github.com/ilyamiro/serpantinum-core 安装之前，系统使用情况、键盘锁定指示器和剪贴板将无法使用。",
-      "installing": "正在安装 Serpantinum 核心服务...",
+      "download_failed": "无法下载 AxShell 核心服务，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-core 安装。",
+      "installed": "已安装 AxShell 核心服务 {version}",
+      "install_failed": "安装 AxShell 核心服务失败。在从 github.com/ilyamiro/serpantinum-core 安装之前，系统使用情况、键盘锁定指示器和剪贴板将无法使用。",
+      "installing": "正在安装 AxShell 核心服务...",
       "unsupported_arch": "预编译的核心服务包仅提供 x86_64 版本，已跳过。",
-      "up_to_date": "-> Serpantinum 核心服务 {version} 已安装。"
+      "up_to_date": "-> AxShell 核心服务 {version} 已安装。"
     },
     "gamma": {
       "checksum_failed": "蓝光过滤器下载未通过校验和检查，已跳过。",
-      "download_failed": "无法下载 Serpantinum 蓝光过滤器，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-gamma 安装。",
-      "installed": "已安装 Serpantinum 蓝光过滤器 {version}",
-      "install_failed": "安装 Serpantinum 蓝光过滤器失败。在从 github.com/ilyamiro/serpantinum-gamma 安装之前，它将无法使用。",
-      "installing": "正在安装 Serpantinum 蓝光过滤器...",
+      "download_failed": "无法下载 AxShell 蓝光过滤器，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-gamma 安装。",
+      "installed": "已安装 AxShell 蓝光过滤器 {version}",
+      "install_failed": "安装 AxShell 蓝光过滤器失败。在从 github.com/ilyamiro/serpantinum-gamma 安装之前，它将无法使用。",
+      "installing": "正在安装 AxShell 蓝光过滤器...",
       "unsupported_arch": "预编译的蓝光过滤器包仅提供 x86_64 版本，已跳过。",
-      "up_to_date": "-> Serpantinum 蓝光过滤器 {version} 已安装。"
+      "up_to_date": "-> AxShell 蓝光过滤器 {version} 已安装。"
     },
     "ski": {
       "checksum_failed": "Ski 下载未通过校验和检查，已跳过。",

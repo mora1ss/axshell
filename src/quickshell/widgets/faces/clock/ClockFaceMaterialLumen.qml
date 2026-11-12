@@ -122,7 +122,7 @@ Item {
             property vector4d weights2: Qt.vector4d(root.glow[8], root.glow[9], root.glow[10], root.glow[11])
             property vector4d params: Qt.vector4d(Math.min(width, height) * 0.435, Math.min(width, height) * 0.042, 0.0, 0.0)
 
-            fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/gauges/clock_lumen_dial.frag.qsb"
+            fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/gauges/clock_lumen_dial.frag.qsb"
         }
 
         Item {

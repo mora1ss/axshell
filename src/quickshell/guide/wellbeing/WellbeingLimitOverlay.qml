@@ -91,7 +91,7 @@ Scope {
 
             WlrLayershell.layer: WlrLayer.Overlay
             WlrLayershell.exclusionMode: ExclusionMode.Ignore
-            WlrLayershell.namespace: "serpantinum-wellbeing-limit"
+            WlrLayershell.namespace: "axshell-wellbeing-limit"
 
             Rectangle {
                 id: dimRect

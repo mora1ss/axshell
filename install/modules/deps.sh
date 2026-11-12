@@ -113,7 +113,7 @@ bootstrap_installer_deps() {
 install_fonts() {
     local target_fonts_dir="$HOME/.local/share/fonts/IosevkaNerdFont"
     if [ ! -d "$target_fonts_dir" ] || [ -z "$(ls -A "$target_fonts_dir" 2>/dev/null | grep -i "\.ttf")" ]; then
-        local font_cache="${XDG_CACHE_HOME:-"$HOME/.cache"}/serpantinum-fonts"
+        local font_cache="${XDG_CACHE_HOME:-"$HOME/.cache"}/axshell-fonts"
         mkdir -p "$font_cache" "$target_fonts_dir"
         echo -e "\n\e[36m[ INFO ]\e[0m Downloading Iosevka Nerd Font..."
         if curl -# -L --connect-timeout 15 --retry 3 "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.zip" -o "$font_cache/Iosevka.zip"; then
@@ -161,7 +161,7 @@ configure_qt_icon_theme() {
     done
 
     local env_dir="$config_home/environment.d"
-    local env_file="$env_dir/serpantinum-qt.conf"
+    local env_file="$env_dir/axshell-qt.conf"
     if [ -z "${QT_QPA_PLATFORMTHEME:-}" ] && ! grep -rqs '^QT_QPA_PLATFORMTHEME=' "$env_dir" 2>/dev/null; then
         mkdir -p "$env_dir"
         printf 'QT_QPA_PLATFORMTHEME=qt6ct\n' > "$env_file"

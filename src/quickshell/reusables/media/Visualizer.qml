@@ -235,6 +235,6 @@ Item {
         property real ringBarWidth: root.ringBarWidth
         property real tintStrength: root.tintStrength
 
-        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/audio/" + (root.continuous ? (root.ringRadius > 0 ? "visualizer_ring_wave" : "visualizer_wave") : "visualizer_bars") + ".frag.qsb"
+        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/audio/" + (root.continuous ? (root.ringRadius > 0 ? "visualizer_ring_wave" : "visualizer_wave") : "visualizer_bars") + ".frag.qsb"
     }
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-OCR_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/serpantinum/tessdata"
-OCR_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/serpantinum/ocr"
+OCR_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/axshell/tessdata"
+OCR_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/axshell/ocr"
 OCR_MODELS_URL="https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main"
 OCR_API_URL="https://api.github.com/repos/tesseract-ocr/tessdata_fast/contents/"
 OCR_AVAILABLE_MAX_AGE_MIN=1440

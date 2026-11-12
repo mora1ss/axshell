@@ -61,7 +61,6 @@
 - fix(media): blur album art in QML and keep the largest cover for each track
 - perf: load wallpaper picker on demand, cap visualizer updates and bound paused searches
 - feat: new widgets: Timer, Stopwatch, Pomodoro for desktop. Adaptation of the quickactions
-- docs(readme): add subreddit invite above installation
 - chore(aur): bundle Ski 0.6.3
 
 ### 2.4.3
@@ -71,7 +70,7 @@
 - fix(wallpaper): declare tint on transition mask shaders to silence missing property warnings
 - style(wallpaper): lay transition previews out in a three-column grid like the bar style cards
 - feat(wallpaper): add paint transition that grows the new wallpaper in from cell colonies
-- feat: quit serpantinum-core, -audio and -gamma when serpantinumd stops, and leave gamma running through installer updates
+- feat: quit serpantinum-core, -audio and -gamma when axshelld stops, and leave gamma running through installer updates
 - feat(installer): restart running core and gamma daemons after updating them, with one helper shared with audio
 - Revert "feat: restart serpantinum-core, -audio and -gamma daemons left running from an older install"
 - feat: restart serpantinum-core, -audio and -gamma daemons left running from an older install
@@ -221,7 +220,7 @@
 - refactor(cli): group info, set and trigger commands under logical parents
 - refactor(cli): fold info dock-autohide into info dock
 - refactor(cli): fold info caffeine into info idle
-- feat(cli): add serpantinum info idle to print idle system status
+- feat(cli): add axshell info idle to print idle system status
 - feat(idle): add idle status IPC call reporting gate and action state
 - feat(workspaces): track the active workspace per monitor on Hyprland and Sway
 - perf(sway): share one IPC event stream through a SwayState singleton
@@ -273,14 +272,14 @@
 
 - fix(media): restore the test tone paths so the audio test plays through serpantinum-audio
 - docs: describe the narrower EasyEffects handover and how to turn EasyEffects off
-- fix(audio): limit the EasyEffects handover to what Serpantinum set up and notify once instead of killing it on every start
+- fix(audio): limit the EasyEffects handover to what AxShell set up and notify once instead of killing it on every start
 - fix(nix): put serpantinum-audio on PATH alongside the shell binaries
 - feat(media): show the dynamic EQ as a labelled button with a toggle and let Toggle take a track size
 - feat(audio): replace EasyEffects with the serpantinum-audio engine and add a dynamic EQ toggle
 - docs: document the serpantinum-audio engine and drop EasyEffects from the guides
 - feat(install): add Void Linux support with an xbps backend
 - chore: bump bundled Ski to 0.4.0 in the AUR packages
-- fix(bluelight): anchor wl-gammarelay-rs process match and guard SERPANTINUM_DIR under nounset
+- fix(bluelight): anchor wl-gammarelay-rs process match and guard AXSHELL_DIR under nounset
 - fix(bluelight): prevent unbound variable in caching.sh under nounset and fix process matching (#510)
 - chore: bump bundled Ski to 0.3.0 in the AUR packages
 - chore: update flake.lock
@@ -403,7 +402,7 @@
 - fix(settings): animate the sidebar collapse smoothly instead of snapping
 - fix(settings): make the settings window freely resizable with a compact sidebar and stacked rows on narrow widths
 - feat(settings): run settings as a standalone window and rename guide to settings with a deprecated alias
-- feat(packaging): add serpantinum settings desktop entry and icon to nix, aur and installer
+- feat(packaging): add axshell settings desktop entry and icon to nix, aur and installer
 - feat(i18n): add OCR language warning translations
 - feat(screenshot): warn when OCR text may be in an uninstalled language
 - perf(guide): virtualize OCR language list and keep its order stable
@@ -625,7 +624,6 @@
 - feat(guide): group related settings rows into blobs across guide tabs
 - feat(bar): add adjustable bar thickness setting with module scaling
 - refactor(bar): merge side module and face variants into single orientation-aware files
-- feat(telemetry): withhold os and compositor when disabled, send arch and session when enabled
 - fix(widgets): clear stretch flags when a widget is moved or resized
 - perf(datetime): recompute minute-level strings only when the minute changes
 - perf(wallpaper): enable transition mask layers only during transitions
@@ -694,7 +692,7 @@
 - feat(mango): add mango compositor config
 - feat(website): add custom 404 page
 - fix(lock): compare FullyCharged against battery state
-- feat(lock): add dedicated serpantinum pam service
+- feat(lock): add dedicated axshell pam service
 - fix(lock): fall back to fprintd-verify when pam stack lacks fprintd
 - refactor(lock): use native pam for fingerprint and password
 - feat(bar): add media width slider and duration/author switch
@@ -747,7 +745,6 @@
 - style(site): solid navbar, softer search highlights in dark mode and no gap after search
 - style(site): reorder navbar, tighten search spacing, soften support button and move shortcut hint into placeholder
 - style(site): material-style previous and next buttons in docs
-- feat(site): move search to the right and add Ko-fi support button
 - style(site): move search left, docs and changelog right and polish the footer
 - refactor(site): drop feature cards and swap hero docs button for a surface-colored GitHub link
 - revert(site): restore the star history bar chart
@@ -872,7 +869,7 @@
 - fix(widgets): resolve ReferenceError when removing widget in WidgetRedactor
 - fix: correct filled content box height in SystemUsageCard
 - fix(audio): resolve binding loops in audio device and stream cache
-- fix(audio): tag and filter out serpantinum sfx streams from volume stream list
+- fix(audio): tag and filter out axshell sfx streams from volume stream list
 - fix(workspaces): fix active and occupied state tracking on niri dynamic workspaces
 - fix(bar): show all running timers in info faces simultaneously
 - feat(bar): add text style for battery module
@@ -927,7 +924,7 @@
 - fix(focus): ignore unfocused window title events in sway (fixing the same issue for Sway as in #390)
 - perf(focus): eliminate reload lag and optimize active window tracking
 - perf(bar): skip visualizer level processing in hidden or unused modes (#395)
-- fix(wallpaper): persist search state in cache json instead of QSettings serpantinum.conf
+- fix(wallpaper): persist search state in cache json instead of QSettings axshell.conf
 - fix(inputs): persist password reveal via Config singleton
 - fix(widgets): properly remove deleted widgets from model and tear down faces
 - fix(inputs): restore persistent reveal state with explicit settings location
@@ -1211,7 +1208,7 @@
 - fix: launcher having a bad corner at the bottom
 - fix: dock evaluation warning
 - fix: Dock taking up mouse area clicking when in hidden mode
-- fix a local function call bug in serpantinumd
+- fix a local function call bug in axshelld
 - fix: make all dock settings hide when dock is disabled
 
 ### 2.1.3
@@ -1234,7 +1231,7 @@
 - style: make all of the settings have separate configuration boxes
 - fix: wallpaper picker recent wallpaper animation fixed
 - fix wallpaper dir not being properly set on install
-- fix: serpantinum not cleanly killing the quickshell process
+- fix: axshell not cleanly killing the quickshell process
 - fix: a right corner in clipboard having a wrong target coordinate
 - fix sounds not having access to the config
 - Remove duplicate no-op lines in QR polygon parser (#253)
@@ -1334,7 +1331,7 @@
 - style: change the volume of the whoosh sound in the MusicPopup equalizer
 - feat: BlueLight singleton to ensure that bluelight applies on shell startup
 - fix: stale thumbnails in the music player due to asynchronious loading
-- fix: serpantinum --version flag to display version correctly on nix
+- fix: axshell --version flag to display version correctly on nix
 - fix: make sure focus_daemon.py doesn't self-duplicate on reload and doesn't inflate the usage time
 - feat: change the default icon in grouped notificatoins in the NotificationBox to use the icon of the grouped notifications that it contains
 - fix(nix): add a ... to declare rev from flake.nix

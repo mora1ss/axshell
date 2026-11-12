@@ -43,13 +43,13 @@ Singleton {
         objects: root.trackedNodes
     }
 
-    function isSerpantinumStream(node) {
+    function isAxShellStream(node) {
         if (!node || !node.properties) return false;
         let p = node.properties;
         let appId = p["application.id"] || "";
         let appName = p["application.name"] || "";
-        if (appId === "serpantinum-sfx" || appId === "serpantinum" || appId === "org.serpantinum.sfx") return true;
-        if (appName === "serpantinum-sfx" || appName === "serpantinum") return true;
+        if (appId === "axshell-sfx" || appId === "axshell" || appId === "org.axshell.sfx") return true;
+        if (appName === "axshell-sfx" || appName === "axshell") return true;
         if (p["node.group"] === "serpantinum-audio" || p["node.link-group"] === "serpantinum-audio") return true;
         let mediaFile = p["media.filename"] || p["media.name"] || "";
         if (mediaFile.indexOf("assets/sounds/") !== -1) return true;
@@ -81,7 +81,7 @@ Singleton {
         for (const n of root.pipewireNodes()) {
             if (n.isStream && n.audio
                 && n.properties?.["application.id"] !== "org.PulseAudio.pavucontrol"
-                && !isSerpantinumStream(n)) {
+                && !isAxShellStream(n)) {
                 arr.push(n);
             }
         }

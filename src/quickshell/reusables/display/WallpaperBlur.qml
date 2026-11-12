@@ -256,7 +256,7 @@ Item {
                         property vector2d origin: Qt.vector2d(root.engine ? root.engine.transitionOriginX : 0.5, root.engine ? root.engine.transitionOriginY : 0.5)
                         property vector4d params: Qt.vector4d(root.engine && root.engine.wipeIsVertical ? 1.0 : 0.0, root.engine ? root.engine.swipeDirection : 0, root.engine ? root.engine.transitionSeed : 0.0, 0.0)
 
-                        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/transitions/wallpaper_blend.frag.qsb"
+                        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/transitions/wallpaper_blend.frag.qsb"
                     }
 
                     Rectangle {
@@ -308,7 +308,7 @@ Item {
                         property vector2d itemSize: Qt.vector2d(width, height)
                         property vector4d radii: Qt.vector4d(root.topLeftRadius, root.topRightRadius, root.bottomRightRadius, root.bottomLeftRadius)
                         property real fillAlpha: Math.min(0.98, ThemeBackend.elementOpacity)
-                        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/ui/rounded_mask.frag.qsb"
+                        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/ui/rounded_mask.frag.qsb"
                     }
 
                     ShaderEffect {
@@ -336,7 +336,7 @@ Item {
                         property vector4d k1: root.field ? root.field.k1 : Qt.vector4d(0, 0, 0, 0)
                         property vector4d o0: root.field ? root.field.o0 : Qt.vector4d(0, 0, 0, 0)
                         property vector4d o1: root.field ? root.field.o1 : Qt.vector4d(0, 0, 0, 0)
-                        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/ui/surface_field_tex.frag.qsb"
+                        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/ui/surface_field_tex.frag.qsb"
                     }
 
                     LiquidGlass {

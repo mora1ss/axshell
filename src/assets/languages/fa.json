@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "در حال بارگذاری...",
       "unknown": "ناشناخته",
       "version_by": "نسخه {version} • اثر {author}",
@@ -20,7 +20,7 @@
         "uptime": "مدت‌زمان روشن‌بودن",
         "default_os": "لینوکس"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "خوش‌آمدید",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "قلم",
-        "desc": "انتخاب قلم پیش‌فرض مورد استفاده در serpantinum",
+        "desc": "انتخاب قلم پیش‌فرض مورد استفاده در axshell",
         "select": "انتخاب..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "به‌روزرسانی پیکربندی ممکن نشد: {line}"
         },
         "hint": {
-          "select_in_app": "پوسته Serpantinum را در تنظیمات برنامه انتخاب کنید",
+          "select_in_app": "پوسته AxShell را در تنظیمات برنامه انتخاب کنید",
           "restart": "برای دیدن رنگ‌های جدید، پنجره‌های باز را دوباره اجرا کنید",
-          "neovim": "برای استفاده، ‎:colorscheme serpantinum را اجرا کنید",
+          "neovim": "برای استفاده، ‎:colorscheme axshell را اجرا کنید",
           "helix": "برای دیدن رنگ‌های جدید، ‎:config-reload را در ویرایشگرهای باز اجرا کنید",
-          "fastfetch": "برای استفاده، fastfetch -c serpantinum را اجرا کنید",
-          "spicetify": "spicetify config current_theme Serpantinum و سپس spicetify apply را اجرا کنید",
-          "discord": "Serpantinum را در تنظیمات پوسته کلاینت فعال کنید",
-          "emacs": "برای استفاده، M-x load-theme serpantinum را اجرا کنید",
+          "fastfetch": "برای استفاده، fastfetch -c axshell را اجرا کنید",
+          "spicetify": "spicetify config current_theme AxShell و سپس spicetify apply را اجرا کنید",
+          "discord": "AxShell را در تنظیمات پوسته کلاینت فعال کنید",
+          "emacs": "برای استفاده، M-x load-theme axshell را اجرا کنید",
           "steam": "Material-Theme را با Millennium نصب کنید، سپس Matugen را در تنظیمات رنگ آن انتخاب کنید",
-          "heroic": "مسیر پوسته‌های سفارشی Heroic را روی پوشهٔ پوسته‌های آن تنظیم کنید، سپس serpantinum را انتخاب کنید",
+          "heroic": "مسیر پوسته‌های سفارشی Heroic را روی پوشهٔ پوسته‌های آن تنظیم کنید، سپس axshell را انتخاب کنید",
           "telegram": "فایل پوسته را از تنظیمات گفتگوی Telegram بارگذاری کنید"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "ساخته‌شده توسط @{author}",
     "welcome": "خوش‌آمدید",
     "tagline": "یک پوسته میزکار ساخته‌شده برای",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "تنظیمات",
-      "desc": "تنظیمات Serpantinum"
+      "desc": "تنظیمات AxShell"
     },
     "calendar": {
       "name": "تقویم و ساعت",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "کاربرد: serpantinum [دستور] [گزینه‌ها...]",
+    "usage": "کاربرد: axshell [دستور] [گزینه‌ها...]",
     "description": "یک پوسته میزکار برای کامپوزیتورهای وی‌لند.",
     "commands": "دستورات:",
     "script_commands": "دستورات اسکریپت:",
@@ -1880,23 +1880,23 @@
     "version_desc": "نمایش اطلاعات نسخه و خروج",
     "help_desc": "نمایش این پیام راهنما و خروج",
     "examples": "مثال‌ها:",
-    "daemon_stopped": "دیمن serpantinum متوقف شد.",
-    "daemon_restarted": "دیمن serpantinum دوباره راه‌اندازی شد.",
-    "starting_daemon": "دیمن در حال اجرا نیست. در حال راه‌اندازی serpantinumd در پس‌زمینه...",
+    "daemon_stopped": "دیمن axshell متوقف شد.",
+    "daemon_restarted": "دیمن axshell دوباره راه‌اندازی شد.",
+    "starting_daemon": "دیمن در حال اجرا نیست. در حال راه‌اندازی axshelld در پس‌زمینه...",
     "error_missing_qml": "خطا: هدف مورد نظر برای راه‌اندازی مشخص نشده است.",
-    "launch_usage": "کاربرد: serpantinum launch <start> [آرگومان‌ها...]",
+    "launch_usage": "کاربرد: axshell launch <start> [آرگومان‌ها...]",
     "error_qml_not_found": "خطا: پرونده {NAME}.qml در {DIR} یافت نشد",
     "error_shell_qml_not_found": "خطا: مسیر پرونده shell.qml در {DIR} پیدا نشد",
     "error_unknown_command": "خطا: دستور ناشناخته '{CMD}'.",
     "error_unknown_target": "خطا: هدف ناشناخته '{TARGET}'.",
     "launch_help": {
-      "usage": "کاربرد: serpantinum launch <start> [آرگومان‌ها...]",
+      "usage": "کاربرد: axshell launch <start> [آرگومان‌ها...]",
       "description": "راه‌اندازی مستقیم اجزای مستقل در حالت اجراکننده.",
       "available_targets": "هدف‌های موجود:",
       "target_start": "راه‌اندازی واسط پیکربندی آغازین"
     },
     "msg_help": {
-      "usage": "کاربرد: serpantinum msg <command|workspace> [آرگومان‌ها...]",
+      "usage": "کاربرد: axshell msg <command|workspace> [آرگومان‌ها...]",
       "description": "ارسال مستقیم پیام‌های چیدمان، فضای کاری و مدیریت پنجره‌ها.",
       "available_commands": "پیام‌های موجود:",
       "cmd_workspace": "تغییر به فضای کاری <num> (برای انتقال پنجره فعال، 'move' را اضافه کنید)",
@@ -1905,7 +1905,7 @@
       "cmd_close": "بستن تمام لایه‌های فعال پوسته"
     },
     "ipc_help": {
-      "usage": "کاربرد: serpantinum ipc call <target> <method> [آرگومان‌ها...]",
+      "usage": "کاربرد: axshell ipc call <target> <method> [آرگومان‌ها...]",
       "description": "ارسال فراخوانی IPC به‌طور مستقیم به نمونه در حال اجرای quickshell."
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "خواندن و تغییر تنظیمات (get, set, dump, path, edit)",
     "error_unknown_language": "خطا: زبان ناشناخته '{CODE}'.",
     "update_available": "به‌روزرسانی موجود است: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum به‌روز است ({VERSION}).",
+    "up_to_date": "AxShell به‌روز است ({VERSION}).",
     "state_on": "روشن",
     "state_off": "خاموش",
     "error_unknown_theme": "خطا: پوسته ناشناخته '{NAME}'.",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "دیمن در حال حاضر در حال اجرا است. در حال خروج...",
-    "shutting_down": "در حال خاموش کردن دیمن serpantinum...",
-    "launching": "در حال راه‌اندازی دیمن serpantinum...",
+    "shutting_down": "در حال خاموش کردن دیمن axshell...",
+    "launching": "در حال راه‌اندازی دیمن axshell...",
     "cli": {
-      "usage": "کاربرد: serpantinumd <دستور> [گزینه‌ها...]",
-      "description": "دیمن سرویس پس‌زمینه برای پوسته میزکار serpantinum.",
+      "usage": "کاربرد: axshelld <دستور> [گزینه‌ها...]",
+      "description": "دیمن سرویس پس‌زمینه برای پوسته میزکار axshell.",
       "commands": "دستورات:",
       "cmd_start": "شروع سرویس دیمن و راه‌اندازی پردازش‌های پس‌زمینه",
       "cmd_stop": "توقف سرویس دیمن در حال اجرا",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "فعال‌سازی ثبت وقایع با جزئیات کامل",
       "opt_version": "نمایش اطلاعات نسخه و خروج",
       "opt_help": "نمایش این پیام راهنما و خروج",
-      "stopped": "دیمن serpantinum متوقف شد.",
-      "status_running": "دیمن serpantinum در حال اجرا است (PID: {PID}).",
-      "status_stopped": "دیمن serpantinum در حال اجرا نیست.",
+      "stopped": "دیمن axshell متوقف شد.",
+      "status_running": "دیمن axshell در حال اجرا است (PID: {PID}).",
+      "status_stopped": "دیمن axshell در حال اجرا نیست.",
       "unknown_arg": "آرگومان ناشناخته: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects هنوز فعال است",
-      "body": "Serpantinum اکنون موتور صوتی خودش را دارد و EasyEffects ممکن است با آن تداخل کند. اگر EasyEffects را فقط برای Serpantinum استفاده می‌کردید، اجرای خودکار آن هنگام ورود را غیرفعال کنید."
+      "body": "AxShell اکنون موتور صوتی خودش را دارد و EasyEffects ممکن است با آن تداخل کند. اگر EasyEffects را فقط برای AxShell استفاده می‌کردید، اجرای خودکار آن هنگام ورود را غیرفعال کنید."
     }
   },
   "installer": {
@@ -1989,8 +1989,6 @@
       "target_version": "نسخه هدف:",
       "install_mode": "حالت نصب:",
       "github": "گیت‌هاب:",
-      "twitter": "توییتر:",
-      "reddit": "ردیت:",
       "telegram": "تلگرام:",
       "donate": "حمایت مالی:",
       "donate_sub": "(از پروژه حمایت کنید!)",
@@ -2016,7 +2014,6 @@
       "menu_overview": "نمای کلی نصب بسته‌ها ({count} بسته اصلی)",
       "menu_sddm": "مدیر ورود SDDM",
       "menu_wallpapers": "بسته تصاویر پس‌زمینه",
-      "menu_telemetry": "داده‌سنجی ناشناس",
       "menu_update": "به‌روزرسانی",
       "menu_reinstall": "نصب مجدد",
       "menu_install": "نصب",
@@ -2027,7 +2024,7 @@
       "buy_coffee": "اگر از این پروژه لذت می‌برید، برای من یک قهوه بخرید!",
       "installed_success": "✔ سرپانتینوم {ver} ({commit}) با موفقیت نصب شد.",
       "failed_packages": "بسته‌های زیر در حین نصب با خطا مواجه شدند:",
-      "restart_prompt": "برای شروع، کامپوزیتور خود را مجدداً راه‌اندازی کنید یا دستور 'serpantinumd start' را اجرا کنید.",
+      "restart_prompt": "برای شروع، کامپوزیتور خود را مجدداً راه‌اندازی کنید یا دستور 'axshelld start' را اجرا کنید.",
       "ask_reboot": "آیا مایلید سیستم را بازراه‌اندازی کنید؟ [y/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "موتور صوتی از پیش ساخته‌شده‌ای برای این سیستم وجود ندارد، در حال ساخت از سورس...",
       "checksum_failed": "دانلود موتور صوتی در بررسی چک‌سام رد شد، نادیده گرفته می‌شود.",
-      "download_failed": "دانلود موتور صوتی Serpantinum ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/ilyamiro/serpantinum-audio نصب کنید.",
-      "installed": "موتور صوتی Serpantinum {version} نصب شد",
-      "install_failed": "نصب موتور صوتی Serpantinum ناموفق بود. اکولایزر تا زمانی که از github.com/ilyamiro/serpantinum-audio نصب نشود کار نمی‌کند.",
-      "installing": "در حال نصب موتور صوتی Serpantinum...",
-      "up_to_date": "-> موتور صوتی Serpantinum {version} از قبل نصب شده است."
+      "download_failed": "دانلود موتور صوتی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/ilyamiro/serpantinum-audio نصب کنید.",
+      "installed": "موتور صوتی AxShell {version} نصب شد",
+      "install_failed": "نصب موتور صوتی AxShell ناموفق بود. اکولایزر تا زمانی که از github.com/ilyamiro/serpantinum-audio نصب نشود کار نمی‌کند.",
+      "installing": "در حال نصب موتور صوتی AxShell...",
+      "up_to_date": "-> موتور صوتی AxShell {version} از قبل نصب شده است."
     },
     "core": {
       "checksum_failed": "دانلود سرویس‌های اصلی در بررسی چک‌سام رد شد، نادیده گرفته می‌شود.",
-      "download_failed": "دانلود سرویس‌های اصلی Serpantinum ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن‌ها را از github.com/ilyamiro/serpantinum-core نصب کنید.",
-      "installed": "سرویس‌های اصلی Serpantinum {version} نصب شدند",
-      "install_failed": "نصب سرویس‌های اصلی Serpantinum ناموفق بود. میزان استفاده از سیستم، نشانگرهای قفل صفحه‌کلید و کلیپ‌بورد تا زمانی که از github.com/ilyamiro/serpantinum-core نصب نشوند کار نمی‌کنند.",
-      "installing": "در حال نصب سرویس‌های اصلی Serpantinum...",
+      "download_failed": "دانلود سرویس‌های اصلی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن‌ها را از github.com/ilyamiro/serpantinum-core نصب کنید.",
+      "installed": "سرویس‌های اصلی AxShell {version} نصب شدند",
+      "install_failed": "نصب سرویس‌های اصلی AxShell ناموفق بود. میزان استفاده از سیستم، نشانگرهای قفل صفحه‌کلید و کلیپ‌بورد تا زمانی که از github.com/ilyamiro/serpantinum-core نصب نشوند کار نمی‌کنند.",
+      "installing": "در حال نصب سرویس‌های اصلی AxShell...",
       "unsupported_arch": "بسته‌های از پیش ساخته‌شده سرویس‌های اصلی فقط برای x86_64 وجود دارند، نادیده گرفته می‌شود.",
-      "up_to_date": "-> سرویس‌های اصلی Serpantinum {version} از قبل نصب شده‌اند."
+      "up_to_date": "-> سرویس‌های اصلی AxShell {version} از قبل نصب شده‌اند."
     },
     "gamma": {
       "checksum_failed": "دانلود فیلتر نور آبی در بررسی چک‌سام رد شد، نادیده گرفته می‌شود.",
-      "download_failed": "دانلود فیلتر نور آبی Serpantinum ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/ilyamiro/serpantinum-gamma نصب کنید.",
-      "installed": "فیلتر نور آبی Serpantinum {version} نصب شد",
-      "install_failed": "نصب فیلتر نور آبی Serpantinum ناموفق بود. تا زمانی که از github.com/ilyamiro/serpantinum-gamma نصب نشود کار نمی‌کند.",
-      "installing": "در حال نصب فیلتر نور آبی Serpantinum...",
+      "download_failed": "دانلود فیلتر نور آبی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/ilyamiro/serpantinum-gamma نصب کنید.",
+      "installed": "فیلتر نور آبی AxShell {version} نصب شد",
+      "install_failed": "نصب فیلتر نور آبی AxShell ناموفق بود. تا زمانی که از github.com/ilyamiro/serpantinum-gamma نصب نشود کار نمی‌کند.",
+      "installing": "در حال نصب فیلتر نور آبی AxShell...",
       "unsupported_arch": "بسته‌های از پیش ساخته‌شده فیلتر نور آبی فقط برای x86_64 وجود دارند، نادیده گرفته می‌شود.",
-      "up_to_date": "-> فیلتر نور آبی Serpantinum {version} از قبل نصب شده است."
+      "up_to_date": "-> فیلتر نور آبی AxShell {version} از قبل نصب شده است."
     },
     "ski": {
       "checksum_failed": "دانلود Ski در بررسی چک‌سام رد شد، نادیده گرفته می‌شود.",

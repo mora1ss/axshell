@@ -11,18 +11,18 @@ slug: /installation
 **Migrating from v1:** All previous configuration will be backed up and unused. Configuration of compositor settings such as monitors, keybinds, and autostart is now up to you, as the project migrated from being dotfiles to being a shell.
 :::
 
-Serpantinum installs through an automated script on Arch Linux, Fedora, Void Linux, and their derivatives. The script detects your distribution and uses the matching package manager (`pacman`, `dnf`, or `xbps`). On NixOS, use the [flake and modules](/installation/nixos) instead.
+AxShell installs through an automated script on Arch Linux, Fedora, Void Linux, and their derivatives. The script detects your distribution and uses the matching package manager (`pacman`, `dnf`, or `xbps`). On NixOS, use the [flake and modules](/installation/nixos) instead.
 
 Use this installer:
 
 ```bash
-curl -fsSL install.serpantinum.dev | bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mora1ss/axshell/master/install/install.sh)"
 ```
 
 If this doesn't work, use:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ilyamiro/serpantinum/master/install/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mora1ss/axshell/master/install/install.sh)"
 ```
 
 :::info[NOTE]
@@ -37,10 +37,10 @@ Fedora and its derivatives, such as **Nobara** and **Ultramarine**, are installe
 
 Void Linux, both glibc and musl, is installed with `xbps`. Everything comes from the official repositories except:
 
-- **Hyprland**, which Void does not package. When you select it, the installer adds the third-party [black-hole.dev](https://mirror.black-hole.dev) repository in `/etc/xbps.d/20-serpantinum-hyprland.conf` and accepts its signing key. Niri, Sway, and Mango come from the official repositories.
+- **Hyprland**, which Void does not package. When you select it, the installer adds the third-party [black-hole.dev](https://mirror.black-hole.dev) repository in `/etc/xbps.d/20-axshell-hyprland.conf` and accepts its signing key. Niri, Sway, and Mango come from the official repositories.
 - **adw-gtk3** and **JetBrains Mono**, which are downloaded from their latest GitHub releases into `/usr/share/themes` and `/usr/share/fonts`.
 
-Services are enabled through runit. `dbus`, `bluetoothd`, and `power-profiles-daemon` start right away. `NetworkManager` and `sddm` start from the next boot, so the installer does not cut your network or take over the screen while it runs. If `dhcpcd` or `wpa_supplicant` were enabled, they are kept from starting at the next boot, since they conflict with NetworkManager. Wi-Fi networks must then be connected again through Serpantinum or `nmcli`. Display managers being replaced keep running until you reboot.
+Services are enabled through runit. `dbus`, `bluetoothd`, and `power-profiles-daemon` start right away. `NetworkManager` and `sddm` start from the next boot, so the installer does not cut your network or take over the screen while it runs. If `dhcpcd` or `wpa_supplicant` were enabled, they are kept from starting at the next boot, since they conflict with NetworkManager. Wi-Fi networks must then be connected again through AxShell or `nmcli`. Display managers being replaced keep running until you reboot.
 
 PipeWire is configured system-wide to launch WirePlumber and `pipewire-pulse`, with ALSA routed through it. Sessions started from SDDM get a D-Bus session bus and PipeWire automatically. If you start your compositor from a TTY instead, launch it with `dbus-run-session` and start `pipewire` from its autostart.
 
@@ -50,14 +50,14 @@ Arch Linux and its derivatives (EndeavourOS, Manjaro, CachyOS, Garuda, Artix and
 
 ## Build from source on Arch
 
-Arch-based distributions can build Serpantinum as a native package from this repository instead of running the installer script. The package installs the shell system-wide and pulls in every runtime dependency the installer would. The parts of the installer that change your home directory, services, or login screen are not done by a package, so you run them yourself afterwards.
+Arch-based distributions can build AxShell as a native package from this repository instead of running the installer script. The package installs the shell system-wide and pulls in every runtime dependency the installer would. The parts of the installer that change your home directory, services, or login screen are not done by a package, so you run them yourself afterwards.
 
 The repository contains two PKGBUILDs in `packaging/aur`, and they conflict with each other:
 
 | Package | Builds |
 | --- | --- |
-| `serpantinum` | The latest tagged release |
-| `serpantinum-git` | The latest commit on `master` |
+| `axshell` | The latest tagged release |
+| `axshell-git` | The latest commit on `master` |
 
 Install the build tools:
 
@@ -68,15 +68,15 @@ sudo pacman -S --needed base-devel git
 Then clone the repository and build the package:
 
 ```bash
-git clone --depth 1 https://github.com/ilyamiro/serpantinum.git
-cd serpantinum/packaging/aur/serpantinum
+git clone --depth 1 https://github.com/mora1ss/axshell.git
+cd axshell/packaging/aur/axshell
 makepkg -si
 ```
 
-For the latest commit instead of the latest release, use `cd serpantinum/packaging/aur/serpantinum-git`. `makepkg -si` installs the remaining dependencies with `pacman`, builds the package, and installs it.
+For the latest commit instead of the latest release, use `cd axshell/packaging/aur/axshell-git`. `makepkg -si` installs the remaining dependencies with `pacman`, builds the package, and installs it.
 
 :::warning[IMPORTANT]
-Do not run the installer script on a system where Serpantinum is installed this way. It would place a second copy in `~/.local/share/serpantinum` and link it over the packaged one. Update by rebuilding the package, as described below, and use the steps that follow for anything the installer would otherwise do. If the in-app update notification offers to run the installer, ignore it.
+Do not run the installer script on a system where AxShell is installed this way. It would place a second copy in `~/.local/share/axshell` and link it over the packaged one. Update by rebuilding the package, as described below, and use the steps that follow for anything the installer would otherwise do. If the in-app update notification offers to run the installer, ignore it.
 :::
 
 ### What the package does
@@ -85,29 +85,28 @@ Do not run the installer script on a system where Serpantinum is installed this 
 | --- | --- |
 | Install dependencies | Done, including Iosevka Nerd Font |
 | Replace `quickshell-git` with `quickshell` | Done, the package conflicts with `quickshell-git` and installs `quickshell` |
-| Install `serpantinum` and `serpantinumd` | Done, in `/usr/bin` |
+| Install `axshell` and `axshelld` | Done, in `/usr/bin` |
 | Install [serpantinum-audio](/audio) | Done, `serpantinum-audio` in `/usr/bin` |
 | Install [serpantinum-gamma](/gamma) | Done, `serpantinum-gamma` in `/usr/bin` |
 | Install [serpantinum-core](/core) | Done, `serpantinum-core` in `/usr/bin` |
-| Lock screen PAM service | Done, `/etc/pam.d/serpantinum` |
+| Lock screen PAM service | Done, `/etc/pam.d/axshell` |
 | SDDM theme files | Done, in `/usr/share/sddm/themes/material-you` |
 | Compositor configs | Manual, step 1 |
 | Kitty, Cava, and Fastfetch configs | Manual, step 2 |
 | Wallpapers | Manual, step 3 |
-| Serpantinum settings | Manual, step 4 |
+| AxShell settings | Manual, step 4 |
 | System services | Manual, step 5 |
 | Qt icon theme | Manual, step 6 |
 | SDDM configuration | Manual and optional, step 7 |
 | First launch guide | Manual, step 8 |
 
-The installer's anonymous install telemetry has no equivalent, so a package install sends none.
 
 ### Manual setup
 
-The packaged files live in `/usr/share/serpantinum`. These steps copy what you need into your home directory and are written to be pasted into a shell one after another, since later steps reuse variables from earlier ones.
+The packaged files live in `/usr/share/axshell`. These steps copy what you need into your home directory and are written to be pasted into a shell one after another, since later steps reuse variables from earlier ones.
 
 ```bash
-share=/usr/share/serpantinum
+share=/usr/share/axshell
 cfg="${XDG_CONFIG_HOME:-$HOME/.config}"
 ```
 
@@ -156,10 +155,10 @@ if [ -z "$pictures" ] || [ "$pictures" = "$HOME" ]; then
     pictures="$HOME/Pictures"
 fi
 wallpapers="$pictures/Wallpapers"
-repo="${XDG_CACHE_HOME:-$HOME/.cache}/serpantinum-wallpapers"
+repo="${XDG_CACHE_HOME:-$HOME/.cache}/axshell-wallpapers"
 
 mkdir -p "$wallpapers"
-git clone --depth 1 https://github.com/ilyamiro/shell-wallpapers.git "$repo"
+git clone --depth 1 https://github.com/mora1ss/shell-wallpapers.git "$repo"
 find "$repo" -path "$repo/.git" -prune -o -type f \
     \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.webp' \) \
     -exec cp -t "$wallpapers" {} +
@@ -167,17 +166,17 @@ find "$repo" -path "$repo/.git" -prune -o -type f \
 
 This is the full wallpaper pack. To keep only a few, copy those files out of `$repo` instead of running the last command.
 
-#### 4. Serpantinum settings
+#### 4. AxShell settings
 
 This merges the default settings with any settings you already have, keeps your values, and points the shell at your wallpaper folder:
 
 ```bash
-settings="$cfg/serpantinum/settings.json"
-mkdir -p "$cfg/serpantinum"
+settings="$cfg/axshell/settings.json"
+mkdir -p "$cfg/axshell"
 [ -s "$settings" ] || echo '{}' > "$settings"
 
 jq -s --arg wp "$wallpapers" '(.[0] * .[1]) * {wallpaperDir: $wp}' \
-    "$share/config/serpantinum/settings.json" "$settings" > "$settings.tmp" \
+    "$share/config/axshell/settings.json" "$settings" > "$settings.tmp" \
     && mv "$settings.tmp" "$settings"
 
 bash "$share/src/scripts/location.sh" --refresh
@@ -207,7 +206,7 @@ done
 
 if [ -z "$QT_QPA_PLATFORMTHEME" ] && ! grep -rqs '^QT_QPA_PLATFORMTHEME=' "$cfg/environment.d"; then
     mkdir -p "$cfg/environment.d"
-    printf 'QT_QPA_PLATFORMTHEME=qt6ct\n' > "$cfg/environment.d/serpantinum-qt.conf"
+    printf 'QT_QPA_PLATFORMTHEME=qt6ct\n' > "$cfg/environment.d/axshell-qt.conf"
 fi
 ```
 
@@ -251,26 +250,26 @@ sudo systemctl enable sddm.service
 Show the welcome guide on the next start:
 
 ```bash
-rm -f "${XDG_STATE_HOME:-$HOME/.local/state}/serpantinum/first_launch.done"
+rm -f "${XDG_STATE_HOME:-$HOME/.local/state}/axshell/first_launch.done"
 ```
 
-Log in to your compositor. The configs from step 1 start Serpantinum on login. If you kept your own compositor config, add `serpantinumd start` to its autostart.
+Log in to your compositor. The configs from step 1 start AxShell on login. If you kept your own compositor config, add `axshelld start` to its autostart.
 
 ### Updating and removing
 
 To update, pull the repository and build again. The new package replaces the installed one:
 
 ```bash
-cd serpantinum
+cd axshell
 git pull
-cd packaging/aur/serpantinum
+cd packaging/aur/axshell
 makepkg -si
 ```
 
 Removing the package leaves everything in your home directory alone:
 
 ```bash
-sudo pacman -Rns serpantinum
+sudo pacman -Rns axshell
 ```
 
-Delete `~/.config/serpantinum`, `~/.local/state/serpantinum`, and `~/.cache/serpantinum` yourself if you also want your settings gone.
+Delete `~/.config/axshell`, `~/.local/state/axshell`, and `~/.cache/axshell` yourself if you also want your settings gone.

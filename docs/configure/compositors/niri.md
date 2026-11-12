@@ -23,14 +23,14 @@ The shell daemon and clipboard history are launched from `config/autostart.kdl`:
 ```kdl
 spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store"
 spawn-at-startup "bash" "-c" "wl-paste --type image --watch cliphist store"
-spawn-at-startup "serpantinumd" "start"
+spawn-at-startup "axshelld" "start"
 ```
 
-`serpantinumd start` also starts the [audio engine](/audio).
+`axshelld start` also starts the [audio engine](/audio).
 
 ## Keybindings
 
-Shell overlays and controls are bound in `config/keybinds.kdl` using `spawn "serpantinum" "msg" "toggle" "<module>"`:
+Shell overlays and controls are bound in `config/keybinds.kdl` using `spawn "axshell" "msg" "toggle" "<module>"`:
 
 - `launcher` - application launcher (`Mod+D`)
 - `system` - system control panel (`Mod+B`)
@@ -45,16 +45,16 @@ Shell overlays and controls are bound in `config/keybinds.kdl` using `spawn "ser
 Workspace switching is routed through the shell to update bar indicators:
 
 ```kdl
-Mod+1 { spawn "serpantinum" "msg" "workspace" "1"; }
-Mod+2 { spawn "serpantinum" "msg" "workspace" "2"; }
+Mod+1 { spawn "axshell" "msg" "workspace" "1"; }
+Mod+2 { spawn "axshell" "msg" "workspace" "2"; }
 // ...
-Mod+Shift+1 { spawn "serpantinum" "msg" "workspace" "1" "move"; }
+Mod+Shift+1 { spawn "axshell" "msg" "workspace" "1" "move"; }
 ```
 
 Quick utility actions:
-- Lock screen: `Mod+L { spawn "serpantinum" "lock"; }`
-- Reload shell: `Mod+R { spawn "serpantinum" "reload"; }`
-- Bar autohide: `Mod+A { spawn "serpantinum" "msg" "bar" "autohide"; }`
-- Screenshots: `Print { spawn "serpantinum" "screenshot"; }` (add `--edit` or `--full`)
+- Lock screen: `Mod+L { spawn "axshell" "lock"; }`
+- Reload shell: `Mod+R { spawn "axshell" "reload"; }`
+- Bar autohide: `Mod+A { spawn "axshell" "msg" "bar" "autohide"; }`
+- Screenshots: `Print { spawn "axshell" "screenshot"; }` (add `--edit` or `--full`)
 - Brightness: `XF86MonBrightnessDown` and `XF86MonBrightnessUp`
 - Volume: `XF86AudioLowerVolume`, `XF86AudioRaiseVolume`, and `XF86AudioMute`

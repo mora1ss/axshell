@@ -3,11 +3,11 @@
 with lib;
 
 let
-  cfg = config.programs.serpantinum;
+  cfg = config.programs.axshell;
 in
 {
-  options.programs.serpantinum = {
-    enable = mkEnableOption "system-level support for the Serpantinum desktop shell";
+  options.programs.axshell = {
+    enable = mkEnableOption "system-level support for the AxShell desktop shell";
   };
 
   config = mkIf cfg.enable {
@@ -17,7 +17,7 @@ in
     hardware.i2c.enable = mkDefault true;
     services.power-profiles-daemon.enable = mkDefault true;
     security.rtkit.enable = mkDefault true;
-    security.pam.services.serpantinum = { };
+    security.pam.services.axshell = { };
 
     services.pipewire = {
       enable = mkDefault true;

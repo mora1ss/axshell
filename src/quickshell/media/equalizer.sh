@@ -4,8 +4,8 @@ source "$(dirname "${BASH_SOURCE[0]}")/../../scripts/caching.sh"
 qs_ensure_cache "music"
 
 STATE_FILE="$QS_RUN_MUSIC/eq_state.json"
-SINK_NAME="serpantinum_sink"
-DAEMON_STATE="${XDG_STATE_HOME:-$HOME/.local/state}/serpantinum/audio.state"
+SINK_NAME="axshell_sink"
+DAEMON_STATE="${XDG_STATE_HOME:-$HOME/.local/state}/axshell/audio.state"
 TEST_FILE="$QS_RUN_MUSIC/channel_test.wav"
 TEST_PID_FILE="$QS_RUN_MUSIC/channel_test.pid"
 
@@ -188,7 +188,7 @@ PY
         }
         trap cleanup_test EXIT TERM INT
         pw-play "${target[@]}" \
-            -P '{"application.id":"serpantinum-audio-test","application.name":"Serpantinum audio test","media.role":"music"}' \
+            -P '{"application.id":"serpantinum-audio-test","application.name":"AxShell audio test","media.role":"music"}' \
             "$TEST_FILE" >/dev/null 2>&1 &
         player_pid=$!
         wait "$player_pid"

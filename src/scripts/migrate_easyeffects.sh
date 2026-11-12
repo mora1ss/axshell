@@ -96,7 +96,7 @@ announce() {
     title="$(t "daemon.easyeffects.title")"
     body="$(t "daemon.easyeffects.body")"
 
-    if [ -n "${SERPANTINUM_INSTALLER:-}" ]; then
+    if [ -n "${AXSHELL_INSTALLER:-}" ]; then
         echo -e "\n\e[33m[ WARN ]\e[0m $title"
         echo "  $body"
         return

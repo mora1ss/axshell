@@ -96,8 +96,8 @@ Item {
         let keys = Object.keys(pendingTargets);
         if (keys.length === 0) return;
 
-        let scriptPath = (typeof Caching !== "undefined" && Caching.serpantinumDir)
-            ? Caching.serpantinumDir + "/scripts/gamma.sh"
+        let scriptPath = (typeof Caching !== "undefined" && Caching.axshellDir)
+            ? Caching.axshellDir + "/scripts/gamma.sh"
             : "";
 
         if (!scriptPath) {

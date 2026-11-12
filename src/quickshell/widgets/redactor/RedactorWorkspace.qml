@@ -506,7 +506,7 @@ Item {
                 property real lineWidth: 1.0
                 property color lineColor: Qt.rgba(ThemeBackend.text.r, ThemeBackend.text.g, ThemeBackend.text.b, 0.1)
 
-                fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/ui/grid_pattern.frag.qsb"
+                fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/ui/grid_pattern.frag.qsb"
             }
         }
 

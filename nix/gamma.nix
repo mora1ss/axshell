@@ -7,7 +7,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   version = "0.7.0";
 
   src = fetchFromGitHub {
-    owner = "ilyamiro";
+    owner = "mora1ss";
     repo = "serpantinum-gamma";
     rev = "v${finalAttrs.version}";
     hash = "sha256-1+vPg5TvFeEAT+LEhOIAtl0qZhGlNqRx5py7vr5a+vM=";

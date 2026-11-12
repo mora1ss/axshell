@@ -7,13 +7,13 @@ slug: /overview
 
 # Overview
 
-![Serpantinum Banner](./assets/banner.png)
+![AxShell Banner](./assets/banner.png)
 
-**Serpantinum** is a Wayland desktop shell. It started as ilyamiro's `nixos-configuration` dotfiles and became a dedicated shell.
+**AxShell** is a Wayland desktop shell. It started as mora1ss's `nixos-configuration` dotfiles and became a dedicated shell.
 
 ## Compositor configuration
 
-Serpantinum is only a desktop shell. It does not manage keybinds or monitors.
+AxShell is only a desktop shell. It does not manage keybinds or monitors.
 
 Compositor guides:
 

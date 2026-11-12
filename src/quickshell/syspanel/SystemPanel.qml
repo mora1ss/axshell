@@ -318,7 +318,7 @@ Item {
                     root.exitCallback = null;
                     cb();
                 } else {
-                    Quickshell.execDetached(["bash", Caching.serpantinumDir + "/scripts/qs_manager.sh", "close"]);
+                    Quickshell.execDetached(["bash", Caching.axshellDir + "/scripts/qs_manager.sh", "close"]);
                 }
             }
         }
@@ -516,7 +516,7 @@ Item {
                                 interval: 150
                                 onTriggered: {
                                     closeSequence.start();
-                                    Quickshell.execDetached(["bash", Caching.serpantinumDir + "/scripts/system/exit.sh"]);
+                                    Quickshell.execDetached(["bash", Caching.axshellDir + "/scripts/system/exit.sh"]);
                                 }
                             }
 

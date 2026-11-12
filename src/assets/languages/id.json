@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "Memuat...",
       "unknown": "Tidak diketahui",
       "version_by": "v{version} • oleh {author}",
@@ -20,7 +20,7 @@
         "uptime": "Waktu aktif",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "Selamat Datang",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "Huruf",
-        "desc": "Pilih huruf default yang digunakan oleh serpantinum",
+        "desc": "Pilih huruf default yang digunakan oleh axshell",
         "select": "Pilih..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "Gagal memperbarui konfigurasi: {line}"
         },
         "hint": {
-          "select_in_app": "Pilih tema Serpantinum di pengaturan aplikasi",
+          "select_in_app": "Pilih tema AxShell di pengaturan aplikasi",
           "restart": "Mulai ulang jendela yang terbuka untuk melihat warna baru",
-          "neovim": "Jalankan :colorscheme serpantinum untuk memakainya",
+          "neovim": "Jalankan :colorscheme axshell untuk memakainya",
           "helix": "Jalankan :config-reload di editor yang terbuka untuk melihat warna baru",
-          "fastfetch": "Jalankan fastfetch -c serpantinum untuk memakainya",
-          "spicetify": "Jalankan spicetify config current_theme Serpantinum, lalu spicetify apply",
-          "discord": "Aktifkan Serpantinum di pengaturan tema klien",
-          "emacs": "Jalankan M-x load-theme serpantinum untuk menggunakannya",
+          "fastfetch": "Jalankan fastfetch -c axshell untuk memakainya",
+          "spicetify": "Jalankan spicetify config current_theme AxShell, lalu spicetify apply",
+          "discord": "Aktifkan AxShell di pengaturan tema klien",
+          "emacs": "Jalankan M-x load-theme axshell untuk menggunakannya",
           "steam": "Pasang Material-Theme dengan Millennium, lalu pilih Matugen di pengaturan warnanya",
-          "heroic": "Atur jalur tema kustom Heroic ke folder temanya, lalu pilih serpantinum",
+          "heroic": "Atur jalur tema kustom Heroic ke folder temanya, lalu pilih axshell",
           "telegram": "Muat file tema dari pengaturan obrolan Telegram"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "Dibuat oleh @{author}",
     "welcome": "Selamat Datang",
     "tagline": "Shell desktop yang dibangun untuk",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "Pengaturan",
-      "desc": "Pengaturan Serpantinum"
+      "desc": "Pengaturan AxShell"
     },
     "calendar": {
       "name": "Kalender & jam",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "Penggunaan: serpantinum [perintah] [opsi...]",
+    "usage": "Penggunaan: axshell [perintah] [opsi...]",
     "description": "Shell desktop untuk kompositor Wayland.",
     "commands": "Perintah:",
     "script_commands": "Perintah skrip:",
@@ -1880,23 +1880,23 @@
     "version_desc": "Tampilkan informasi versi lalu keluar",
     "help_desc": "Tampilkan pesan bantuan ini lalu keluar",
     "examples": "Contoh:",
-    "daemon_stopped": "Daemon Serpantinum dihentikan.",
-    "daemon_restarted": "Daemon Serpantinum dimulai ulang.",
-    "starting_daemon": "Daemon tidak berjalan. Memulai serpantinumd di latar belakang...",
+    "daemon_stopped": "Daemon AxShell dihentikan.",
+    "daemon_restarted": "Daemon AxShell dimulai ulang.",
+    "starting_daemon": "Daemon tidak berjalan. Memulai axshelld di latar belakang...",
     "error_missing_qml": "Kesalahan: target untuk diluncurkan tidak ada.",
-    "launch_usage": "Penggunaan: serpantinum launch <start> [arg...]",
+    "launch_usage": "Penggunaan: axshell launch <start> [arg...]",
     "error_qml_not_found": "Kesalahan: tidak dapat menemukan {NAME}.qml di {DIR}",
     "error_shell_qml_not_found": "Kesalahan: tidak dapat menemukan jalur ke shell.qml di {DIR}",
     "error_unknown_command": "Kesalahan: perintah tidak dikenal '{CMD}'.",
     "error_unknown_target": "Kesalahan: target tidak dikenal '{TARGET}'.",
     "launch_help": {
-      "usage": "Penggunaan: serpantinum launch <start> [argumen...]",
+      "usage": "Penggunaan: axshell launch <start> [argumen...]",
       "description": "Luncurkan komponen mandiri langsung dalam mode eksekusi.",
       "available_targets": "Target yang tersedia:",
       "target_start": "Luncurkan antarmuka pengaturan awal"
     },
     "msg_help": {
-      "usage": "Penggunaan: serpantinum msg <command|workspace> [argumen...]",
+      "usage": "Penggunaan: axshell msg <command|workspace> [argumen...]",
       "description": "Kirim pesan tata letak, ruang kerja, dan pengelolaan jendela secara langsung.",
       "available_commands": "Pesan yang tersedia:",
       "cmd_workspace": "Beralih ke ruang kerja <num> (tambahkan 'move' untuk mengirim jendela aktif)",
@@ -1905,7 +1905,7 @@
       "cmd_close": "Tutup semua hamparan shell yang aktif"
     },
     "ipc_help": {
-      "usage": "Penggunaan: serpantinum ipc call <target> <method> [argumen...]",
+      "usage": "Penggunaan: axshell ipc call <target> <method> [argumen...]",
       "description": "Kirim panggilan IPC langsung ke instans quickshell yang sedang berjalan."
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "Baca dan ubah pengaturan (get, set, dump, path, edit)",
     "error_unknown_language": "Kesalahan: bahasa '{CODE}' tidak dikenal.",
     "update_available": "Pembaruan tersedia: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum sudah yang terbaru ({VERSION}).",
+    "up_to_date": "AxShell sudah yang terbaru ({VERSION}).",
     "state_on": "aktif",
     "state_off": "nonaktif",
     "error_unknown_theme": "Kesalahan: tema tidak dikenal '{NAME}'.",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "Daemon sudah berjalan. Keluar...",
-    "shutting_down": "Mematikan daemon serpantinum...",
-    "launching": "Meluncurkan daemon serpantinum...",
+    "shutting_down": "Mematikan daemon axshell...",
+    "launching": "Meluncurkan daemon axshell...",
     "cli": {
-      "usage": "Penggunaan: serpantinumd <perintah> [opsi...]",
-      "description": "Daemon layanan latar belakang untuk shell desktop serpantinum.",
+      "usage": "Penggunaan: axshelld <perintah> [opsi...]",
+      "description": "Daemon layanan latar belakang untuk shell desktop axshell.",
       "commands": "Perintah:",
       "cmd_start": "Mulai layanan daemon dan jalankan pekerja latar belakang",
       "cmd_stop": "Hentikan layanan daemon yang sedang berjalan",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "Aktifkan pencatatan log verbose",
       "opt_version": "Tampilkan informasi versi lalu keluar",
       "opt_help": "Tampilkan pesan bantuan ini lalu keluar",
-      "stopped": "Daemon Serpantinum dihentikan.",
-      "status_running": "Daemon Serpantinum sedang berjalan (PID: {PID}).",
-      "status_stopped": "Daemon Serpantinum tidak berjalan.",
+      "stopped": "Daemon AxShell dihentikan.",
+      "status_running": "Daemon AxShell sedang berjalan (PID: {PID}).",
+      "status_stopped": "Daemon AxShell tidak berjalan.",
       "unknown_arg": "Argumen tidak dikenal: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects masih aktif",
-      "body": "Serpantinum kini memiliki mesin audio sendiri, dan EasyEffects dapat mengganggunya. Jika Anda hanya memakai EasyEffects untuk Serpantinum, matikan agar tidak berjalan otomatis saat masuk."
+      "body": "AxShell kini memiliki mesin audio sendiri, dan EasyEffects dapat mengganggunya. Jika Anda hanya memakai EasyEffects untuk AxShell, matikan agar tidak berjalan otomatis saat masuk."
     }
   },
   "installer": {
@@ -1975,7 +1975,7 @@
     },
     "os": {
       "error_root": "Kesalahan: Jangan jalankan skrip ini langsung dengan root/sudo. Jalankan sebagai pengguna biasa.",
-      "error_unsupported": "OS tidak didukung ({os}). Serpantinum hanya mendukung Arch Linux dan turunannya.",
+      "error_unsupported": "OS tidak didukung ({os}). AxShell hanya mendukung Arch Linux dan turunannya.",
       "error_not_found": "Tidak dapat mendeteksi OS. /etc/os-release tidak ditemukan.",
       "unknown_cpu": "CPU tidak dikenal",
       "unknown_gpu": "GPU tidak dikenal / mesin virtual",
@@ -1989,8 +1989,6 @@
       "target_version": "Versi target:",
       "install_mode": "Mode instalasi:",
       "github": "GitHub:",
-      "twitter": "Twitter:",
-      "reddit": "Reddit:",
       "telegram": "Telegram:",
       "donate": "Donasi:",
       "donate_sub": "(Dukung proyek ini!)",
@@ -2016,7 +2014,6 @@
       "menu_overview": "Ringkasan instalasi paket ({count} paket inti)",
       "menu_sddm": "Manajer login SDDM",
       "menu_wallpapers": "Paket gambar latar",
-      "menu_telemetry": "Telemetri anonim",
       "menu_update": "Perbarui",
       "menu_reinstall": "Instal ulang",
       "menu_install": "Instal",
@@ -2025,9 +2022,9 @@
       "tagline": "Shell desktop yang dibangun untuk Anda",
       "support_creator": "Dukung pembuat:",
       "buy_coffee": "Jika Anda menikmati proyek ini, pertimbangkan untuk mentraktir saya kopi!",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) berhasil diinstal.",
+      "installed_success": "✔ AxShell {ver} ({commit}) berhasil diinstal.",
       "failed_packages": "Paket-paket berikut mengalami kesalahan saat instalasi:",
-      "restart_prompt": "Mulai ulang kompositor Anda atau jalankan 'serpantinumd start' untuk memulai.",
+      "restart_prompt": "Mulai ulang kompositor Anda atau jalankan 'axshelld start' untuk memulai.",
       "ask_reboot": "Apakah Anda ingin memulai ulang sistem? [y/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "Tidak ada mesin audio prakompilasi untuk sistem ini, membangun dari sumber...",
       "checksum_failed": "Unduhan mesin audio gagal pemeriksaan checksum, dilewati.",
-      "download_failed": "Tidak dapat mengunduh mesin audio Serpantinum, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-audio.",
-      "installed": "Mesin audio Serpantinum {version} terpasang",
-      "install_failed": "Gagal memasang mesin audio Serpantinum. Equalizer tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-audio.",
-      "installing": "Memasang mesin audio Serpantinum...",
-      "up_to_date": "-> Mesin audio Serpantinum {version} sudah terpasang."
+      "download_failed": "Tidak dapat mengunduh mesin audio AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-audio.",
+      "installed": "Mesin audio AxShell {version} terpasang",
+      "install_failed": "Gagal memasang mesin audio AxShell. Equalizer tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-audio.",
+      "installing": "Memasang mesin audio AxShell...",
+      "up_to_date": "-> Mesin audio AxShell {version} sudah terpasang."
     },
     "core": {
       "checksum_failed": "Unduhan layanan inti gagal pemeriksaan checksum, dilewati.",
-      "download_failed": "Tidak dapat mengunduh layanan inti Serpantinum, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-core.",
-      "installed": "Layanan inti Serpantinum {version} terpasang",
-      "install_failed": "Gagal memasang layanan inti Serpantinum. Penggunaan sistem, indikator kunci keyboard, dan papan klip tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-core.",
-      "installing": "Memasang layanan inti Serpantinum...",
+      "download_failed": "Tidak dapat mengunduh layanan inti AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-core.",
+      "installed": "Layanan inti AxShell {version} terpasang",
+      "install_failed": "Gagal memasang layanan inti AxShell. Penggunaan sistem, indikator kunci keyboard, dan papan klip tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-core.",
+      "installing": "Memasang layanan inti AxShell...",
       "unsupported_arch": "Paket prakompilasi layanan inti hanya tersedia untuk x86_64, dilewati.",
-      "up_to_date": "-> Layanan inti Serpantinum {version} sudah terpasang."
+      "up_to_date": "-> Layanan inti AxShell {version} sudah terpasang."
     },
     "gamma": {
       "checksum_failed": "Unduhan filter cahaya biru gagal pemeriksaan checksum, dilewati.",
-      "download_failed": "Tidak dapat mengunduh filter cahaya biru Serpantinum, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-gamma.",
-      "installed": "Filter cahaya biru Serpantinum {version} terpasang",
-      "install_failed": "Gagal memasang filter cahaya biru Serpantinum. Filter tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-gamma.",
-      "installing": "Memasang filter cahaya biru Serpantinum...",
+      "download_failed": "Tidak dapat mengunduh filter cahaya biru AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-gamma.",
+      "installed": "Filter cahaya biru AxShell {version} terpasang",
+      "install_failed": "Gagal memasang filter cahaya biru AxShell. Filter tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-gamma.",
+      "installing": "Memasang filter cahaya biru AxShell...",
       "unsupported_arch": "Paket prakompilasi filter cahaya biru hanya tersedia untuk x86_64, dilewati.",
-      "up_to_date": "-> Filter cahaya biru Serpantinum {version} sudah terpasang."
+      "up_to_date": "-> Filter cahaya biru AxShell {version} sudah terpasang."
     },
     "ski": {
       "checksum_failed": "Unduhan Ski gagal pemeriksaan checksum, dilewati.",

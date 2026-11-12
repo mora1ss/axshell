@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "Завантаження...",
       "unknown": "Невідомо",
       "version_by": "v{version} • від {author}",
@@ -20,7 +20,7 @@
         "uptime": "Час роботи",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "Ласкаво просимо",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "Шрифт",
-        "desc": "Оберіть типовий шрифт для serpantinum",
+        "desc": "Оберіть типовий шрифт для axshell",
         "select": "Обрати..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "Не вдалося оновити конфігурацію: {line}"
         },
         "hint": {
-          "select_in_app": "Виберіть тему Serpantinum у налаштуваннях застосунку",
+          "select_in_app": "Виберіть тему AxShell у налаштуваннях застосунку",
           "restart": "Перезапустіть відкриті вікна, щоб побачити нові кольори",
-          "neovim": "Виконайте :colorscheme serpantinum, щоб використати її",
+          "neovim": "Виконайте :colorscheme axshell, щоб використати її",
           "helix": "Виконайте :config-reload у відкритих редакторах, щоб побачити нові кольори",
-          "fastfetch": "Виконайте fastfetch -c serpantinum, щоб використати його",
-          "spicetify": "Виконайте spicetify config current_theme Serpantinum, потім spicetify apply",
-          "discord": "Увімкніть Serpantinum у налаштуваннях тем клієнта",
-          "emacs": "Виконайте M-x load-theme serpantinum, щоб використати її",
+          "fastfetch": "Виконайте fastfetch -c axshell, щоб використати його",
+          "spicetify": "Виконайте spicetify config current_theme AxShell, потім spicetify apply",
+          "discord": "Увімкніть AxShell у налаштуваннях тем клієнта",
+          "emacs": "Виконайте M-x load-theme axshell, щоб використати її",
           "steam": "Встановіть Material-Theme через Millennium, потім виберіть Matugen у його налаштуваннях кольорів",
-          "heroic": "Вкажіть у Heroic шлях до власних тем у його теці тем, потім виберіть serpantinum",
+          "heroic": "Вкажіть у Heroic шлях до власних тем у його теці тем, потім виберіть axshell",
           "telegram": "Завантажте файл теми в налаштуваннях чатів Telegram"
         },
         "list": {
@@ -1607,7 +1607,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "Створено @{author}",
     "welcome": "Ласкаво просимо",
     "tagline": "Оболонка робочого столу, створена для",
@@ -1743,7 +1743,7 @@
     },
     "guide": {
       "name": "Налаштування",
-      "desc": "Налаштування serpantinum"
+      "desc": "Налаштування axshell"
     },
     "calendar": {
       "name": "Календар і годинник",
@@ -1867,7 +1867,7 @@
     }
   },
   "cli": {
-    "usage": "Використання: serpantinum [команда] [опції...]",
+    "usage": "Використання: axshell [команда] [опції...]",
     "description": "Оболонка робочого столу для композиторів wayland.",
     "commands": "Команди:",
     "script_commands": "Команди скриптів:",
@@ -1881,23 +1881,23 @@
     "version_desc": "Показати інформацію про версію і вийти",
     "help_desc": "Показати цю довідку і вийти",
     "examples": "Приклади:",
-    "daemon_stopped": "Службу serpantinum зупинено.",
-    "daemon_restarted": "Службу serpantinum перезапущено.",
-    "starting_daemon": "Службу не запущено. Запуск serpantinumd у фоновому режимі...",
+    "daemon_stopped": "Службу axshell зупинено.",
+    "daemon_restarted": "Службу axshell перезапущено.",
+    "starting_daemon": "Службу не запущено. Запуск axshelld у фоновому режимі...",
     "error_missing_qml": "Помилка: не вказано ціль для запуску.",
-    "launch_usage": "Використання: serpantinum launch <start> [аргументи...]",
+    "launch_usage": "Використання: axshell launch <start> [аргументи...]",
     "error_qml_not_found": "Помилка: не вдалося знайти {NAME}.qml у {DIR}",
     "error_shell_qml_not_found": "Помилка: не вдалося визначити шлях до shell.qml у {DIR}",
     "error_unknown_command": "Помилка: невідома команда '{CMD}'.",
     "error_unknown_target": "Помилка: невідома ціль '{TARGET}'.",
     "launch_help": {
-      "usage": "Використання: serpantinum launch <start> [аргументи...]",
+      "usage": "Використання: axshell launch <start> [аргументи...]",
       "description": "Запуск автономних компонентів напряму в режимі runner.",
       "available_targets": "Доступні цілі:",
       "target_start": "Запустити інтерфейс початкового налаштування"
     },
     "msg_help": {
-      "usage": "Використання: serpantinum msg <команда|робочийпростір> [аргументи...]",
+      "usage": "Використання: axshell msg <команда|робочийпростір> [аргументи...]",
       "description": "Надсилання повідомлень розмітки, робочих просторів і керування вікнами напряму.",
       "available_commands": "Доступні повідомлення:",
       "cmd_workspace": "Перемкнутися на робочий простір <номер> (додайте 'move', щоб перемістити активне вікно)",
@@ -1906,7 +1906,7 @@
       "cmd_close": "Закрити будь-який активний оверлей оболонки"
     },
     "ipc_help": {
-      "usage": "Використання: serpantinum ipc call <ціль> <метод> [аргументи...]",
+      "usage": "Використання: axshell ipc call <ціль> <метод> [аргументи...]",
       "description": "Надіслати виклик IPC напряму запущеному екземпляру quickshell."
     },
     "scripts": {
@@ -1932,7 +1932,7 @@
     "config_desc": "Читання та зміна налаштувань (get, set, dump, path, edit)",
     "error_unknown_language": "Помилка: невідома мова '{CODE}'.",
     "update_available": "Доступне оновлення: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum актуальний ({VERSION}).",
+    "up_to_date": "AxShell актуальний ({VERSION}).",
     "state_on": "увімк.",
     "state_off": "вимк.",
     "error_unknown_theme": "Помилка: невідома тема '{NAME}'.",
@@ -1946,11 +1946,11 @@
   },
   "daemon": {
     "already_running": "Службу вже запущено. Вихід...",
-    "shutting_down": "Завершення роботи служби serpantinum...",
-    "launching": "Запуск служби serpantinum...",
+    "shutting_down": "Завершення роботи служби axshell...",
+    "launching": "Запуск служби axshell...",
     "cli": {
-      "usage": "Використання: serpantinumd <команда> [опції...]",
-      "description": "Фонова служба для оболонки робочого столу serpantinum.",
+      "usage": "Використання: axshelld <команда> [опції...]",
+      "description": "Фонова служба для оболонки робочого столу axshell.",
       "commands": "Команди:",
       "cmd_start": "Запустити службу та фонові процеси",
       "cmd_stop": "Зупинити запущену службу",
@@ -1959,15 +1959,15 @@
       "opt_verbose": "Увімкнути докладний вивід логів",
       "opt_version": "Показати інформацію про версію і вийти",
       "opt_help": "Показати цю довідку і вийти",
-      "stopped": "Службу serpantinum зупинено.",
-      "status_running": "Службу serpantinum запущено (PID: {PID}).",
-      "status_stopped": "Службу serpantinum не запущено.",
+      "stopped": "Службу axshell зупинено.",
+      "status_running": "Службу axshell запущено (PID: {PID}).",
+      "status_stopped": "Службу axshell не запущено.",
       "unknown_arg": "Невідомий аргумент: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects досі увімкнено",
-      "body": "Тепер Serpantinum має власний аудіорушій, і EasyEffects може йому заважати. Якщо ви використовували EasyEffects лише для Serpantinum, вимкніть його запуск під час входу в систему."
+      "body": "Тепер AxShell має власний аудіорушій, і EasyEffects може йому заважати. Якщо ви використовували EasyEffects лише для AxShell, вимкніть його запуск під час входу в систему."
     }
   },
   "installer": {
@@ -1976,7 +1976,7 @@
     },
     "os": {
       "error_root": "Помилка: не запускайте цей скрипт від root/sudo. Запустіть від звичайного користувача.",
-      "error_unsupported": "Непідтримувана ОС ({os}). Serpantinum підтримує лише arch linux та його похідні.",
+      "error_unsupported": "Непідтримувана ОС ({os}). AxShell підтримує лише arch linux та його похідні.",
       "error_not_found": "Не вдалося визначити ОС. /etc/os-release не знайдено.",
       "unknown_cpu": "Невідомий процесор",
       "unknown_gpu": "Невідомо / віртуальна машина",
@@ -1990,8 +1990,6 @@
       "target_version": "Цільова версія:",
       "install_mode": "Режим встановлення:",
       "github": "GitHub:",
-      "twitter": "Twitter:",
-      "reddit": "Reddit:",
       "telegram": "Telegram:",
       "donate": "Підтримати:",
       "donate_sub": "(Підтримайте проєкт!)",
@@ -2017,7 +2015,6 @@
       "menu_overview": "Огляд встановлення пакетів ({count} основних пакетів)",
       "menu_sddm": "Дисплейний менеджер SDDM",
       "menu_wallpapers": "Набір шпалер",
-      "menu_telemetry": "Анонімна телеметрія",
       "menu_update": "Оновити",
       "menu_reinstall": "Перевстановити",
       "menu_install": "Встановити",
@@ -2026,9 +2023,9 @@
       "tagline": "Оболонка робочого столу, створена для вас",
       "support_creator": "Підтримати автора:",
       "buy_coffee": "Якщо вам подобається цей проєкт, пригостіть автора кавою!",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) успішно встановлено.",
+      "installed_success": "✔ AxShell {ver} ({commit}) успішно встановлено.",
       "failed_packages": "Під час встановлення таких пакетів виникли помилки:",
-      "restart_prompt": "Перезапустіть композитор або виконайте 'serpantinumd start' для початку роботи.",
+      "restart_prompt": "Перезапустіть композитор або виконайте 'axshelld start' для початку роботи.",
       "ask_reboot": "Перезавантажити систему зараз? [y/n] "
     },
     "deps": {
@@ -2057,29 +2054,29 @@
     "audio": {
       "building": "Для цієї системи немає готового аудіодвигуна, збирання з вихідного коду...",
       "checksum_failed": "Завантажений аудіодвигун не пройшов перевірку контрольної суми, пропуск.",
-      "download_failed": "Не вдалося завантажити аудіодвигун Serpantinum, пропуск. Ви можете встановити його пізніше з github.com/ilyamiro/serpantinum-audio.",
-      "installed": "Аудіодвигун Serpantinum {version} встановлено",
-      "install_failed": "Не вдалося встановити аудіодвигун Serpantinum. Еквалайзер не працюватиме, доки його не встановлять із github.com/ilyamiro/serpantinum-audio.",
-      "installing": "Встановлення аудіодвигуна Serpantinum...",
-      "up_to_date": "-> Аудіодвигун Serpantinum {version} уже встановлено."
+      "download_failed": "Не вдалося завантажити аудіодвигун AxShell, пропуск. Ви можете встановити його пізніше з github.com/ilyamiro/serpantinum-audio.",
+      "installed": "Аудіодвигун AxShell {version} встановлено",
+      "install_failed": "Не вдалося встановити аудіодвигун AxShell. Еквалайзер не працюватиме, доки його не встановлять із github.com/ilyamiro/serpantinum-audio.",
+      "installing": "Встановлення аудіодвигуна AxShell...",
+      "up_to_date": "-> Аудіодвигун AxShell {version} уже встановлено."
     },
     "core": {
       "checksum_failed": "Завантажені основні служби не пройшли перевірку контрольної суми, пропуск.",
-      "download_failed": "Не вдалося завантажити основні служби Serpantinum, пропуск. Ви можете встановити їх пізніше з github.com/ilyamiro/serpantinum-core.",
-      "installed": "Основні служби Serpantinum {version} встановлено",
-      "install_failed": "Не вдалося встановити основні служби Serpantinum. Використання системи, індикатори блокування клавіатури та буфер обміну не працюватимуть, доки їх не встановлять із github.com/ilyamiro/serpantinum-core.",
-      "installing": "Встановлення основних служб Serpantinum...",
+      "download_failed": "Не вдалося завантажити основні служби AxShell, пропуск. Ви можете встановити їх пізніше з github.com/ilyamiro/serpantinum-core.",
+      "installed": "Основні служби AxShell {version} встановлено",
+      "install_failed": "Не вдалося встановити основні служби AxShell. Використання системи, індикатори блокування клавіатури та буфер обміну не працюватимуть, доки їх не встановлять із github.com/ilyamiro/serpantinum-core.",
+      "installing": "Встановлення основних служб AxShell...",
       "unsupported_arch": "Готові пакети основних служб існують лише для x86_64, пропуск.",
-      "up_to_date": "-> Основні служби Serpantinum {version} уже встановлено."
+      "up_to_date": "-> Основні служби AxShell {version} уже встановлено."
     },
     "gamma": {
       "checksum_failed": "Завантажений фільтр синього світла не пройшов перевірку контрольної суми, пропуск.",
-      "download_failed": "Не вдалося завантажити фільтр синього світла Serpantinum, пропуск. Ви можете встановити його пізніше з github.com/ilyamiro/serpantinum-gamma.",
-      "installed": "Фільтр синього світла Serpantinum {version} встановлено",
-      "install_failed": "Не вдалося встановити фільтр синього світла Serpantinum. Він не працюватиме, доки його не встановлять із github.com/ilyamiro/serpantinum-gamma.",
-      "installing": "Встановлення фільтра синього світла Serpantinum...",
+      "download_failed": "Не вдалося завантажити фільтр синього світла AxShell, пропуск. Ви можете встановити його пізніше з github.com/ilyamiro/serpantinum-gamma.",
+      "installed": "Фільтр синього світла AxShell {version} встановлено",
+      "install_failed": "Не вдалося встановити фільтр синього світла AxShell. Він не працюватиме, доки його не встановлять із github.com/ilyamiro/serpantinum-gamma.",
+      "installing": "Встановлення фільтра синього світла AxShell...",
       "unsupported_arch": "Готові пакети фільтра синього світла існують лише для x86_64, пропуск.",
-      "up_to_date": "-> Фільтр синього світла Serpantinum {version} уже встановлено."
+      "up_to_date": "-> Фільтр синього світла AxShell {version} уже встановлено."
     },
     "ski": {
       "checksum_failed": "Завантажений Ski не пройшов перевірку контрольної суми, пропуск.",

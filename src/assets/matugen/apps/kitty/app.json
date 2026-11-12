@@ -11,14 +11,14 @@
   "templates": [
     {
       "input": "kitty.conf",
-      "output": "$XDG_CONFIG_HOME/kitty/themes/serpantinum.conf"
+      "output": "$XDG_CONFIG_HOME/kitty/themes/axshell.conf"
     }
   ],
   "integrate": [
     {
       "type": "line",
       "file": "$XDG_CONFIG_HOME/kitty/kitty.conf",
-      "line": "include themes/serpantinum.conf",
+      "line": "include themes/axshell.conf",
       "disable": "^\\s*include\\s+~/\\.config/kitty/colors\\.conf\\s*$",
       "create": true
     }

@@ -7,14 +7,14 @@ slug: /gamma
 
 # serpantinum-gamma
 
-Serpantinum ships its own blue light filter, [serpantinum-gamma](https://github.com/ilyamiro/serpantinum-gamma). It sets the color temperature, brightness, gamma and inversion of your displays on Wayland, with a day and night schedule that follows the sun.
+AxShell ships its own blue light filter, [serpantinum-gamma](https://github.com/ilyamiro/serpantinum-gamma). It sets the color temperature, brightness, gamma and inversion of your displays on Wayland, with a day and night schedule that follows the sun.
 
 It is a small daemon, and the same binary is its command line client. They talk over the D-Bus session bus, so it needs no systemd. The binary links only glibc.
 
 ## In the shell
 
-- The `serpantinum gamma` command drives it, and starts it when needed. See the [CLI reference](/cli/client#gamma).
-- Serpantinum stops it on exit, and the compositor then restores normal colors.
+- The `axshell gamma` command drives it, and starts it when needed. See the [CLI reference](/cli/client#gamma).
+- AxShell stops it on exit, and the compositor then restores normal colors.
 - Without `--output`, a command changes every output, including outputs connected later.
 
 ## Compositors
@@ -74,13 +74,13 @@ The sun's position comes from NOAA's equations and agrees with PyEphem to about 
 
 ## D-Bus
 
-The daemon owns `org.serpantinum.Gamma` on the session bus. Object `/` controls every output, and `/outputs/<name>` controls one. Output names become path elements with every character other than a letter or digit replaced by `_`, so `eDP-1` is `/outputs/eDP_1`.
+The daemon owns `org.axshell.Gamma` on the session bus. Object `/` controls every output, and `/outputs/<name>` controls one. Output names become path elements with every character other than a letter or digit replaced by `_`, so `eDP-1` is `/outputs/eDP_1`.
 
 ```sh
-busctl --user set-property org.serpantinum.Gamma / org.serpantinum.Gamma Temperature q 4000
-busctl --user set-property org.serpantinum.Gamma /outputs/eDP_1 org.serpantinum.Gamma Brightness d 0.8
-busctl --user call org.serpantinum.Gamma / org.serpantinum.Gamma ToggleInverted
-busctl --user tree org.serpantinum.Gamma
+busctl --user set-property org.axshell.Gamma / org.axshell.Gamma Temperature q 4000
+busctl --user set-property org.axshell.Gamma /outputs/eDP_1 org.axshell.Gamma Brightness d 0.8
+busctl --user call org.axshell.Gamma / org.axshell.Gamma ToggleInverted
+busctl --user tree org.axshell.Gamma
 ```
 
 | Member | Type | Range |
@@ -93,7 +93,7 @@ busctl --user tree org.serpantinum.Gamma
 | `UpdateBrightness`, `UpdateGamma` | method `d` | adds a delta |
 | `ToggleInverted` | method | |
 
-The schedule lives on the `org.serpantinum.Gamma.Schedule` interface, with `Auto`, `DayTemperature`, `NightTemperature`, `SetLocation`, `ClearLocation`, the fallback times and read-only values for the sun. Reading `/` gives the average of all outputs, and writing to `/` changes every output, including outputs connected later.
+The schedule lives on the `org.axshell.Gamma.Schedule` interface, with `Auto`, `DayTemperature`, `NightTemperature`, `SetLocation`, `ClearLocation`, the fallback times and read-only values for the sun. Reading `/` gives the average of all outputs, and writing to `/` changes every output, including outputs connected later.
 
 All properties emit `PropertiesChanged`. The full list of members is in the [serpantinum-gamma README](https://github.com/ilyamiro/serpantinum-gamma#d-bus).
 
@@ -118,7 +118,7 @@ The screen should turn warmer and then return to normal. If it doesn't, see belo
 
 ### Starting it through D-Bus
 
-The package installs `share/dbus-1/services/org.serpantinum.Gamma.service`, so the first call to `org.serpantinum.Gamma` starts the daemon. A process D-Bus starts gets D-Bus's own environment, so `WAYLAND_DISPLAY` must be in it. Most compositor setups already run `dbus-update-activation-environment --systemd WAYLAND_DISPLAY`. If yours doesn't, start the daemon from the compositor's autostart instead. The shell does this for you with `serpantinum gamma start`.
+The package installs `share/dbus-1/services/org.axshell.Gamma.service`, so the first call to `org.axshell.Gamma` starts the daemon. A process D-Bus starts gets D-Bus's own environment, so `WAYLAND_DISPLAY` must be in it. Most compositor setups already run `dbus-update-activation-environment --systemd WAYLAND_DISPLAY`. If yours doesn't, start the daemon from the compositor's autostart instead. The shell does this for you with `axshell gamma start`.
 
 ### If nothing changes
 

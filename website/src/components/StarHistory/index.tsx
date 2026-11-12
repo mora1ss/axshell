@@ -91,7 +91,7 @@ export default function StarHistory(): ReactNode {
   }, []);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/ilyamiro/serpantinum')
+    fetch('https://api.github.com/repos/mora1ss/axshell')
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((json) => {
         if (typeof json.stargazers_count === 'number') {
@@ -111,7 +111,7 @@ export default function StarHistory(): ReactNode {
       .catch(() => {});
 
     fetch(
-      'https://api.github.com/search/issues?q=repo:ilyamiro/serpantinum+type:pr+is:merged',
+      'https://api.github.com/search/issues?q=repo:mora1ss/axshell+type:pr+is:merged',
     )
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((json) => {
@@ -122,7 +122,7 @@ export default function StarHistory(): ReactNode {
       .catch(() => {});
 
     fetch(
-      'https://api.github.com/search/issues?q=repo:ilyamiro/serpantinum+type:pr+is:unmerged',
+      'https://api.github.com/search/issues?q=repo:mora1ss/axshell+type:pr+is:unmerged',
     )
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((json) => {
@@ -156,11 +156,11 @@ export default function StarHistory(): ReactNode {
       aria-label="GitHub Star History">
       <div className={styles.header}>
         <Heading as="h2" className={styles.title}>
-          ilyamiro/serpantinum stars
+          mora1ss/axshell stars
         </Heading>
         <p className={styles.subtitle}>
           The growing community of{' '}
-          <span className={styles.serpantinumGlow}>Serpantinum</span>
+          <span className={styles.axshellGlow}>AxShell</span>
         </p>
       </div>
 
@@ -195,7 +195,7 @@ export default function StarHistory(): ReactNode {
 
           <Link
             className={styles.githubButton}
-            href="https://github.com/ilyamiro/serpantinum/stargazers">
+            href="https://github.com/mora1ss/axshell/stargazers">
             <svg
               className={styles.starIcon}
               width="16"

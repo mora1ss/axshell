@@ -1,5 +1,5 @@
 {
-  description = "Serpantinum - a desktop shell built for YOU.";
+  description = "AxShell - a desktop shell built for YOU.";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -9,13 +9,13 @@
       flake = false;
     };
 
-    serpantinum-wallpapers = {
-      url = "github:ilyamiro/shell-wallpapers";
+    axshell-wallpapers = {
+      url = "github:mora1ss/shell-wallpapers";
       flake = false;
     };
   };
 
-  outputs = { self, nixpkgs, ski, serpantinum-wallpapers, ... }:
+  outputs = { self, nixpkgs, ski, axshell-wallpapers, ... }:
     let
       supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
@@ -23,7 +23,7 @@
     in
     {
       overlays.default = final: _prev: {
-        serpantinum = final.callPackage ./nix/package.nix {
+        axshell = final.callPackage ./nix/package.nix {
           rev = self.rev or self.dirtyRev or "dirty";
         };
       };
@@ -34,18 +34,18 @@
           default = pkgs.callPackage ./nix/package.nix {
             rev = self.rev or self.dirtyRev or "dirty";
           };
-          serpantinum = self.packages.${system}.default;
+          axshell = self.packages.${system}.default;
           ski = import ski { pkgs = pkgsFor system; };
         });
 
       apps = forAllSystems (system: {
         default = {
           type = "app";
-          program = "${self.packages.${system}.default}/bin/serpantinum";
+          program = "${self.packages.${system}.default}/bin/axshell";
         };
-        serpantinumd = {
+        axshelld = {
           type = "app";
-          program = "${self.packages.${system}.default}/bin/serpantinumd";
+          program = "${self.packages.${system}.default}/bin/axshelld";
         };
       });
 
@@ -60,14 +60,14 @@
 
       homeManagerModules.default = import ./nix/hm-module.nix {
         inherit self;
-        wallpapers = serpantinum-wallpapers;
+        wallpapers = axshell-wallpapers;
       };
-      homeManagerModules.serpantinum = self.homeManagerModules.default;
+      homeManagerModules.axshell = self.homeManagerModules.default;
 
       nixosModules.default = {
         imports = [ ./nix/nixos-module.nix "${ski}/nix/module.nix" ];
       };
-      nixosModules.serpantinum = self.nixosModules.default;
+      nixosModules.axshell = self.nixosModules.default;
 
       formatter = forAllSystems (system: (pkgsFor system).nixpkgs-fmt);
     };

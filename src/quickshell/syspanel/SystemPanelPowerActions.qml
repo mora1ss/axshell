@@ -270,7 +270,7 @@ RowLayout {
                         Sounds.stopSfx(actionCapsule.chargingSoundHandle);
                         actionCapsule.chargingSoundHandle = -1;
                     }
-                    let scriptPath = cmd === "lock" ? Caching.serpantinumDir + "/scripts/lock.sh" : Caching.serpantinumDir + "/scripts/system/" + (cmd === "sleep" ? "suspend.sh" : cmd + ".sh");
+                    let scriptPath = cmd === "lock" ? Caching.axshellDir + "/scripts/lock.sh" : Caching.axshellDir + "/scripts/system/" + (cmd === "sleep" ? "suspend.sh" : cmd + ".sh");
                     Quickshell.execDetached(["bash", scriptPath]);
 
                     actionCapsule.fillLevel = 0.0;

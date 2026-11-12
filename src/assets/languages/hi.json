@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "लोड हो रहा है...",
       "unknown": "अज्ञात",
       "version_by": "v{version} • {author} द्वारा",
@@ -20,7 +20,7 @@
         "uptime": "अपटाइम",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "स्वागत है",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "फ़ॉन्ट",
-        "desc": "Serpantinum द्वारा उपयोग किया जाने वाला डिफ़ॉल्ट फ़ॉन्ट चुनें",
+        "desc": "AxShell द्वारा उपयोग किया जाने वाला डिफ़ॉल्ट फ़ॉन्ट चुनें",
         "select": "चुनें..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "कॉन्फ़िग अपडेट नहीं हो सका: {line}"
         },
         "hint": {
-          "select_in_app": "ऐप की सेटिंग में Serpantinum थीम चुनें",
+          "select_in_app": "ऐप की सेटिंग में AxShell थीम चुनें",
           "restart": "नए रंग देखने के लिए खुली विंडो फिर से शुरू करें",
-          "neovim": "इस्तेमाल करने के लिए :colorscheme serpantinum चलाएँ",
+          "neovim": "इस्तेमाल करने के लिए :colorscheme axshell चलाएँ",
           "helix": "नए रंग देखने के लिए खुले संपादकों में :config-reload चलाएँ",
-          "fastfetch": "इस्तेमाल करने के लिए fastfetch -c serpantinum चलाएँ",
-          "spicetify": "spicetify config current_theme Serpantinum चलाएँ, फिर spicetify apply",
-          "discord": "क्लाइंट की थीम सेटिंग में Serpantinum चालू करें",
-          "emacs": "इसे उपयोग करने के लिए M-x load-theme serpantinum चलाएँ",
+          "fastfetch": "इस्तेमाल करने के लिए fastfetch -c axshell चलाएँ",
+          "spicetify": "spicetify config current_theme AxShell चलाएँ, फिर spicetify apply",
+          "discord": "क्लाइंट की थीम सेटिंग में AxShell चालू करें",
+          "emacs": "इसे उपयोग करने के लिए M-x load-theme axshell चलाएँ",
           "steam": "Millennium से Material-Theme इंस्टॉल करें, फिर उसकी रंग सेटिंग्स में Matugen चुनें",
-          "heroic": "Heroic में कस्टम थीम पथ को उसके थीम फ़ोल्डर पर सेट करें, फिर serpantinum चुनें",
+          "heroic": "Heroic में कस्टम थीम पथ को उसके थीम फ़ोल्डर पर सेट करें, फिर axshell चुनें",
           "telegram": "Telegram की चैट सेटिंग्स से थीम फ़ाइल लोड करें"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "@{author} द्वारा निर्मित",
     "welcome": "स्वागत है",
     "tagline": "एक डेस्कटॉप शेल जो बना है",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "सेटिंग्स",
-      "desc": "Serpantinum सेटिंग्स"
+      "desc": "AxShell सेटिंग्स"
     },
     "calendar": {
       "name": "कैलेंडर और घड़ी",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "उपयोग: serpantinum [कमांड] [विकल्प...]",
+    "usage": "उपयोग: axshell [कमांड] [विकल्प...]",
     "description": "वेरलैंड कंपोजिटर्स के लिए एक डेस्कटॉप शेल।",
     "commands": "कमांड:",
     "script_commands": "स्क्रिप्ट कमांड:",
@@ -1880,23 +1880,23 @@
     "version_desc": "संस्करण जानकारी प्रदर्शित करें और बाहर निकलें",
     "help_desc": "यह सहायता संदेश दिखाएं और बाहर निकलें",
     "examples": "उदाहरण:",
-    "daemon_stopped": "Serpantinum डेमन रुक गया।",
-    "daemon_restarted": "Serpantinum डेमन पुनः आरंभ हुआ।",
-    "starting_daemon": "डेमन नहीं चल रहा है। पृष्ठभूमि में serpantinumd शुरू किया जा रहा है...",
+    "daemon_stopped": "AxShell डेमन रुक गया।",
+    "daemon_restarted": "AxShell डेमन पुनः आरंभ हुआ।",
+    "starting_daemon": "डेमन नहीं चल रहा है। पृष्ठभूमि में axshelld शुरू किया जा रहा है...",
     "error_missing_qml": "त्रुटि: लॉन्च करने के लिए लक्ष्य अनुपलब्ध है।",
-    "launch_usage": "उपयोग: serpantinum launch <start> [args...]",
+    "launch_usage": "उपयोग: axshell launch <start> [args...]",
     "error_qml_not_found": "त्रुटि: {DIR} में {NAME}.qml हल नहीं किया जा सका",
     "error_shell_qml_not_found": "त्रुटि: {DIR} में shell.qml का पथ हल नहीं किया जा सका",
     "error_unknown_command": "त्रुटि: अज्ञात कमांड '{CMD}'।",
     "error_unknown_target": "त्रुटि: अज्ञात लक्ष्य '{TARGET}'।",
     "launch_help": {
-      "usage": "उपयोग: serpantinum launch <start> [तर्क...]",
+      "usage": "उपयोग: axshell launch <start> [तर्क...]",
       "description": "स्टैंडअलोन घटकों को सीधे रनर मोड में लॉन्च करें।",
       "available_targets": "उपलब्ध लक्ष्य:",
       "target_start": "प्रारंभिक सेटअप इंटरफ़ेस लॉन्च करें"
     },
     "msg_help": {
-      "usage": "उपयोग: serpantinum msg <command|workspace> [तर्क...]",
+      "usage": "उपयोग: axshell msg <command|workspace> [तर्क...]",
       "description": "लेआउट, वर्कस्पेस और विंडो प्रबंधन संदेश सीधे भेजें।",
       "available_commands": "उपलब्ध संदेश:",
       "cmd_workspace": "वर्कस्पेस <num> पर जाएं (सक्रिय विंडो भेजने के लिए 'move' जोड़ें)",
@@ -1905,7 +1905,7 @@
       "cmd_close": "किसी भी सक्रिय शेल ओवरले को बंद करें"
     },
     "ipc_help": {
-      "usage": "उपयोग: serpantinum ipc call <target> <method> [तर्क...]",
+      "usage": "उपयोग: axshell ipc call <target> <method> [तर्क...]",
       "description": "चल रहे quickshell इंस्टेंस को सीधे आईपीसी कॉल भेजें।"
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "सेटिंग्स पढ़ें और बदलें (get, set, dump, path, edit)",
     "error_unknown_language": "त्रुटि: अज्ञात भाषा '{CODE}'।",
     "update_available": "अपडेट उपलब्ध है: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum अप टू डेट है ({VERSION})।",
+    "up_to_date": "AxShell अप टू डेट है ({VERSION})।",
     "state_on": "चालू",
     "state_off": "बंद",
     "error_unknown_theme": "त्रुटि: अज्ञात थीम '{NAME}'।",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "डेमन पहले से चल रहा है। बाहर निकल रहे हैं...",
-    "shutting_down": "Serpantinum डेमन बंद हो रहा है...",
-    "launching": "Serpantinum डेमन लॉन्च किया जा रहा है...",
+    "shutting_down": "AxShell डेमन बंद हो रहा है...",
+    "launching": "AxShell डेमन लॉन्च किया जा रहा है...",
     "cli": {
-      "usage": "उपयोग: serpantinumd <कमांड> [विकल्प...]",
-      "description": "Serpantinum डेस्कटॉप शेल के लिए बैकग्राउंड सर्विस डेमन।",
+      "usage": "उपयोग: axshelld <कमांड> [विकल्प...]",
+      "description": "AxShell डेस्कटॉप शेल के लिए बैकग्राउंड सर्विस डेमन।",
       "commands": "कमांड:",
       "cmd_start": "डेमन सेवा शुरू करें और बैकग्राउंड वर्कर्स लॉन्च करें",
       "cmd_stop": "चल रही डेमन सेवा रोकें",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "विस्तृत आउटपुट लॉगिंग सक्षम करें",
       "opt_version": "संस्करण जानकारी दिखाएं और बाहर निकलें",
       "opt_help": "यह सहायता संदेश दिखाएं और बाहर निकलें",
-      "stopped": "Serpantinum डेमन रुक गया।",
-      "status_running": "Serpantinum डेमन चल रहा है (PID: {PID})।",
-      "status_stopped": "Serpantinum डेमन नहीं चल रहा है।",
+      "stopped": "AxShell डेमन रुक गया।",
+      "status_running": "AxShell डेमन चल रहा है (PID: {PID})।",
+      "status_stopped": "AxShell डेमन नहीं चल रहा है।",
       "unknown_arg": "अज्ञात तर्क: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects अभी भी चालू है",
-      "body": "Serpantinum के पास अब अपना ऑडियो इंजन है, और EasyEffects इसमें बाधा डाल सकता है। अगर आप EasyEffects का उपयोग केवल Serpantinum के लिए करते थे, तो लॉगिन पर इसका अपने-आप शुरू होना बंद करें।"
+      "body": "AxShell के पास अब अपना ऑडियो इंजन है, और EasyEffects इसमें बाधा डाल सकता है। अगर आप EasyEffects का उपयोग केवल AxShell के लिए करते थे, तो लॉगिन पर इसका अपने-आप शुरू होना बंद करें।"
     }
   },
   "installer": {
@@ -1975,7 +1975,7 @@
     },
     "os": {
       "error_root": "त्रुटि: इस स्क्रिप्ट को सीधे root/sudo के साथ न चलाएं। सामान्य उपयोगकर्ता के रूप में चलाएं।",
-      "error_unsupported": "असमर्थित ओएस ({os})। Serpantinum केवल arch linux और इसके डेरिवेटिव का समर्थन करता है।",
+      "error_unsupported": "असमर्थित ओएस ({os})। AxShell केवल arch linux और इसके डेरिवेटिव का समर्थन करता है।",
       "error_not_found": "ओएस का पता नहीं लगाया जा सका। /etc/os-release नहीं मिला।",
       "unknown_cpu": "अज्ञात CPU",
       "unknown_gpu": "अज्ञात / वर्चुअल मशीन",
@@ -1989,8 +1989,6 @@
       "target_version": "लक्ष्य संस्करण:",
       "install_mode": "इंस्टॉल मोड:",
       "github": "GitHub:",
-      "twitter": "Twitter:",
-      "reddit": "Reddit:",
       "telegram": "Telegram:",
       "donate": "दान करें:",
       "donate_sub": "(परियोजना का समर्थन करें!)",
@@ -2016,7 +2014,6 @@
       "menu_overview": "पैकेज इंस्टॉलेशन अवलोकन ({count} कोर पैकेज)",
       "menu_sddm": "SDDM लॉगिन मैनेजर",
       "menu_wallpapers": "वॉलपेपर पैक",
-      "menu_telemetry": "गुमनाम टेलीमेट्री",
       "menu_update": "अपडेट करें",
       "menu_reinstall": "पुनः इंस्टॉल करें",
       "menu_install": "इंस्टॉल करें",
@@ -2025,9 +2022,9 @@
       "tagline": "एक डेस्कटॉप शेल जो आपके लिए बना है",
       "support_creator": "निर्माता का समर्थन करें:",
       "buy_coffee": "यदि आप इस प्रोजेक्ट को पसंद करते हैं, तो मुझे एक कॉफ़ी पिलाने पर विचार करें!",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) सफलतापूर्वक इंस्टॉल हुआ।",
+      "installed_success": "✔ AxShell {ver} ({commit}) सफलतापूर्वक इंस्टॉल हुआ।",
       "failed_packages": "इंस्टॉलेशन के दौरान निम्नलिखित पैकेजों में त्रुटियां आईं:",
-      "restart_prompt": "शुरू करने के लिए अपने कंपोज़िटर को रीस्टार्ट करें या 'serpantinumd start' चलाएं।",
+      "restart_prompt": "शुरू करने के लिए अपने कंपोज़िटर को रीस्टार्ट करें या 'axshelld start' चलाएं।",
       "ask_reboot": "क्या आप पुनरारंभ करना चाहते हैं? [y/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "इस सिस्टम के लिए पहले से बना ऑडियो इंजन उपलब्ध नहीं है, स्रोत से बनाया जा रहा है...",
       "checksum_failed": "ऑडियो इंजन का डाउनलोड चेकसम जाँच में विफल रहा, छोड़ा जा रहा है।",
-      "download_failed": "Serpantinum ऑडियो इंजन डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/ilyamiro/serpantinum-audio से इंस्टॉल कर सकते हैं।",
-      "installed": "Serpantinum ऑडियो इंजन {version} इंस्टॉल हो गया",
-      "install_failed": "Serpantinum ऑडियो इंजन इंस्टॉल नहीं हो सका। जब तक इसे github.com/ilyamiro/serpantinum-audio से इंस्टॉल नहीं किया जाता, इक्वलाइज़र काम नहीं करेगा।",
-      "installing": "Serpantinum ऑडियो इंजन इंस्टॉल हो रहा है...",
-      "up_to_date": "-> Serpantinum ऑडियो इंजन {version} पहले से इंस्टॉल है।"
+      "download_failed": "AxShell ऑडियो इंजन डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/ilyamiro/serpantinum-audio से इंस्टॉल कर सकते हैं।",
+      "installed": "AxShell ऑडियो इंजन {version} इंस्टॉल हो गया",
+      "install_failed": "AxShell ऑडियो इंजन इंस्टॉल नहीं हो सका। जब तक इसे github.com/ilyamiro/serpantinum-audio से इंस्टॉल नहीं किया जाता, इक्वलाइज़र काम नहीं करेगा।",
+      "installing": "AxShell ऑडियो इंजन इंस्टॉल हो रहा है...",
+      "up_to_date": "-> AxShell ऑडियो इंजन {version} पहले से इंस्टॉल है।"
     },
     "core": {
       "checksum_failed": "मुख्य सेवाओं का डाउनलोड चेकसम जाँच में विफल रहा, छोड़ा जा रहा है।",
-      "download_failed": "Serpantinum मुख्य सेवाएँ डाउनलोड नहीं हो सकीं, छोड़ा जा रहा है। आप इन्हें बाद में github.com/ilyamiro/serpantinum-core से इंस्टॉल कर सकते हैं।",
-      "installed": "Serpantinum मुख्य सेवाएँ {version} इंस्टॉल हो गईं",
-      "install_failed": "Serpantinum मुख्य सेवाएँ इंस्टॉल नहीं हो सकीं। जब तक इन्हें github.com/ilyamiro/serpantinum-core से इंस्टॉल नहीं किया जाता, सिस्टम उपयोग, कीबोर्ड लॉक संकेतक और क्लिपबोर्ड काम नहीं करेंगे।",
-      "installing": "Serpantinum मुख्य सेवाएँ इंस्टॉल हो रही हैं...",
+      "download_failed": "AxShell मुख्य सेवाएँ डाउनलोड नहीं हो सकीं, छोड़ा जा रहा है। आप इन्हें बाद में github.com/ilyamiro/serpantinum-core से इंस्टॉल कर सकते हैं।",
+      "installed": "AxShell मुख्य सेवाएँ {version} इंस्टॉल हो गईं",
+      "install_failed": "AxShell मुख्य सेवाएँ इंस्टॉल नहीं हो सकीं। जब तक इन्हें github.com/ilyamiro/serpantinum-core से इंस्टॉल नहीं किया जाता, सिस्टम उपयोग, कीबोर्ड लॉक संकेतक और क्लिपबोर्ड काम नहीं करेंगे।",
+      "installing": "AxShell मुख्य सेवाएँ इंस्टॉल हो रही हैं...",
       "unsupported_arch": "मुख्य सेवाओं के पहले से बने पैकेज केवल x86_64 के लिए उपलब्ध हैं, छोड़ा जा रहा है।",
-      "up_to_date": "-> Serpantinum मुख्य सेवाएँ {version} पहले से इंस्टॉल हैं।"
+      "up_to_date": "-> AxShell मुख्य सेवाएँ {version} पहले से इंस्टॉल हैं।"
     },
     "gamma": {
       "checksum_failed": "ब्लू लाइट फ़िल्टर का डाउनलोड चेकसम जाँच में विफल रहा, छोड़ा जा रहा है।",
-      "download_failed": "Serpantinum ब्लू लाइट फ़िल्टर डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/ilyamiro/serpantinum-gamma से इंस्टॉल कर सकते हैं।",
-      "installed": "Serpantinum ब्लू लाइट फ़िल्टर {version} इंस्टॉल हो गया",
-      "install_failed": "Serpantinum ब्लू लाइट फ़िल्टर इंस्टॉल नहीं हो सका। जब तक इसे github.com/ilyamiro/serpantinum-gamma से इंस्टॉल नहीं किया जाता, यह काम नहीं करेगा।",
-      "installing": "Serpantinum ब्लू लाइट फ़िल्टर इंस्टॉल हो रहा है...",
+      "download_failed": "AxShell ब्लू लाइट फ़िल्टर डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/ilyamiro/serpantinum-gamma से इंस्टॉल कर सकते हैं।",
+      "installed": "AxShell ब्लू लाइट फ़िल्टर {version} इंस्टॉल हो गया",
+      "install_failed": "AxShell ब्लू लाइट फ़िल्टर इंस्टॉल नहीं हो सका। जब तक इसे github.com/ilyamiro/serpantinum-gamma से इंस्टॉल नहीं किया जाता, यह काम नहीं करेगा।",
+      "installing": "AxShell ब्लू लाइट फ़िल्टर इंस्टॉल हो रहा है...",
       "unsupported_arch": "ब्लू लाइट फ़िल्टर के पहले से बने पैकेज केवल x86_64 के लिए उपलब्ध हैं, छोड़ा जा रहा है।",
-      "up_to_date": "-> Serpantinum ब्लू लाइट फ़िल्टर {version} पहले से इंस्टॉल है।"
+      "up_to_date": "-> AxShell ब्लू लाइट फ़िल्टर {version} पहले से इंस्टॉल है।"
     },
     "ski": {
       "checksum_failed": "Ski का डाउनलोड चेकसम जाँच में विफल रहा, छोड़ा जा रहा है।",

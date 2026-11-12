@@ -97,6 +97,6 @@ Item {
         }
         property vector4d params: Qt.vector4d(root.morphProgress, 0.0, 0.0, 0.0)
 
-        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/ui/loader_blob.frag.qsb"
+        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/ui/loader_blob.frag.qsb"
     }
 }

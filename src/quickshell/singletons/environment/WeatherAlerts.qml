@@ -8,7 +8,7 @@ import "WeatherRules.js" as Rules
 Item {
     id: root
 
-    readonly property string weatherDir: Caching.serpantinumDir ? Caching.getCacheDir("weather") : ""
+    readonly property string weatherDir: Caching.axshellDir ? Caching.getCacheDir("weather") : ""
     readonly property int sendSpacing: 700
     readonly property real keepDelivered: 24 * 3600000
 

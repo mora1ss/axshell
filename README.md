@@ -1,11 +1,5 @@
 <div align="center">
-  <a href="https://ko-fi.com/ilyamiro">
-    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi" />
-  </a>
-</div>
-
-<div align="center">
-  <img src="docs/assets/banner.png" alt="Serpantinum" width="850" />
+  <img src="docs/assets/banner.png" alt="AxShell" width="850" />
 </div>
 
 ## Previews
@@ -18,15 +12,9 @@
 ---
 
 > [!IMPORTANT]
-> **Hey, join our subreddit!** Share your setups, ask questions and follow updates at **[r/serpantinum](https://www.reddit.com/r/serpantinum)**.
->
-> [![Join r/serpantinum](https://img.shields.io/badge/Join-r%2Fserpantinum-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/r/serpantinum)
-
 ## Installation
 
 > [!TIP]
-> Full installation and configuration instructions live at **[serpantinum.dev](https://serpantinum.dev)**.
-
 > [!IMPORTANT]
 > **Migrating from v1:** All previous configuration will be backed up and unused. Configuration of compositor settings such as monitors, keybinds, and autostart is now up to you, as the project migrated from being dotfiles to being a shell.
 
@@ -37,13 +25,13 @@ For Arch-based distributions (including systemd, OpenRC, and other init systems)
 Use this installer:
 
 ```bash
-curl -fsSL install.serpantinum.dev | bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mora1ss/axshell/master/install/install.sh)"
 ```
 
 If this doesn't work, use:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ilyamiro/serpantinum/master/install/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mora1ss/axshell/master/install/install.sh)"
 ```
 
 > [!NOTE]
@@ -53,19 +41,19 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ilyamiro/serpantinum/mas
 
 ### NixOS
 
-See the [NixOS installation guide](https://serpantinum.dev/installation/nixos) for flake setup, the NixOS and Home Manager modules, and updating.
+See the NixOS installation guide in the repository documentation for flake setup, the NixOS and Home Manager modules, and updating.
 
 ---
 
 ## Audio engine
 
-The equalizer, balance, mono, channel swap, dynamic range modes and the dynamic EQ run on [serpantinum-audio](https://github.com/ilyamiro/serpantinum-audio), a small PipeWire processor that replaces EasyEffects. The installer and the packages install it, and on the first start after updating, Serpantinum hands your audio over from EasyEffects. See the [audio engine guide](https://serpantinum.dev/audio).
+The equalizer, balance, mono, channel swap, dynamic range modes and the dynamic EQ run on [serpantinum-audio](https://github.com/ilyamiro/serpantinum-audio), a small PipeWire processor that replaces EasyEffects. The installer and the packages install it, and on the first start after updating, AxShell hands your audio over from EasyEffects.
 
 ---
 
 ## Blue light filter
 
-The blue light filter and its day and night schedule run on [serpantinum-gamma](https://github.com/ilyamiro/serpantinum-gamma), a small Wayland daemon that replaces wl-gammarelay-rs. The installer and the packages install it. Serpantinum starts it the first time a filter is turned on and stops it on exit.
+The blue light filter and its day and night schedule run on [serpantinum-gamma](https://github.com/ilyamiro/serpantinum-gamma), a small Wayland daemon that replaces wl-gammarelay-rs. The installer and the packages install it. AxShell starts it the first time a filter is turned on and stops it on exit.
 
 ---
 
@@ -77,9 +65,9 @@ Hyprland, Niri, Sway and Mango. The installer detects the running compositor and
 
 ## Running
 
-To run the shell, launch `serpantinumd start`
+To run the shell, launch `axshelld start`
 
-For configuration, see the [configuration guide](https://serpantinum.dev/configure).
+For configuration, see the repository documentation.
 
 <br><br><br>
 

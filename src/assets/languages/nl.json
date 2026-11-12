@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "Laden...",
       "unknown": "Onbekend",
       "version_by": "v{version} • door {author}",
@@ -20,7 +20,7 @@
         "uptime": "Uptime",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "Welkom",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "Lettertype",
-        "desc": "Kies het standaard lettertype voor serpantinum",
+        "desc": "Kies het standaard lettertype voor axshell",
         "select": "Selecteren..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "Kon de configuratie niet bijwerken: {line}"
         },
         "hint": {
-          "select_in_app": "Kies het thema Serpantinum in de instellingen van de app",
+          "select_in_app": "Kies het thema AxShell in de instellingen van de app",
           "restart": "Start open vensters opnieuw om de nieuwe kleuren te zien",
-          "neovim": "Voer :colorscheme serpantinum uit om het te gebruiken",
+          "neovim": "Voer :colorscheme axshell uit om het te gebruiken",
           "helix": "Voer :config-reload uit in open editors om de nieuwe kleuren te zien",
-          "fastfetch": "Voer fastfetch -c serpantinum uit om het te gebruiken",
-          "spicetify": "Voer spicetify config current_theme Serpantinum uit en daarna spicetify apply",
-          "discord": "Schakel Serpantinum in bij de thema-instellingen van de client",
-          "emacs": "Voer M-x load-theme serpantinum uit om het te gebruiken",
+          "fastfetch": "Voer fastfetch -c axshell uit om het te gebruiken",
+          "spicetify": "Voer spicetify config current_theme AxShell uit en daarna spicetify apply",
+          "discord": "Schakel AxShell in bij de thema-instellingen van de client",
+          "emacs": "Voer M-x load-theme axshell uit om het te gebruiken",
           "steam": "Installeer Material-Theme met Millennium en kies daarna Matugen in de kleurinstellingen",
-          "heroic": "Stel het pad voor eigen thema's in Heroic in op de themamap en kies daarna serpantinum",
+          "heroic": "Stel het pad voor eigen thema's in Heroic in op de themamap en kies daarna axshell",
           "telegram": "Laad het themabestand via de chatinstellingen van Telegram"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "Gemaakt door @{author}",
     "welcome": "Welkom",
     "tagline": "Een desktopshell gebouwd voor",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "Instellingen",
-      "desc": "Serpantinum-instellingen"
+      "desc": "AxShell-instellingen"
     },
     "calendar": {
       "name": "Kalender & klok",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "Gebruik: serpantinum [opdracht] [opties...]",
+    "usage": "Gebruik: axshell [opdracht] [opties...]",
     "description": "Een desktopshell voor wayland-compositors.",
     "commands": "Opdrachten:",
     "script_commands": "Scriptopdrachten:",
@@ -1880,23 +1880,23 @@
     "version_desc": "Versie-informatie weergeven en afsluiten",
     "help_desc": "Dit helpbericht weergeven en afsluiten",
     "examples": "Voorbeelden:",
-    "daemon_stopped": "Serpantinum-daemon gestopt.",
-    "daemon_restarted": "Serpantinum-daemon opnieuw gestart.",
-    "starting_daemon": "Daemon niet actief. serpantinumd wordt op de achtergrond gestart...",
+    "daemon_stopped": "AxShell-daemon gestopt.",
+    "daemon_restarted": "AxShell-daemon opnieuw gestart.",
+    "starting_daemon": "Daemon niet actief. axshelld wordt op de achtergrond gestart...",
     "error_missing_qml": "Fout: ontbrekend doel om te starten.",
-    "launch_usage": "Gebruik: serpantinum launch <start> [argumenten...]",
+    "launch_usage": "Gebruik: axshell launch <start> [argumenten...]",
     "error_qml_not_found": "Fout: kan {NAME}.qml niet vinden in {DIR}",
     "error_shell_qml_not_found": "Fout: kan pad naar shell.qml niet vinden in {DIR}",
     "error_unknown_command": "Fout: onbekende opdracht '{CMD}'.",
     "error_unknown_target": "Fout: onbekend doel '{TARGET}'.",
     "launch_help": {
-      "usage": "Gebruik: serpantinum launch <start> [argumenten...]",
+      "usage": "Gebruik: axshell launch <start> [argumenten...]",
       "description": "Zelfstandige componenten rechtstreeks starten in runner-modus.",
       "available_targets": "Beschikbare doelen:",
       "target_start": "Start de installatie-interface van de startwizard"
     },
     "msg_help": {
-      "usage": "Gebruik: serpantinum msg <opdracht|werkblad> [argumenten...]",
+      "usage": "Gebruik: axshell msg <opdracht|werkblad> [argumenten...]",
       "description": "Direct layout-, werkblad- en vensterbeheerberichten verzenden.",
       "available_commands": "Beschikbare berichten:",
       "cmd_workspace": "Wissel naar werkblad <num> (voeg 'move' toe om actief venster te verplaatsen)",
@@ -1905,7 +1905,7 @@
       "cmd_close": "Sluit elke actieve shell-overlay"
     },
     "ipc_help": {
-      "usage": "Gebruik: serpantinum ipc call <doel> <methode> [argumenten...]",
+      "usage": "Gebruik: axshell ipc call <doel> <methode> [argumenten...]",
       "description": "Stuur een IPC-aanroep direct naar het actieve quickshell-exemplaar."
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "Instellingen lezen en wijzigen (get, set, dump, path, edit)",
     "error_unknown_language": "Fout: onbekende taal '{CODE}'.",
     "update_available": "Update beschikbaar: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum is up-to-date ({VERSION}).",
+    "up_to_date": "AxShell is up-to-date ({VERSION}).",
     "state_on": "aan",
     "state_off": "uit",
     "error_unknown_theme": "Fout: onbekend thema '{NAME}'.",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "Daemon draait al. Afsluiten...",
-    "shutting_down": "Serpantinum-daemon afsluiten...",
-    "launching": "Serpantinum-daemon starten...",
+    "shutting_down": "AxShell-daemon afsluiten...",
+    "launching": "AxShell-daemon starten...",
     "cli": {
-      "usage": "Gebruik: serpantinumd <opdracht> [opties...]",
-      "description": "Achtergrondservice-daemon voor Serpantinum-desktopshell.",
+      "usage": "Gebruik: axshelld <opdracht> [opties...]",
+      "description": "Achtergrondservice-daemon voor AxShell-desktopshell.",
       "commands": "Opdrachten:",
       "cmd_start": "De daemonservice starten en achtergrondwerkers lanceren",
       "cmd_stop": "De actieve daemonservice stoppen",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "Uitgebreide loguitvoer inschakelen",
       "opt_version": "Versie-informatie weergeven en afsluiten",
       "opt_help": "Dit helpbericht weergeven en afsluiten",
-      "stopped": "Serpantinum-daemon gestopt.",
-      "status_running": "Serpantinum-daemon is actief (PID: {PID}).",
-      "status_stopped": "Serpantinum-daemon is niet actief.",
+      "stopped": "AxShell-daemon gestopt.",
+      "status_running": "AxShell-daemon is actief (PID: {PID}).",
+      "status_stopped": "AxShell-daemon is niet actief.",
       "unknown_arg": "Onbekend argument: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects is nog ingeschakeld",
-      "body": "Serpantinum heeft nu een eigen audio-engine en EasyEffects kan daarmee storen. Gebruikte u EasyEffects alleen voor Serpantinum, zorg dan dat het niet meer bij het aanmelden start."
+      "body": "AxShell heeft nu een eigen audio-engine en EasyEffects kan daarmee storen. Gebruikte u EasyEffects alleen voor AxShell, zorg dan dat het niet meer bij het aanmelden start."
     }
   },
   "installer": {
@@ -1975,7 +1975,7 @@
     },
     "os": {
       "error_root": "Fout: Voer dit script niet rechtstreeks uit met root/sudo. Voer uit als normale gebruiker.",
-      "error_unsupported": "Niet-ondersteund besturingssysteem ({os}). Serpantinum ondersteunt uitsluitend Arch Linux en derivaten.",
+      "error_unsupported": "Niet-ondersteund besturingssysteem ({os}). AxShell ondersteunt uitsluitend Arch Linux en derivaten.",
       "error_not_found": "Kan besturingssysteem niet detecteren. /etc/os-release niet gevonden.",
       "unknown_cpu": "Onbekende CPU",
       "unknown_gpu": "Onbekend / virtuele machine",
@@ -1989,8 +1989,6 @@
       "target_version": "Doelversie:",
       "install_mode": "Installatiemodus:",
       "github": "GitHub:",
-      "twitter": "Twitter:",
-      "reddit": "Reddit:",
       "telegram": "Telegram:",
       "donate": "Doneren:",
       "donate_sub": "(Steun het project!)",
@@ -2016,7 +2014,6 @@
       "menu_overview": "Overzicht pakketinstallatie ({count} basispakketten)",
       "menu_sddm": "SDDM-inlogbeheerder",
       "menu_wallpapers": "Achtergrondpakket",
-      "menu_telemetry": "Anonieme telemetrie",
       "menu_update": "Bijwerken",
       "menu_reinstall": "Opnieuw installeren",
       "menu_install": "Installeren",
@@ -2025,9 +2022,9 @@
       "tagline": "Een desktopshell gebouwd voor jou",
       "support_creator": "Steun de maker:",
       "buy_coffee": "Als u van dit project geniet, overweeg dan een kopje koffie voor mij te kopen!",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) succesvol geïnstalleerd.",
+      "installed_success": "✔ AxShell {ver} ({commit}) succesvol geïnstalleerd.",
       "failed_packages": "De volgende pakketten hebben fouten ondervonden tijdens de installatie:",
-      "restart_prompt": "Herstart uw compositor of voer 'serpantinumd start' uit om te beginnen.",
+      "restart_prompt": "Herstart uw compositor of voer 'axshelld start' uit om te beginnen.",
       "ask_reboot": "Wilt u opnieuw opstarten? [j/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "Geen vooraf gebouwde audio-engine voor dit systeem, wordt gebouwd vanuit de broncode...",
       "checksum_failed": "De download van de audio-engine is niet door de checksumcontrole gekomen, wordt overgeslagen.",
-      "download_failed": "Kon de Serpantinum-audio-engine niet downloaden, wordt overgeslagen. Je kunt hem later installeren via github.com/ilyamiro/serpantinum-audio.",
-      "installed": "Serpantinum-audio-engine {version} geïnstalleerd",
-      "install_failed": "Installeren van de Serpantinum-audio-engine mislukt. De equalizer werkt pas als hij is geïnstalleerd via github.com/ilyamiro/serpantinum-audio.",
-      "installing": "Serpantinum-audio-engine wordt geïnstalleerd...",
-      "up_to_date": "-> Serpantinum-audio-engine {version} is al geïnstalleerd."
+      "download_failed": "Kon de AxShell-audio-engine niet downloaden, wordt overgeslagen. Je kunt hem later installeren via github.com/ilyamiro/serpantinum-audio.",
+      "installed": "AxShell-audio-engine {version} geïnstalleerd",
+      "install_failed": "Installeren van de AxShell-audio-engine mislukt. De equalizer werkt pas als hij is geïnstalleerd via github.com/ilyamiro/serpantinum-audio.",
+      "installing": "AxShell-audio-engine wordt geïnstalleerd...",
+      "up_to_date": "-> AxShell-audio-engine {version} is al geïnstalleerd."
     },
     "core": {
       "checksum_failed": "De download van de kernservices is niet door de checksumcontrole gekomen, wordt overgeslagen.",
-      "download_failed": "Kon de Serpantinum-kernservices niet downloaden, wordt overgeslagen. Je kunt ze later installeren via github.com/ilyamiro/serpantinum-core.",
-      "installed": "Serpantinum-kernservices {version} geïnstalleerd",
-      "install_failed": "Installeren van de Serpantinum-kernservices mislukt. Systeemgebruik, toetsenbordvergrendelingsindicatoren en het klembord werken pas als ze zijn geïnstalleerd via github.com/ilyamiro/serpantinum-core.",
-      "installing": "Serpantinum-kernservices worden geïnstalleerd...",
+      "download_failed": "Kon de AxShell-kernservices niet downloaden, wordt overgeslagen. Je kunt ze later installeren via github.com/ilyamiro/serpantinum-core.",
+      "installed": "AxShell-kernservices {version} geïnstalleerd",
+      "install_failed": "Installeren van de AxShell-kernservices mislukt. Systeemgebruik, toetsenbordvergrendelingsindicatoren en het klembord werken pas als ze zijn geïnstalleerd via github.com/ilyamiro/serpantinum-core.",
+      "installing": "AxShell-kernservices worden geïnstalleerd...",
       "unsupported_arch": "Vooraf gebouwde pakketten van de kernservices bestaan alleen voor x86_64, wordt overgeslagen.",
-      "up_to_date": "-> Serpantinum-kernservices {version} zijn al geïnstalleerd."
+      "up_to_date": "-> AxShell-kernservices {version} zijn al geïnstalleerd."
     },
     "gamma": {
       "checksum_failed": "De download van het blauwlichtfilter is niet door de checksumcontrole gekomen, wordt overgeslagen.",
-      "download_failed": "Kon het Serpantinum-blauwlichtfilter niet downloaden, wordt overgeslagen. Je kunt het later installeren via github.com/ilyamiro/serpantinum-gamma.",
-      "installed": "Serpantinum-blauwlichtfilter {version} geïnstalleerd",
-      "install_failed": "Installeren van het Serpantinum-blauwlichtfilter mislukt. Het werkt pas als het is geïnstalleerd via github.com/ilyamiro/serpantinum-gamma.",
-      "installing": "Serpantinum-blauwlichtfilter wordt geïnstalleerd...",
+      "download_failed": "Kon het AxShell-blauwlichtfilter niet downloaden, wordt overgeslagen. Je kunt het later installeren via github.com/ilyamiro/serpantinum-gamma.",
+      "installed": "AxShell-blauwlichtfilter {version} geïnstalleerd",
+      "install_failed": "Installeren van het AxShell-blauwlichtfilter mislukt. Het werkt pas als het is geïnstalleerd via github.com/ilyamiro/serpantinum-gamma.",
+      "installing": "AxShell-blauwlichtfilter wordt geïnstalleerd...",
       "unsupported_arch": "Vooraf gebouwde pakketten van het blauwlichtfilter bestaan alleen voor x86_64, wordt overgeslagen.",
-      "up_to_date": "-> Serpantinum-blauwlichtfilter {version} is al geïnstalleerd."
+      "up_to_date": "-> AxShell-blauwlichtfilter {version} is al geïnstalleerd."
     },
     "ski": {
       "checksum_failed": "De download van Ski is niet door de checksumcontrole gekomen, wordt overgeslagen.",

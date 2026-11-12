@@ -392,7 +392,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "Stworzone przez @{author}",
     "welcome": "Witaj",
     "tagline": "Powłoka pulpitu stworzona dla",
@@ -528,7 +528,7 @@
     },
     "guide": {
       "name": "Ustawienia",
-      "desc": "Ustawienia Serpantinum"
+      "desc": "Ustawienia AxShell"
     },
     "calendar": {
       "name": "Kalendarz i zegar",
@@ -652,7 +652,7 @@
     }
   },
   "cli": {
-    "usage": "Użycie: serpantinum [polecenie] [opcje...]",
+    "usage": "Użycie: axshell [polecenie] [opcje...]",
     "description": "Powłoka pulpitu dla kompozytorów Wayland.",
     "commands": "Polecenia:",
     "script_commands": "Polecenia skryptów:",
@@ -666,23 +666,23 @@
     "version_desc": "Wyświetl informacje o wersji i zakończ",
     "help_desc": "Wyświetl ten komunikat pomocy i zakończ",
     "examples": "Przykłady:",
-    "daemon_stopped": "Demon Serpantinum został zatrzymany.",
-    "daemon_restarted": "Demon Serpantinum został uruchomiony ponownie.",
-    "starting_daemon": "Demon nie jest uruchomiony. Uruchamianie serpantinumd w tle...",
+    "daemon_stopped": "Demon AxShell został zatrzymany.",
+    "daemon_restarted": "Demon AxShell został uruchomiony ponownie.",
+    "starting_daemon": "Demon nie jest uruchomiony. Uruchamianie axshelld w tle...",
     "error_missing_qml": "Błąd: brak celu do uruchomienia.",
-    "launch_usage": "Użycie: serpantinum launch <start> [argumenty...]",
+    "launch_usage": "Użycie: axshell launch <start> [argumenty...]",
     "error_qml_not_found": "Błąd: nie można odnaleźć {NAME}.qml w {DIR}",
     "error_shell_qml_not_found": "Błąd: nie można odnaleźć ścieżki do shell.qml w {DIR}",
     "error_unknown_command": "Błąd: nieznane polecenie '{CMD}'.",
     "error_unknown_target": "Błąd: nieznany cel '{TARGET}'.",
     "launch_help": {
-      "usage": "Użycie: serpantinum launch <start> [argumenty...]",
+      "usage": "Użycie: axshell launch <start> [argumenty...]",
       "description": "Uruchom komponenty bezpośrednio w trybie wykonawczym.",
       "available_targets": "Dostępne cele:",
       "target_start": "Uruchom interfejs konfiguracji startowej"
     },
     "msg_help": {
-      "usage": "Użycie: serpantinum msg <polecenie|workspace> [argumenty...]",
+      "usage": "Użycie: axshell msg <polecenie|workspace> [argumenty...]",
       "description": "Wysyłaj polecenia układu, obszarów roboczych i zarządzania oknami bezpośrednio.",
       "available_commands": "Dostępne komunikaty:",
       "cmd_workspace": "Przełącz na obszar roboczy <num> (dodaj 'move', aby przenieść aktywne okno)",
@@ -691,7 +691,7 @@
       "cmd_close": "Zamknij każdą aktywną nakładkę powłoki"
     },
     "ipc_help": {
-      "usage": "Użycie: serpantinum ipc call <cel> <metoda> [argumenty...]",
+      "usage": "Użycie: axshell ipc call <cel> <metoda> [argumenty...]",
       "description": "Wyślij wywołanie IPC bezpośrednio do uruchomionej instancji quickshell."
     },
     "scripts": {
@@ -717,7 +717,7 @@
     "config_desc": "Odczytaj i zmień ustawienia (get, set, dump, path, edit)",
     "error_unknown_language": "Błąd: nieznany język '{CODE}'.",
     "update_available": "Dostępna aktualizacja: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum jest aktualny ({VERSION}).",
+    "up_to_date": "AxShell jest aktualny ({VERSION}).",
     "state_on": "włączone",
     "state_off": "wyłączone",
     "error_unknown_theme": "Błąd: nieznany motyw '{NAME}'.",
@@ -731,11 +731,11 @@
   },
   "daemon": {
     "already_running": "Demon jest już uruchomiony. Kończenie pracy...",
-    "shutting_down": "Zamykanie demona serpantinum...",
-    "launching": "Uruchamianie demona serpantinum...",
+    "shutting_down": "Zamykanie demona axshell...",
+    "launching": "Uruchamianie demona axshell...",
     "cli": {
-      "usage": "Użycie: serpantinumd <polecenie> [opcje...]",
-      "description": "Usługa demona w tle dla powłoki pulpitu serpantinum.",
+      "usage": "Użycie: axshelld <polecenie> [opcje...]",
+      "description": "Usługa demona w tle dla powłoki pulpitu axshell.",
       "commands": "Polecenia:",
       "cmd_start": "Uruchom usługę demona i procesy w tle",
       "cmd_stop": "Zatrzymaj działającą usługę demona",
@@ -744,15 +744,15 @@
       "opt_verbose": "Włącz szczegółowe rejestrowanie zdarzeń",
       "opt_version": "Wyświetl informacje o wersji i zakończ",
       "opt_help": "Wyświetl ten komunikat pomocy i zakończ",
-      "stopped": "Demon Serpantinum został zatrzymany.",
-      "status_running": "Demon Serpantinum jest uruchomiony (PID: {PID}).",
-      "status_stopped": "Demon Serpantinum nie jest uruchomiony.",
+      "stopped": "Demon AxShell został zatrzymany.",
+      "status_running": "Demon AxShell jest uruchomiony (PID: {PID}).",
+      "status_stopped": "Demon AxShell nie jest uruchomiony.",
       "unknown_arg": "Nieznany argument: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects jest nadal włączony",
-      "body": "Serpantinum ma teraz własny silnik dźwięku, a EasyEffects może mu przeszkadzać. Jeśli EasyEffects służył Ci tylko do Serpantinum, wyłącz jego uruchamianie przy logowaniu."
+      "body": "AxShell ma teraz własny silnik dźwięku, a EasyEffects może mu przeszkadzać. Jeśli EasyEffects służył Ci tylko do AxShell, wyłącz jego uruchamianie przy logowaniu."
     }
   },
   "installer": {
@@ -761,7 +761,7 @@
     },
     "os": {
       "error_root": "Błąd: Nie uruchamiaj tego skryptu bezpośrednio jako root/sudo. Uruchom jako zwykły użytkownik.",
-      "error_unsupported": "Nieobsługiwany system operacyjny ({os}). Serpantinum obsługuje wyłącznie Arch Linux i jego pochodne.",
+      "error_unsupported": "Nieobsługiwany system operacyjny ({os}). AxShell obsługuje wyłącznie Arch Linux i jego pochodne.",
       "error_not_found": "Nie można wykryć systemu operacyjnego. Nie znaleziono /etc/os-release.",
       "unknown_cpu": "Nieznany procesor",
       "unknown_gpu": "Nieznana karta graficzna / maszyna wirtualna",
@@ -775,8 +775,6 @@
       "target_version": "Wersja docelowa:",
       "install_mode": "Tryb instalacji:",
       "github": "GitHub:",
-      "twitter": "Twitter:",
-      "reddit": "Reddit:",
       "telegram": "Telegram:",
       "donate": "Dotacja:",
       "donate_sub": "(Wesprzyj projekt!)",
@@ -802,7 +800,6 @@
       "menu_overview": "Przegląd instalacji pakietów ({count} głównych pakietów)",
       "menu_sddm": "Menedżer logowania SDDM",
       "menu_wallpapers": "Pakiet tapet",
-      "menu_telemetry": "Anonimowa telemetria",
       "menu_update": "Aktualizuj",
       "menu_reinstall": "Zainstaluj ponownie",
       "menu_install": "Zainstaluj",
@@ -811,9 +808,9 @@
       "tagline": "Powłoka pulpitu stworzona dla Ciebie",
       "support_creator": "Wesprzyj twórcę:",
       "buy_coffee": "Jeśli podoba Ci się ten projekt, postaw mi kawę!",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) zainstalowano pomyślnie.",
+      "installed_success": "✔ AxShell {ver} ({commit}) zainstalowano pomyślnie.",
       "failed_packages": "Wystąpiły błędy podczas instalacji następujących pakietów:",
-      "restart_prompt": "Uruchom ponownie kompozytor lub wpisz 'serpantinumd start', aby rozpocząć.",
+      "restart_prompt": "Uruchom ponownie kompozytor lub wpisz 'axshelld start', aby rozpocząć.",
       "ask_reboot": "Czy chcesz uruchomić komputer ponownie? [t/n] "
     },
     "deps": {
@@ -842,29 +839,29 @@
     "audio": {
       "building": "Brak gotowego silnika audio dla tego systemu, budowanie ze źródeł...",
       "checksum_failed": "Pobrany silnik audio nie przeszedł weryfikacji sumy kontrolnej, pomijanie.",
-      "download_failed": "Nie można pobrać silnika audio Serpantinum, pomijanie. Możesz zainstalować go później z github.com/ilyamiro/serpantinum-audio.",
-      "installed": "Zainstalowano silnik audio Serpantinum {version}",
-      "install_failed": "Nie udało się zainstalować silnika audio Serpantinum. Equalizer nie będzie działać, dopóki nie zostanie zainstalowany z github.com/ilyamiro/serpantinum-audio.",
-      "installing": "Instalowanie silnika audio Serpantinum...",
-      "up_to_date": "-> Silnik audio Serpantinum {version} jest już zainstalowany."
+      "download_failed": "Nie można pobrać silnika audio AxShell, pomijanie. Możesz zainstalować go później z github.com/ilyamiro/serpantinum-audio.",
+      "installed": "Zainstalowano silnik audio AxShell {version}",
+      "install_failed": "Nie udało się zainstalować silnika audio AxShell. Equalizer nie będzie działać, dopóki nie zostanie zainstalowany z github.com/ilyamiro/serpantinum-audio.",
+      "installing": "Instalowanie silnika audio AxShell...",
+      "up_to_date": "-> Silnik audio AxShell {version} jest już zainstalowany."
     },
     "core": {
       "checksum_failed": "Pobrane usługi podstawowe nie przeszły weryfikacji sumy kontrolnej, pomijanie.",
-      "download_failed": "Nie można pobrać usług podstawowych Serpantinum, pomijanie. Możesz zainstalować je później z github.com/ilyamiro/serpantinum-core.",
-      "installed": "Zainstalowano usługi podstawowe Serpantinum {version}",
-      "install_failed": "Nie udało się zainstalować usług podstawowych Serpantinum. Użycie systemu, wskaźniki blokady klawiatury i schowek nie będą działać, dopóki nie zostaną zainstalowane z github.com/ilyamiro/serpantinum-core.",
-      "installing": "Instalowanie usług podstawowych Serpantinum...",
+      "download_failed": "Nie można pobrać usług podstawowych AxShell, pomijanie. Możesz zainstalować je później z github.com/ilyamiro/serpantinum-core.",
+      "installed": "Zainstalowano usługi podstawowe AxShell {version}",
+      "install_failed": "Nie udało się zainstalować usług podstawowych AxShell. Użycie systemu, wskaźniki blokady klawiatury i schowek nie będą działać, dopóki nie zostaną zainstalowane z github.com/ilyamiro/serpantinum-core.",
+      "installing": "Instalowanie usług podstawowych AxShell...",
       "unsupported_arch": "Gotowe pakiety usług podstawowych istnieją tylko dla x86_64, pomijanie.",
-      "up_to_date": "-> Usługi podstawowe Serpantinum {version} są już zainstalowane."
+      "up_to_date": "-> Usługi podstawowe AxShell {version} są już zainstalowane."
     },
     "gamma": {
       "checksum_failed": "Pobrany filtr światła niebieskiego nie przeszedł weryfikacji sumy kontrolnej, pomijanie.",
-      "download_failed": "Nie można pobrać filtra światła niebieskiego Serpantinum, pomijanie. Możesz zainstalować go później z github.com/ilyamiro/serpantinum-gamma.",
-      "installed": "Zainstalowano filtr światła niebieskiego Serpantinum {version}",
-      "install_failed": "Nie udało się zainstalować filtra światła niebieskiego Serpantinum. Nie będzie działać, dopóki nie zostanie zainstalowany z github.com/ilyamiro/serpantinum-gamma.",
-      "installing": "Instalowanie filtra światła niebieskiego Serpantinum...",
+      "download_failed": "Nie można pobrać filtra światła niebieskiego AxShell, pomijanie. Możesz zainstalować go później z github.com/ilyamiro/serpantinum-gamma.",
+      "installed": "Zainstalowano filtr światła niebieskiego AxShell {version}",
+      "install_failed": "Nie udało się zainstalować filtra światła niebieskiego AxShell. Nie będzie działać, dopóki nie zostanie zainstalowany z github.com/ilyamiro/serpantinum-gamma.",
+      "installing": "Instalowanie filtra światła niebieskiego AxShell...",
       "unsupported_arch": "Gotowe pakiety filtra światła niebieskiego istnieją tylko dla x86_64, pomijanie.",
-      "up_to_date": "-> Filtr światła niebieskiego Serpantinum {version} jest już zainstalowany."
+      "up_to_date": "-> Filtr światła niebieskiego AxShell {version} jest już zainstalowany."
     },
     "ski": {
       "checksum_failed": "Pobrany Ski nie przeszedł weryfikacji sumy kontrolnej, pomijanie.",
@@ -878,7 +875,7 @@
   },
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "Ładowanie...",
       "unknown": "Nieznany",
       "version_by": "v{version} • stworzone przez {author}",
@@ -897,7 +894,7 @@
         "uptime": "Czas pracy",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "Witaj",
@@ -1550,7 +1547,7 @@
     "theme": {
       "font": {
         "title": "Czcionka",
-        "desc": "Wybierz domyślną czcionkę używaną przez Serpantinum",
+        "desc": "Wybierz domyślną czcionkę używaną przez AxShell",
         "select": "Wybierz..."
       },
       "radius": {
@@ -1652,16 +1649,16 @@
           "failed": "Nie udało się zaktualizować konfiguracji: {line}"
         },
         "hint": {
-          "select_in_app": "Wybierz motyw Serpantinum w ustawieniach aplikacji",
+          "select_in_app": "Wybierz motyw AxShell w ustawieniach aplikacji",
           "restart": "Uruchom ponownie otwarte okna, aby zobaczyć nowe kolory",
-          "neovim": "Uruchom :colorscheme serpantinum, aby go użyć",
+          "neovim": "Uruchom :colorscheme axshell, aby go użyć",
           "helix": "Uruchom :config-reload w otwartych edytorach, aby zobaczyć nowe kolory",
-          "fastfetch": "Uruchom fastfetch -c serpantinum, aby go użyć",
-          "spicetify": "Uruchom spicetify config current_theme Serpantinum, a potem spicetify apply",
-          "discord": "Włącz Serpantinum w ustawieniach motywów klienta",
-          "emacs": "Uruchom M-x load-theme serpantinum, aby go użyć",
+          "fastfetch": "Uruchom fastfetch -c axshell, aby go użyć",
+          "spicetify": "Uruchom spicetify config current_theme AxShell, a potem spicetify apply",
+          "discord": "Włącz AxShell w ustawieniach motywów klienta",
+          "emacs": "Uruchom M-x load-theme axshell, aby go użyć",
           "steam": "Zainstaluj Material-Theme przez Millennium, a potem wybierz Matugen w jego ustawieniach kolorów",
-          "heroic": "Ustaw w Heroic ścieżkę własnych motywów na jego folder motywów, a potem wybierz serpantinum",
+          "heroic": "Ustaw w Heroic ścieżkę własnych motywów na jego folder motywów, a potem wybierz axshell",
           "telegram": "Wczytaj plik motywu z ustawień czatu w Telegramie"
         },
         "list": {

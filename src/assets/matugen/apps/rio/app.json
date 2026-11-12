@@ -9,8 +9,8 @@
   },
   "templates": [
     {
-      "input": "serpantinum.toml",
-      "output": "$XDG_CONFIG_HOME/rio/themes/serpantinum.toml"
+      "input": "axshell.toml",
+      "output": "$XDG_CONFIG_HOME/rio/themes/axshell.toml"
     }
   ],
   "integrate": [
@@ -18,7 +18,7 @@
       "type": "line",
       "file": "$XDG_CONFIG_HOME/rio/config.toml",
       "section": "",
-      "line": "theme = \"serpantinum\"",
+      "line": "theme = \"axshell\"",
       "disable": "^\\s*theme\\s*=",
       "create": true
     }

@@ -141,7 +141,7 @@ GuideTab {
                     anchors.centerIn: parent
                     width: rootObj.s(210)
                     height: rootObj.s(210)
-                    source: "file://" + (typeof Caching !== "undefined" && Caching.serpantinumDir ? Caching.serpantinumDir : (rootObj && rootObj.appPaths ? rootObj.appPaths.serpantinumDir : "")) + "/assets/logo.svg"
+                    source: "file://" + (typeof Caching !== "undefined" && Caching.axshellDir ? Caching.axshellDir : (rootObj && rootObj.appPaths ? rootObj.appPaths.axshellDir : "")) + "/assets/logo.svg"
                     sourceSize: Qt.size(width, height)
                     fillMode: Image.PreserveAspectFit
                     smooth: true
@@ -174,7 +174,7 @@ GuideTab {
                     property color baseColor: ThemeBackend.mauve
                     property vector4d params: Qt.vector4d(rootObj.s(12), 0.0, 0.0, 0.0)
 
-                    fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/fluid/logo_water_wave.frag.qsb"
+                    fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/fluid/logo_water_wave.frag.qsb"
                 }
             }
 
@@ -227,7 +227,7 @@ GuideTab {
             }
 
             Text {
-                text: I18n.t("guide.welcome.by_author", { author: "ilyamiro" })
+                text: I18n.t("guide.welcome.by_author", { author: "mora1ss" })
                 font.family: ThemeBackend.fontFamily
                 font.pixelSize: rootObj.s(14)
                 color: ThemeBackend.subtext0

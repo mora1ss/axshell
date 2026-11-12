@@ -15,9 +15,9 @@ from pathlib import Path
 
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9_-]{0,63}$")
 CATEGORIES = ("system", "terminals", "editors", "tools", "apps")
-MARK_BEGIN = ">>> serpantinum theme >>>"
-MARK_END = "<<< serpantinum theme <<<"
-MARK_DISABLED = "serpantinum-disabled: "
+MARK_BEGIN = ">>> axshell theme >>>"
+MARK_END = "<<< axshell theme <<<"
+MARK_DISABLED = "axshell-disabled: "
 HEADER_RE = re.compile(r"^\[(.*)\]\s*(?:[#;].*)?$")
 STATE_VERSION = 1
 MATUGEN_TIMEOUT = 60
@@ -53,16 +53,16 @@ class Context:
         self.cache_home = _xdg("XDG_CACHE_HOME", ".cache")
         self.state_home = _xdg("XDG_STATE_HOME", ".local/state")
         qs_state = os.environ.get("QS_STATE_DIR", "")
-        self.state_dir = Path(qs_state) if qs_state and os.path.isabs(qs_state) else self.state_home / "serpantinum"
+        self.state_dir = Path(qs_state) if qs_state and os.path.isabs(qs_state) else self.state_home / "axshell"
         self.work = self.state_dir / "matugen"
         self.palette = self.work / "palette.json"
         self.state_file = self.work / "apps-state.json"
         settings = os.environ.get("QS_SETTINGS", "")
-        self.settings = Path(settings) if settings and os.path.isabs(settings) else self.config_home / "serpantinum" / "settings.json"
-        builtin = os.environ.get("SERPANTINUM_APPTHEME_BUILTIN", "")
+        self.settings = Path(settings) if settings and os.path.isabs(settings) else self.config_home / "axshell" / "settings.json"
+        builtin = os.environ.get("AXSHELL_APPTHEME_BUILTIN", "")
         self.builtin_dir = Path(builtin) if builtin else Path(__file__).resolve().parent.parent.parent / "assets" / "matugen" / "apps"
-        self.user_dir = self.config_home / "serpantinum" / "matugen" / "apps"
-        self.matugen = os.environ.get("SERPANTINUM_MATUGEN", "matugen")
+        self.user_dir = self.config_home / "axshell" / "matugen" / "apps"
+        self.matugen = os.environ.get("AXSHELL_MATUGEN", "matugen")
         data_dirs = os.environ.get("XDG_DATA_DIRS", "") or "/usr/local/share:/usr/share"
         self.data_dirs = [Path(p) for p in data_dirs.split(":") if p and os.path.isabs(p)]
         config_dirs = os.environ.get("XDG_CONFIG_DIRS", "") or "/etc/xdg"

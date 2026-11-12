@@ -444,7 +444,7 @@ Item {
     }
 
     function cacheDirPath() {
-        return (Quickshell.env("XDG_CACHE_HOME") || (Quickshell.env("HOME") + "/.cache")) + "/serpantinum/github";
+        return (Quickshell.env("XDG_CACHE_HOME") || (Quickshell.env("HOME") + "/.cache")) + "/axshell/github";
     }
 
     function cacheFilePath(user, year) {

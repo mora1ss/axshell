@@ -7,7 +7,7 @@ slug: /configure
 
 # Variables
 
-The configuration file is located at `~/.config/serpantinum/settings.json` (or `${XDG_CONFIG_HOME:-$HOME/.config}/serpantinum/settings.json`), and changes apply instantly without a reload.
+The configuration file is located at `~/.config/axshell/settings.json` (or `${XDG_CONFIG_HOME:-$HOME/.config}/axshell/settings.json`), and changes apply instantly without a reload.
 
 ## Example settings.json
 

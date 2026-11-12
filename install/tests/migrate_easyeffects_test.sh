@@ -58,7 +58,7 @@ printf '#!/usr/bin/env bash\nwhile :; do sleep 0.2; done\n' > "$FAKE_EE"
 export PATH="$STUBS:$TOOLS"
 export LANG=C
 unset LC_ALL LC_MESSAGES
-export SERPANTINUM_DIR="$REPO_ROOT/src"
+export AXSHELL_DIR="$REPO_ROOT/src"
 export XDG_RUNTIME_DIR="$SANDBOX/run"
 mkdir -p "$XDG_RUNTIME_DIR"
 chmod 700 "$XDG_RUNTIME_DIR"
@@ -67,7 +67,7 @@ reset_home() {
     export HOME="$SANDBOX/home-$1"
     export XDG_CONFIG_HOME="$HOME/.config"
     export XDG_DATA_HOME="$HOME/.local/share"
-    MARKER="$HOME/.local/state/serpantinum/easyeffects-migrated"
+    MARKER="$HOME/.local/state/axshell/easyeffects-migrated"
     PRESETS="$XDG_DATA_HOME/easyeffects/output"
     mkdir -p "$HOME"
     : > "$CALLS"
@@ -95,12 +95,12 @@ write_shipped_autostart() {
 hl.on("hyprland.start", function()
   hl.exec_cmd("wl-paste --type text --watch cliphist store")
   hl.exec_cmd("systemctl --user enable --now easyeffects")
-  hl.exec_cmd("serpantinumd start")
+  hl.exec_cmd("axshelld start")
 end)
 EOF
-    printf 'spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store"\nspawn-at-startup "systemctl" "--user" "enable" "--now" "easyeffects"\nspawn-at-startup "serpantinumd" "start"\n' > "$base/niri/config/autostart.kdl"
-    printf 'exec wl-paste --type text --watch cliphist store\nexec systemctl --user enable --now easyeffects\nexec serpantinumd start\n' > "$base/sway/configDir/autostart"
-    printf 'exec_once=wl-paste --type text --watch cliphist store\nexec_once=systemctl --user enable --now easyeffects\nexec_once=serpantinumd start\n' > "$base/mango/config/autostart.conf"
+    printf 'spawn-at-startup "bash" "-c" "wl-paste --type text --watch cliphist store"\nspawn-at-startup "systemctl" "--user" "enable" "--now" "easyeffects"\nspawn-at-startup "axshelld" "start"\n' > "$base/niri/config/autostart.kdl"
+    printf 'exec wl-paste --type text --watch cliphist store\nexec systemctl --user enable --now easyeffects\nexec axshelld start\n' > "$base/sway/configDir/autostart"
+    printf 'exec_once=wl-paste --type text --watch cliphist store\nexec_once=systemctl --user enable --now easyeffects\nexec_once=axshelld start\n' > "$base/mango/config/autostart.conf"
 }
 
 SHIPPED=(hypr/config/autostart.lua niri/config/autostart.kdl sway/configDir/autostart mango/config/autostart.conf)
@@ -111,7 +111,7 @@ write_shipped_autostart "$XDG_CONFIG_HOME"
 mkdir -p "$PRESETS"
 echo '{}' > "$PRESETS/live_eq.json"
 own_pid="$(spawn_easyeffects -w -l live_eq)"
-SERPANTINUM_INSTALLER=1 run_migration
+AXSHELL_INSTALLER=1 run_migration
 check "nothing is touched" "[ ! -s '$CALLS' ] && [ ! -f '$MARKER' ] && [ -f '$PRESETS/live_eq.json' ] && grep -q easyeffects '$XDG_CONFIG_HOME/sway/configDir/autostart'"
 check "its EasyEffects keeps running" "alive $own_pid"
 kill -KILL "$own_pid" 2>/dev/null
@@ -131,7 +131,7 @@ printf '[Desktop Entry]\n' > "$XDG_CONFIG_HOME/autostart/com.github.wwmm.easyeff
 echo ee-eq.service > "$ACTIVE"
 own_pid="$(spawn_easyeffects -w -l live_eq)"
 user_pid="$(spawn_easyeffects --hide-window)"
-SERPANTINUM_INSTALLER=1 run_migration
+AXSHELL_INSTALLER=1 run_migration
 check "exit status is zero" "[ $? -eq 0 ]"
 check "the instance the old equalizer started is stopped" "! alive $own_pid"
 check "an EasyEffects the user started keeps running" "alive $user_pid"
@@ -143,14 +143,14 @@ check "the generated preset is removed" "[ ! -e '$PRESETS/live_eq.json' ]"
 check "the user's own presets are kept" "[ -f '$PRESETS/my_own_preset.json' ]"
 for f in "${SHIPPED[@]}"; do
     check "$f: line removed" "! grep -q easyeffects '$XDG_CONFIG_HOME/$f'"
-    check "$f: other lines kept" "grep -q 'serpantinumd' '$XDG_CONFIG_HOME/$f' && grep -q cliphist '$XDG_CONFIG_HOME/$f'"
+    check "$f: other lines kept" "grep -q 'axshelld' '$XDG_CONFIG_HOME/$f' && grep -q cliphist '$XDG_CONFIG_HOME/$f'"
     check "$f: backup written" "grep -q easyeffects '$XDG_CONFIG_HOME/$f.pre-audio-engine.bak'"
 done
-check "the same line in a file Serpantinum did not ship is kept" "grep -q easyeffects '$XDG_CONFIG_HOME/hypr/config/mine.lua'"
+check "the same line in a file AxShell did not ship is kept" "grep -q easyeffects '$XDG_CONFIG_HOME/hypr/config/mine.lua'"
 check "the installer prints the notice" "grep -q 'EasyEffects is still enabled' '$OUT'"
 check "a completion marker is written" "[ -f '$MARKER' ]"
 : > "$CALLS"
-SERPANTINUM_INSTALLER=1 run_migration
+AXSHELL_INSTALLER=1 run_migration
 check "a second run does nothing" "[ ! -s '$CALLS' ] && [ ! -s '$OUT' ]"
 kill -KILL "$user_pid" 2>/dev/null
 
@@ -160,10 +160,10 @@ write_shipped_autostart "$SANDBOX/dotfiles"
 mkdir -p "$XDG_CONFIG_HOME/mango/config"
 ln -s "$SANDBOX/dotfiles/mango/config/autostart.conf" "$XDG_CONFIG_HOME/mango/config/autostart.conf"
 ln -s "$SANDBOX/dotfiles/sway" "$XDG_CONFIG_HOME/sway"
-SERPANTINUM_INSTALLER=1 run_migration
+AXSHELL_INSTALLER=1 run_migration
 check "a symlinked autostart file is not edited" "grep -q easyeffects '$SANDBOX/dotfiles/mango/config/autostart.conf' && [ ! -e '$SANDBOX/dotfiles/mango/config/autostart.conf.pre-audio-engine.bak' ]"
 check "a file inside a symlinked folder is not edited" "grep -q easyeffects '$SANDBOX/dotfiles/sway/configDir/autostart' && [ ! -e '$SANDBOX/dotfiles/sway/configDir/autostart.pre-audio-engine.bak' ]"
-check "nothing Serpantinum did here, so no notice" "[ ! -s '$OUT' ]"
+check "nothing AxShell did here, so no notice" "[ ! -s '$OUT' ]"
 
 echo "== a new user with their own EasyEffects"
 reset_home fresh
@@ -172,7 +172,7 @@ echo '{}' > "$PRESETS/my_own_preset.json"
 printf '[Desktop Entry]\n' > "$XDG_CONFIG_HOME/autostart/com.github.wwmm.easyeffects.desktop"
 echo easyeffects.service > "$ENABLED"
 user_pid="$(spawn_easyeffects --hide-window)"
-SERPANTINUM_INSTALLER=1 run_migration
+AXSHELL_INSTALLER=1 run_migration
 check "their EasyEffects keeps running" "alive $user_pid"
 check "their setup is untouched" "[ -f '$XDG_CONFIG_HOME/autostart/com.github.wwmm.easyeffects.desktop' ] && [ -f '$PRESETS/my_own_preset.json' ] && ! grep -qE 'stop|disable' '$CALLS'"
 check "they get no notice" "[ ! -s '$OUT' ]"
@@ -185,13 +185,13 @@ mkdir -p "$PRESETS"
 echo '{}' > "$PRESETS/live_eq.json"
 echo easyeffects.service > "$ENABLED"
 run_migration
-check "the preset folder Serpantinum created is removed once empty" "[ ! -e '$PRESETS' ] && [ ! -e '$XDG_DATA_HOME/easyeffects' ]"
+check "the preset folder AxShell created is removed once empty" "[ ! -e '$PRESETS' ] && [ ! -e '$XDG_DATA_HOME/easyeffects' ]"
 check "nothing is printed outside the installer" "[ ! -s '$OUT' ]"
 for _ in $(seq 50); do
     grep -q "serpantinum-core notify" "$CALLS" && break
     sleep 0.1
 done
-check "the notice is sent as a notification" "grep -q 'serpantinum-core notify --app Serpantinum -- EasyEffects is still enabled' '$CALLS'"
+check "the notice is sent as a notification" "grep -q 'serpantinum-core notify --app AxShell -- EasyEffects is still enabled' '$CALLS'"
 
 echo "$([ "$failures" -eq 0 ] && echo 'all passed' || echo "$failures FAILED")"
 [ "$failures" -eq 0 ]

@@ -82,9 +82,9 @@ ShellRoot {
     }
 
     Component.onCompleted: {
-        Qt.application.organization = "serpantinum";
-        Qt.application.domain = "serpantinum.org";
-        Qt.application.name = "serpantinum";
+        Qt.application.organization = "axshell";
+        Qt.application.domain = "axshell.org";
+        Qt.application.name = "axshell";
         FirstLaunch.checkFirstLaunch();
         SysNotif.checkBattery();
         WeatherAlerts.isQuietNow();

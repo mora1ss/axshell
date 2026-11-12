@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "Đang tải...",
       "unknown": "Không rõ",
       "version_by": "v{version} • bởi {author}",
@@ -20,7 +20,7 @@
         "uptime": "Thời gian hoạt động",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "Chào mừng",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "Phông chữ",
-        "desc": "Chọn phông chữ mặc định cho serpantinum",
+        "desc": "Chọn phông chữ mặc định cho axshell",
         "select": "Chọn..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "Không thể cập nhật cấu hình: {line}"
         },
         "hint": {
-          "select_in_app": "Chọn giao diện Serpantinum trong cài đặt của ứng dụng",
+          "select_in_app": "Chọn giao diện AxShell trong cài đặt của ứng dụng",
           "restart": "Khởi động lại các cửa sổ đang mở để thấy màu mới",
-          "neovim": "Chạy :colorscheme serpantinum để sử dụng",
+          "neovim": "Chạy :colorscheme axshell để sử dụng",
           "helix": "Chạy :config-reload trong trình soạn thảo đang mở để thấy màu mới",
-          "fastfetch": "Chạy fastfetch -c serpantinum để sử dụng",
-          "spicetify": "Chạy spicetify config current_theme Serpantinum, rồi spicetify apply",
-          "discord": "Bật Serpantinum trong cài đặt giao diện của ứng dụng",
-          "emacs": "Chạy M-x load-theme serpantinum để dùng",
+          "fastfetch": "Chạy fastfetch -c axshell để sử dụng",
+          "spicetify": "Chạy spicetify config current_theme AxShell, rồi spicetify apply",
+          "discord": "Bật AxShell trong cài đặt giao diện của ứng dụng",
+          "emacs": "Chạy M-x load-theme axshell để dùng",
           "steam": "Cài Material-Theme bằng Millennium, rồi chọn Matugen trong phần cài đặt màu của nó",
-          "heroic": "Đặt đường dẫn chủ đề tùy chỉnh của Heroic tới thư mục chủ đề của nó, rồi chọn serpantinum",
+          "heroic": "Đặt đường dẫn chủ đề tùy chỉnh của Heroic tới thư mục chủ đề của nó, rồi chọn axshell",
           "telegram": "Tải tệp chủ đề từ cài đặt trò chuyện của Telegram"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "Thực hiện bởi @{author}",
     "welcome": "Chào mừng",
     "tagline": "Một desktop shell được xây dựng cho",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "Cài đặt",
-      "desc": "Cài đặt Serpantinum"
+      "desc": "Cài đặt AxShell"
     },
     "calendar": {
       "name": "Lịch & Đồng hồ",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "Cách dùng: serpantinum [lệnh] [tùy chọn...]",
+    "usage": "Cách dùng: axshell [lệnh] [tùy chọn...]",
     "description": "Một desktop shell dành cho các Wayland compositor.",
     "commands": "Các lệnh:",
     "script_commands": "Các lệnh tập lệnh:",
@@ -1880,23 +1880,23 @@
     "version_desc": "Hiển thị thông tin phiên bản và thoát",
     "help_desc": "Hiển thị thông báo trợ giúp này và thoát",
     "examples": "Ví dụ:",
-    "daemon_stopped": "Đã dừng daemon Serpantinum.",
-    "daemon_restarted": "Đã khởi động lại daemon Serpantinum.",
-    "starting_daemon": "Daemon không chạy. Đang khởi động serpantinumd ở nền...",
+    "daemon_stopped": "Đã dừng daemon AxShell.",
+    "daemon_restarted": "Đã khởi động lại daemon AxShell.",
+    "starting_daemon": "Daemon không chạy. Đang khởi động axshelld ở nền...",
     "error_missing_qml": "Lỗi: thiếu mục tiêu để khởi chạy.",
-    "launch_usage": "Cách dùng: serpantinum launch <start> [đối số...]",
+    "launch_usage": "Cách dùng: axshell launch <start> [đối số...]",
     "error_qml_not_found": "Lỗi: không tìm thấy {NAME}.qml trong {DIR}",
     "error_shell_qml_not_found": "Lỗi: không tìm thấy đường dẫn đến shell.qml trong {DIR}",
     "error_unknown_command": "Lỗi: lệnh không xác định '{CMD}'.",
     "error_unknown_target": "Lỗi: mục tiêu không xác định '{TARGET}'.",
     "launch_help": {
-      "usage": "Cách dùng: serpantinum launch <start> [đối số...]",
+      "usage": "Cách dùng: axshell launch <start> [đối số...]",
       "description": "Khởi chạy trực tiếp các thành phần độc lập ở chế độ chạy.",
       "available_targets": "Các mục tiêu khả dụng:",
       "target_start": "Khởi chạy giao diện thiết lập ban đầu"
     },
     "msg_help": {
-      "usage": "Cách dùng: serpantinum msg <lệnh|không_gian_làm_việc> [đối số...]",
+      "usage": "Cách dùng: axshell msg <lệnh|không_gian_làm_việc> [đối số...]",
       "description": "Gửi trực tiếp thông điệp quản lý bố cục, không gian làm việc và cửa sổ.",
       "available_commands": "Các thông điệp khả dụng:",
       "cmd_workspace": "Chuyển đến không gian làm việc <số> (thêm 'move' để chuyển cửa sổ đang hoạt động)",
@@ -1905,7 +1905,7 @@
       "cmd_close": "Đóng mọi lớp phủ shell đang hoạt động"
     },
     "ipc_help": {
-      "usage": "Cách dùng: serpantinum ipc call <mục_tiêu> <phương_thức> [đối số...]",
+      "usage": "Cách dùng: axshell ipc call <mục_tiêu> <phương_thức> [đối số...]",
       "description": "Gửi lệnh gọi IPC trực tiếp đến phiên bản quickshell đang chạy."
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "Đọc và thay đổi cài đặt (get, set, dump, path, edit)",
     "error_unknown_language": "Lỗi: ngôn ngữ '{CODE}' không xác định.",
     "update_available": "Có bản cập nhật: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum đã được cập nhật ({VERSION}).",
+    "up_to_date": "AxShell đã được cập nhật ({VERSION}).",
     "state_on": "bật",
     "state_off": "tắt",
     "error_unknown_theme": "Lỗi: không rõ chủ đề '{NAME}'.",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "Daemon đang chạy rồi. Đang thoát...",
-    "shutting_down": "Đang tắt daemon serpantinum...",
-    "launching": "Đang khởi chạy daemon serpantinum...",
+    "shutting_down": "Đang tắt daemon axshell...",
+    "launching": "Đang khởi chạy daemon axshell...",
     "cli": {
-      "usage": "Cách dùng: serpantinumd <lệnh> [tùy chọn...]",
-      "description": "Daemon dịch vụ nền cho desktop shell serpantinum.",
+      "usage": "Cách dùng: axshelld <lệnh> [tùy chọn...]",
+      "description": "Daemon dịch vụ nền cho desktop shell axshell.",
       "commands": "Các lệnh:",
       "cmd_start": "Khởi động dịch vụ daemon và các tiến trình nền",
       "cmd_stop": "Dừng dịch vụ daemon đang chạy",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "Bật ghi nhật ký đầu ra chi tiết",
       "opt_version": "Hiển thị thông tin phiên bản và thoát",
       "opt_help": "Hiển thị thông báo trợ giúp này và thoát",
-      "stopped": "Đã dừng daemon Serpantinum.",
-      "status_running": "Daemon Serpantinum đang chạy (PID: {PID}).",
-      "status_stopped": "Daemon Serpantinum không chạy.",
+      "stopped": "Đã dừng daemon AxShell.",
+      "status_running": "Daemon AxShell đang chạy (PID: {PID}).",
+      "status_stopped": "Daemon AxShell không chạy.",
       "unknown_arg": "Đối số không xác định: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects vẫn đang bật",
-      "body": "Serpantinum giờ đã có công cụ âm thanh riêng và EasyEffects có thể gây xung đột. Nếu bạn chỉ dùng EasyEffects cho Serpantinum, hãy tắt việc tự khởi động khi đăng nhập."
+      "body": "AxShell giờ đã có công cụ âm thanh riêng và EasyEffects có thể gây xung đột. Nếu bạn chỉ dùng EasyEffects cho AxShell, hãy tắt việc tự khởi động khi đăng nhập."
     }
   },
   "installer": {
@@ -1975,7 +1975,7 @@
     },
     "os": {
       "error_root": "Lỗi: Không chạy trực tiếp tập lệnh này bằng root/sudo. Hãy chạy với tư cách người dùng thường.",
-      "error_unsupported": "Hệ điều hành không được hỗ trợ ({os}). Serpantinum chỉ hỗ trợ Arch Linux và các bản phân phối dựa trên Arch.",
+      "error_unsupported": "Hệ điều hành không được hỗ trợ ({os}). AxShell chỉ hỗ trợ Arch Linux và các bản phân phối dựa trên Arch.",
       "error_not_found": "Không thể nhận diện hệ điều hành. Không tìm thấy /etc/os-release.",
       "unknown_cpu": "CPU không rõ",
       "unknown_gpu": "Không rõ / Máy ảo",
@@ -1989,8 +1989,6 @@
       "target_version": "Phiên bản đích:",
       "install_mode": "Chế độ cài đặt:",
       "github": "GitHub:",
-      "twitter": "Twitter:",
-      "reddit": "Reddit:",
       "telegram": "Telegram:",
       "donate": "Ủng hộ:",
       "donate_sub": "(Ủng hộ dự án!)",
@@ -2016,7 +2014,6 @@
       "menu_overview": "Tổng quan cài đặt gói ({count} gói cốt lõi)",
       "menu_sddm": "Trình quản lý đăng nhập SDDM",
       "menu_wallpapers": "Gói hình nền",
-      "menu_telemetry": "Gửi dữ liệu chẩn đoán ẩn danh",
       "menu_update": "Cập nhật",
       "menu_reinstall": "Cài đặt lại",
       "menu_install": "Cài đặt",
@@ -2025,9 +2022,9 @@
       "tagline": "Một desktop shell được xây dựng cho bạn",
       "support_creator": "Ủng hộ tác giả:",
       "buy_coffee": "Nếu bạn thích dự án này, hãy cân nhắc mời tôi một ly cà phê!",
-      "installed_success": "✔ Đã cài đặt thành công Serpantinum {ver} ({commit}).",
+      "installed_success": "✔ Đã cài đặt thành công AxShell {ver} ({commit}).",
       "failed_packages": "Các gói sau đã gặp lỗi trong quá trình cài đặt:",
-      "restart_prompt": "Hãy khởi động lại compositor hoặc chạy 'serpantinumd start' để bắt đầu.",
+      "restart_prompt": "Hãy khởi động lại compositor hoặc chạy 'axshelld start' để bắt đầu.",
       "ask_reboot": "Bạn có muốn khởi động lại không? [y/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "Không có công cụ âm thanh dựng sẵn cho hệ thống này, đang biên dịch từ mã nguồn...",
       "checksum_failed": "Bản tải xuống công cụ âm thanh không qua được bước kiểm tra checksum, bỏ qua.",
-      "download_failed": "Không thể tải xuống công cụ âm thanh Serpantinum, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-audio.",
-      "installed": "Đã cài đặt công cụ âm thanh Serpantinum {version}",
-      "install_failed": "Cài đặt công cụ âm thanh Serpantinum thất bại. Bộ cân bằng âm sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-audio.",
-      "installing": "Đang cài đặt công cụ âm thanh Serpantinum...",
-      "up_to_date": "-> Công cụ âm thanh Serpantinum {version} đã được cài đặt."
+      "download_failed": "Không thể tải xuống công cụ âm thanh AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-audio.",
+      "installed": "Đã cài đặt công cụ âm thanh AxShell {version}",
+      "install_failed": "Cài đặt công cụ âm thanh AxShell thất bại. Bộ cân bằng âm sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-audio.",
+      "installing": "Đang cài đặt công cụ âm thanh AxShell...",
+      "up_to_date": "-> Công cụ âm thanh AxShell {version} đã được cài đặt."
     },
     "core": {
       "checksum_failed": "Bản tải xuống các dịch vụ lõi không qua được bước kiểm tra checksum, bỏ qua.",
-      "download_failed": "Không thể tải xuống các dịch vụ lõi Serpantinum, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-core.",
-      "installed": "Đã cài đặt các dịch vụ lõi Serpantinum {version}",
-      "install_failed": "Cài đặt các dịch vụ lõi Serpantinum thất bại. Mức sử dụng hệ thống, chỉ báo khóa bàn phím và bộ nhớ tạm sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-core.",
-      "installing": "Đang cài đặt các dịch vụ lõi Serpantinum...",
+      "download_failed": "Không thể tải xuống các dịch vụ lõi AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-core.",
+      "installed": "Đã cài đặt các dịch vụ lõi AxShell {version}",
+      "install_failed": "Cài đặt các dịch vụ lõi AxShell thất bại. Mức sử dụng hệ thống, chỉ báo khóa bàn phím và bộ nhớ tạm sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-core.",
+      "installing": "Đang cài đặt các dịch vụ lõi AxShell...",
       "unsupported_arch": "Gói dựng sẵn của các dịch vụ lõi chỉ có cho x86_64, bỏ qua.",
-      "up_to_date": "-> Các dịch vụ lõi Serpantinum {version} đã được cài đặt."
+      "up_to_date": "-> Các dịch vụ lõi AxShell {version} đã được cài đặt."
     },
     "gamma": {
       "checksum_failed": "Bản tải xuống bộ lọc ánh sáng xanh không qua được bước kiểm tra checksum, bỏ qua.",
-      "download_failed": "Không thể tải xuống bộ lọc ánh sáng xanh Serpantinum, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-gamma.",
-      "installed": "Đã cài đặt bộ lọc ánh sáng xanh Serpantinum {version}",
-      "install_failed": "Cài đặt bộ lọc ánh sáng xanh Serpantinum thất bại. Bộ lọc sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-gamma.",
-      "installing": "Đang cài đặt bộ lọc ánh sáng xanh Serpantinum...",
+      "download_failed": "Không thể tải xuống bộ lọc ánh sáng xanh AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-gamma.",
+      "installed": "Đã cài đặt bộ lọc ánh sáng xanh AxShell {version}",
+      "install_failed": "Cài đặt bộ lọc ánh sáng xanh AxShell thất bại. Bộ lọc sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-gamma.",
+      "installing": "Đang cài đặt bộ lọc ánh sáng xanh AxShell...",
       "unsupported_arch": "Gói dựng sẵn của bộ lọc ánh sáng xanh chỉ có cho x86_64, bỏ qua.",
-      "up_to_date": "-> Bộ lọc ánh sáng xanh Serpantinum {version} đã được cài đặt."
+      "up_to_date": "-> Bộ lọc ánh sáng xanh AxShell {version} đã được cài đặt."
     },
     "ski": {
       "checksum_failed": "Bản tải xuống Ski không qua được bước kiểm tra checksum, bỏ qua.",

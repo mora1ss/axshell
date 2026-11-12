@@ -13,7 +13,7 @@ Item {
     readonly property int batteryPercentage: (UPower.displayDevice.ready && root.hasBattery) ? Math.round(UPower.displayDevice.percentage * 100) : 0
     readonly property bool isCharging: root.hasBattery && UPower.displayDevice.ready && (UPower.displayDevice.state === UPowerDeviceState.Charging || UPower.displayDevice.state === UPowerDeviceState.FullyCharged)
     readonly property string stateFilePath: {
-        let base = (typeof Caching !== "undefined" && Caching.runDir) ? Caching.runDir : "/tmp/serpantinum";
+        let base = (typeof Caching !== "undefined" && Caching.runDir) ? Caching.runDir : "/tmp/axshell";
         return base + "/battery_notif_state.json";
     }
 

@@ -52,8 +52,8 @@ Item {
     property color maroon: "#eba0ac"
     property color teal: "#94e2d5"
 
-    property string configPath: Quickshell.env("QS_COLORS_JSON") ?? "~/.local/state/serpantinum/qs_colors.json"
-    property string matugenConfigPath: (typeof Caching !== "undefined" && Caching.stateDir ? Caching.stateDir : ((Quickshell.env("HOME") ?? "") + "/.local/state/serpantinum")) + "/qs_matugen_colors.json"
+    property string configPath: Quickshell.env("QS_COLORS_JSON") ?? "~/.local/state/axshell/qs_colors.json"
+    property string matugenConfigPath: (typeof Caching !== "undefined" && Caching.stateDir ? Caching.stateDir : ((Quickshell.env("HOME") ?? "") + "/.local/state/axshell")) + "/qs_matugen_colors.json"
 
     property bool _readInProgress: false
     property var matugenColors: null
@@ -66,8 +66,8 @@ Item {
 
     FontLoader {
         id: iconFontLoader
-        source: (typeof Caching !== "undefined" && Caching.serpantinumDir && Caching.serpantinumDir !== "")
-            ? ("file://" + Caching.serpantinumDir + "/assets/fonts/SymbolsNerdFontMono-Regular.ttf")
+        source: (typeof Caching !== "undefined" && Caching.axshellDir && Caching.axshellDir !== "")
+            ? ("file://" + Caching.axshellDir + "/assets/fonts/SymbolsNerdFontMono-Regular.ttf")
             : ""
     }
 
@@ -123,9 +123,9 @@ Item {
         property bool forceRescan: false
 
         command: {
-            let sys = Caching.serpantinumDir ? (Caching.serpantinumDir + "/assets/fonts") : "";
-            let usr = Caching.stateDir ? (Caching.stateDir + "/fonts") : (Caching.home + "/.local/state/serpantinum/fonts");
-            let cacheFile = Caching.stateDir ? (Caching.stateDir + "/fonts_cache.txt") : (Caching.home + "/.local/state/serpantinum/fonts_cache.txt");
+            let sys = Caching.axshellDir ? (Caching.axshellDir + "/assets/fonts") : "";
+            let usr = Caching.stateDir ? (Caching.stateDir + "/fonts") : (Caching.home + "/.local/state/axshell/fonts");
+            let cacheFile = Caching.stateDir ? (Caching.stateDir + "/fonts_cache.txt") : (Caching.home + "/.local/state/axshell/fonts_cache.txt");
             let force = forceRescan ? "true" : "false";
 
             let cmd = "CACHE=\"" + cacheFile + "\"; ";

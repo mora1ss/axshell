@@ -400,7 +400,7 @@ export default function AnimatedLogo(): React.JSX.Element {
       ref={containerRef}
       className={styles.logoContainer}
       onClick={() => animStateRef.current.restart()}
-      title="Serpantinum">
+      title="AxShell">
       <canvas ref={canvasRef} className={styles.canvas} width={270} height={270} />
     </div>
   );

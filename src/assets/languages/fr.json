@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "Chargement...",
       "unknown": "Inconnu",
       "version_by": "v{version} • par {author}",
@@ -20,7 +20,7 @@
         "uptime": "Temps d'activité",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "Bienvenue",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "Police",
-        "desc": "Choisir la police par défaut utilisée par serpantinum",
+        "desc": "Choisir la police par défaut utilisée par axshell",
         "select": "Sélectionner..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "Impossible de mettre à jour la configuration : {line}"
         },
         "hint": {
-          "select_in_app": "Choisissez le thème Serpantinum dans les paramètres de l'application",
+          "select_in_app": "Choisissez le thème AxShell dans les paramètres de l'application",
           "restart": "Redémarrez les fenêtres ouvertes pour voir les nouvelles couleurs",
-          "neovim": "Exécutez :colorscheme serpantinum pour l'utiliser",
+          "neovim": "Exécutez :colorscheme axshell pour l'utiliser",
           "helix": "Exécutez :config-reload dans les éditeurs ouverts pour voir les nouvelles couleurs",
-          "fastfetch": "Exécutez fastfetch -c serpantinum pour l'utiliser",
-          "spicetify": "Exécutez spicetify config current_theme Serpantinum, puis spicetify apply",
-          "discord": "Activez Serpantinum dans les paramètres de thème du client",
-          "emacs": "Exécutez M-x load-theme serpantinum pour l'utiliser",
+          "fastfetch": "Exécutez fastfetch -c axshell pour l'utiliser",
+          "spicetify": "Exécutez spicetify config current_theme AxShell, puis spicetify apply",
+          "discord": "Activez AxShell dans les paramètres de thème du client",
+          "emacs": "Exécutez M-x load-theme axshell pour l'utiliser",
           "steam": "Installez Material-Theme avec Millennium, puis choisissez Matugen dans ses réglages de couleurs",
-          "heroic": "Définissez le chemin des thèmes personnalisés de Heroic sur son dossier de thèmes, puis choisissez serpantinum",
+          "heroic": "Définissez le chemin des thèmes personnalisés de Heroic sur son dossier de thèmes, puis choisissez axshell",
           "telegram": "Chargez le fichier de thème depuis les paramètres de discussion de Telegram"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "Créé par @{author}",
     "welcome": "Bienvenue",
     "tagline": "Un shell de bureau conçu pour",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "Paramètres",
-      "desc": "Paramètres de Serpantinum"
+      "desc": "Paramètres de AxShell"
     },
     "calendar": {
       "name": "Calendrier et horloge",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "Utilisation : serpantinum [commande] [options...]",
+    "usage": "Utilisation : axshell [commande] [options...]",
     "description": "Un shell de bureau pour les gestionnaires de fenêtres Wayland.",
     "commands": "Commandes :",
     "script_commands": "Commandes de scripts :",
@@ -1880,23 +1880,23 @@
     "version_desc": "Afficher les informations de version et quitter",
     "help_desc": "Afficher ce message d'aide et quitter",
     "examples": "Exemples :",
-    "daemon_stopped": "Le démon Serpantinum est arrêté.",
-    "daemon_restarted": "Le démon Serpantinum est redémarré.",
-    "starting_daemon": "Le démon n'est pas en cours d'exécution. Démarrage de serpantinumd en arrière-plan...",
+    "daemon_stopped": "Le démon AxShell est arrêté.",
+    "daemon_restarted": "Le démon AxShell est redémarré.",
+    "starting_daemon": "Le démon n'est pas en cours d'exécution. Démarrage de axshelld en arrière-plan...",
     "error_missing_qml": "Erreur : cible de lancement manquante.",
-    "launch_usage": "Utilisation : serpantinum launch <start> [arguments...]",
+    "launch_usage": "Utilisation : axshell launch <start> [arguments...]",
     "error_qml_not_found": "Erreur : impossible de résoudre {NAME}.qml dans {DIR}",
     "error_shell_qml_not_found": "Erreur : impossible de résoudre le chemin vers shell.qml dans {DIR}",
     "error_unknown_command": "Erreur : commande inconnue '{CMD}'.",
     "error_unknown_target": "Erreur : cible inconnue '{TARGET}'.",
     "launch_help": {
-      "usage": "Utilisation : serpantinum launch <start> [arguments...]",
+      "usage": "Utilisation : axshell launch <start> [arguments...]",
       "description": "Lancer des composants autonomes directement en mode exécutable.",
       "available_targets": "Cibles disponibles :",
       "target_start": "Lancer l'interface de configuration initiale"
     },
     "msg_help": {
-      "usage": "Utilisation : serpantinum msg <commande|espace_de_travail> [arguments...]",
+      "usage": "Utilisation : axshell msg <commande|espace_de_travail> [arguments...]",
       "description": "Envoyer directement des messages de disposition, d'espace de travail et de gestion des fenêtres.",
       "available_commands": "Messages disponibles :",
       "cmd_workspace": "Basculer vers l'espace de travail <num> (ajoutez 'move' pour déplacer la fenêtre active)",
@@ -1905,7 +1905,7 @@
       "cmd_close": "Fermer toute surimpression active du shell"
     },
     "ipc_help": {
-      "usage": "Utilisation : serpantinum ipc call <cible> <méthode> [arguments...]",
+      "usage": "Utilisation : axshell ipc call <cible> <méthode> [arguments...]",
       "description": "Envoyer un appel IPC directement à l'instance quickshell en cours d'exécution."
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "Lire et modifier les paramètres (get, set, dump, path, edit)",
     "error_unknown_language": "Erreur : langue inconnue '{CODE}'.",
     "update_available": "Mise à jour disponible : {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum est à jour ({VERSION}).",
+    "up_to_date": "AxShell est à jour ({VERSION}).",
     "state_on": "activé",
     "state_off": "désactivé",
     "error_unknown_theme": "Erreur : thème inconnu '{NAME}'.",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "Le démon est déjà en cours d'exécution. Arrêt...",
-    "shutting_down": "Arrêt du démon serpantinum...",
-    "launching": "Lancement du démon serpantinum...",
+    "shutting_down": "Arrêt du démon axshell...",
+    "launching": "Lancement du démon axshell...",
     "cli": {
-      "usage": "Utilisation : serpantinumd <commande> [options...]",
-      "description": "Démon de service en arrière-plan pour le shell de bureau serpantinum.",
+      "usage": "Utilisation : axshelld <commande> [options...]",
+      "description": "Démon de service en arrière-plan pour le shell de bureau axshell.",
       "commands": "Commandes :",
       "cmd_start": "Démarrer le service démon et lancer les processus d'arrière-plan",
       "cmd_stop": "Arrêter le service démon en cours d'exécution",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "Activer la journalisation détaillée",
       "opt_version": "Afficher les informations de version et quitter",
       "opt_help": "Afficher ce message d'aide et quitter",
-      "stopped": "Le démon Serpantinum est arrêté.",
-      "status_running": "Le démon Serpantinum est en cours d'exécution (PID : {PID}).",
-      "status_stopped": "Le démon Serpantinum n'est pas en cours d'exécution.",
+      "stopped": "Le démon AxShell est arrêté.",
+      "status_running": "Le démon AxShell est en cours d'exécution (PID : {PID}).",
+      "status_stopped": "Le démon AxShell n'est pas en cours d'exécution.",
       "unknown_arg": "Argument inconnu : {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects est toujours activé",
-      "body": "Serpantinum dispose désormais de son propre moteur audio, et EasyEffects peut interférer avec lui. Si vous utilisiez EasyEffects uniquement pour Serpantinum, empêchez-le de démarrer à l'ouverture de session."
+      "body": "AxShell dispose désormais de son propre moteur audio, et EasyEffects peut interférer avec lui. Si vous utilisiez EasyEffects uniquement pour AxShell, empêchez-le de démarrer à l'ouverture de session."
     }
   },
   "installer": {
@@ -1975,7 +1975,7 @@
     },
     "os": {
       "error_root": "Erreur : N'exécutez pas ce script directement en tant que root/sudo. Exécutez-le en tant qu'utilisateur normal.",
-      "error_unsupported": "Système d'exploitation non pris en charge ({os}). Serpantinum prend strictement en charge Arch Linux et ses dérivés.",
+      "error_unsupported": "Système d'exploitation non pris en charge ({os}). AxShell prend strictement en charge Arch Linux et ses dérivés.",
       "error_not_found": "Impossible de détecter l'OS. /etc/os-release introuvable.",
       "unknown_cpu": "Processeur inconnu",
       "unknown_gpu": "Inconnu / machine virtuelle",
@@ -1989,8 +1989,6 @@
       "target_version": "Version cible :",
       "install_mode": "Mode d'installation :",
       "github": "GitHub :",
-      "twitter": "Twitter :",
-      "reddit": "Reddit :",
       "telegram": "Telegram :",
       "donate": "Faire un don :",
       "donate_sub": "(Soutenez le projet !)",
@@ -2016,7 +2014,6 @@
       "menu_overview": "Aperçu de l'installation des paquets ({count} paquets de base)",
       "menu_sddm": "Gestionnaire de connexion SDDM",
       "menu_wallpapers": "Pack de fonds d'écran",
-      "menu_telemetry": "Télémétrie anonyme",
       "menu_update": "Mettre à jour",
       "menu_reinstall": "Réinstaller",
       "menu_install": "Installer",
@@ -2025,9 +2022,9 @@
       "tagline": "Un shell de bureau conçu pour vous",
       "support_creator": "Soutenez le créateur :",
       "buy_coffee": "Si vous appréciez ce projet, pensez à m'offrir un café !",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) a été installé avec succès.",
+      "installed_success": "✔ AxShell {ver} ({commit}) a été installé avec succès.",
       "failed_packages": "Les paquets suivants ont rencontré des erreurs lors de l'installation :",
-      "restart_prompt": "Redémarrez votre compositeur ou lancez 'serpantinumd start' pour commencer.",
+      "restart_prompt": "Redémarrez votre compositeur ou lancez 'axshelld start' pour commencer.",
       "ask_reboot": "Voulez-vous redémarrer ? [o/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "Aucun moteur audio précompilé pour ce système, compilation depuis les sources...",
       "checksum_failed": "Le téléchargement du moteur audio a échoué à la vérification de la somme de contrôle, ignoré.",
-      "download_failed": "Impossible de télécharger le moteur audio Serpantinum, ignoré. Vous pourrez l'installer plus tard depuis github.com/ilyamiro/serpantinum-audio.",
-      "installed": "Moteur audio Serpantinum {version} installé",
-      "install_failed": "Échec de l'installation du moteur audio Serpantinum. L'égaliseur ne fonctionnera pas tant qu'il ne sera pas installé depuis github.com/ilyamiro/serpantinum-audio.",
-      "installing": "Installation du moteur audio Serpantinum...",
-      "up_to_date": "-> Le moteur audio Serpantinum {version} est déjà installé."
+      "download_failed": "Impossible de télécharger le moteur audio AxShell, ignoré. Vous pourrez l'installer plus tard depuis github.com/ilyamiro/serpantinum-audio.",
+      "installed": "Moteur audio AxShell {version} installé",
+      "install_failed": "Échec de l'installation du moteur audio AxShell. L'égaliseur ne fonctionnera pas tant qu'il ne sera pas installé depuis github.com/ilyamiro/serpantinum-audio.",
+      "installing": "Installation du moteur audio AxShell...",
+      "up_to_date": "-> Le moteur audio AxShell {version} est déjà installé."
     },
     "core": {
       "checksum_failed": "Le téléchargement des services principaux a échoué à la vérification de la somme de contrôle, ignoré.",
-      "download_failed": "Impossible de télécharger les services principaux Serpantinum, ignoré. Vous pourrez les installer plus tard depuis github.com/ilyamiro/serpantinum-core.",
-      "installed": "Services principaux Serpantinum {version} installés",
-      "install_failed": "Échec de l'installation des services principaux Serpantinum. L'utilisation du système, les indicateurs de verrouillage du clavier et le presse-papiers ne fonctionneront pas tant qu'ils ne seront pas installés depuis github.com/ilyamiro/serpantinum-core.",
-      "installing": "Installation des services principaux Serpantinum...",
+      "download_failed": "Impossible de télécharger les services principaux AxShell, ignoré. Vous pourrez les installer plus tard depuis github.com/ilyamiro/serpantinum-core.",
+      "installed": "Services principaux AxShell {version} installés",
+      "install_failed": "Échec de l'installation des services principaux AxShell. L'utilisation du système, les indicateurs de verrouillage du clavier et le presse-papiers ne fonctionneront pas tant qu'ils ne seront pas installés depuis github.com/ilyamiro/serpantinum-core.",
+      "installing": "Installation des services principaux AxShell...",
       "unsupported_arch": "Les paquets précompilés des services principaux n'existent que pour x86_64, ignoré.",
-      "up_to_date": "-> Les services principaux Serpantinum {version} sont déjà installés."
+      "up_to_date": "-> Les services principaux AxShell {version} sont déjà installés."
     },
     "gamma": {
       "checksum_failed": "Le téléchargement du filtre de lumière bleue a échoué à la vérification de la somme de contrôle, ignoré.",
-      "download_failed": "Impossible de télécharger le filtre de lumière bleue Serpantinum, ignoré. Vous pourrez l'installer plus tard depuis github.com/ilyamiro/serpantinum-gamma.",
-      "installed": "Filtre de lumière bleue Serpantinum {version} installé",
-      "install_failed": "Échec de l'installation du filtre de lumière bleue Serpantinum. Il ne fonctionnera pas tant qu'il ne sera pas installé depuis github.com/ilyamiro/serpantinum-gamma.",
-      "installing": "Installation du filtre de lumière bleue Serpantinum...",
+      "download_failed": "Impossible de télécharger le filtre de lumière bleue AxShell, ignoré. Vous pourrez l'installer plus tard depuis github.com/ilyamiro/serpantinum-gamma.",
+      "installed": "Filtre de lumière bleue AxShell {version} installé",
+      "install_failed": "Échec de l'installation du filtre de lumière bleue AxShell. Il ne fonctionnera pas tant qu'il ne sera pas installé depuis github.com/ilyamiro/serpantinum-gamma.",
+      "installing": "Installation du filtre de lumière bleue AxShell...",
       "unsupported_arch": "Les paquets précompilés du filtre de lumière bleue n'existent que pour x86_64, ignoré.",
-      "up_to_date": "-> Le filtre de lumière bleue Serpantinum {version} est déjà installé."
+      "up_to_date": "-> Le filtre de lumière bleue AxShell {version} est déjà installé."
     },
     "ski": {
       "checksum_failed": "Le téléchargement de Ski a échoué à la vérification de la somme de contrôle, ignoré.",

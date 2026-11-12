@@ -11,9 +11,9 @@ PM_SDDM_WAYLAND_DEFAULT=true
 PM_SDDM_CURSOR_FIX=true
 PM_AUDIO_BUILD_PKGS=(gcc make pkg-config pipewire-devel)
 
-VOID_HYPRLAND_REPO_CONF="/etc/xbps.d/20-serpantinum-hyprland.conf"
+VOID_HYPRLAND_REPO_CONF="/etc/xbps.d/20-axshell-hyprland.conf"
 VOID_HYPRLAND_REPO_BASE="https://mirror.black-hole.dev"
-VOID_SDDM_SESSION_WRAPPER="/usr/local/share/serpantinum/sddm-wayland-session"
+VOID_SDDM_SESSION_WRAPPER="/usr/local/share/axshell/sddm-wayland-session"
 
 declare -A PM_PKG_MAP=(
     [tesseract]="tesseract-ocr"

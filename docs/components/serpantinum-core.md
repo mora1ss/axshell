@@ -7,14 +7,14 @@ slug: /core
 
 # serpantinum-core
 
-Serpantinum ships a small background service written in Rust, [serpantinum-core](https://github.com/ilyamiro/serpantinum-core). It serves system usage, compositor state, brightness, idle inhibition, screen time, launcher ranking and clipboard history to the shell. These used to be scripts and Python helpers that the shell ran on a timer or on every event. Now one long-running process answers them, so the shell no longer starts a process for each poll and no longer needs `brightnessctl` or `python-jeepney`.
+AxShell ships a small background service written in Rust, [serpantinum-core](https://github.com/ilyamiro/serpantinum-core). It serves system usage, compositor state, brightness, idle inhibition, screen time, launcher ranking and clipboard history to the shell. These used to be scripts and Python helpers that the shell ran on a timer or on every event. Now one long-running process answers them, so the shell no longer starts a process for each poll and no longer needs `brightnessctl` or `python-jeepney`.
 
 It talks to the shell over the D-Bus session bus, works on any compositor and links only glibc. The same binary is its command line client, and every command prints JSON, one object or array per line.
 
 ## In the shell
 
 - The daemon starts the first time anything asks for it, and every command except `quit` starts it when it is not running. `watch` starts it again if it goes away.
-- `serpantinumd start` runs `serpantinum-core screentime track` for the digital wellbeing tab, and `serpantinumd stop` ends it.
+- `axshelld start` runs `serpantinum-core screentime track` for the digital wellbeing tab, and `axshelld stop` ends it.
 - The daemon can outlive a login. `serpantinum-core quit` stops it.
 
 ## Feeds cost nothing when unused
@@ -32,7 +32,7 @@ The daemon samples a feed only while a client holds a lease on it. A lease ends 
 | `watch idle MARKER` | Idle inhibition and the sleep lock |
 | `screentime track`, `screentime stats [DATE]` | Counting and reading screen time |
 | `launcher rank`, `launcher log NAME`, `launcher files QUERY` | App ranking, launch counts and file search in the launcher |
-| `monitors` | Monitor lists in the wallpaper picker, the bar's workspace settings and `serpantinum info monitors` |
+| `monitors` | Monitor lists in the wallpaper picker, the bar's workspace settings and `axshell info monitors` |
 | `system can-hibernate`, `system fingerprint` | Whether the system panel offers hibernate, and whether fingerprint unlock is set up |
 | `clipboard list\|pin\|delete\|wipe` | The clipboard history |
 
@@ -74,28 +74,28 @@ Screen time counts the focused app once a second into the shell's database, per 
 
 ### Clipboard
 
-The clipboard commands read the history from [cliphist](https://github.com/sentriz/cliphist), which must be installed. Decoded images and pins are kept in the directory passed with `--cache-dir`, by default `$XDG_CACHE_HOME/serpantinum/clipboard`.
+The clipboard commands read the history from [cliphist](https://github.com/sentriz/cliphist), which must be installed. Decoded images and pins are kept in the directory passed with `--cache-dir`, by default `$XDG_CACHE_HOME/axshell/clipboard`.
 
 ## D-Bus
 
-The daemon owns `org.serpantinum.Core` on the session bus, with one object per feed:
+The daemon owns `org.axshell.Core` on the session bus, with one object per feed:
 
 | Object | Interface |
 | --- | --- |
-| `/` | `org.serpantinum.Core` |
-| `/sysinfo` | `org.serpantinum.Core.SysInfo` |
-| `/locks` | `org.serpantinum.Core.Locks` |
-| `/compositor` | `org.serpantinum.Core.Compositor` |
-| `/brightness` | `org.serpantinum.Core.Brightness` |
-| `/idle` | `org.serpantinum.Core.Idle` |
-| `/screentime` | `org.serpantinum.Core.ScreenTime` |
-| `/clipboard` | `org.serpantinum.Core.Clipboard` |
+| `/` | `org.axshell.Core` |
+| `/sysinfo` | `org.axshell.Core.SysInfo` |
+| `/locks` | `org.axshell.Core.Locks` |
+| `/compositor` | `org.axshell.Core.Compositor` |
+| `/brightness` | `org.axshell.Core.Brightness` |
+| `/idle` | `org.axshell.Core.Idle` |
+| `/screentime` | `org.axshell.Core.ScreenTime` |
+| `/clipboard` | `org.axshell.Core.Clipboard` |
 
 Properties signal `PropertiesChanged`. You can query it by hand:
 
 ```sh
-busctl --user call org.serpantinum.Core /sysinfo org.serpantinum.Core.SysInfo Subscribe u 1000
-busctl --user get-property org.serpantinum.Core /sysinfo org.serpantinum.Core.SysInfo Cpu
+busctl --user call org.axshell.Core /sysinfo org.axshell.Core.SysInfo Subscribe u 1000
+busctl --user get-property org.axshell.Core /sysinfo org.axshell.Core.SysInfo Cpu
 ```
 
 The full list of members is in the [serpantinum-core README](https://github.com/ilyamiro/serpantinum-core#d-bus).

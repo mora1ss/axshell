@@ -10,15 +10,15 @@
   },
   "templates": [
     {
-      "input": "serpantinum",
-      "output": "$XDG_CONFIG_HOME/zathura/serpantinum"
+      "input": "axshell",
+      "output": "$XDG_CONFIG_HOME/zathura/axshell"
     }
   ],
   "integrate": [
     {
       "type": "line",
       "file": "$XDG_CONFIG_HOME/zathura/zathurarc",
-      "line": "include serpantinum",
+      "line": "include axshell",
       "create": true
     }
   ]

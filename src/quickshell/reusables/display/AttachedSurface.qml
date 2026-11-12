@@ -344,6 +344,6 @@ Item {
         property vector4d k1: root.k1
         property vector4d o0: root.o0
         property vector4d o1: root.o1
-        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/ui/surface_field.frag.qsb"
+        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/ui/surface_field.frag.qsb"
     }
 }

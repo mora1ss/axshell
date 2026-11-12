@@ -10,15 +10,15 @@
   },
   "templates": [
     {
-      "input": "serpantinum.kak",
-      "output": "$XDG_CONFIG_HOME/kak/colors/serpantinum.kak"
+      "input": "axshell.kak",
+      "output": "$XDG_CONFIG_HOME/kak/colors/axshell.kak"
     }
   ],
   "integrate": [
     {
       "type": "line",
       "file": "$XDG_CONFIG_HOME/kak/kakrc",
-      "line": "colorscheme serpantinum",
+      "line": "colorscheme axshell",
       "disable": "^\\s*colorscheme\\s",
       "create": true
     }

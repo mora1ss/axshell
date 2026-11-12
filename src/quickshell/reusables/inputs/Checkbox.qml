@@ -117,7 +117,7 @@ Item {
                 property color checkColor: root.checkColor
                 property vector4d params: Qt.vector4d(root.cornerRadius, 0.0, root.fill, root.draw)
                 property vector4d params2: Qt.vector4d(root.hover, Math.max(1.5, root.size * 0.1), 0.0, 0.0)
-                fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/ui/checkbox.frag.qsb"
+                fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/ui/checkbox.frag.qsb"
             }
         }
 

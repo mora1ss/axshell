@@ -248,7 +248,7 @@ PanelWindow {
                         Image {
                             id: rawSvgImage
                             anchors.fill: parent
-                            source: "file://" + Caching.serpantinumDir + "/assets/logo.svg"
+                            source: "file://" + Caching.axshellDir + "/assets/logo.svg"
                             sourceSize: Qt.size(1024, 1024)
                             fillMode: Image.PreserveAspectFit
                             antialiasing: true

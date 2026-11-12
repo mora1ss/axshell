@@ -24,14 +24,14 @@ The shell daemon and clipboard history are launched from `configDir/autostart`:
 ```ini
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
-exec serpantinumd start
+exec axshelld start
 ```
 
-`serpantinumd start` also starts the [audio engine](/audio).
+`axshelld start` also starts the [audio engine](/audio).
 
 ## Keybindings
 
-Shell overlays and controls are bound in `configDir/keybinds` using `exec serpantinum msg toggle <module>`:
+Shell overlays and controls are bound in `configDir/keybinds` using `exec axshell msg toggle <module>`:
 
 - `launcher` - application launcher (`$mod+D`)
 - `system` - system control panel (`$mod+B`)
@@ -46,15 +46,15 @@ Shell overlays and controls are bound in `configDir/keybinds` using `exec serpan
 Workspace switching is routed through the shell to update bar indicators:
 
 ```ini
-bindsym $mod+1 exec serpantinum msg workspace 1
-bindsym $mod+Shift+1 exec serpantinum msg workspace 1 move
+bindsym $mod+1 exec axshell msg workspace 1
+bindsym $mod+Shift+1 exec axshell msg workspace 1 move
 # ... up to workspace 10 ($mod+0)
 ```
 
 Quick utility actions:
-- Lock screen: `$mod+L exec serpantinum lock`
-- Reload shell: `$mod+R exec serpantinum reload`
-- Bar autohide: `$mod+A exec serpantinum msg bar autohide`
-- Screenshots: `Print exec serpantinum screenshot` (add `--edit` or `--full`)
+- Lock screen: `$mod+L exec axshell lock`
+- Reload shell: `$mod+R exec axshell reload`
+- Bar autohide: `$mod+A exec axshell msg bar autohide`
+- Screenshots: `Print exec axshell screenshot` (add `--edit` or `--full`)
 - Brightness: `XF86MonBrightnessDown` and `XF86MonBrightnessUp`
 - Volume: `XF86AudioLowerVolume`, `XF86AudioRaiseVolume`, and `XF86AudioMute`

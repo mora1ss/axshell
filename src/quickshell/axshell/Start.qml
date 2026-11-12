@@ -244,7 +244,7 @@ PanelWindow {
         property color color4: window.base
         property vector4d params: Qt.vector4d(window.s(45), 0.0, 0.0, 0.0)
 
-        fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/effects/screen_wipe.frag.qsb"
+        fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/effects/screen_wipe.frag.qsb"
     }
 
     Item {
@@ -339,7 +339,7 @@ PanelWindow {
             property color vignetteColor: "#000000"
             property vector4d params: Qt.vector4d(0.4, 0.75, 0.4, 0.0)
 
-            fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/effects/vignette.frag.qsb"
+            fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/effects/vignette.frag.qsb"
         }
 
         Item {
@@ -378,7 +378,7 @@ PanelWindow {
                             anchors.centerIn: parent
                             width: window.s(360)
                             height: window.s(360)
-                            source: "file://" + Caching.serpantinumDir + "/assets/logo.svg"
+                            source: "file://" + Caching.axshellDir + "/assets/logo.svg"
                             sourceSize: Qt.size(width, height)
                             fillMode: Image.PreserveAspectFit
                             smooth: true
@@ -411,7 +411,7 @@ PanelWindow {
                             property color baseColor: window.mauve
                             property vector4d params: Qt.vector4d(window.s(16), 0.0, 0.0, 0.0)
 
-                            fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/fluid/logo_water_wave.frag.qsb"
+                            fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/fluid/logo_water_wave.frag.qsb"
                         }
                     }
 
@@ -454,7 +454,7 @@ PanelWindow {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: serpText.bottom
                     anchors.topMargin: window.s(12)
-                    text: I18n.t("start.made_by", { "author": "ilyamiro" })
+                    text: I18n.t("start.made_by", { "author": "mora1ss" })
                     font.family: ThemeBackend.fontFamily
                     font.pixelSize: window.s(15)
                     scale: 0.88
@@ -553,7 +553,7 @@ PanelWindow {
 
                     Text {
                         id: introAuthorText
-                        text: I18n.t("start.made_by", { "author": "ilyamiro" })
+                        text: I18n.t("start.made_by", { "author": "mora1ss" })
                         font.family: ThemeBackend.fontFamily
                         font.pixelSize: window.s(14)
                         color: window.subtext0

@@ -8,7 +8,7 @@ ski_release_json() {
 }
 
 ski_version_stamp() {
-    echo "${XDG_STATE_HOME:-$HOME/.local/state}/serpantinum/ski-version"
+    echo "${XDG_STATE_HOME:-$HOME/.local/state}/axshell/ski-version"
 }
 
 ski_installed_version() {
@@ -63,7 +63,7 @@ install_ski() {
 
     local cache="${XDG_CACHE_HOME:-$HOME/.cache}" work
     mkdir -p "$cache"
-    work="$(mktemp -d "$cache/serpantinum-ski.XXXXXX")"
+    work="$(mktemp -d "$cache/axshell-ski.XXXXXX")"
     local archive="$work/${tarball_url##*/}"
 
     if ! curl -fL# --connect-timeout 15 --retry 3 "$tarball_url" -o "$archive"; then
@@ -119,7 +119,7 @@ ski_set_portal_preference() {
 }
 
 ski_set_dock_entry() {
-    local settings="${XDG_CONFIG_HOME:-$HOME/.config}/serpantinum/settings.json"
+    local settings="${XDG_CONFIG_HOME:-$HOME/.config}/axshell/settings.json"
     [ -s "$settings" ] || return 0
     command -v jq >/dev/null 2>&1 || return 0
 
@@ -145,7 +145,7 @@ configure_ski_defaults() {
 
     local env_dir="${XDG_CONFIG_HOME:-$HOME/.config}/environment.d"
     mkdir -p "$env_dir"
-    printf 'GTK_USE_PORTAL=1\n' > "$env_dir/serpantinum-portal.conf"
+    printf 'GTK_USE_PORTAL=1\n' > "$env_dir/axshell-portal.conf"
 
     ski_set_dock_entry
 }

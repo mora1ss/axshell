@@ -1,65 +1,19 @@
 #!/usr/bin/env bash
 
 MODULE_DIR="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
-if [ -z "$SERPANTINUM_DIR" ]; then
+if [ -z "$AXSHELL_DIR" ]; then
     if [ -d "$(dirname "$(dirname "$MODULE_DIR")")/src" ]; then
-        export SERPANTINUM_DIR="$(dirname "$(dirname "$MODULE_DIR")")/src"
+        export AXSHELL_DIR="$(dirname "$(dirname "$MODULE_DIR")")/src"
     fi
 fi
 
-if [ -n "$SERPANTINUM_DIR" ] && [ -f "$SERPANTINUM_DIR/scripts/caching.sh" ]; then
-    source "$SERPANTINUM_DIR/scripts/caching.sh"
+if [ -n "$AXSHELL_DIR" ] && [ -f "$AXSHELL_DIR/scripts/caching.sh" ]; then
+    source "$AXSHELL_DIR/scripts/caching.sh"
 fi
 
-STATE_DIR="${QS_STATE_DIR:-${XDG_STATE_HOME:-$HOME/.local/state}/serpantinum}"
+STATE_DIR="${QS_STATE_DIR:-${XDG_STATE_HOME:-$HOME/.local/state}/axshell}"
 VERSION_FILE="$STATE_DIR/version"
 DEFAULT_FALLBACK_VERSION="2.0.0"
-
-format_uuid() {
-    local raw
-    raw=$(echo "$1" | tr -d '-' | tr '[:upper:]' '[:lower:]' | tr -cd '0-9a-f')
-    if [[ ${#raw} -eq 32 ]]; then
-        echo "$raw" | sed -E 's/(.{8})(.{4})(.{4})(.{4})(.{12})/\1-\2-\3-\4-\5/'
-    else
-        echo "$1"
-    fi
-}
-
-get_telemetry_id() {
-    if [ -f "$VERSION_FILE" ]; then
-        local id
-        id=$(awk -F= '/^TELEMETRY_ID=/{gsub(/"/, "", $2); print $2}' "$VERSION_FILE")
-        if [ -n "$id" ]; then
-            format_uuid "$id"
-            return
-        fi
-    fi
-
-    local raw_id=""
-    if command -v uuidgen &> /dev/null; then
-        raw_id=$(uuidgen)
-    elif [ -f /proc/sys/kernel/random/uuid ]; then
-        raw_id=$(cat /proc/sys/kernel/random/uuid 2>/dev/null)
-    elif [ -f /etc/machine-id ]; then
-        raw_id=$(cat /etc/machine-id 2>/dev/null)
-    else
-        raw_id=$(head -c 16 /dev/urandom | od -An -t x1 | tr -d ' \n')
-    fi
-
-    format_uuid "$raw_id"
-}
-
-get_telemetry_enabled() {
-    if [ -f "$VERSION_FILE" ]; then
-        local enabled
-        enabled=$(awk -F= '/^ENABLE_TELEMETRY=/{gsub(/"/, "", $2); print $2}' "$VERSION_FILE")
-        if [ "$enabled" = "false" ]; then
-            echo "false"
-            return
-        fi
-    fi
-    echo "true"
-}
 
 get_saved_preference() {
     local key="$1"
@@ -77,16 +31,16 @@ get_saved_preference() {
 get_installed_version() {
     local ver=""
     if [ -f "$VERSION_FILE" ]; then
-        ver=$(awk -F= '/^SERPANTINUM_VERSION=/{gsub(/"/, "", $2); print $2}' "$VERSION_FILE")
+        ver=$(awk -F= '/^AXSHELL_VERSION=/{gsub(/"/, "", $2); print $2}' "$VERSION_FILE")
     fi
-    if [ -z "$ver" ] && [ -n "$SERPANTINUM_VERSION" ]; then
-        ver="$SERPANTINUM_VERSION"
+    if [ -z "$ver" ] && [ -n "$AXSHELL_VERSION" ]; then
+        ver="$AXSHELL_VERSION"
     fi
     if [ -z "$ver" ]; then
-        if [ -n "$SERPANTINUM_DIR" ] && [ -f "$SERPANTINUM_DIR/version.txt" ]; then
-            ver=$(cat "$SERPANTINUM_DIR/version.txt" 2>/dev/null | xargs)
-        elif [ -n "$SERPANTINUM_DIR" ] && [ -f "$(dirname "$SERPANTINUM_DIR")/version.txt" ]; then
-            ver=$(cat "$(dirname "$SERPANTINUM_DIR")/version.txt" 2>/dev/null | xargs)
+        if [ -n "$AXSHELL_DIR" ] && [ -f "$AXSHELL_DIR/version.txt" ]; then
+            ver=$(cat "$AXSHELL_DIR/version.txt" 2>/dev/null | xargs)
+        elif [ -n "$AXSHELL_DIR" ] && [ -f "$(dirname "$AXSHELL_DIR")/version.txt" ]; then
+            ver=$(cat "$(dirname "$AXSHELL_DIR")/version.txt" 2>/dev/null | xargs)
         elif [ -n "$REPO_ROOT" ] && [ -f "$REPO_ROOT/version.txt" ]; then
             ver=$(cat "$REPO_ROOT/version.txt" 2>/dev/null | xargs)
         fi
@@ -99,13 +53,13 @@ get_installed_version() {
 
 get_installed_commit() {
     if [ -f "$VERSION_FILE" ]; then
-        awk -F= '/^SERPANTINUM_COMMIT=/{gsub(/"/, "", $2); print $2}' "$VERSION_FILE"
+        awk -F= '/^AXSHELL_COMMIT=/{gsub(/"/, "", $2); print $2}' "$VERSION_FILE"
     fi
 }
 
 get_target_version() {
     local repo_root="$1"
-    local repo_slug="${2:-"${REPO_SLUG:-"ilyamiro/serpantinum"}"}"
+    local repo_slug="${2:-"${REPO_SLUG:-"mora1ss/axshell"}"}"
     local target_ver=""
 
     if [ -f "$repo_root/version.txt" ]; then
@@ -127,7 +81,7 @@ get_target_version() {
 
 get_target_commit() {
     local repo_root="$1"
-    local repo_slug="${2:-"${REPO_SLUG:-"ilyamiro/serpantinum"}"}"
+    local repo_slug="${2:-"${REPO_SLUG:-"mora1ss/axshell"}"}"
     local target_commit=""
 
     if [ -d "$repo_root/.git" ] && command -v git &>/dev/null; then
@@ -150,30 +104,20 @@ get_target_commit() {
 write_version_state() {
     local version="${1:-"$DEFAULT_FALLBACK_VERSION"}"
     local commit="${2:-"unknown"}"
-    local tel_id="$3"
-    local tel_enabled="${4:-true}"
-    local compositors="$5"
-    local opt_sddm="${6:-true}"
-    local sddm_wayland="${7:-false}"
-    local full_wallpapers="${8:-true}"
+    local compositors="$3"
+    local opt_sddm="${4:-true}"
+    local sddm_wayland="${5:-false}"
+    local full_wallpapers="${6:-true}"
 
     if [[ -z "$commit" || "$commit" == "null" ]]; then
         commit="unknown"
     fi
 
-    if [[ -z "$tel_id" ]]; then
-        tel_id=$(get_telemetry_id)
-    else
-        tel_id=$(format_uuid "$tel_id")
-    fi
-
     mkdir -p "$STATE_DIR"
     local tmp_file="${VERSION_FILE}.tmp.$$"
     cat <<EOF > "$tmp_file"
-SERPANTINUM_VERSION="$version"
-SERPANTINUM_COMMIT="$commit"
-TELEMETRY_ID="$tel_id"
-ENABLE_TELEMETRY="$tel_enabled"
+AXSHELL_VERSION="$version"
+AXSHELL_COMMIT="$commit"
 SELECTED_COMPOSITORS="$compositors"
 OPT_SDDM="$opt_sddm"
 SDDM_WAYLAND="$sddm_wayland"

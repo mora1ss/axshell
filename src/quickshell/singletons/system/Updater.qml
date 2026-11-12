@@ -65,11 +65,11 @@ Item {
     }
 
     function saveNotifiedVersion(ver) {
-        if (typeof Caching === "undefined" || !Caching.serpantinumDir) return;
+        if (typeof Caching === "undefined" || !Caching.axshellDir) return;
         let stateDir = Caching.getStateDir();
         Quickshell.execDetached([
             "python3",
-            Caching.serpantinumDir + "/scripts/updater.py",
+            Caching.axshellDir + "/scripts/updater.py",
             "--state-dir",
             stateDir,
             "--save-notified",
@@ -78,7 +78,7 @@ Item {
     }
 
     function sendNotification() {
-        let serpDir = (typeof Caching !== "undefined" && Caching.serpantinumDir) ? Caching.serpantinumDir : "";
+        let serpDir = (typeof Caching !== "undefined" && Caching.axshellDir) ? Caching.axshellDir : "";
         let appName = I18n.t("updater.notification.app_name");
         let actionText = I18n.t("updater.notification.action_open_guide");
         let notifTitle = I18n.t("updater.notification.update_available_title", { "remote": root.remoteVersion });
@@ -95,7 +95,7 @@ Item {
 
     function checkUpdate() {
         if (typeof SystemInfo !== "undefined" && SystemInfo.osName.toLowerCase().indexOf("nixos") !== -1) return;
-        if (typeof Caching === "undefined" || !Caching.serpantinumDir) return;
+        if (typeof Caching === "undefined" || !Caching.axshellDir) return;
         if (updateProc.running) return;
         root.isChecking = true;
         updateProc.running = true;
@@ -103,14 +103,14 @@ Item {
 
     function scheduleInitialCheck() {
         if (typeof SystemInfo !== "undefined" && SystemInfo.osName.toLowerCase().indexOf("nixos") !== -1) return;
-        if (typeof Caching === "undefined" || !Caching.serpantinumDir) return;
+        if (typeof Caching === "undefined" || !Caching.axshellDir) return;
         if (checkDelayProc.running) return;
         checkDelayProc.running = true;
     }
 
     FileView {
         id: pkgVersionFileView
-        path: (typeof Caching !== "undefined" && Caching.serpantinumDir ? Caching.serpantinumDir : "") + "/version.txt"
+        path: (typeof Caching !== "undefined" && Caching.axshellDir ? Caching.axshellDir : "") + "/version.txt"
         onFileChanged: {
             pkgVersionFileView.reload();
         }
@@ -137,8 +137,8 @@ Item {
             let lines = content.split("\n");
             for (let i = 0; i < lines.length; i++) {
                 let line = lines[i].trim();
-                if (line.indexOf("SERPANTINUM_VERSION=") === 0) {
-                    let v = line.substring("SERPANTINUM_VERSION=".length).replace(/["']/g, "").trim();
+                if (line.indexOf("AXSHELL_VERSION=") === 0) {
+                    let v = line.substring("AXSHELL_VERSION=".length).replace(/["']/g, "").trim();
                     if (v) {
                         root.stateVersion = v;
                         root.syncLocalVersion();
@@ -181,7 +181,7 @@ Item {
         running: false
         command: [
             "python3",
-            (typeof Caching !== "undefined" ? Caching.serpantinumDir : "") + "/scripts/updater.py",
+            (typeof Caching !== "undefined" ? Caching.axshellDir : "") + "/scripts/updater.py",
             "--state-dir",
             (typeof Caching !== "undefined" ? Caching.getStateDir() : ""),
             "--delay"
@@ -205,7 +205,7 @@ Item {
         running: false
         command: [
             "python3",
-            (typeof Caching !== "undefined" ? Caching.serpantinumDir : "") + "/scripts/updater.py",
+            (typeof Caching !== "undefined" ? Caching.axshellDir : "") + "/scripts/updater.py",
             "--state-dir",
             (typeof Caching !== "undefined" ? Caching.getStateDir() : "")
         ]

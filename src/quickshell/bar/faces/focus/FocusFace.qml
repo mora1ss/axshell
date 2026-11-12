@@ -57,8 +57,8 @@ Item {
             bgOpacity: root.barOpacity
             textColor: isHoveredOrHighlighted ? ThemeBackend.text : (root.isCompact ? ThemeBackend.subtext0 : ThemeBackend.overlay2)
             onClicked: {
-                if (Caching.serpantinumDir) {
-                    Quickshell.execDetached(["bash", "-c", Caching.serpantinumDir + "/scripts/qs_manager.sh toggle applauncher"])
+                if (Caching.axshellDir) {
+                    Quickshell.execDetached(["bash", "-c", Caching.axshellDir + "/scripts/qs_manager.sh toggle applauncher"])
                 }
             }
         }
@@ -121,8 +121,8 @@ Item {
         cursorShape: Qt.PointingHandCursor
         z: -1
         onClicked: {
-            if (Caching.serpantinumDir) {
-                Quickshell.execDetached(["bash", "-c", Caching.serpantinumDir + "/scripts/qs_manager.sh toggle applauncher"])
+            if (Caching.axshellDir) {
+                Quickshell.execDetached(["bash", "-c", Caching.axshellDir + "/scripts/qs_manager.sh toggle applauncher"])
             }
         }
     }

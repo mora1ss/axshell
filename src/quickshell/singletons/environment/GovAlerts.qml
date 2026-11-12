@@ -212,7 +212,7 @@ Item {
 
     function _curlCommand(job) {
         let cmd = ["curl", "-sL", "--fail", "--proto", "=http,https", "--max-redirs", "5", "--connect-timeout", "10",
-            "--max-time", String(job.timeout), "--max-filesize", String(job.maxSize), "--compressed", "-A", "serpantinum"];
+            "--max-time", String(job.timeout), "--max-filesize", String(job.maxSize), "--compressed", "-A", "axshell"];
         for (let i = 0; i < (job.headers || []).length; i++) {
             cmd.push("-H");
             cmd.push(job.headers[i]);

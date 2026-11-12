@@ -1,7 +1,7 @@
 {
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "Բեռնվում է...",
       "unknown": "Անհայտ",
       "version_by": "v{version} • հեղինակ՝ {author}",
@@ -20,7 +20,7 @@
         "uptime": "Աշխատաժամանակ",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "Բարի գալուստ",
@@ -673,7 +673,7 @@
     "theme": {
       "font": {
         "title": "Տառատեսակ",
-        "desc": "Ընտրեք Serpantinum-ի լռելյայն տառատեսակը",
+        "desc": "Ընտրեք AxShell-ի լռելյայն տառատեսակը",
         "select": "Ընտրել..."
       },
       "radius": {
@@ -775,16 +775,16 @@
           "failed": "Չհաջողվեց թարմացնել կարգավորումը՝ {line}"
         },
         "hint": {
-          "select_in_app": "Ընտրեք Serpantinum թեման հավելվածի կարգավորումներում",
+          "select_in_app": "Ընտրեք AxShell թեման հավելվածի կարգավորումներում",
           "restart": "Նոր գույները տեսնելու համար վերագործարկեք բաց պատուհանները",
-          "neovim": "Օգտագործելու համար գործարկեք :colorscheme serpantinum",
+          "neovim": "Օգտագործելու համար գործարկեք :colorscheme axshell",
           "helix": "Նոր գույները տեսնելու համար բաց խմբագրիչներում գործարկեք :config-reload",
-          "fastfetch": "Օգտագործելու համար գործարկեք fastfetch -c serpantinum",
-          "spicetify": "Գործարկեք spicetify config current_theme Serpantinum, ապա spicetify apply",
-          "discord": "Միացրեք Serpantinum-ը հաճախորդի թեմաների կարգավորումներում",
-          "emacs": "Գործարկեք M-x load-theme serpantinum՝ այն օգտագործելու համար",
+          "fastfetch": "Օգտագործելու համար գործարկեք fastfetch -c axshell",
+          "spicetify": "Գործարկեք spicetify config current_theme AxShell, ապա spicetify apply",
+          "discord": "Միացրեք AxShell-ը հաճախորդի թեմաների կարգավորումներում",
+          "emacs": "Գործարկեք M-x load-theme axshell՝ այն օգտագործելու համար",
           "steam": "Տեղադրեք Material-Theme-ը Millennium-ով, ապա ընտրեք Matugen-ը դրա գույների կարգավորումներում",
-          "heroic": "Heroic-ում սահմանեք անհատական թեմաների ուղին դրա թեմաների թղթապանակին, ապա ընտրեք serpantinum",
+          "heroic": "Heroic-ում սահմանեք անհատական թեմաների ուղին դրա թեմաների թղթապանակին, ապա ընտրեք axshell",
           "telegram": "Բեռնեք թեմայի ֆայլը Telegram-ի զրույցի կարգավորումներից"
         },
         "list": {
@@ -1606,7 +1606,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "Ստեղծել է @{author}",
     "welcome": "Բարի գալուստ",
     "tagline": "Աշխատասեղանի թաղանթ՝ ստեղծված",
@@ -1742,7 +1742,7 @@
     },
     "guide": {
       "name": "Կարգավորումներ",
-      "desc": "Serpantinum-ի կարգավորումներ"
+      "desc": "AxShell-ի կարգավորումներ"
     },
     "calendar": {
       "name": "Օրացույց և ժամացույց",
@@ -1866,7 +1866,7 @@
     }
   },
   "cli": {
-    "usage": "Օգտագործում՝ serpantinum [command] [options...]",
+    "usage": "Օգտագործում՝ axshell [command] [options...]",
     "description": "Աշխատասեղանի թաղանթ Wayland կոմպոզիտորների համար։",
     "commands": "Հրամաններ՝",
     "script_commands": "Սկրիպտի հրամաններ՝",
@@ -1880,23 +1880,23 @@
     "version_desc": "Ցուցադրել տարբերակի տվյալները և դուրս գալ",
     "help_desc": "Ցուցադրել այս օգնության հաղորդագրությունը և դուրս գալ",
     "examples": "Օրինակներ՝",
-    "daemon_stopped": "Serpantinum-ի սպասարկիչը կանգնեցված է։",
-    "daemon_restarted": "Serpantinum-ի սպասարկիչը վերագործարկված է։",
-    "starting_daemon": "Սպասարկիչը չի աշխատում։ serpantinumd-ը գործարկվում է հետնամասում...",
+    "daemon_stopped": "AxShell-ի սպասարկիչը կանգնեցված է։",
+    "daemon_restarted": "AxShell-ի սպասարկիչը վերագործարկված է։",
+    "starting_daemon": "Սպասարկիչը չի աշխատում։ axshelld-ը գործարկվում է հետնամասում...",
     "error_missing_qml": "Սխալ՝ գործարկման թիրախը նշված չէ։",
-    "launch_usage": "Օգտագործում՝ serpantinum launch <start> [args...]",
+    "launch_usage": "Օգտագործում՝ axshell launch <start> [args...]",
     "error_qml_not_found": "Սխալ՝ {DIR}-ում չհաջողվեց գտնել {NAME}.qml-ը",
     "error_shell_qml_not_found": "Սխալ՝ չհաջողվեց գտնել shell.qml-ի ուղին {DIR}-ում",
     "error_unknown_command": "Սխալ՝ անհայտ հրաման՝ «{CMD}»։",
     "error_unknown_target": "Սխալ՝ անհայտ թիրախ՝ «{TARGET}»։",
     "launch_help": {
-      "usage": "Օգտագործում՝ serpantinum launch <start> [arguments...]",
+      "usage": "Օգտագործում՝ axshell launch <start> [arguments...]",
       "description": "Առանձին բաղադրիչներն անմիջապես գործարկել runner ռեժիմով։",
       "available_targets": "Հասանելի թիրախներ՝",
       "target_start": "Գործարկել սկզբնական կարգավորման միջերեսը"
     },
     "msg_help": {
-      "usage": "Օգտագործում՝ serpantinum msg <command|workspace> [arguments...]",
+      "usage": "Օգտագործում՝ axshell msg <command|workspace> [arguments...]",
       "description": "Անմիջապես ուղարկել դասավորության, աշխատատարածքի և պատուհանների կառավարման հաղորդագրություններ։",
       "available_commands": "Հասանելի հաղորդագրություններ՝",
       "cmd_workspace": "Անցնել <num> աշխատատարածքին (ակտիվ պատուհանն ուղարկելու համար ավելացրեք 'move')",
@@ -1905,7 +1905,7 @@
       "cmd_close": "Փակել թաղանթի ցանկացած ակտիվ վերադիր շերտ"
     },
     "ipc_help": {
-      "usage": "Օգտագործում՝ serpantinum ipc call <target> <method> [arguments...]",
+      "usage": "Օգտագործում՝ axshell ipc call <target> <method> [arguments...]",
       "description": "IPC կանչն անմիջապես ուղարկել աշխատող Quickshell նմուշին։"
     },
     "scripts": {
@@ -1931,7 +1931,7 @@
     "config_desc": "Կարդալ և փոխել կարգավորումները (get, set, dump, path, edit)",
     "error_unknown_language": "Սխալ՝ անհայտ լեզու '{CODE}'։",
     "update_available": "Հասանելի է թարմացում՝ {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum-ը թարմ է ({VERSION})։",
+    "up_to_date": "AxShell-ը թարմ է ({VERSION})։",
     "state_on": "միացված",
     "state_off": "անջատված",
     "error_unknown_theme": "Սխալ․ անհայտ թեմա '{NAME}'։",
@@ -1945,11 +1945,11 @@
   },
   "daemon": {
     "already_running": "Սպասարկիչն արդեն աշխատում է։ Դուրս է գալիս...",
-    "shutting_down": "Serpantinum-ի սպասարկիչն անջատվում է...",
-    "launching": "Serpantinum-ի սպասարկիչը գործարկվում է...",
+    "shutting_down": "AxShell-ի սպասարկիչն անջատվում է...",
+    "launching": "AxShell-ի սպասարկիչը գործարկվում է...",
     "cli": {
-      "usage": "Օգտագործում՝ serpantinumd <command> [options...]",
-      "description": "Serpantinum աշխատասեղանի թաղանթի հետնամասային սպասարկիչ։",
+      "usage": "Օգտագործում՝ axshelld <command> [options...]",
+      "description": "AxShell աշխատասեղանի թաղանթի հետնամասային սպասարկիչ։",
       "commands": "Հրամաններ՝",
       "cmd_start": "Գործարկել սպասարկիչն ու հետնամասային աշխատիչները",
       "cmd_stop": "Կանգնեցնել աշխատող սպասարկիչը",
@@ -1958,15 +1958,15 @@
       "opt_verbose": "Միացնել մանրամասն ելքային գրանցումը",
       "opt_version": "Ցուցադրել տարբերակի տվյալները և դուրս գալ",
       "opt_help": "Ցուցադրել այս օգնության հաղորդագրությունը և դուրս գալ",
-      "stopped": "Serpantinum-ի սպասարկիչը կանգնեցված է։",
-      "status_running": "Serpantinum-ի սպասարկիչն աշխատում է (PID՝ {PID})։",
-      "status_stopped": "Serpantinum-ի սպասարկիչը չի աշխատում։",
+      "stopped": "AxShell-ի սպասարկիչը կանգնեցված է։",
+      "status_running": "AxShell-ի սպասարկիչն աշխատում է (PID՝ {PID})։",
+      "status_stopped": "AxShell-ի սպասարկիչը չի աշխատում։",
       "unknown_arg": "Անհայտ փաստարկ՝ {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects-ը դեռ միացված է",
-      "body": "Serpantinum-ն այժմ ունի իր սեփական ձայնային շարժիչը, և EasyEffects-ը կարող է խանգարել դրան։ Եթե EasyEffects-ն օգտագործում էիք միայն Serpantinum-ի համար, անջատեք դրա գործարկումը մուտք գործելիս։"
+      "body": "AxShell-ն այժմ ունի իր սեփական ձայնային շարժիչը, և EasyEffects-ը կարող է խանգարել դրան։ Եթե EasyEffects-ն օգտագործում էիք միայն AxShell-ի համար, անջատեք դրա գործարկումը մուտք գործելիս։"
     }
   },
   "installer": {
@@ -1975,7 +1975,7 @@
     },
     "os": {
       "error_root": "Սխալ՝ այս սկրիպտը մի գործարկեք անմիջապես root/sudo-ով։ Գործարկեք սովորական օգտատիրոջ անունից։",
-      "error_unsupported": "Չաջակցվող ՕՀ ({os})։ Serpantinum-ը խստորեն աջակցում է Arch Linux-ին և դրա ածանցյալներին։",
+      "error_unsupported": "Չաջակցվող ՕՀ ({os})։ AxShell-ը խստորեն աջակցում է Arch Linux-ին և դրա ածանցյալներին։",
       "error_not_found": "Չհաջողվեց որոշել ՕՀ-ն։ /etc/os-release-ը չի գտնվել։",
       "unknown_cpu": "Անհայտ CPU",
       "unknown_gpu": "Անհայտ / վիրտուալ մեքենա",
@@ -1989,8 +1989,6 @@
       "target_version": "Թիրախային տարբերակ՝",
       "install_mode": "Տեղադրման ռեժիմ՝",
       "github": "GitHub՝",
-      "twitter": "Twitter՝",
-      "reddit": "Reddit՝",
       "telegram": "Telegram՝",
       "donate": "Նվիրաբերել՝",
       "donate_sub": "(Աջակցեք նախագծին։)",
@@ -2016,7 +2014,6 @@
       "menu_overview": "Փաթեթների տեղադրման ամփոփում ({count} հիմնական փաթեթ)",
       "menu_sddm": "SDDM մուտքի կառավարիչ",
       "menu_wallpapers": "Պաստառների փաթեթ",
-      "menu_telemetry": "Անանուն հեռաչափություն",
       "menu_update": "Թարմացնել",
       "menu_reinstall": "Վերատեղադրել",
       "menu_install": "Տեղադրել",
@@ -2025,9 +2022,9 @@
       "tagline": "Աշխատասեղանի թաղանթ՝ ստեղծված ձեզ համար",
       "support_creator": "Աջակցեք ստեղծողին՝",
       "buy_coffee": "Եթե ձեզ դուր է գալիս այս նախագիծը, կարող եք ինձ սուրճ հյուրասիրել։",
-      "installed_success": "✔ Serpantinum {ver} ({commit})-ը հաջողությամբ տեղադրվեց։",
+      "installed_success": "✔ AxShell {ver} ({commit})-ը հաջողությամբ տեղադրվեց։",
       "failed_packages": "Հետևյալ փաթեթների տեղադրման ժամանակ սխալներ առաջացան՝",
-      "restart_prompt": "Սկսելու համար վերագործարկեք կոմպոզիտորը կամ կատարեք 'serpantinumd start' հրամանը։",
+      "restart_prompt": "Սկսելու համար վերագործարկեք կոմպոզիտորը կամ կատարեք 'axshelld start' հրամանը։",
       "ask_reboot": "Ցանկանո՞ւմ եք վերագործարկել։ [y/n] "
     },
     "deps": {
@@ -2056,29 +2053,29 @@
     "audio": {
       "building": "Այս համակարգի համար պատրաստի աուդիո շարժիչ չկա, կառուցվում է սկզբնական կոդից...",
       "checksum_failed": "Աուդիո շարժիչի ներբեռնումը չանցավ վերահսկիչ գումարի ստուգումը, բաց է թողնվում։",
-      "download_failed": "Չհաջողվեց ներբեռնել Serpantinum աուդիո շարժիչը, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/ilyamiro/serpantinum-audio-ից։",
-      "installed": "Serpantinum աուդիո շարժիչ {version} տեղադրվեց",
-      "install_failed": "Չհաջողվեց տեղադրել Serpantinum աուդիո շարժիչը։ Էկվալայզերը չի աշխատի, մինչև այն չտեղադրվի github.com/ilyamiro/serpantinum-audio-ից։",
-      "installing": "Serpantinum աուդիո շարժիչը տեղադրվում է...",
-      "up_to_date": "-> Serpantinum աուդիո շարժիչ {version}-ը արդեն տեղադրված է։"
+      "download_failed": "Չհաջողվեց ներբեռնել AxShell աուդիո շարժիչը, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/ilyamiro/serpantinum-audio-ից։",
+      "installed": "AxShell աուդիո շարժիչ {version} տեղադրվեց",
+      "install_failed": "Չհաջողվեց տեղադրել AxShell աուդիո շարժիչը։ Էկվալայզերը չի աշխատի, մինչև այն չտեղադրվի github.com/ilyamiro/serpantinum-audio-ից։",
+      "installing": "AxShell աուդիո շարժիչը տեղադրվում է...",
+      "up_to_date": "-> AxShell աուդիո շարժիչ {version}-ը արդեն տեղադրված է։"
     },
     "core": {
       "checksum_failed": "Հիմնական ծառայությունների ներբեռնումը չանցավ վերահսկիչ գումարի ստուգումը, բաց է թողնվում։",
-      "download_failed": "Չհաջողվեց ներբեռնել Serpantinum հիմնական ծառայությունները, բաց է թողնվում։ Կարող եք տեղադրել դրանք ավելի ուշ github.com/ilyamiro/serpantinum-core-ից։",
-      "installed": "Serpantinum հիմնական ծառայություններ {version} տեղադրվեցին",
-      "install_failed": "Չհաջողվեց տեղադրել Serpantinum հիմնական ծառայությունները։ Համակարգի օգտագործումը, ստեղնաշարի կողպման ցուցիչները և clipboard-ը չեն աշխատի, մինչև դրանք չտեղադրվեն github.com/ilyamiro/serpantinum-core-ից։",
-      "installing": "Serpantinum հիմնական ծառայությունները տեղադրվում են...",
+      "download_failed": "Չհաջողվեց ներբեռնել AxShell հիմնական ծառայությունները, բաց է թողնվում։ Կարող եք տեղադրել դրանք ավելի ուշ github.com/ilyamiro/serpantinum-core-ից։",
+      "installed": "AxShell հիմնական ծառայություններ {version} տեղադրվեցին",
+      "install_failed": "Չհաջողվեց տեղադրել AxShell հիմնական ծառայությունները։ Համակարգի օգտագործումը, ստեղնաշարի կողպման ցուցիչները և clipboard-ը չեն աշխատի, մինչև դրանք չտեղադրվեն github.com/ilyamiro/serpantinum-core-ից։",
+      "installing": "AxShell հիմնական ծառայությունները տեղադրվում են...",
       "unsupported_arch": "Հիմնական ծառայությունների պատրաստի փաթեթներ կան միայն x86_64-ի համար, բաց է թողնվում։",
-      "up_to_date": "-> Serpantinum հիմնական ծառայություններ {version}-ը արդեն տեղադրված են։"
+      "up_to_date": "-> AxShell հիմնական ծառայություններ {version}-ը արդեն տեղադրված են։"
     },
     "gamma": {
       "checksum_failed": "Կապույտ լույսի զտիչի ներբեռնումը չանցավ վերահսկիչ գումարի ստուգումը, բաց է թողնվում։",
-      "download_failed": "Չհաջողվեց ներբեռնել Serpantinum կապույտ լույսի զտիչը, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/ilyamiro/serpantinum-gamma-ից։",
-      "installed": "Serpantinum կապույտ լույսի զտիչ {version} տեղադրվեց",
-      "install_failed": "Չհաջողվեց տեղադրել Serpantinum կապույտ լույսի զտիչը։ Այն չի աշխատի, մինչև չտեղադրվի github.com/ilyamiro/serpantinum-gamma-ից։",
-      "installing": "Serpantinum կապույտ լույսի զտիչը տեղադրվում է...",
+      "download_failed": "Չհաջողվեց ներբեռնել AxShell կապույտ լույսի զտիչը, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/ilyamiro/serpantinum-gamma-ից։",
+      "installed": "AxShell կապույտ լույսի զտիչ {version} տեղադրվեց",
+      "install_failed": "Չհաջողվեց տեղադրել AxShell կապույտ լույսի զտիչը։ Այն չի աշխատի, մինչև չտեղադրվի github.com/ilyamiro/serpantinum-gamma-ից։",
+      "installing": "AxShell կապույտ լույսի զտիչը տեղադրվում է...",
       "unsupported_arch": "Կապույտ լույսի զտիչի պատրաստի փաթեթներ կան միայն x86_64-ի համար, բաց է թողնվում։",
-      "up_to_date": "-> Serpantinum կապույտ լույսի զտիչ {version}-ը արդեն տեղադրված է։"
+      "up_to_date": "-> AxShell կապույտ լույսի զտիչ {version}-ը արդեն տեղադրված է։"
     },
     "ski": {
       "checksum_failed": "Ski-ի ներբեռնումը չանցավ վերահսկիչ գումարի ստուգումը, բաց է թողնվում։",

@@ -9,8 +9,8 @@
   },
   "templates": [
     {
-      "input": "serpantinum.ini",
-      "output": "$XDG_CONFIG_HOME/fuzzel/serpantinum.ini"
+      "input": "axshell.ini",
+      "output": "$XDG_CONFIG_HOME/fuzzel/axshell.ini"
     }
   ],
   "integrate": [
@@ -18,7 +18,7 @@
       "type": "line",
       "file": "$XDG_CONFIG_HOME/fuzzel/fuzzel.ini",
       "section": "",
-      "line": "include=$TILDE_CONFIG_HOME/fuzzel/serpantinum.ini",
+      "line": "include=$TILDE_CONFIG_HOME/fuzzel/axshell.ini",
       "create": true
     }
   ]

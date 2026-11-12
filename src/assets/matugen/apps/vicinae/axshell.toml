@@ -1,6 +1,6 @@
 [meta]
-name = "Serpantinum"
-description = "Colors from the Serpantinum shell"
+name = "AxShell"
+description = "Colors from the AxShell shell"
 variant = "{{mode}}"
 
 [colors.core]

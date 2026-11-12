@@ -1,5 +1,5 @@
 [theme]
-name = "serpantinum"
+name = "axshell"
 
 [colors]
 AlertInfo = "{{colors.secondary.default.hex}}"

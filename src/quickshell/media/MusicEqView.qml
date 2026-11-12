@@ -392,7 +392,7 @@ Item {
                     root.s(30)
                 )
 
-                fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/vfx/eq_lightning.frag.qsb"
+                fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/vfx/eq_lightning.frag.qsb"
             }
         }
 

@@ -127,7 +127,7 @@ Item {
     ]
 
     function getStorageDir() {
-        return (typeof Caching !== "undefined" && Caching.stateDir ? Caching.stateDir : ((Quickshell.env("HOME") || "") + "/.local/state/serpantinum")) + "/quickactions";
+        return (typeof Caching !== "undefined" && Caching.stateDir ? Caching.stateDir : ((Quickshell.env("HOME") || "") + "/.local/state/axshell")) + "/quickactions";
     }
 
     FileView {

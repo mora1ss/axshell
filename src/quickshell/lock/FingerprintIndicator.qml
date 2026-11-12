@@ -273,7 +273,7 @@ Item {
             property vector4d params: Qt.vector4d(fp.shaderTime, fp.shownFill, fp.shaderBurst, fp.look === "liquid" ? 1.0 : 0.0)
             property vector4d cfg: Qt.vector4d(fp.spin, fp.status === "hold" ? (fp.look === "liquid" ? 2.0 : 5.0) : (fp.look === "liquid" ? 1.0 : 2.4), 0.0, 0.0)
 
-            fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/lock/fingerprint_ring.frag.qsb"
+            fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/lock/fingerprint_ring.frag.qsb"
         }
 
         Item {
@@ -400,7 +400,7 @@ Item {
             property color accentColor: ThemeBackend.green
             property vector4d params: Qt.vector4d(fp.successT, 2.0, 0.0, 0.0)
 
-            fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/lock/fingerprint_success.frag.qsb"
+            fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/lock/fingerprint_success.frag.qsb"
         }
     }
 

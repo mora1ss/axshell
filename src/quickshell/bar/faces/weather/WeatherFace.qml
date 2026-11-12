@@ -43,8 +43,8 @@ Item {
         hoverEnabled: true
         cursorShape: Qt.PointingHandCursor
         onClicked: {
-            if (Caching.serpantinumDir) {
-                Quickshell.execDetached(["bash", Caching.serpantinumDir + "/scripts/qs_manager.sh", "toggle", "calendar"]);
+            if (Caching.axshellDir) {
+                Quickshell.execDetached(["bash", Caching.axshellDir + "/scripts/qs_manager.sh", "toggle", "calendar"]);
             }
         }
     }

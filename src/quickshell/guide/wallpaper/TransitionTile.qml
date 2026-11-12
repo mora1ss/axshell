@@ -248,7 +248,7 @@ Rectangle {
                     property vector4d params: Qt.vector4d(tile.vertical ? 1.0 : 0.0, tile.direction, tile.seed, 0.0)
                     property color tint: "transparent"
 
-                    fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
+                    fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
                 }
 
                 ShaderEffect {
@@ -263,7 +263,7 @@ Rectangle {
                     property vector4d params: Qt.vector4d(0.0, 0.0, tile.seed, 1.0)
                     property color tint: ThemeBackend.mauve
 
-                    fragmentShader: "file://" + Caching.serpantinumDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
+                    fragmentShader: "file://" + Caching.axshellDir + "/assets/shaders/transitions/wallpaper_transition.frag.qsb"
                 }
             }
         }

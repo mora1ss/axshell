@@ -360,8 +360,8 @@ PanelWindow {
                     Layout.preferredHeight: titleSection.implicitHeight
                     cursorShape: Qt.PointingHandCursor
                     onClicked: {
-                        if (Caching.serpantinumDir) {
-                            Quickshell.execDetached(["bash", "-c", Caching.serpantinumDir + "/scripts/qs_manager.sh toggle music"]);
+                        if (Caching.axshellDir) {
+                            Quickshell.execDetached(["bash", "-c", Caching.axshellDir + "/scripts/qs_manager.sh toggle music"]);
                         }
                     }
 

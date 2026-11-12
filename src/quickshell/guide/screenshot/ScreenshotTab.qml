@@ -12,7 +12,7 @@ import "OcrLanguages.js" as OcrLanguages
 GuideTab {
     id: screenshotTabRoot
 
-    readonly property string scriptPath: Caching.serpantinumDir + "/scripts/ocr_langs.sh"
+    readonly property string scriptPath: Caching.axshellDir + "/scripts/ocr_langs.sh"
 
     property bool captureOnRelease: false
     property var allLanguages: []

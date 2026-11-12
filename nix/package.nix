@@ -38,7 +38,7 @@
 , ...
 }:
 let
-  pname = "serpantinum";
+  pname = "axshell";
   version = lib.strings.trim (builtins.readFile ../version.txt);
   pathDeps = [
     bluez
@@ -100,30 +100,30 @@ stdenv.mkDerivation (finalAttrs: {
     cp -r config "$out/share/${finalAttrs.pname}/config"
     cp version.txt "$out/share/${finalAttrs.pname}/version.txt"
     find "$out/share/${finalAttrs.pname}" -type f \( -name "*.sh" -o -name "*.py" \) -exec chmod +x {} +
-    install -Dm755 bin/serpantinum  "$out/bin/.serpantinum-wrapped"
-    install -Dm755 bin/serpantinumd "$out/bin/.serpantinumd-wrapped"
+    install -Dm755 bin/axshell  "$out/bin/.axshell-wrapped"
+    install -Dm755 bin/axshelld "$out/bin/.axshelld-wrapped"
     ln -s "${lib.getExe serpantinum-audio}" "$out/bin/serpantinum-audio"
     ln -s "${lib.getExe serpantinum-gamma}" "$out/bin/serpantinum-gamma"
     ln -s "${lib.getExe serpantinum-core}" "$out/bin/serpantinum-core"
     runHook postInstall
   '';
   postFixup = ''
-    for bin in serpantinum serpantinumd; do
+    for bin in axshell axshelld; do
       makeWrapper "$out/bin/.$bin-wrapped" "$out/bin/$bin" \
         "''${qtWrapperArgs[@]}" \
         --prefix QML2_IMPORT_PATH : "${qmlImportPath}" \
         --prefix QT_PLUGIN_PATH : "${qtPluginPath}" \
-        --set SERPANTINUM_DIR "$out/share/${finalAttrs.pname}" \
-        --set SERPANTINUM_VERSION "${finalAttrs.version}" \
+        --set AXSHELL_DIR "$out/share/${finalAttrs.pname}" \
+        --set AXSHELL_VERSION "${finalAttrs.version}" \
         --prefix PATH : "${lib.makeBinPath pathDeps}"
     done
   '';
   passthru = { inherit pathDeps qtDeps serpantinum-audio serpantinum-gamma serpantinum-core; };
   meta = with lib; {
     description = "A desktop shell built for YOU";
-    homepage = "https://github.com/ilyamiro/serpantinum";
+    homepage = "https://github.com/mora1ss/axshell";
     license = licenses.mit;
     platforms = platforms.linux;
-    mainProgram = "serpantinum";
+    mainProgram = "axshell";
   };
 })

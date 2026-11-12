@@ -7,26 +7,26 @@ slug: /installation/nixos
 
 # NixOS: Flake input
 
-Serpantinum provides flake outputs, a NixOS module for system dependencies, and a Home Manager module for user configuration and service management. This page covers the flake and the system module; see [Home Manager](/installation/nixos/home-manager) for the user configuration.
+AxShell provides flake outputs, a NixOS module for system dependencies, and a Home Manager module for user configuration and service management. This page covers the flake and the system module; see [Home Manager](/installation/nixos/home-manager) for the user configuration.
 
 ## Add the flake input
 
-Add Serpantinum to your `flake.nix`:
+Add AxShell to your `flake.nix`:
 
 ```nix
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    serpantinum.url = "github:ilyamiro/serpantinum";
+    axshell.url = "github:mora1ss/axshell";
   };
 
-  outputs = { self, nixpkgs, serpantinum, ... }: {
+  outputs = { self, nixpkgs, axshell, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit serpantinum; };
+      specialArgs = { inherit axshell; };
       modules = [
         ./configuration.nix
-        serpantinum.nixosModules.default
+        axshell.nixosModules.default
       ];
     };
   };
@@ -39,19 +39,19 @@ Enable the NixOS module to configure system prerequisites:
 
 ```nix
 {
-  programs.serpantinum.enable = true;
+  programs.axshell.enable = true;
 }
 ```
 
 If you prefer installing the package directly without the system module:
 
 ```nix
-{ pkgs, serpantinum, ... }:
+{ pkgs, axshell, ... }:
 
 {
   environment.systemPackages = [
-    serpantinum.packages.${pkgs.stdenv.hostPlatform.system}.default
-    serpantinum.packages.${pkgs.stdenv.hostPlatform.system}.ski
+    axshell.packages.${pkgs.stdenv.hostPlatform.system}.default
+    axshell.packages.${pkgs.stdenv.hostPlatform.system}.ski
   ];
 }
 ```
@@ -63,6 +63,6 @@ This installs Ski without the system module. Setting it as the default file mana
 Update the flake lockfile and rebuild your system:
 
 ```bash
-nix flake update serpantinum
+nix flake update axshell
 sudo nixos-rebuild switch --flake .
 ```

@@ -386,7 +386,7 @@
     }
   },
   "start": {
-    "title": "Serpantinum",
+    "title": "AxShell",
     "made_by": "作成者: @{author}",
     "welcome": "ようこそ",
     "tagline": "あなたのために作られたデスクトップシェル",
@@ -522,7 +522,7 @@
     },
     "guide": {
       "name": "設定",
-      "desc": "Serpantinum の設定"
+      "desc": "AxShell の設定"
     },
     "calendar": {
       "name": "カレンダーと時計",
@@ -646,7 +646,7 @@
     }
   },
   "cli": {
-    "usage": "使用法: serpantinum [コマンド] [オプション...]",
+    "usage": "使用法: axshell [コマンド] [オプション...]",
     "description": "Wayland コンポジター向けデスクトップシェル。",
     "commands": "コマンド:",
     "script_commands": "スクリプトコマンド:",
@@ -660,23 +660,23 @@
     "version_desc": "バージョン情報を表示して終了",
     "help_desc": "このヘルプメッセージを表示して終了",
     "examples": "使用例:",
-    "daemon_stopped": "Serpantinum デーモンを停止しました。",
-    "daemon_restarted": "Serpantinum デーモンを再起動しました。",
-    "starting_daemon": "デーモンが実行されていません。バックグラウンドで serpantinumd を起動中...",
+    "daemon_stopped": "AxShell デーモンを停止しました。",
+    "daemon_restarted": "AxShell デーモンを再起動しました。",
+    "starting_daemon": "デーモンが実行されていません。バックグラウンドで axshelld を起動中...",
     "error_missing_qml": "エラー: 起動対象が指定されていません。",
-    "launch_usage": "使用法: serpantinum launch <start> [引数...]",
+    "launch_usage": "使用法: axshell launch <start> [引数...]",
     "error_qml_not_found": "エラー: {DIR} 内で {NAME}.qml を解決できませんでした",
     "error_shell_qml_not_found": "エラー: {DIR} 内で shell.qml へのパスを解決できませんでした",
     "error_unknown_command": "エラー: 不明なコマンド '{CMD}' です。",
     "error_unknown_target": "エラー: 不明な対象 '{TARGET}' です。",
     "launch_help": {
-      "usage": "使用法: serpantinum launch <start> [引数...]",
+      "usage": "使用法: axshell launch <start> [引数...]",
       "description": "ランナーモードでスタンドアロンコンポーネントを直接起動します。",
       "available_targets": "利用可能な対象:",
       "target_start": "初期設定インターフェースを起動"
     },
     "msg_help": {
-      "usage": "使用法: serpantinum msg <command|workspace> [引数...]",
+      "usage": "使用法: axshell msg <command|workspace> [引数...]",
       "description": "レイアウト、ワークスペース、ウィンドウ管理メッセージを直接送信します。",
       "available_commands": "利用可能なメッセージ:",
       "cmd_workspace": "ワークスペース <num> に切り替え ('move' を付加するとアクティブウィンドウを移動)",
@@ -685,7 +685,7 @@
       "cmd_close": "アクティブなシェルオーバーレイを閉じる"
     },
     "ipc_help": {
-      "usage": "使用法: serpantinum ipc call <target> <method> [引数...]",
+      "usage": "使用法: axshell ipc call <target> <method> [引数...]",
       "description": "実行中の quickshell インスタンスに直接 IPC 呼び出しを送信します。"
     },
     "scripts": {
@@ -711,7 +711,7 @@
     "config_desc": "設定の読み取りと変更 (get, set, dump, path, edit)",
     "error_unknown_language": "エラー: 不明な言語 '{CODE}' です。",
     "update_available": "アップデートがあります: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum は最新です ({VERSION})。",
+    "up_to_date": "AxShell は最新です ({VERSION})。",
     "state_on": "オン",
     "state_off": "オフ",
     "error_unknown_theme": "エラー: 不明なテーマ '{NAME}' です。",
@@ -725,11 +725,11 @@
   },
   "daemon": {
     "already_running": "デーモンは既に実行中です。終了します...",
-    "shutting_down": "serpantinum デーモンをシャットダウン中...",
-    "launching": "serpantinum デーモンを起動中...",
+    "shutting_down": "axshell デーモンをシャットダウン中...",
+    "launching": "axshell デーモンを起動中...",
     "cli": {
-      "usage": "使用法: serpantinumd <コマンド> [オプション...]",
-      "description": "serpantinum デスクトップシェルのバックグラウンドサービスデーモン。",
+      "usage": "使用法: axshelld <コマンド> [オプション...]",
+      "description": "axshell デスクトップシェルのバックグラウンドサービスデーモン。",
       "commands": "コマンド:",
       "cmd_start": "デーモンサービスを開始し、バックグラウンドワーカーを起動",
       "cmd_stop": "実行中のデーモンサービスを停止",
@@ -738,15 +738,15 @@
       "opt_verbose": "詳細ログ出力を有効化",
       "opt_version": "バージョン情報を表示して終了",
       "opt_help": "このヘルプメッセージを表示して終了",
-      "stopped": "Serpantinum デーモンを停止しました。",
-      "status_running": "Serpantinum デーモンが実行中です (PID: {PID})。",
-      "status_stopped": "Serpantinum デーモンは実行されていません。",
+      "stopped": "AxShell デーモンを停止しました。",
+      "status_running": "AxShell デーモンが実行中です (PID: {PID})。",
+      "status_stopped": "AxShell デーモンは実行されていません。",
       "unknown_arg": "不明な引数: {ARG}"
     },
-    "app_name": "Serpantinum",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "EasyEffects がまだ有効です",
-      "body": "Serpantinum に独自のオーディオエンジンが搭載され、EasyEffects はそれと干渉する可能性があります。EasyEffects を Serpantinum のためだけに使っていた場合は、ログイン時に起動しないようにしてください。"
+      "body": "AxShell に独自のオーディオエンジンが搭載され、EasyEffects はそれと干渉する可能性があります。EasyEffects を AxShell のためだけに使っていた場合は、ログイン時に起動しないようにしてください。"
     }
   },
   "installer": {
@@ -755,7 +755,7 @@
     },
     "os": {
       "error_root": "エラー: このスクリプトを root/sudo で直接実行しないでください。一般ユーザーとして実行してください。",
-      "error_unsupported": "サポートされていないOS ({os}) です。Serpantinum は Arch Linux およびその派生ディストリビューションのみをサポートしています。",
+      "error_unsupported": "サポートされていないOS ({os}) です。AxShell は Arch Linux およびその派生ディストリビューションのみをサポートしています。",
       "error_not_found": "OSを検出できません。/etc/os-release が見つかりません。",
       "unknown_cpu": "不明なCPU",
       "unknown_gpu": "不明 / 仮想マシン",
@@ -769,8 +769,6 @@
       "target_version": "対象バージョン:",
       "install_mode": "インストールモード:",
       "github": "GitHub:",
-      "twitter": "Twitter:",
-      "reddit": "Reddit:",
       "telegram": "Telegram:",
       "donate": "寄付:",
       "donate_sub": "(プロジェクトを支援！)",
@@ -796,7 +794,6 @@
       "menu_overview": "パッケージインストール概要 ({count} 個のコアパッケージ)",
       "menu_sddm": "SDDM ログインマネージャー",
       "menu_wallpapers": "壁紙パック",
-      "menu_telemetry": "匿名テレメトリ",
       "menu_update": "アップデート",
       "menu_reinstall": "再インストール",
       "menu_install": "インストール",
@@ -805,9 +802,9 @@
       "tagline": "あなたのために作られたデスクトップシェル",
       "support_creator": "開発者を支援:",
       "buy_coffee": "このプロジェクトを気に入っていただけたら、コーヒーを一杯奢ってください！",
-      "installed_success": "✔ Serpantinum {ver} ({commit}) が正常にインストールされました。",
+      "installed_success": "✔ AxShell {ver} ({commit}) が正常にインストールされました。",
       "failed_packages": "以下のパッケージのインストール中にエラーが発生しました:",
-      "restart_prompt": "開始するにはコンポジターを再起動するか、'serpantinumd start' を実行してください。",
+      "restart_prompt": "開始するにはコンポジターを再起動するか、'axshelld start' を実行してください。",
       "ask_reboot": "再起動しますか？ [y/n] "
     },
     "deps": {
@@ -836,29 +833,29 @@
     "audio": {
       "building": "このシステム用のビルド済みオーディオエンジンがないため、ソースからビルドしています...",
       "checksum_failed": "オーディオエンジンのダウンロードがチェックサム検証に失敗したため、スキップします。",
-      "download_failed": "Serpantinum オーディオエンジンをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-audio からインストールできます。",
-      "installed": "Serpantinum オーディオエンジン {version} をインストールしました",
-      "install_failed": "Serpantinum オーディオエンジンのインストールに失敗しました。github.com/ilyamiro/serpantinum-audio からインストールするまでイコライザーは動作しません。",
-      "installing": "Serpantinum オーディオエンジンをインストールしています...",
-      "up_to_date": "-> Serpantinum オーディオエンジン {version} は既にインストールされています。"
+      "download_failed": "AxShell オーディオエンジンをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-audio からインストールできます。",
+      "installed": "AxShell オーディオエンジン {version} をインストールしました",
+      "install_failed": "AxShell オーディオエンジンのインストールに失敗しました。github.com/ilyamiro/serpantinum-audio からインストールするまでイコライザーは動作しません。",
+      "installing": "AxShell オーディオエンジンをインストールしています...",
+      "up_to_date": "-> AxShell オーディオエンジン {version} は既にインストールされています。"
     },
     "core": {
       "checksum_failed": "コアサービスのダウンロードがチェックサム検証に失敗したため、スキップします。",
-      "download_failed": "Serpantinum コアサービスをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-core からインストールできます。",
-      "installed": "Serpantinum コアサービス {version} をインストールしました",
-      "install_failed": "Serpantinum コアサービスのインストールに失敗しました。github.com/ilyamiro/serpantinum-core からインストールするまで、システム使用状況、キーボードロック表示、クリップボードは動作しません。",
-      "installing": "Serpantinum コアサービスをインストールしています...",
+      "download_failed": "AxShell コアサービスをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-core からインストールできます。",
+      "installed": "AxShell コアサービス {version} をインストールしました",
+      "install_failed": "AxShell コアサービスのインストールに失敗しました。github.com/ilyamiro/serpantinum-core からインストールするまで、システム使用状況、キーボードロック表示、クリップボードは動作しません。",
+      "installing": "AxShell コアサービスをインストールしています...",
       "unsupported_arch": "ビルド済みのコアサービスパッケージは x86_64 のみ提供されているため、スキップします。",
-      "up_to_date": "-> Serpantinum コアサービス {version} は既にインストールされています。"
+      "up_to_date": "-> AxShell コアサービス {version} は既にインストールされています。"
     },
     "gamma": {
       "checksum_failed": "ブルーライトフィルターのダウンロードがチェックサム検証に失敗したため、スキップします。",
-      "download_failed": "Serpantinum ブルーライトフィルターをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-gamma からインストールできます。",
-      "installed": "Serpantinum ブルーライトフィルター {version} をインストールしました",
-      "install_failed": "Serpantinum ブルーライトフィルターのインストールに失敗しました。github.com/ilyamiro/serpantinum-gamma からインストールするまで動作しません。",
-      "installing": "Serpantinum ブルーライトフィルターをインストールしています...",
+      "download_failed": "AxShell ブルーライトフィルターをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-gamma からインストールできます。",
+      "installed": "AxShell ブルーライトフィルター {version} をインストールしました",
+      "install_failed": "AxShell ブルーライトフィルターのインストールに失敗しました。github.com/ilyamiro/serpantinum-gamma からインストールするまで動作しません。",
+      "installing": "AxShell ブルーライトフィルターをインストールしています...",
       "unsupported_arch": "ビルド済みのブルーライトフィルターパッケージは x86_64 のみ提供されているため、スキップします。",
-      "up_to_date": "-> Serpantinum ブルーライトフィルター {version} は既にインストールされています。"
+      "up_to_date": "-> AxShell ブルーライトフィルター {version} は既にインストールされています。"
     },
     "ski": {
       "checksum_failed": "Ski のダウンロードがチェックサム検証に失敗したため、スキップします。",
@@ -878,7 +875,7 @@
   },
   "guide": {
     "about": {
-      "title": "Serpantinum",
+      "title": "AxShell",
       "loading": "読み込み中...",
       "unknown": "不明",
       "version_by": "v{version} • by {author}",
@@ -897,7 +894,7 @@
         "uptime": "稼働時間",
         "default_os": "Linux"
       },
-      "github_repo": "ilyamiro/serpantinum"
+      "github_repo": "mora1ss/axshell"
     },
     "tabs": {
       "welcome": "ようこそ",
@@ -1550,7 +1547,7 @@
     "theme": {
       "font": {
         "title": "フォント",
-        "desc": "Serpantinum で使用するデフォルトフォントを選択します",
+        "desc": "AxShell で使用するデフォルトフォントを選択します",
         "select": "選択..."
       },
       "radius": {
@@ -1652,16 +1649,16 @@
           "failed": "設定を更新できませんでした: {line}"
         },
         "hint": {
-          "select_in_app": "アプリの設定で Serpantinum テーマを選択してください",
+          "select_in_app": "アプリの設定で AxShell テーマを選択してください",
           "restart": "新しい色を反映するには開いているウィンドウを再起動してください",
-          "neovim": ":colorscheme serpantinum を実行すると使えます",
+          "neovim": ":colorscheme axshell を実行すると使えます",
           "helix": "新しい色を反映するには開いているエディターで :config-reload を実行してください",
-          "fastfetch": "fastfetch -c serpantinum を実行すると使えます",
-          "spicetify": "spicetify config current_theme Serpantinum を実行してから spicetify apply を実行してください",
-          "discord": "クライアントのテーマ設定で Serpantinum を有効にしてください",
-          "emacs": "M-x load-theme serpantinum を実行すると使えます",
+          "fastfetch": "fastfetch -c axshell を実行すると使えます",
+          "spicetify": "spicetify config current_theme AxShell を実行してから spicetify apply を実行してください",
+          "discord": "クライアントのテーマ設定で AxShell を有効にしてください",
+          "emacs": "M-x load-theme axshell を実行すると使えます",
           "steam": "Millennium で Material-Theme をインストールし、その色設定で Matugen を選択してください",
-          "heroic": "Heroic のカスタムテーマのパスをテーマフォルダーに設定し、serpantinum を選択してください",
+          "heroic": "Heroic のカスタムテーマのパスをテーマフォルダーに設定し、axshell を選択してください",
           "telegram": "Telegram のチャット設定からテーマファイルを読み込んでください"
         },
         "list": {

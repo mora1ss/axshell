@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const CF_BEACON_TOKEN = 'c2690c3444a34bc4aed5966aa3778e88';
 
 const config: Config = {
-  title: 'Serpantinum',
+  title: 'AxShell',
   tagline: 'A wayland shell built for you',
   favicon: 'favicon.ico',
 
@@ -13,12 +13,12 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://serpantinum.dev',
+  url: 'https://mora1ss.github.io',
   baseUrl: '/',
   trailingSlash: false,
 
-  organizationName: 'ilyamiro',
-  projectName: 'serpantinum',
+  organizationName: 'mora1ss',
+  projectName: 'axshell',
 
   onBrokenLinks: 'throw',
 
@@ -73,7 +73,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
           path: '../docs',
-          editUrl: 'https://github.com/ilyamiro/serpantinum/edit/master/docs/',
+          editUrl: 'https://github.com/mora1ss/axshell/edit/master/docs/',
         },
         blog: false,
         theme: {
@@ -90,9 +90,9 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Serpantinum',
+      title: 'AxShell',
       logo: {
-        alt: 'Serpantinum Logo',
+        alt: 'AxShell Logo',
         src: 'img/logo-light.svg',
         srcDark: 'img/logo-dark.svg',
         width: 32,
@@ -104,50 +104,12 @@ const config: Config = {
           label: 'Documentation',
           position: 'left',
         },
-        {
-          href: 'https://github.com/ilyamiro/serpantinum/blob/master/CHANGELOG.md',
-          label: 'Changelog',
-          position: 'left',
-          className: 'navbar-changelog-link',
-        },
-        {
-          type: 'search',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/ilyamiro/serpantinum',
-          label: 'GitHub',
-          position: 'right',
-          className: 'navbar-github-link',
-          'aria-label': 'GitHub repository',
-        },
-        {
-          href: 'https://www.reddit.com/r/serpantinum',
-          label: 'Reddit',
-          position: 'right',
-          className: 'navbar-reddit-link',
-          'aria-label': 'Reddit community',
-        },
-        {
-          href: 'https://t.me/serpantinum_git',
-          label: 'Telegram',
-          position: 'right',
-          className: 'navbar-telegram-link',
-          'aria-label': 'Telegram channel',
-        },
-        {
-          href: 'https://ko-fi.com/ilyamiro',
-          label: 'Support',
-          position: 'right',
-          className: 'navbar-kofi-link',
-          'aria-label': 'Support the creator on Ko-fi',
-        },
       ],
     },
     footer: {
       style: 'dark',
       logo: {
-        alt: 'Serpantinum Logo',
+        alt: 'AxShell Logo',
         src: 'img/logo-light.svg',
         srcDark: 'img/logo-dark.svg',
         width: 44,
@@ -172,45 +134,11 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Telegram',
-              href: 'https://t.me/serpantinum_git',
-            },
-            {
-              label: 'Support on Ko-fi',
-              href: 'https://ko-fi.com/ilyamiro',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/ilyamiro/serpantinum',
-            },
-          ],
-        },
-        {
-          title: 'Creator',
-          items: [
-            {
-              label: 'X (Twitter)',
-              href: 'https://x.com/ilyamirox',
-            },
-            {
-              label: 'Reddit',
-              href: 'https://reddit.com/user/ilyamiro1',
-            },
-            {
-              label: 'YouTube',
-              href: 'https://youtube.com/@ilyamiro21',
-            },
-            {
-              label: 'TikTok',
-              href: 'https://tiktok.com/@ilyamiro.dev',
-            },
-          ],
+          title: 'Project',
+          items: [{ label: 'GitHub', href: 'https://github.com/mora1ss/axshell' }],
         },
       ],
-      copyright: `A desktop shell built for YOU. Copyright © ${new Date().getFullYear()} Serpantinum.`,
+      copyright: `A desktop shell built for YOU. Copyright © ${new Date().getFullYear()} AxShell.`,
     },
     prism: {
       theme: prismThemes.github,

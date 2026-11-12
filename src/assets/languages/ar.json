@@ -30,8 +30,8 @@
   },
   "cli": {
     "commands": "الأوامر:",
-    "daemon_stopped": "تم إيقاف خدمة خلفية Serpantinum.",
-    "daemon_restarted": "تمت إعادة تشغيل خدمة خلفية Serpantinum.",
+    "daemon_stopped": "تم إيقاف خدمة خلفية AxShell.",
+    "daemon_restarted": "تمت إعادة تشغيل خدمة خلفية AxShell.",
     "description": "واجهة سطح مكتب عصرية لمديري نوافذ Wayland.",
     "error_missing_qml": "خطأ: لم يتم تحديد هدف للتشغيل.",
     "error_qml_not_found": "ملف QML غير موجود: '{NAME}' في '{DIR}'",
@@ -43,7 +43,7 @@
     "ipc_desc": "توجيه نداءات IPC مباشرة إلى واجهة Shell",
     "ipc_help": {
       "description": "إرسال نداء IPC مباشرة إلى مثيل quickshell قيد التشغيل.",
-      "usage": "الاستخدام: serpantinum ipc call <هدف> <دالة> [وسائط...]"
+      "usage": "الاستخدام: axshell ipc call <هدف> <دالة> [وسائط...]"
     },
     "kill_desc": "إيقاف خدمة الخلفية قيد التشغيل بشكل نظيف",
     "restart_desc": "إعادة تشغيل خدمة الخلفية",
@@ -52,9 +52,9 @@
       "available_targets": "الأهداف المتاحة:",
       "description": "تشغيل مكونات مستقلة مباشرة في وضع runner.",
       "target_start": "تشغيل واجهة البدء والإعداد الأولي",
-      "usage": "الاستخدام: serpantinum launch <start> [وسائط...]"
+      "usage": "الاستخدام: axshell launch <start> [وسائط...]"
     },
-    "launch_usage": "الاستخدام: serpantinum launch <start> [وسائط...]",
+    "launch_usage": "الاستخدام: axshell launch <start> [وسائط...]",
     "msg_desc": "إرسال أوامر أو التبديل بين مساحات العمل إلى مدير الواجهة",
     "msg_help": {
       "available_commands": "الرسائل المتاحة:",
@@ -63,7 +63,7 @@
       "cmd_toggle": "تبديل حالة لوحة واجهة مدارة",
       "cmd_workspace": "التبديل إلى مساحة العمل <رقم> (أضف 'move' لنقل النافذة النشطة)",
       "description": "إرسال رسائل إدارة التخطيط، مساحات العمل والنوافذ مباشرة.",
-      "usage": "الاستخدام: serpantinum msg <أمر|مساحة_عمل> [وسائط...]"
+      "usage": "الاستخدام: axshell msg <أمر|مساحة_عمل> [وسائط...]"
     },
     "options": "الخيارات:",
     "script_commands": "أوامر السكربتات:",
@@ -86,15 +86,15 @@
       "redactor": "فتح محرر تخطيط عناصر سطح المكتب أو تبديله",
       "lock_redactor": "تبديل محرر تخطيط شاشة القفل أو فتحه أو إغلاقه"
     },
-    "starting_daemon": "خدمة الخلفية لا تعمل. جارٍ بدء serpantinumd في الخلفية...",
-    "usage": "الاستخدام: serpantinum [أمر] [خيارات...]",
+    "starting_daemon": "خدمة الخلفية لا تعمل. جارٍ بدء axshelld في الخلفية...",
+    "usage": "الاستخدام: axshell [أمر] [خيارات...]",
     "verbose_desc": "تفعيل المخرجات التفصيلية في السجلات",
     "version_desc": "عرض معلومات الإصدار ثم الخروج",
     "usage_label": "الاستخدام:",
     "config_desc": "قراءة الإعدادات وتغييرها (get, set, dump, path, edit)",
     "error_unknown_language": "خطأ: اللغة '{CODE}' غير معروفة.",
     "update_available": "يتوفر تحديث: {LOCAL} -> {REMOTE}",
-    "up_to_date": "Serpantinum محدّث ({VERSION}).",
+    "up_to_date": "AxShell محدّث ({VERSION}).",
     "state_on": "مفعل",
     "state_off": "معطل",
     "error_unknown_theme": "خطأ: سمة غير معروفة '{NAME}'.",
@@ -121,23 +121,23 @@
       "cmd_status": "التحقق من حالة تشغيل خدمة الخلفية",
       "cmd_stop": "إيقاف خدمة الخلفية قيد التشغيل",
       "commands": "الأوامر:",
-      "description": "خدمة خلفية لإدارة واجهة سطح مكتب Serpantinum.",
+      "description": "خدمة خلفية لإدارة واجهة سطح مكتب AxShell.",
       "opt_help": "عرض رسالة المساعدة هذه ثم الخروج",
       "opt_verbose": "تفعيل تسجيل المخرجات التفصيلية",
       "opt_version": "عرض معلومات الإصدار ثم الخروج",
       "options": "الخيارات:",
       "status_running": "خدمة الخلفية تعمل (PID: {PID})",
-      "status_stopped": "خدمة خلفية Serpantinum لا تعمل.",
-      "stopped": "تم إيقاف خدمة خلفية Serpantinum.",
+      "status_stopped": "خدمة خلفية AxShell لا تعمل.",
+      "stopped": "تم إيقاف خدمة خلفية AxShell.",
       "unknown_arg": "وسيطة غير معروفة: '{ARG}'",
-      "usage": "الاستخدام: serpantinumd [start|stop|restart|status]"
+      "usage": "الاستخدام: axshelld [start|stop|restart|status]"
     },
-    "launching": "جارٍ إطلاق خدمة خلفية Serpantinum...",
-    "shutting_down": "جارٍ إيقاف خدمة خلفية Serpantinum...",
-    "app_name": "Serpantinum",
+    "launching": "جارٍ إطلاق خدمة خلفية AxShell...",
+    "shutting_down": "جارٍ إيقاف خدمة خلفية AxShell...",
+    "app_name": "AxShell",
     "easyeffects": {
       "title": "لا يزال EasyEffects مفعّلًا",
-      "body": "أصبح لدى Serpantinum الآن محرك صوت خاص به، وقد يتعارض EasyEffects معه. إذا كنت تستخدم EasyEffects من أجل Serpantinum فقط، فأوقف تشغيله التلقائي عند تسجيل الدخول."
+      "body": "أصبح لدى AxShell الآن محرك صوت خاص به، وقد يتعارض EasyEffects معه. إذا كنت تستخدم EasyEffects من أجل AxShell فقط، فأوقف تشغيله التلقائي عند تسجيل الدخول."
     }
   },
   "datetime": {
@@ -148,7 +148,7 @@
   },
   "guide": {
     "about": {
-      "github_repo": "ilyamiro/serpantinum",
+      "github_repo": "mora1ss/axshell",
       "hardware": {
         "device_name": "اسم الجهاز",
         "disk_capacity": "سعة القرص",
@@ -165,7 +165,7 @@
         "shell": "الصدفة (Shell)",
         "uptime": "مدة التشغيل"
       },
-      "title": "Serpantinum",
+      "title": "AxShell",
       "unknown": "غير معروف",
       "version_by": "الإصدار {version} بواسطة @{author}"
     },
@@ -1012,7 +1012,7 @@
         "title": "سمات الألوان"
       },
       "font": {
-        "desc": "اختر الخط الافتراضي المستخدم في واجهة Serpantinum",
+        "desc": "اختر الخط الافتراضي المستخدم في واجهة AxShell",
         "select": "اختر الخط...",
         "title": "الخط"
       },
@@ -1110,16 +1110,16 @@
           "failed": "تعذّر تحديث الإعدادات: {line}"
         },
         "hint": {
-          "select_in_app": "اختر سمة Serpantinum في إعدادات التطبيق",
+          "select_in_app": "اختر سمة AxShell في إعدادات التطبيق",
           "restart": "أعد تشغيل النوافذ المفتوحة لرؤية الألوان الجديدة",
-          "neovim": "نفّذ ‎:colorscheme serpantinum لاستخدامها",
+          "neovim": "نفّذ ‎:colorscheme axshell لاستخدامها",
           "helix": "نفّذ ‎:config-reload في المحررات المفتوحة لرؤية الألوان الجديدة",
-          "fastfetch": "نفّذ fastfetch -c serpantinum لاستخدامه",
-          "spicetify": "نفّذ spicetify config current_theme Serpantinum ثم spicetify apply",
-          "discord": "فعّل Serpantinum في إعدادات سمات العميل",
-          "emacs": "نفّذ M-x load-theme serpantinum لاستخدامه",
+          "fastfetch": "نفّذ fastfetch -c axshell لاستخدامه",
+          "spicetify": "نفّذ spicetify config current_theme AxShell ثم spicetify apply",
+          "discord": "فعّل AxShell في إعدادات سمات العميل",
+          "emacs": "نفّذ M-x load-theme axshell لاستخدامه",
           "steam": "ثبّت Material-Theme عبر Millennium، ثم اختر Matugen في إعدادات الألوان الخاصة به",
-          "heroic": "اضبط مسار السمات المخصصة في Heroic على مجلد السمات الخاص به، ثم اختر serpantinum",
+          "heroic": "اضبط مسار السمات المخصصة في Heroic على مجلد السمات الخاص به، ثم اختر axshell",
           "telegram": "حمّل ملف السمة من إعدادات الدردشة في Telegram"
         },
         "list": {
@@ -1416,13 +1416,12 @@
       "gpu": "كرت الشاشة:",
       "install_mode": "نمط التثبيت:",
       "installed": " (مثبت)",
-      "installed_success": "تم تثبيت Serpantinum الإصدار {ver} ({commit}) بنجاح!",
+      "installed_success": "تم تثبيت AxShell الإصدار {ver} ({commit}) بنجاح!",
       "menu_exit": "خروج",
       "menu_install": "بدء التثبيت الكامل",
       "menu_overview": "المهام المحددة: {count}",
       "menu_reinstall": "إعادة التثبيت",
       "menu_sddm": "إعداد SDDM",
-      "menu_telemetry": "القياس عن بُعد المجهول",
       "menu_update": "تحديث",
       "menu_wallpapers": "حزمة الخلفيات",
       "not_installed": " (غير مثبت)",
@@ -1431,8 +1430,7 @@
       "package_missing": "الحزمة {pkg} مفقودة",
       "packages_header": "حزم الاعتماديات المطلوبة:",
       "packages_prompt": "تثبيت الحزم المفقودة الآن؟",
-      "reddit": "ريديت:",
-      "restart_prompt": "أعد تشغيل مدير النوافذ أو نفذ 'serpantinumd start' للبدء.",
+      "restart_prompt": "أعد تشغيل مدير النوافذ أو نفذ 'axshelld start' للبدء.",
       "sddm_detected_active": "تم اكتشاف مدير الجلسات النشط: {dm}",
       "sddm_detected_none": "مدير الجلسات المكتشف النشط/الممكن: لا يوجد",
       "sddm_opt_disable": "تعطيل {dm} وتمكين SDDM",
@@ -1447,36 +1445,35 @@
       "target_compositor_selected": "مدير النوافذ المختار [{comps}]",
       "target_version": "الإصدار المستهدف:",
       "telegram": "تيليجرام:",
-      "twitter": "تويتر / X:",
       "unsupported_compositor": "مدير نوافذ غير مدعوم",
       "user": "المستخدم الحالي:"
     },
     "audio": {
       "building": "لا يوجد محرك صوت مُجمَّع مسبقًا لهذا النظام، جارٍ البناء من المصدر...",
       "checksum_failed": "فشل تنزيل محرك الصوت في فحص المجموع الاختباري، سيتم التخطي.",
-      "download_failed": "تعذّر تنزيل محرك الصوت من Serpantinum، سيتم التخطي. يمكنك تثبيته لاحقًا من github.com/ilyamiro/serpantinum-audio.",
-      "installed": "تم تثبيت محرك الصوت من Serpantinum {version}",
-      "install_failed": "فشل تثبيت محرك الصوت من Serpantinum. لن يعمل المعادل حتى يتم تثبيته من github.com/ilyamiro/serpantinum-audio.",
-      "installing": "جارٍ تثبيت محرك الصوت من Serpantinum...",
-      "up_to_date": "-> محرك الصوت من Serpantinum {version} مثبّت بالفعل."
+      "download_failed": "تعذّر تنزيل محرك الصوت من AxShell، سيتم التخطي. يمكنك تثبيته لاحقًا من github.com/ilyamiro/serpantinum-audio.",
+      "installed": "تم تثبيت محرك الصوت من AxShell {version}",
+      "install_failed": "فشل تثبيت محرك الصوت من AxShell. لن يعمل المعادل حتى يتم تثبيته من github.com/ilyamiro/serpantinum-audio.",
+      "installing": "جارٍ تثبيت محرك الصوت من AxShell...",
+      "up_to_date": "-> محرك الصوت من AxShell {version} مثبّت بالفعل."
     },
     "core": {
       "checksum_failed": "فشل تنزيل الخدمات الأساسية في فحص المجموع الاختباري، سيتم التخطي.",
-      "download_failed": "تعذّر تنزيل الخدمات الأساسية من Serpantinum، سيتم التخطي. يمكنك تثبيتها لاحقًا من github.com/ilyamiro/serpantinum-core.",
-      "installed": "تم تثبيت الخدمات الأساسية من Serpantinum {version}",
-      "install_failed": "فشل تثبيت الخدمات الأساسية من Serpantinum. لن يعمل استخدام النظام ومؤشرات قفل لوحة المفاتيح والحافظة حتى يتم تثبيتها من github.com/ilyamiro/serpantinum-core.",
-      "installing": "جارٍ تثبيت الخدمات الأساسية من Serpantinum...",
+      "download_failed": "تعذّر تنزيل الخدمات الأساسية من AxShell، سيتم التخطي. يمكنك تثبيتها لاحقًا من github.com/ilyamiro/serpantinum-core.",
+      "installed": "تم تثبيت الخدمات الأساسية من AxShell {version}",
+      "install_failed": "فشل تثبيت الخدمات الأساسية من AxShell. لن يعمل استخدام النظام ومؤشرات قفل لوحة المفاتيح والحافظة حتى يتم تثبيتها من github.com/ilyamiro/serpantinum-core.",
+      "installing": "جارٍ تثبيت الخدمات الأساسية من AxShell...",
       "unsupported_arch": "الحزم المُجمَّعة مسبقًا للخدمات الأساسية متوفرة فقط لمعمارية x86_64، سيتم التخطي.",
-      "up_to_date": "-> الخدمات الأساسية من Serpantinum {version} مثبّتة بالفعل."
+      "up_to_date": "-> الخدمات الأساسية من AxShell {version} مثبّتة بالفعل."
     },
     "gamma": {
       "checksum_failed": "فشل تنزيل مرشح الضوء الأزرق في فحص المجموع الاختباري، سيتم التخطي.",
-      "download_failed": "تعذّر تنزيل مرشح الضوء الأزرق من Serpantinum، سيتم التخطي. يمكنك تثبيته لاحقًا من github.com/ilyamiro/serpantinum-gamma.",
-      "installed": "تم تثبيت مرشح الضوء الأزرق من Serpantinum {version}",
-      "install_failed": "فشل تثبيت مرشح الضوء الأزرق من Serpantinum. لن يعمل حتى يتم تثبيته من github.com/ilyamiro/serpantinum-gamma.",
-      "installing": "جارٍ تثبيت مرشح الضوء الأزرق من Serpantinum...",
+      "download_failed": "تعذّر تنزيل مرشح الضوء الأزرق من AxShell، سيتم التخطي. يمكنك تثبيته لاحقًا من github.com/ilyamiro/serpantinum-gamma.",
+      "installed": "تم تثبيت مرشح الضوء الأزرق من AxShell {version}",
+      "install_failed": "فشل تثبيت مرشح الضوء الأزرق من AxShell. لن يعمل حتى يتم تثبيته من github.com/ilyamiro/serpantinum-gamma.",
+      "installing": "جارٍ تثبيت مرشح الضوء الأزرق من AxShell...",
       "unsupported_arch": "الحزم المُجمَّعة مسبقًا لمرشح الضوء الأزرق متوفرة فقط لمعمارية x86_64، سيتم التخطي.",
-      "up_to_date": "-> مرشح الضوء الأزرق من Serpantinum {version} مثبّت بالفعل."
+      "up_to_date": "-> مرشح الضوء الأزرق من AxShell {version} مثبّت بالفعل."
     },
     "ski": {
       "checksum_failed": "فشل تنزيل Ski في فحص المجموع الاختباري، سيتم التخطي.",
@@ -1822,7 +1819,7 @@
     "made_by": "صُنع بواسطة @{author}",
     "start_preview": "بدء المعاينة",
     "tagline": "واجهة سطح مكتب صُممت من أجل",
-    "title": "Serpantinum",
+    "title": "AxShell",
     "welcome": "مرحبًا بك",
     "you": "أنت"
   },
@@ -1981,7 +1978,7 @@
       "set_user": "تعيين المستخدم"
     },
     "guide": {
-      "desc": "إعدادات Serpantinum",
+      "desc": "إعدادات AxShell",
       "name": "الإعدادات"
     },
     "music": {

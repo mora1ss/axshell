@@ -224,13 +224,13 @@ Item {
     }
 
     function lockSession(isStatic) {
-        let cmd = ["bash", Caching.serpantinumDir + "/scripts/lock.sh"];
+        let cmd = ["bash", Caching.axshellDir + "/scripts/lock.sh"];
         if (isStatic === true) cmd.push("--static");
         Quickshell.execDetached(cmd);
     }
 
     function reauthLockSession() {
-        Quickshell.execDetached(["bash", Caching.serpantinumDir + "/scripts/lock.sh", "--reauth"]);
+        Quickshell.execDetached(["bash", Caching.axshellDir + "/scripts/lock.sh", "--reauth"]);
     }
 
     function performLock() {

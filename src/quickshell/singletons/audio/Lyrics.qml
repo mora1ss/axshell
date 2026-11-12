@@ -41,8 +41,8 @@ Item {
     function getMemCache() {
         try {
             if (typeof globalThis !== "undefined" && globalThis) {
-                if (!globalThis._serpantinumLyrics) globalThis._serpantinumLyrics = {};
-                return globalThis._serpantinumLyrics;
+                if (!globalThis._axshellLyrics) globalThis._axshellLyrics = {};
+                return globalThis._axshellLyrics;
             }
         } catch(e) {}
         if (!root.localCache) root.localCache = {};
@@ -367,7 +367,7 @@ Item {
 
     function cacheFilePath(key) {
         let base = Quickshell.env("XDG_CACHE_HOME") || (Caching.home + "/.cache");
-        return base + "/serpantinum/lyrics/" + Qt.md5(key) + ".json";
+        return base + "/axshell/lyrics/" + Qt.md5(key) + ".json";
     }
 
     function saveLyricsToDisk(key, parsedList) {
@@ -881,7 +881,7 @@ Item {
         let url = "https://lrclib.net/api/get?" + params;
         let xhr = new XMLHttpRequest();
         xhr.open("GET", url);
-        xhr.setRequestHeader("Lrclib-Client", "serpantinum-shell");
+        xhr.setRequestHeader("Lrclib-Client", "axshell-shell");
 
         xhr.onreadystatechange = function() {
             if (xhr.readyState !== XMLHttpRequest.DONE) return;
@@ -921,7 +921,7 @@ Item {
         let url = "https://lrclib.net/api/search?q=" + encodeURIComponent(uniq[idx]);
         let xhr = new XMLHttpRequest();
         xhr.open("GET", url);
-        xhr.setRequestHeader("Lrclib-Client", "serpantinum-shell");
+        xhr.setRequestHeader("Lrclib-Client", "axshell-shell");
 
         xhr.onreadystatechange = function() {
             if (xhr.readyState !== XMLHttpRequest.DONE) return;
@@ -958,7 +958,7 @@ Item {
         let url = "https://lrclib.net/api/get?" + params;
         let xhr = new XMLHttpRequest();
         xhr.open("GET", url);
-        xhr.setRequestHeader("Lrclib-Client", "serpantinum-shell");
+        xhr.setRequestHeader("Lrclib-Client", "axshell-shell");
 
         xhr.onreadystatechange = function() {
             if (xhr.readyState !== XMLHttpRequest.DONE) return;

@@ -1,9 +1,3 @@
-<div align="center">
-  <img src="docs/assets/banner.png" alt="AxShell" width="850" />
-</div>
-
-## Previews
-
 | | |
 |---|---|
 | ![Preview 1](docs/assets/previews/preview_1.png) | ![Preview 2](docs/assets/previews/preview_2.png) |
@@ -11,11 +5,10 @@
 
 ---
 
-> [!IMPORTANT]
+
 ## Installation
 
 > [!TIP]
-> [!IMPORTANT]
 > **Migrating from v1:** All previous configuration will be backed up and unused. Configuration of compositor settings such as monitors, keybinds, and autostart is now up to you, as the project migrated from being dotfiles to being a shell.
 
 ### Arch Linux, Fedora, Void Linux and their derivatives
@@ -23,12 +16,6 @@
 For Arch-based distributions (including systemd, OpenRC, and other init systems), for Fedora-based distributions such as Nobara and Ultramarine, and for Void Linux (glibc and musl), run the automated installation script. It detects your distribution and uses `pacman`, `dnf` or `xbps`.
 
 Use this installer:
-
-```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/mora1ss/axshell/master/install/install.sh)"
-```
-
-If this doesn't work, use:
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/mora1ss/axshell/master/install/install.sh)"

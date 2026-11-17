@@ -2014,6 +2014,7 @@
       "menu_overview": "Ringkasan instalasi paket ({count} paket inti)",
       "menu_sddm": "Manajer login SDDM",
       "menu_wallpapers": "Paket gambar latar",
+      "menu_optional": "Opsional",
       "menu_update": "Perbarui",
       "menu_reinstall": "Instal ulang",
       "menu_install": "Instal",
@@ -2026,6 +2027,20 @@
       "failed_packages": "Paket-paket berikut mengalami kesalahan saat instalasi:",
       "restart_prompt": "Mulai ulang kompositor Anda atau jalankan 'axshelld start' untuk memulai.",
       "ask_reboot": "Apakah Anda ingin memulai ulang sistem? [y/n] "
+    },
+    "optional": {
+      "title": "Ekstra Opsional",
+      "hint": "Pilih ekstra yang diinginkan. Semua tidak dicentang secara bawaan.",
+      "fastfetch": "Fastfetch milik pembuat",
+      "starship": "Starship milik pembuat",
+      "brave": "Brave",
+      "done": "Selesai",
+      "installing": "Memasang paket opsional...",
+      "config_applied": "Konfigurasi {name} diterapkan",
+      "config_backup": "Konfigurasi {name} yang ada dicadangkan ke {path}",
+      "shell_enabled": "Starship diinisialisasi di {shell}",
+      "preset_missing": "Preset {name} tidak ditemukan, dilewati",
+      "aur_helper_missing": "Brave membutuhkan helper AUR (yay/paru); dilewati"
     },
     "deps": {
       "syncing": "Menyinkronkan dan memperbarui paket sistem (pacman -Syyu)...",

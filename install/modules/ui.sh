@@ -18,6 +18,9 @@ UNSUPPORTED_COMPOSITOR_DETECTED=false
 IS_REINSTALL=false
 
 OPT_SDDM=true
+OPT_FASTFETCH=false
+OPT_STARSHIP=false
+OPT_BRAVE=false
 REPLACE_DM=false
 SDDM_WAYLAND="$PM_SDDM_WAYLAND_DEFAULT"
 
@@ -453,6 +456,88 @@ manage_sddm_menu() {
     done
 }
 
+manage_optional_menu() {
+    draw_banner
+    stty -echo 2>/dev/null || true
+    printf "\e[?25l"
+    printf "%s%s%s%s\n\n" "$BOLD" "$C_CYAN" "$(t "installer.optional.title")" "$RESET"
+    printf "%s%s%s\n\n" "$DIM" "$(t "installer.optional.hint")" "$RESET"
+
+    local cursor=0
+    local rendered_lines=0
+
+    while true; do
+        local mark_off="${DIM}[ ]${RESET}"
+        local mark_on="${C_GREEN}[x]${RESET}"
+        local S_FF="$mark_off"
+        local S_ST="$mark_off"
+        local S_BR="$mark_off"
+
+        [ "$OPT_FASTFETCH" = true ] && S_FF="$mark_on"
+        [ "$OPT_STARSHIP" = true ] && S_ST="$mark_on"
+        [ "$OPT_BRAVE" = true ] && S_BR="$mark_on"
+
+        local items=()
+        items+=("1. $(t "installer.optional.fastfetch") $S_FF")
+        items+=("2. $(t "installer.optional.starship") $S_ST")
+        items+=("3. $(t "installer.optional.brave") $S_BR")
+        items+=("4. ${BOLD}${C_GREEN}$(t "installer.optional.done")${RESET}")
+
+        if [ "$rendered_lines" -gt 0 ]; then
+            printf "\033[%dA" "$rendered_lines"
+        fi
+
+        for i in "${!items[@]}"; do
+            if [ "$i" -eq "$cursor" ]; then
+                printf "\r\033[K%s%s ▸ %s%s\n" "$BOLD" "$C_CYAN" "$RESET" "${items[$i]}"
+            else
+                printf "\r\033[K    %s\n" "${items[$i]}"
+            fi
+        done
+        rendered_lines=${#items[@]}
+
+        local key
+        key=$(read_key)
+
+        case "$key" in
+            UP|[kK])
+                if [ "$cursor" -gt 0 ]; then
+                    cursor=$(( cursor - 1 ))
+                else
+                    cursor=$(( ${#items[@]} - 1 ))
+                fi
+                ;;
+            DOWN|[jJ])
+                if [ "$cursor" -lt $(( ${#items[@]} - 1 )) ]; then
+                    cursor=$(( cursor + 1 ))
+                else
+                    cursor=0
+                fi
+                ;;
+            ENTER|SPACE)
+                local selected_str="${items[$cursor]}"
+                case "$selected_str" in
+                    "1."*)
+                        OPT_FASTFETCH=$([ "$OPT_FASTFETCH" = true ] && echo false || echo true)
+                        ;;
+                    "2."*)
+                        OPT_STARSHIP=$([ "$OPT_STARSHIP" = true ] && echo false || echo true)
+                        ;;
+                    "3."*)
+                        OPT_BRAVE=$([ "$OPT_BRAVE" = true ] && echo false || echo true)
+                        ;;
+                    "4."*)
+                        break
+                        ;;
+                esac
+                ;;
+            ESC|[qQ])
+                break
+                ;;
+        esac
+    done
+}
+
 run_installer_ui() {
     local cursor=0
 
@@ -487,23 +572,32 @@ run_installer_ui() {
 
             local S_SDDM="${DIM}[OFF]${RESET}"
             local S_WP="${DIM}[3 Random]${RESET}"
+            local OPT_COUNT=0
 
             [ "$OPT_SDDM" = true ] && S_SDDM="${C_GREEN}[ON]${RESET}"
             [ "$INSTALL_FULL_WALLPAPERS" = true ] && S_WP="${C_GREEN}[Full Pack]${RESET}"
+
+            [ "$OPT_FASTFETCH" = true ] && OPT_COUNT=$(( OPT_COUNT + 1 ))
+            [ "$OPT_STARSHIP" = true ] && OPT_COUNT=$(( OPT_COUNT + 1 ))
+            [ "$OPT_BRAVE" = true ] && OPT_COUNT=$(( OPT_COUNT + 1 ))
+
+            local S_OPT="${DIM}[0/3]${RESET}"
+            [ "$OPT_COUNT" -gt 0 ] && S_OPT="${C_GREEN}[$OPT_COUNT/3]${RESET}"
 
             local items=()
             items+=("1. $(t "installer.ui.menu_overview" "count=${#REQUIRED_PKGS[@]}")")
             items+=("2. $COMP_MENU_ITEM")
             items+=("3. $(t "installer.ui.menu_sddm") $S_SDDM")
             items+=("4. $(t "installer.ui.menu_wallpapers") $S_WP")
+            items+=("5. $(t "installer.ui.menu_optional") $S_OPT")
 
             if [[ "$INSTALL_STATE" == "current" ]]; then
-                items+=("5. ${BOLD}${C_GREEN}$(t "installer.ui.menu_update")${RESET}")
-                items+=("6. ${BOLD}${C_YELLOW}$(t "installer.ui.menu_reinstall")${RESET}")
-                items+=("7. ${DIM}$(t "installer.ui.menu_exit")${RESET}")
+                items+=("6. ${BOLD}${C_GREEN}$(t "installer.ui.menu_update")${RESET}")
+                items+=("7. ${BOLD}${C_YELLOW}$(t "installer.ui.menu_reinstall")${RESET}")
+                items+=("8. ${DIM}$(t "installer.ui.menu_exit")${RESET}")
             else
-                items+=("5. ${BOLD}${C_GREEN}$(t "installer.ui.menu_install")${RESET}")
-                items+=("6. ${DIM}$(t "installer.ui.menu_exit")${RESET}")
+                items+=("6. ${BOLD}${C_GREEN}$(t "installer.ui.menu_install")${RESET}")
+                items+=("7. ${DIM}$(t "installer.ui.menu_exit")${RESET}")
             fi
 
             if [ "$rendered_lines" -gt 0 ]; then
@@ -522,6 +616,8 @@ run_installer_ui() {
             local key
             key=$(read_key)
 
+            local activate=false
+
             case "$key" in
                 UP|[kK])
                     if [ "$cursor" -gt 0 ]; then
@@ -537,22 +633,45 @@ run_installer_ui() {
                         cursor=0
                     fi
                     ;;
-                "1")
+                ENTER|SPACE)
+                    activate=true
+                    ;;
+                [1-9])
+                    if [ "$key" -le "${#items[@]}" ]; then
+                        cursor=$(( key - 1 ))
+                        activate=true
+                    fi
+                    ;;
+                ESC|[qQ])
+                    cleanup_terminal
+                    clear
+                    exit 0
+                    ;;
+            esac
+
+            [ "$activate" = true ] || continue
+
+            case "${items[$cursor]}" in
+                "1."*)
                     show_package_overview
                     break
                     ;;
-                "2")
+                "2."*)
                     manage_compositors_menu
                     break
                     ;;
-                "3")
+                "3."*)
                     manage_sddm_menu
                     break
                     ;;
-                "4")
+                "4."*)
                     INSTALL_FULL_WALLPAPERS=$([ "$INSTALL_FULL_WALLPAPERS" = true ] && echo false || echo true)
                     ;;
-                "5")
+                "5."*)
+                    manage_optional_menu
+                    break
+                    ;;
+                "6."*)
                     if [ ${#SELECTED_COMPOSITORS[@]} -eq 0 ]; then
                         printf "\n%s[!] %s%s\n" "$C_RED" "$(t "installer.ui.error_no_compositor")" "$RESET"
                         sleep 1.5
@@ -562,7 +681,7 @@ run_installer_ui() {
                     cleanup_terminal
                     return 0
                     ;;
-                "6")
+                "7."*)
                     if [[ "$INSTALL_STATE" == "current" ]]; then
                         if [ ${#SELECTED_COMPOSITORS[@]} -eq 0 ]; then
                             printf "\n%s[!] %s%s\n" "$C_RED" "$(t "installer.ui.error_no_compositor")" "$RESET"
@@ -572,76 +691,17 @@ run_installer_ui() {
                         IS_REINSTALL=true
                         cleanup_terminal
                         return 0
-                    else
-                        cleanup_terminal
-                        clear
-                        exit 0
                     fi
+                    cleanup_terminal
+                    clear
+                    exit 0
                     ;;
-                "7")
+                "8."*)
                     if [[ "$INSTALL_STATE" == "current" ]]; then
                         cleanup_terminal
                         clear
                         exit 0
                     fi
-                    ;;
-                ESC|[qQ])
-                    cleanup_terminal
-                    clear
-                    exit 0
-                    ;;
-                ENTER|SPACE)
-                    local sel="${items[$cursor]}"
-                    case "$sel" in
-                        *"1."*)
-                            show_package_overview
-                            break
-                            ;;
-                        *"2."*)
-                            manage_compositors_menu
-                            break
-                            ;;
-                        *"3."*)
-                            manage_sddm_menu
-                            break
-                            ;;
-                        *"4."*)
-                            INSTALL_FULL_WALLPAPERS=$([ "$INSTALL_FULL_WALLPAPERS" = true ] && echo false || echo true)
-                            ;;
-                        *"5."*)
-                            if [ ${#SELECTED_COMPOSITORS[@]} -eq 0 ]; then
-                                printf "\n%s[!] %s%s\n" "$C_RED" "$(t "installer.ui.error_no_compositor")" "$RESET"
-                                sleep 1.5
-                                break
-                            fi
-                            IS_REINSTALL=false
-                            cleanup_terminal
-                            return 0
-                            ;;
-                        *"6."*)
-                            if [[ "$INSTALL_STATE" == "current" ]]; then
-                                if [ ${#SELECTED_COMPOSITORS[@]} -eq 0 ]; then
-                                    printf "\n%s[!] %s%s\n" "$C_RED" "$(t "installer.ui.error_no_compositor")" "$RESET"
-                                    sleep 1.5
-                                    break
-                                fi
-                                IS_REINSTALL=true
-                                cleanup_terminal
-                                return 0
-                            else
-                                cleanup_terminal
-                                clear
-                                exit 0
-                            fi
-                            ;;
-                        *"7."*)
-                            if [[ "$INSTALL_STATE" == "current" ]]; then
-                                cleanup_terminal
-                                clear
-                                exit 0
-                            fi
-                            ;;
-                    esac
                     ;;
             esac
         done

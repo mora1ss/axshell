@@ -2014,6 +2014,7 @@
       "menu_overview": "Visão geral da instalação ({count} pacotes base)",
       "menu_sddm": "Gerenciador de login SDDM",
       "menu_wallpapers": "Pacote de papéis de parede",
+      "menu_optional": "Opcionais",
       "menu_update": "Atualizar",
       "menu_reinstall": "Reinstalar",
       "menu_install": "Instalar",
@@ -2026,6 +2027,20 @@
       "failed_packages": "Os seguintes pacotes tiveram erro na instalação:",
       "restart_prompt": "Reinicie o compositor ou execute 'axshelld start' para começar.",
       "ask_reboot": "Deseja reiniciar? [y/n] "
+    },
+    "optional": {
+      "title": "Extras Opcionais",
+      "hint": "Escolha os extras que deseja. Todos vêm desmarcados por padrão.",
+      "fastfetch": "Fastfetch do criador",
+      "starship": "Starship do criador",
+      "brave": "Brave",
+      "done": "Concluir",
+      "installing": "Instalando pacotes opcionais...",
+      "config_applied": "Configuração do {name} aplicada",
+      "config_backup": "Configuração existente do {name} salva em {path}",
+      "shell_enabled": "Starship inicializado no {shell}",
+      "preset_missing": "Preset do {name} não encontrado, ignorando",
+      "aur_helper_missing": "Brave precisa de um helper AUR (yay/paru); ignorando"
     },
     "deps": {
       "syncing": "Sincronizando e atualizando pacotes do sistema (pacman -syyu)...",

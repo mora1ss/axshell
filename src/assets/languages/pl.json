@@ -800,6 +800,7 @@
       "menu_overview": "Przegląd instalacji pakietów ({count} głównych pakietów)",
       "menu_sddm": "Menedżer logowania SDDM",
       "menu_wallpapers": "Pakiet tapet",
+      "menu_optional": "Opcjonalne",
       "menu_update": "Aktualizuj",
       "menu_reinstall": "Zainstaluj ponownie",
       "menu_install": "Zainstaluj",
@@ -812,6 +813,20 @@
       "failed_packages": "Wystąpiły błędy podczas instalacji następujących pakietów:",
       "restart_prompt": "Uruchom ponownie kompozytor lub wpisz 'axshelld start', aby rozpocząć.",
       "ask_reboot": "Czy chcesz uruchomić komputer ponownie? [t/n] "
+    },
+    "optional": {
+      "title": "Opcjonalne dodatki",
+      "hint": "Wybierz dodatki, które chcesz zainstalować. Domyślnie żaden nie jest zaznaczony.",
+      "fastfetch": "Fastfetch twórcy",
+      "starship": "Starship twórcy",
+      "brave": "Brave",
+      "done": "Gotowe",
+      "installing": "Instalowanie opcjonalnych pakietów...",
+      "config_applied": "Zastosowano konfigurację {name}",
+      "config_backup": "Istniejąca konfiguracja {name} została zapisana w {path}",
+      "shell_enabled": "Zainicjalizowano Starship w {shell}",
+      "preset_missing": "Nie znaleziono presetu {name}, pomijanie",
+      "aur_helper_missing": "Brave wymaga pomocnika AUR (yay/paru); pomijanie"
     },
     "deps": {
       "syncing": "Synchronizacja i aktualizacja pakietów systemowych (pacman -Syyu)...",

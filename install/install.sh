@@ -58,6 +58,7 @@ source "$PROJECT_ROOT/src/scripts/i18n.sh"
 source "$MODULES_DIR/pm.sh"
 source "$MODULES_DIR/deps.sh"
 source "$MODULES_DIR/ski.sh"
+source "$MODULES_DIR/optional.sh"
 source "$MODULES_DIR/daemons.sh"
 source "$MODULES_DIR/audio.sh"
 source "$MODULES_DIR/gamma.sh"
@@ -73,6 +74,9 @@ source "$MODULES_DIR/ui.sh"
 OPT_SDDM=$(get_saved_preference OPT_SDDM "$OPT_SDDM")
 SDDM_WAYLAND=$(get_saved_preference SDDM_WAYLAND "$SDDM_WAYLAND")
 INSTALL_FULL_WALLPAPERS=$(get_saved_preference INSTALL_FULL_WALLPAPERS "$INSTALL_FULL_WALLPAPERS")
+OPT_FASTFETCH=$(get_saved_preference OPT_FASTFETCH "$OPT_FASTFETCH")
+OPT_STARSHIP=$(get_saved_preference OPT_STARSHIP "$OPT_STARSHIP")
+OPT_BRAVE=$(get_saved_preference OPT_BRAVE "$OPT_BRAVE")
 
 check_supported_os
 bootstrap_installer_deps
@@ -97,6 +101,7 @@ fi
 
 install_dependencies "$INSTALL_STATE" "$IS_REINSTALL" "${SELECTED_COMPOSITORS[@]}"
 install_ski
+install_optional_packages
 install_audio_daemon
 install_gamma_daemon
 install_core_daemon
@@ -108,10 +113,11 @@ install_wallpapers "$INSTALL_FULL_WALLPAPERS"
 WALLPAPER_DIR=$(get_wallpaper_dir)
 init_axshell_config "$PROJECT_ROOT" "$WALLPAPER_DIR" "$INSTALL_STATE" "$IS_REINSTALL"
 configure_ski_defaults
+configure_optional_presets
 
 setup_services
 hand_over_from_easyeffects
-write_version_state "$TARGET_VERSION" "$TARGET_COMMIT" "${SELECTED_COMPOSITORS[*]}" "$OPT_SDDM" "$SDDM_WAYLAND" "$INSTALL_FULL_WALLPAPERS"
+write_version_state "$TARGET_VERSION" "$TARGET_COMMIT" "${SELECTED_COMPOSITORS[*]}" "$OPT_SDDM" "$SDDM_WAYLAND" "$INSTALL_FULL_WALLPAPERS" "$OPT_FASTFETCH" "$OPT_STARSHIP" "$OPT_BRAVE"
 
 if [[ "$INSTALL_STATE" == "legacy" || "$INSTALL_STATE" == "fresh" || "$IS_REINSTALL" == true ]]; then
     rm -f "$HOME/.local/state/axshell/first_launch.done" "$HOME/.local/state/quickshell/first_launch.done"

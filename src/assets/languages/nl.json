@@ -2014,6 +2014,7 @@
       "menu_overview": "Overzicht pakketinstallatie ({count} basispakketten)",
       "menu_sddm": "SDDM-inlogbeheerder",
       "menu_wallpapers": "Achtergrondpakket",
+      "menu_optional": "Optioneel",
       "menu_update": "Bijwerken",
       "menu_reinstall": "Opnieuw installeren",
       "menu_install": "Installeren",
@@ -2026,6 +2027,20 @@
       "failed_packages": "De volgende pakketten hebben fouten ondervonden tijdens de installatie:",
       "restart_prompt": "Herstart uw compositor of voer 'axshelld start' uit om te beginnen.",
       "ask_reboot": "Wilt u opnieuw opstarten? [j/n] "
+    },
+    "optional": {
+      "title": "Optionele extra's",
+      "hint": "Kies de gewenste extra's. Standaard is niets aangevinkt.",
+      "fastfetch": "Fastfetch van de maker",
+      "starship": "Starship van de maker",
+      "brave": "Brave",
+      "done": "Klaar",
+      "installing": "Optionele pakketten worden geïnstalleerd...",
+      "config_applied": "{name}-configuratie toegepast",
+      "config_backup": "Bestaande {name}-configuratie geback-upt naar {path}",
+      "shell_enabled": "Starship geïnitialiseerd in {shell}",
+      "preset_missing": "{name}-preset niet gevonden, overgeslagen",
+      "aur_helper_missing": "Brave vereist een AUR-helper (yay/paru); overgeslagen"
     },
     "deps": {
       "syncing": "Systeempakketten synchroniseren en bijwerken (pacman -syyu)...",

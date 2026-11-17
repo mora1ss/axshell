@@ -2014,6 +2014,7 @@
       "menu_overview": "Package installation overview ({count} core packages)",
       "menu_sddm": "SDDM login manager",
       "menu_wallpapers": "Wallpaper pack",
+      "menu_optional": "Optional",
       "menu_update": "Update",
       "menu_reinstall": "Reinstall",
       "menu_install": "Install",
@@ -2026,6 +2027,20 @@
       "failed_packages": "The following packages encountered errors during installation:",
       "restart_prompt": "Restart your compositor or run 'axshelld start' to begin.",
       "ask_reboot": "Do you want to restart? [y/n] "
+    },
+    "optional": {
+      "title": "Optional Extras",
+      "hint": "Choose the extras you want. All are unchecked by default.",
+      "fastfetch": "Creator's Fastfetch",
+      "starship": "Creator's Starship",
+      "brave": "Brave",
+      "done": "Done",
+      "installing": "Installing optional packages...",
+      "config_applied": "{name} configuration applied",
+      "config_backup": "Existing {name} configuration backed up to {path}",
+      "shell_enabled": "Starship initialized in {shell}",
+      "preset_missing": "{name} preset not found, skipping",
+      "aur_helper_missing": "Brave needs an AUR helper (yay/paru); skipping"
     },
     "deps": {
       "syncing": "Synchronizing and updating system packages (pacman -syyu)...",

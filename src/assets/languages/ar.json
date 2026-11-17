@@ -1380,6 +1380,20 @@
       "sddm_no_backend": "لم يتم العثور على Xorg ولا على مركّب Wayland مدعوم لشاشة تسجيل الدخول (kwin_wayland/weston) في /usr/local/bin أو /usr/bin أو /bin.",
       "sddm_skipped": "تم تخطي إعداد SDDM: لم يتم العثور على خادم عرض أو مركّب لشاشة تسجيل الدخول صالح للاستخدام. لم يتم تغيير مدير العرض الحالي."
     },
+    "optional": {
+      "title": "إضافات اختيارية",
+      "hint": "اختر الإضافات التي تريدها. جميعها غير محددة افتراضيًا.",
+      "fastfetch": "Fastfetch الخاص بالمطوّر",
+      "starship": "Starship الخاص بالمطوّر",
+      "brave": "Brave",
+      "done": "تم",
+      "installing": "جارٍ تثبيت الحزم الاختيارية...",
+      "config_applied": "تم تطبيق إعدادات {name}",
+      "config_backup": "تم نسخ إعدادات {name} الحالية احتياطيًا إلى {path}",
+      "shell_enabled": "تم تهيئة Starship في {shell}",
+      "preset_missing": "لم يتم العثور على إعداد {name} المسبق، جارٍ التخطي",
+      "aur_helper_missing": "يتطلب Brave مساعد AUR (yay/paru)؛ جارٍ التخطي"
+    },
     "deps": {
       "all_installed": "-> جميع الحزم مثبتة بالفعل! تخطي مرحلة تنزيل الحزم.",
       "install_failed": "فشل تثبيت {pkg}",
@@ -1424,6 +1438,7 @@
       "menu_sddm": "إعداد SDDM",
       "menu_update": "تحديث",
       "menu_wallpapers": "حزمة الخلفيات",
+      "menu_optional": "اختياري",
       "not_installed": " (غير مثبت)",
       "os": "نظام التشغيل:",
       "package_installed": "الحزمة {pkg} مثبتة بالفعل",

@@ -2014,6 +2014,7 @@
       "menu_overview": "套件安裝概覽（{count} 個核心套件）",
       "menu_sddm": "SDDM 登入管理器",
       "menu_wallpapers": "桌布包",
+      "menu_optional": "選用",
       "menu_update": "更新",
       "menu_reinstall": "重新安裝",
       "menu_install": "安裝",
@@ -2026,6 +2027,20 @@
       "failed_packages": "下列套件在安裝過程中發生錯誤：",
       "restart_prompt": "重新啟動您的合成器或執行「axshelld start」以開始使用。",
       "ask_reboot": "您要重新開機嗎？[y/n] "
+    },
+    "optional": {
+      "title": "選用附加項目",
+      "hint": "選擇你想要的附加項目。預設全部未勾選。",
+      "fastfetch": "作者的 Fastfetch",
+      "starship": "作者的 Starship",
+      "brave": "Brave",
+      "done": "完成",
+      "installing": "正在安裝選用套件...",
+      "config_applied": "已套用 {name} 設定",
+      "config_backup": "現有 {name} 設定已備份至 {path}",
+      "shell_enabled": "已在 {shell} 中初始化 Starship",
+      "preset_missing": "找不到 {name} 預設，略過",
+      "aur_helper_missing": "Brave 需要 AUR 助手（yay/paru）；略過"
     },
     "deps": {
       "syncing": "正在同步並更新系統套件 (pacman -syyu)...",

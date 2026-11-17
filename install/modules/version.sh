@@ -108,6 +108,9 @@ write_version_state() {
     local opt_sddm="${4:-true}"
     local sddm_wayland="${5:-false}"
     local full_wallpapers="${6:-true}"
+    local opt_fastfetch="${7:-false}"
+    local opt_starship="${8:-false}"
+    local opt_brave="${9:-false}"
 
     if [[ -z "$commit" || "$commit" == "null" ]]; then
         commit="unknown"
@@ -122,6 +125,9 @@ SELECTED_COMPOSITORS="$compositors"
 OPT_SDDM="$opt_sddm"
 SDDM_WAYLAND="$sddm_wayland"
 INSTALL_FULL_WALLPAPERS="$full_wallpapers"
+OPT_FASTFETCH="$opt_fastfetch"
+OPT_STARSHIP="$opt_starship"
+OPT_BRAVE="$opt_brave"
 EOF
     mv -f "$tmp_file" "$VERSION_FILE"
 }

@@ -2015,6 +2015,7 @@
       "menu_overview": "Огляд встановлення пакетів ({count} основних пакетів)",
       "menu_sddm": "Дисплейний менеджер SDDM",
       "menu_wallpapers": "Набір шпалер",
+      "menu_optional": "Додатково",
       "menu_update": "Оновити",
       "menu_reinstall": "Перевстановити",
       "menu_install": "Встановити",
@@ -2027,6 +2028,20 @@
       "failed_packages": "Під час встановлення таких пакетів виникли помилки:",
       "restart_prompt": "Перезапустіть композитор або виконайте 'axshelld start' для початку роботи.",
       "ask_reboot": "Перезавантажити систему зараз? [y/n] "
+    },
+    "optional": {
+      "title": "Додаткові компоненти",
+      "hint": "Виберіть потрібні компоненти. За замовчуванням жоден не позначений.",
+      "fastfetch": "Fastfetch від автора",
+      "starship": "Starship від автора",
+      "brave": "Brave",
+      "done": "Готово",
+      "installing": "Встановлення додаткових пакетів...",
+      "config_applied": "Конфігурацію {name} застосовано",
+      "config_backup": "Наявну конфігурацію {name} збережено в {path}",
+      "shell_enabled": "Starship ініціалізовано в {shell}",
+      "preset_missing": "Пресет {name} не знайдено, пропускаємо",
+      "aur_helper_missing": "Для Brave потрібен помічник AUR (yay/paru); пропускаємо"
     },
     "deps": {
       "syncing": "Синхронізація та оновлення системних пакетів (pacman -syyu)...",

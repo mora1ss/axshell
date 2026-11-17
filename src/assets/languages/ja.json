@@ -794,6 +794,7 @@
       "menu_overview": "パッケージインストール概要 ({count} 個のコアパッケージ)",
       "menu_sddm": "SDDM ログインマネージャー",
       "menu_wallpapers": "壁紙パック",
+      "menu_optional": "オプション",
       "menu_update": "アップデート",
       "menu_reinstall": "再インストール",
       "menu_install": "インストール",
@@ -806,6 +807,20 @@
       "failed_packages": "以下のパッケージのインストール中にエラーが発生しました:",
       "restart_prompt": "開始するにはコンポジターを再起動するか、'axshelld start' を実行してください。",
       "ask_reboot": "再起動しますか？ [y/n] "
+    },
+    "optional": {
+      "title": "オプションの追加項目",
+      "hint": "追加したい項目を選択してください。デフォルトではすべて未選択です。",
+      "fastfetch": "作者のFastfetch",
+      "starship": "作者のStarship",
+      "brave": "Brave",
+      "done": "完了",
+      "installing": "オプションのパッケージをインストール中...",
+      "config_applied": "{name}の設定を適用しました",
+      "config_backup": "既存の{name}設定を{path}にバックアップしました",
+      "shell_enabled": "{shell}でStarshipを初期化しました",
+      "preset_missing": "{name}のプリセットが見つからないためスキップします",
+      "aur_helper_missing": "BraveにはAURヘルパー（yay/paru）が必要です。スキップします"
     },
     "deps": {
       "syncing": "システムパッケージを同期および更新中 (pacman -Syyu)...",

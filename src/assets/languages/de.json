@@ -2015,6 +2015,7 @@
       "menu_overview": "Paketinstallations-Übersicht ({count} Kernpakete)",
       "menu_sddm": "SDDM-Login-Manager",
       "menu_wallpapers": "Hintergrundbild-Paket",
+      "menu_optional": "Optional",
       "menu_update": "Aktualisieren",
       "menu_reinstall": "Neu installieren",
       "menu_install": "Installieren",
@@ -2027,6 +2028,20 @@
       "failed_packages": "Bei den folgenden Paketen sind während der Installation Fehler aufgetreten:",
       "restart_prompt": "Compositor neu starten oder 'axshelld start' ausführen, um zu beginnen.",
       "ask_reboot": "Möchten Sie jetzt neu starten? [y/n] "
+    },
+    "optional": {
+      "title": "Optionale Extras",
+      "hint": "Wähle die gewünschten Extras. Standardmäßig ist nichts ausgewählt.",
+      "fastfetch": "Fastfetch des Erstellers",
+      "starship": "Starship des Erstellers",
+      "brave": "Brave",
+      "done": "Fertig",
+      "installing": "Optionale Pakete werden installiert...",
+      "config_applied": "{name}-Konfiguration angewendet",
+      "config_backup": "Bestehende {name}-Konfiguration gesichert nach {path}",
+      "shell_enabled": "Starship in {shell} initialisiert",
+      "preset_missing": "{name}-Preset nicht gefunden, wird übersprungen",
+      "aur_helper_missing": "Brave benötigt einen AUR-Helper (yay/paru); wird übersprungen"
     },
     "deps": {
       "syncing": "Systempakete werden synchronisiert und aktualisiert (pacman -Syyu)...",

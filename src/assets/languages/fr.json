@@ -2014,6 +2014,7 @@
       "menu_overview": "Aperçu de l'installation des paquets ({count} paquets de base)",
       "menu_sddm": "Gestionnaire de connexion SDDM",
       "menu_wallpapers": "Pack de fonds d'écran",
+      "menu_optional": "Optionnel",
       "menu_update": "Mettre à jour",
       "menu_reinstall": "Réinstaller",
       "menu_install": "Installer",
@@ -2026,6 +2027,20 @@
       "failed_packages": "Les paquets suivants ont rencontré des erreurs lors de l'installation :",
       "restart_prompt": "Redémarrez votre compositeur ou lancez 'axshelld start' pour commencer.",
       "ask_reboot": "Voulez-vous redémarrer ? [o/n] "
+    },
+    "optional": {
+      "title": "Extras optionnels",
+      "hint": "Choisissez les extras souhaités. Aucun n'est coché par défaut.",
+      "fastfetch": "Fastfetch du créateur",
+      "starship": "Starship du créateur",
+      "brave": "Brave",
+      "done": "Terminé",
+      "installing": "Installation des paquets optionnels...",
+      "config_applied": "Configuration de {name} appliquée",
+      "config_backup": "Configuration existante de {name} sauvegardée dans {path}",
+      "shell_enabled": "Starship initialisé dans {shell}",
+      "preset_missing": "Préréglage {name} introuvable, ignoré",
+      "aur_helper_missing": "Brave nécessite un assistant AUR (yay/paru) ; ignoré"
     },
     "deps": {
       "syncing": "Synchronisation et mise à jour des paquets système (pacman -Syyu)...",

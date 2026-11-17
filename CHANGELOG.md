@@ -1,5 +1,8 @@
 ### 2.5.1
 
+- feat(installer): add an Optional step that installs the creator's Fastfetch and Starship presets and Brave, all unchecked by default
+- feat(installer): remember the Optional selections on reinstall and back up existing Fastfetch and Starship configs before overwriting them
+- chore(packaging): bump the AUR axshell pkgver to 2.5.1
 - fix(screenshot): silence missing qr_result FileView warning
 - feat(theme): add light/dark mode switch with static preset mode detection and color-scheme sync
 - fix(theme): keep matugen preset tile text and tint fixed over wallpaper, blur more

@@ -2014,6 +2014,7 @@
       "menu_overview": "نمای کلی نصب بسته‌ها ({count} بسته اصلی)",
       "menu_sddm": "مدیر ورود SDDM",
       "menu_wallpapers": "بسته تصاویر پس‌زمینه",
+      "menu_optional": "اختیاری",
       "menu_update": "به‌روزرسانی",
       "menu_reinstall": "نصب مجدد",
       "menu_install": "نصب",
@@ -2026,6 +2027,20 @@
       "failed_packages": "بسته‌های زیر در حین نصب با خطا مواجه شدند:",
       "restart_prompt": "برای شروع، کامپوزیتور خود را مجدداً راه‌اندازی کنید یا دستور 'axshelld start' را اجرا کنید.",
       "ask_reboot": "آیا مایلید سیستم را بازراه‌اندازی کنید؟ [y/n] "
+    },
+    "optional": {
+      "title": "افزونه‌های اختیاری",
+      "hint": "افزونه‌های موردنظر را انتخاب کنید. همه به‌صورت پیش‌فرض انتخاب نشده‌اند.",
+      "fastfetch": "Fastfetch سازنده",
+      "starship": "Starship سازنده",
+      "brave": "Brave",
+      "done": "تمام",
+      "installing": "در حال نصب بسته‌های اختیاری...",
+      "config_applied": "پیکربندی {name} اعمال شد",
+      "config_backup": "پیکربندی موجود {name} در {path} پشتیبان‌گیری شد",
+      "shell_enabled": "Starship در {shell} راه‌اندازی شد",
+      "preset_missing": "پیش‌تنظیم {name} پیدا نشد، رد می‌شود",
+      "aur_helper_missing": "Brave به کمک‌کنندهٔ AUR (yay/paru) نیاز دارد؛ رد می‌شود"
     },
     "deps": {
       "syncing": "در حال همگام‌سازی و به‌روزرسانی بسته‌های سیستم (pacman -syyu)...",

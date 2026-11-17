@@ -2014,6 +2014,7 @@
       "menu_overview": "Tổng quan cài đặt gói ({count} gói cốt lõi)",
       "menu_sddm": "Trình quản lý đăng nhập SDDM",
       "menu_wallpapers": "Gói hình nền",
+      "menu_optional": "Tùy chọn",
       "menu_update": "Cập nhật",
       "menu_reinstall": "Cài đặt lại",
       "menu_install": "Cài đặt",
@@ -2026,6 +2027,20 @@
       "failed_packages": "Các gói sau đã gặp lỗi trong quá trình cài đặt:",
       "restart_prompt": "Hãy khởi động lại compositor hoặc chạy 'axshelld start' để bắt đầu.",
       "ask_reboot": "Bạn có muốn khởi động lại không? [y/n] "
+    },
+    "optional": {
+      "title": "Tiện ích tùy chọn",
+      "hint": "Chọn các tiện ích bạn muốn. Mặc định tất cả đều chưa được chọn.",
+      "fastfetch": "Fastfetch của tác giả",
+      "starship": "Starship của tác giả",
+      "brave": "Brave",
+      "done": "Xong",
+      "installing": "Đang cài các gói tùy chọn...",
+      "config_applied": "Đã áp dụng cấu hình {name}",
+      "config_backup": "Đã sao lưu cấu hình {name} hiện có vào {path}",
+      "shell_enabled": "Đã khởi tạo Starship trong {shell}",
+      "preset_missing": "Không tìm thấy preset {name}, bỏ qua",
+      "aur_helper_missing": "Brave cần trợ giúp AUR (yay/paru); bỏ qua"
     },
     "deps": {
       "syncing": "Đang đồng bộ hóa và cập nhật các gói hệ thống (pacman -syyu)...",

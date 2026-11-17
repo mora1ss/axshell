@@ -2014,6 +2014,7 @@
       "menu_overview": "Paket kurulumuna genel bakış ({count} temel paket)",
       "menu_sddm": "SDDM giriş yöneticisi",
       "menu_wallpapers": "Duvar kâğıdı paketi",
+      "menu_optional": "İsteğe bağlı",
       "menu_update": "Güncelle",
       "menu_reinstall": "Yeniden yükle",
       "menu_install": "Yükle",
@@ -2026,6 +2027,20 @@
       "failed_packages": "Aşağıdaki paketler kurulum sırasında hatalarla karşılaştı:",
       "restart_prompt": "Başlamak için birleştiricinizi yeniden başlatın veya 'axshelld start' komutunu çalıştırın.",
       "ask_reboot": "Yeniden başlatmak istiyor musunuz? [y/n] "
+    },
+    "optional": {
+      "title": "İsteğe Bağlı Ekler",
+      "hint": "İstediğiniz ekleri seçin. Varsayılan olarak hiçbiri işaretli değildir.",
+      "fastfetch": "Yapımcının Fastfetch'i",
+      "starship": "Yapımcının Starship'i",
+      "brave": "Brave",
+      "done": "Bitti",
+      "installing": "İsteğe bağlı paketler kuruluyor...",
+      "config_applied": "{name} yapılandırması uygulandı",
+      "config_backup": "Mevcut {name} yapılandırması {path} konumuna yedeklendi",
+      "shell_enabled": "Starship {shell} içinde başlatıldı",
+      "preset_missing": "{name} ön ayarı bulunamadı, atlanıyor",
+      "aur_helper_missing": "Brave için AUR yardımcısı (yay/paru) gerekiyor; atlanıyor"
     },
     "deps": {
       "syncing": "Sistem paketleri senkronize ediliyor ve güncelleniyor (pacman -syyu)...",

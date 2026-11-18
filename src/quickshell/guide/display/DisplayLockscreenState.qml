@@ -44,7 +44,7 @@ GuideTab {
 
     Process {
         id: fingerprintProbe
-        command: ["serpantinum-core", "system", "fingerprint"]
+        command: ["axshell-core", "system", "fingerprint"]
         onExited: (exitCode) => displayLockscreenRoot.fingerprintSupported = exitCode === 0
     }
 

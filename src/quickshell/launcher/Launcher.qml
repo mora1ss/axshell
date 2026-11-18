@@ -368,7 +368,7 @@ PanelWindow {
     Process {
         id: rankFetcher
         running: false
-        command: ["serpantinum-core", "launcher", "rank"]
+        command: ["axshell-core", "launcher", "rank"]
 
         stdout: StdioCollector {
             onStreamFinished: {
@@ -826,7 +826,7 @@ PanelWindow {
         if (fileSearchProcess.running) {
             fileSearchProcess.running = false;
         }
-        fileSearchProcess.command = ["serpantinum-core", "launcher", "files", query ? query.trim() : ""];
+        fileSearchProcess.command = ["axshell-core", "launcher", "files", query ? query.trim() : ""];
         fileSearchProcess.running = true;
     }
 
@@ -1146,7 +1146,7 @@ PanelWindow {
             }
         }
         if (Caching.qsDir) {
-            Quickshell.execDetached(["serpantinum-core", "launcher", "log", appName]);
+            Quickshell.execDetached(["axshell-core", "launcher", "log", appName]);
         }
         closeLauncher();
     }

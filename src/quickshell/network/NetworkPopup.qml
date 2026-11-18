@@ -434,7 +434,7 @@ Item {
     Process {
         id: networkWatcher
         running: popupWindowRoot.visible
-        command: ["serpantinum-core", "watch", "network"]
+        command: ["axshell-core", "watch", "network"]
         stdout: SplitParser {
             onRead: data => {
                 let state;

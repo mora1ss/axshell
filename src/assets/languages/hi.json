@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "चेतावनी कमांड",
         "desc": "क्रिया से पहले निष्पादित करने के लिए ऑफ़सेट और कमांड",
-        "placeholder": "उदा. serpantinum-core notify 'चेतावनी'"
+        "placeholder": "उदा. axshell-core notify 'चेतावनी'"
       },
       "before_command": {
         "title": "पूर्व कमांड",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "पुनः आरंभ कमांड",
         "desc": "उपयोगकर्ता गतिविधि फिर से शुरू होने पर निष्पादित",
-        "placeholder": "उदा. serpantinum-core notify 'पुनः आरंभ'"
+        "placeholder": "उदा. axshell-core notify 'पुनः आरंभ'"
       },
       "dim": {
         "title": "स्क्रीन मद्धिम करें",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "इस सिस्टम के लिए पहले से बना ऑडियो इंजन उपलब्ध नहीं है, स्रोत से बनाया जा रहा है...",
       "checksum_failed": "ऑडियो इंजन का डाउनलोड चेकसम जाँच में विफल रहा, छोड़ा जा रहा है।",
-      "download_failed": "AxShell ऑडियो इंजन डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/ilyamiro/serpantinum-audio से इंस्टॉल कर सकते हैं।",
+      "download_failed": "AxShell ऑडियो इंजन डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/mora1ss/axshell-audio से इंस्टॉल कर सकते हैं।",
       "installed": "AxShell ऑडियो इंजन {version} इंस्टॉल हो गया",
-      "install_failed": "AxShell ऑडियो इंजन इंस्टॉल नहीं हो सका। जब तक इसे github.com/ilyamiro/serpantinum-audio से इंस्टॉल नहीं किया जाता, इक्वलाइज़र काम नहीं करेगा।",
+      "install_failed": "AxShell ऑडियो इंजन इंस्टॉल नहीं हो सका। जब तक इसे github.com/mora1ss/axshell-audio से इंस्टॉल नहीं किया जाता, इक्वलाइज़र काम नहीं करेगा।",
       "installing": "AxShell ऑडियो इंजन इंस्टॉल हो रहा है...",
       "up_to_date": "-> AxShell ऑडियो इंजन {version} पहले से इंस्टॉल है।"
     },
     "core": {
       "checksum_failed": "मुख्य सेवाओं का डाउनलोड चेकसम जाँच में विफल रहा, छोड़ा जा रहा है।",
-      "download_failed": "AxShell मुख्य सेवाएँ डाउनलोड नहीं हो सकीं, छोड़ा जा रहा है। आप इन्हें बाद में github.com/ilyamiro/serpantinum-core से इंस्टॉल कर सकते हैं।",
+      "download_failed": "AxShell मुख्य सेवाएँ डाउनलोड नहीं हो सकीं, छोड़ा जा रहा है। आप इन्हें बाद में github.com/mora1ss/axshell-core से इंस्टॉल कर सकते हैं।",
       "installed": "AxShell मुख्य सेवाएँ {version} इंस्टॉल हो गईं",
-      "install_failed": "AxShell मुख्य सेवाएँ इंस्टॉल नहीं हो सकीं। जब तक इन्हें github.com/ilyamiro/serpantinum-core से इंस्टॉल नहीं किया जाता, सिस्टम उपयोग, कीबोर्ड लॉक संकेतक और क्लिपबोर्ड काम नहीं करेंगे।",
+      "install_failed": "AxShell मुख्य सेवाएँ इंस्टॉल नहीं हो सकीं। जब तक इन्हें github.com/mora1ss/axshell-core से इंस्टॉल नहीं किया जाता, सिस्टम उपयोग, कीबोर्ड लॉक संकेतक और क्लिपबोर्ड काम नहीं करेंगे।",
       "installing": "AxShell मुख्य सेवाएँ इंस्टॉल हो रही हैं...",
       "unsupported_arch": "मुख्य सेवाओं के पहले से बने पैकेज केवल x86_64 के लिए उपलब्ध हैं, छोड़ा जा रहा है।",
       "up_to_date": "-> AxShell मुख्य सेवाएँ {version} पहले से इंस्टॉल हैं।"
     },
     "gamma": {
       "checksum_failed": "ब्लू लाइट फ़िल्टर का डाउनलोड चेकसम जाँच में विफल रहा, छोड़ा जा रहा है।",
-      "download_failed": "AxShell ब्लू लाइट फ़िल्टर डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/ilyamiro/serpantinum-gamma से इंस्टॉल कर सकते हैं।",
+      "download_failed": "AxShell ब्लू लाइट फ़िल्टर डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/mora1ss/axshell-gamma से इंस्टॉल कर सकते हैं।",
       "installed": "AxShell ब्लू लाइट फ़िल्टर {version} इंस्टॉल हो गया",
-      "install_failed": "AxShell ब्लू लाइट फ़िल्टर इंस्टॉल नहीं हो सका। जब तक इसे github.com/ilyamiro/serpantinum-gamma से इंस्टॉल नहीं किया जाता, यह काम नहीं करेगा।",
+      "install_failed": "AxShell ब्लू लाइट फ़िल्टर इंस्टॉल नहीं हो सका। जब तक इसे github.com/mora1ss/axshell-gamma से इंस्टॉल नहीं किया जाता, यह काम नहीं करेगा।",
       "installing": "AxShell ब्लू लाइट फ़िल्टर इंस्टॉल हो रहा है...",
       "unsupported_arch": "ब्लू लाइट फ़िल्टर के पहले से बने पैकेज केवल x86_64 के लिए उपलब्ध हैं, छोड़ा जा रहा है।",
       "up_to_date": "-> AxShell ब्लू लाइट फ़िल्टर {version} पहले से इंस्टॉल है।"

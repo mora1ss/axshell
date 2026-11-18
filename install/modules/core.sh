@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CORE_REPO="ilyamiro/serpantinum-core"
+CORE_REPO="mora1ss/axshell-core"
 CORE_PREFIX="/usr/local"
 
 core_release_json() {
@@ -8,8 +8,8 @@ core_release_json() {
 }
 
 core_installed_version() {
-    command -v serpantinum-core >/dev/null 2>&1 || return 0
-    serpantinum-core --version 2>/dev/null | awk '{print $2}'
+    command -v axshell-core >/dev/null 2>&1 || return 0
+    axshell-core --version 2>/dev/null | awk '{print $2}'
 }
 
 core_install_prebuilt() {
@@ -29,11 +29,11 @@ core_install_prebuilt() {
 
     mkdir -p "$work/stage"
     tar -xzf "$archive" -C "$work/stage" || return 1
-    "$work/stage/usr/bin/serpantinum-core" --version >/dev/null 2>&1 || return 1
+    "$work/stage/usr/bin/axshell-core" --version >/dev/null 2>&1 || return 1
 
-    sudo install -Dm755 "$work/stage/usr/bin/serpantinum-core" "$CORE_PREFIX/bin/serpantinum-core" || return 1
-    if [ -f "$work/stage/usr/share/licenses/serpantinum-core/LICENSE" ]; then
-        sudo install -Dm644 "$work/stage/usr/share/licenses/serpantinum-core/LICENSE" "$CORE_PREFIX/share/licenses/serpantinum-core/LICENSE" || return 1
+    sudo install -Dm755 "$work/stage/usr/bin/axshell-core" "$CORE_PREFIX/bin/axshell-core" || return 1
+    if [ -f "$work/stage/usr/share/licenses/axshell-core/LICENSE" ]; then
+        sudo install -Dm644 "$work/stage/usr/share/licenses/axshell-core/LICENSE" "$CORE_PREFIX/share/licenses/axshell-core/LICENSE" || return 1
     fi
 }
 
@@ -45,19 +45,19 @@ install_core_daemon() {
 
     if [ "$(uname -m)" != "x86_64" ]; then
         echo -e "\e[33m[ WARN ]\e[0m $(t "installer.core.unsupported_arch")"
-        [ -n "$current" ] || FAILED_PKGS+=("serpantinum-core")
+        [ -n "$current" ] || FAILED_PKGS+=("axshell-core")
         return 0
     fi
 
     if ! json="$(core_release_json)" || [ -z "$json" ]; then
         echo -e "\e[33m[ WARN ]\e[0m $(t "installer.core.download_failed")"
-        [ -n "$current" ] || FAILED_PKGS+=("serpantinum-core")
+        [ -n "$current" ] || FAILED_PKGS+=("axshell-core")
         return 0
     fi
     tag="$(jq -r '.tag_name // empty' <<< "$json")"
     if [ -z "$tag" ]; then
         echo -e "\e[33m[ WARN ]\e[0m $(t "installer.core.download_failed")"
-        [ -n "$current" ] || FAILED_PKGS+=("serpantinum-core")
+        [ -n "$current" ] || FAILED_PKGS+=("axshell-core")
         return 0
     fi
 
@@ -68,15 +68,15 @@ install_core_daemon() {
 
     local cache="${XDG_CACHE_HOME:-$HOME/.cache}"
     mkdir -p "$cache"
-    work="$(mktemp -d "$cache/serpantinum-core.XXXXXX")"
+    work="$(mktemp -d "$cache/axshell-core.XXXXXX")"
 
     if core_install_prebuilt "$json" "$work"; then
         hash -r
         echo -e "\e[32m[ OK ] $(t "installer.core.installed" "version=${tag#v}")\e[0m"
-        restart_daemon_if_running serpantinum-core '(^|/)serpantinum-core$' quit
+        restart_daemon_if_running axshell-core '(^|/)axshell-core$' quit
     else
         echo -e "\e[31m[ FAILED ] $(t "installer.core.install_failed")\e[0m"
-        FAILED_PKGS+=("serpantinum-core")
+        FAILED_PKGS+=("axshell-core")
     fi
     rm -rf "$work"
 }

@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Comando de advertencia",
         "desc": "Desfase y comando a ejecutar antes de la acción",
-        "placeholder": "ej. serpantinum-core notify 'advertencia'"
+        "placeholder": "ej. axshell-core notify 'advertencia'"
       },
       "before_command": {
         "title": "Comando previo",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Comando de reanudación",
         "desc": "Se ejecuta cuando se reanuda la actividad del usuario",
-        "placeholder": "ej. serpantinum-core notify 'reanudado'"
+        "placeholder": "ej. axshell-core notify 'reanudado'"
       },
       "dim": {
         "title": "Atenuar pantalla",
@@ -2069,26 +2069,26 @@
     "audio": {
       "building": "No hay un motor de audio precompilado para este sistema, compilándolo desde el código fuente...",
       "checksum_failed": "La descarga del motor de audio no superó la comprobación de suma de verificación, se omite.",
-      "download_failed": "No se pudo descargar el motor de audio de AxShell, se omite. Puedes instalarlo más tarde desde github.com/ilyamiro/serpantinum-audio.",
+      "download_failed": "No se pudo descargar el motor de audio de AxShell, se omite. Puedes instalarlo más tarde desde github.com/mora1ss/axshell-audio.",
       "installed": "Motor de audio de AxShell {version} instalado",
-      "install_failed": "No se pudo instalar el motor de audio de AxShell. El ecualizador no funcionará hasta que se instale desde github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "No se pudo instalar el motor de audio de AxShell. El ecualizador no funcionará hasta que se instale desde github.com/mora1ss/axshell-audio.",
       "installing": "Instalando el motor de audio de AxShell...",
       "up_to_date": "-> El motor de audio de AxShell {version} ya está instalado."
     },
     "core": {
       "checksum_failed": "La descarga de los servicios principales no superó la comprobación de suma de verificación, se omite.",
-      "download_failed": "No se pudieron descargar los servicios principales de AxShell, se omite. Puedes instalarlos más tarde desde github.com/ilyamiro/serpantinum-core.",
+      "download_failed": "No se pudieron descargar los servicios principales de AxShell, se omite. Puedes instalarlos más tarde desde github.com/mora1ss/axshell-core.",
       "installed": "Servicios principales de AxShell {version} instalados",
-      "install_failed": "No se pudieron instalar los servicios principales de AxShell. El uso del sistema, los indicadores de bloqueo del teclado y el portapapeles no funcionarán hasta que se instalen desde github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "No se pudieron instalar los servicios principales de AxShell. El uso del sistema, los indicadores de bloqueo del teclado y el portapapeles no funcionarán hasta que se instalen desde github.com/mora1ss/axshell-core.",
       "installing": "Instalando los servicios principales de AxShell...",
       "unsupported_arch": "Los paquetes precompilados de los servicios principales solo existen para x86_64, se omite.",
       "up_to_date": "-> Los servicios principales de AxShell {version} ya están instalados."
     },
     "gamma": {
       "checksum_failed": "La descarga del filtro de luz azul no superó la comprobación de suma de verificación, se omite.",
-      "download_failed": "No se pudo descargar el filtro de luz azul de AxShell, se omite. Puedes instalarlo más tarde desde github.com/ilyamiro/serpantinum-gamma.",
+      "download_failed": "No se pudo descargar el filtro de luz azul de AxShell, se omite. Puedes instalarlo más tarde desde github.com/mora1ss/axshell-gamma.",
       "installed": "Filtro de luz azul de AxShell {version} instalado",
-      "install_failed": "No se pudo instalar el filtro de luz azul de AxShell. No funcionará hasta que se instale desde github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "No se pudo instalar el filtro de luz azul de AxShell. No funcionará hasta que se instale desde github.com/mora1ss/axshell-gamma.",
       "installing": "Instalando el filtro de luz azul de AxShell...",
       "unsupported_arch": "Los paquetes precompilados del filtro de luz azul solo existen para x86_64, se omite.",
       "up_to_date": "-> El filtro de luz azul de AxShell {version} ya está instalado."

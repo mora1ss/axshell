@@ -52,7 +52,7 @@ case \"\$2\" in
     is-enabled) if grep -qxF \"\$unit\" \"$ENABLED\"; then echo enabled; else echo disabled; exit 1; fi ;;
 esac"
 stub busctl 'echo "b true"'
-stub serpantinum-core "echo \"serpantinum-core \$*\" >> \"$CALLS\""
+stub axshell-core "echo \"axshell-core \$*\" >> \"$CALLS\""
 printf '#!/usr/bin/env bash\nwhile :; do sleep 0.2; done\n' > "$FAKE_EE"
 
 export PATH="$STUBS:$TOOLS"
@@ -116,7 +116,7 @@ check "nothing is touched" "[ ! -s '$CALLS' ] && [ ! -f '$MARKER' ] && [ -f '$PR
 check "its EasyEffects keeps running" "alive $own_pid"
 kill -KILL "$own_pid" 2>/dev/null
 
-stub serpantinum-audio 'exit 0'
+stub axshell-audio 'exit 0'
 
 echo "== a user updating from the EasyEffects equalizer"
 reset_home update
@@ -188,10 +188,10 @@ run_migration
 check "the preset folder AxShell created is removed once empty" "[ ! -e '$PRESETS' ] && [ ! -e '$XDG_DATA_HOME/easyeffects' ]"
 check "nothing is printed outside the installer" "[ ! -s '$OUT' ]"
 for _ in $(seq 50); do
-    grep -q "serpantinum-core notify" "$CALLS" && break
+    grep -q "axshell-core notify" "$CALLS" && break
     sleep 0.1
 done
-check "the notice is sent as a notification" "grep -q 'serpantinum-core notify --app AxShell -- EasyEffects is still enabled' '$CALLS'"
+check "the notice is sent as a notification" "grep -q 'axshell-core notify --app AxShell -- EasyEffects is still enabled' '$CALLS'"
 
 echo "$([ "$failures" -eq 0 ] && echo 'all passed' || echo "$failures FAILED")"
 [ "$failures" -eq 0 ]

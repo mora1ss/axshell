@@ -854,26 +854,26 @@
     "audio": {
       "building": "Brak gotowego silnika audio dla tego systemu, budowanie ze źródeł...",
       "checksum_failed": "Pobrany silnik audio nie przeszedł weryfikacji sumy kontrolnej, pomijanie.",
-      "download_failed": "Nie można pobrać silnika audio AxShell, pomijanie. Możesz zainstalować go później z github.com/ilyamiro/serpantinum-audio.",
+      "download_failed": "Nie można pobrać silnika audio AxShell, pomijanie. Możesz zainstalować go później z github.com/mora1ss/axshell-audio.",
       "installed": "Zainstalowano silnik audio AxShell {version}",
-      "install_failed": "Nie udało się zainstalować silnika audio AxShell. Equalizer nie będzie działać, dopóki nie zostanie zainstalowany z github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "Nie udało się zainstalować silnika audio AxShell. Equalizer nie będzie działać, dopóki nie zostanie zainstalowany z github.com/mora1ss/axshell-audio.",
       "installing": "Instalowanie silnika audio AxShell...",
       "up_to_date": "-> Silnik audio AxShell {version} jest już zainstalowany."
     },
     "core": {
       "checksum_failed": "Pobrane usługi podstawowe nie przeszły weryfikacji sumy kontrolnej, pomijanie.",
-      "download_failed": "Nie można pobrać usług podstawowych AxShell, pomijanie. Możesz zainstalować je później z github.com/ilyamiro/serpantinum-core.",
+      "download_failed": "Nie można pobrać usług podstawowych AxShell, pomijanie. Możesz zainstalować je później z github.com/mora1ss/axshell-core.",
       "installed": "Zainstalowano usługi podstawowe AxShell {version}",
-      "install_failed": "Nie udało się zainstalować usług podstawowych AxShell. Użycie systemu, wskaźniki blokady klawiatury i schowek nie będą działać, dopóki nie zostaną zainstalowane z github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "Nie udało się zainstalować usług podstawowych AxShell. Użycie systemu, wskaźniki blokady klawiatury i schowek nie będą działać, dopóki nie zostaną zainstalowane z github.com/mora1ss/axshell-core.",
       "installing": "Instalowanie usług podstawowych AxShell...",
       "unsupported_arch": "Gotowe pakiety usług podstawowych istnieją tylko dla x86_64, pomijanie.",
       "up_to_date": "-> Usługi podstawowe AxShell {version} są już zainstalowane."
     },
     "gamma": {
       "checksum_failed": "Pobrany filtr światła niebieskiego nie przeszedł weryfikacji sumy kontrolnej, pomijanie.",
-      "download_failed": "Nie można pobrać filtra światła niebieskiego AxShell, pomijanie. Możesz zainstalować go później z github.com/ilyamiro/serpantinum-gamma.",
+      "download_failed": "Nie można pobrać filtra światła niebieskiego AxShell, pomijanie. Możesz zainstalować go później z github.com/mora1ss/axshell-gamma.",
       "installed": "Zainstalowano filtr światła niebieskiego AxShell {version}",
-      "install_failed": "Nie udało się zainstalować filtra światła niebieskiego AxShell. Nie będzie działać, dopóki nie zostanie zainstalowany z github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "Nie udało się zainstalować filtra światła niebieskiego AxShell. Nie będzie działać, dopóki nie zostanie zainstalowany z github.com/mora1ss/axshell-gamma.",
       "installing": "Instalowanie filtra światła niebieskiego AxShell...",
       "unsupported_arch": "Gotowe pakiety filtra światła niebieskiego istnieją tylko dla x86_64, pomijanie.",
       "up_to_date": "-> Filtr światła niebieskiego AxShell {version} jest już zainstalowany."
@@ -1037,7 +1037,7 @@
       "warning_command": {
         "title": "Polecenie ostrzegawcze",
         "desc": "Przesunięcie czasowe i polecenie do wykonania przed akcją",
-        "placeholder": "np. serpantinum-core notify 'ostrzeżenie'"
+        "placeholder": "np. axshell-core notify 'ostrzeżenie'"
       },
       "before_command": {
         "title": "Polecenie poprzedzające",
@@ -1047,7 +1047,7 @@
       "resume_command": {
         "title": "Polecenie wznowienia",
         "desc": "Wykonywane po wznowieniu aktywności przez użytkownika",
-        "placeholder": "np. serpantinum-core notify 'wznowiono'"
+        "placeholder": "np. axshell-core notify 'wznowiono'"
       },
       "dim": {
         "title": "Przyciemnij ekran",

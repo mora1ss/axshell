@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Waarschuwingsopdracht",
         "desc": "Verschuiving en opdracht die vóór de actie wordt uitgevoerd",
-        "placeholder": "bijv. serpantinum-core notify 'waarschuwing'"
+        "placeholder": "bijv. axshell-core notify 'waarschuwing'"
       },
       "before_command": {
         "title": "Voorafgaande opdracht",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Hervattingsopdracht",
         "desc": "Wordt uitgevoerd wanneer gebruikersactiviteit wordt hervat",
-        "placeholder": "bijv. serpantinum-core notify 'hervat'"
+        "placeholder": "bijv. axshell-core notify 'hervat'"
       },
       "dim": {
         "title": "Scherm dimmen",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "Geen vooraf gebouwde audio-engine voor dit systeem, wordt gebouwd vanuit de broncode...",
       "checksum_failed": "De download van de audio-engine is niet door de checksumcontrole gekomen, wordt overgeslagen.",
-      "download_failed": "Kon de AxShell-audio-engine niet downloaden, wordt overgeslagen. Je kunt hem later installeren via github.com/ilyamiro/serpantinum-audio.",
+      "download_failed": "Kon de AxShell-audio-engine niet downloaden, wordt overgeslagen. Je kunt hem later installeren via github.com/mora1ss/axshell-audio.",
       "installed": "AxShell-audio-engine {version} geïnstalleerd",
-      "install_failed": "Installeren van de AxShell-audio-engine mislukt. De equalizer werkt pas als hij is geïnstalleerd via github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "Installeren van de AxShell-audio-engine mislukt. De equalizer werkt pas als hij is geïnstalleerd via github.com/mora1ss/axshell-audio.",
       "installing": "AxShell-audio-engine wordt geïnstalleerd...",
       "up_to_date": "-> AxShell-audio-engine {version} is al geïnstalleerd."
     },
     "core": {
       "checksum_failed": "De download van de kernservices is niet door de checksumcontrole gekomen, wordt overgeslagen.",
-      "download_failed": "Kon de AxShell-kernservices niet downloaden, wordt overgeslagen. Je kunt ze later installeren via github.com/ilyamiro/serpantinum-core.",
+      "download_failed": "Kon de AxShell-kernservices niet downloaden, wordt overgeslagen. Je kunt ze later installeren via github.com/mora1ss/axshell-core.",
       "installed": "AxShell-kernservices {version} geïnstalleerd",
-      "install_failed": "Installeren van de AxShell-kernservices mislukt. Systeemgebruik, toetsenbordvergrendelingsindicatoren en het klembord werken pas als ze zijn geïnstalleerd via github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "Installeren van de AxShell-kernservices mislukt. Systeemgebruik, toetsenbordvergrendelingsindicatoren en het klembord werken pas als ze zijn geïnstalleerd via github.com/mora1ss/axshell-core.",
       "installing": "AxShell-kernservices worden geïnstalleerd...",
       "unsupported_arch": "Vooraf gebouwde pakketten van de kernservices bestaan alleen voor x86_64, wordt overgeslagen.",
       "up_to_date": "-> AxShell-kernservices {version} zijn al geïnstalleerd."
     },
     "gamma": {
       "checksum_failed": "De download van het blauwlichtfilter is niet door de checksumcontrole gekomen, wordt overgeslagen.",
-      "download_failed": "Kon het AxShell-blauwlichtfilter niet downloaden, wordt overgeslagen. Je kunt het later installeren via github.com/ilyamiro/serpantinum-gamma.",
+      "download_failed": "Kon het AxShell-blauwlichtfilter niet downloaden, wordt overgeslagen. Je kunt het later installeren via github.com/mora1ss/axshell-gamma.",
       "installed": "AxShell-blauwlichtfilter {version} geïnstalleerd",
-      "install_failed": "Installeren van het AxShell-blauwlichtfilter mislukt. Het werkt pas als het is geïnstalleerd via github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "Installeren van het AxShell-blauwlichtfilter mislukt. Het werkt pas als het is geïnstalleerd via github.com/mora1ss/axshell-gamma.",
       "installing": "AxShell-blauwlichtfilter wordt geïnstalleerd...",
       "unsupported_arch": "Vooraf gebouwde pakketten van het blauwlichtfilter bestaan alleen voor x86_64, wordt overgeslagen.",
       "up_to_date": "-> AxShell-blauwlichtfilter {version} is al geïnstalleerd."

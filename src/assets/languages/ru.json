@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Команда предупреждения",
         "desc": "Смещение и команда, выполняемая перед действием",
-        "placeholder": "напр. serpantinum-core notify 'предупреждение'"
+        "placeholder": "напр. axshell-core notify 'предупреждение'"
       },
       "before_command": {
         "title": "Команда перед действием",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Команда возобновления",
         "desc": "Выполняется при возобновлении активности",
-        "placeholder": "напр. serpantinum-core notify 'возобновлено'"
+        "placeholder": "напр. axshell-core notify 'возобновлено'"
       },
       "dim": {
         "title": "Затемнение экрана",
@@ -2069,26 +2069,26 @@
     "audio": {
       "building": "Для этой системы нет готового аудиодвижка, сборка из исходников...",
       "checksum_failed": "Загруженный аудиодвижок не прошёл проверку контрольной суммы, пропуск.",
-      "download_failed": "Не удалось загрузить аудиодвижок AxShell, пропуск. Вы можете установить его позже с github.com/ilyamiro/serpantinum-audio.",
+      "download_failed": "Не удалось загрузить аудиодвижок AxShell, пропуск. Вы можете установить его позже с github.com/mora1ss/axshell-audio.",
       "installed": "Аудиодвижок AxShell {version} установлен",
-      "install_failed": "Не удалось установить аудиодвижок AxShell. Эквалайзер не будет работать, пока его не установят с github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "Не удалось установить аудиодвижок AxShell. Эквалайзер не будет работать, пока его не установят с github.com/mora1ss/axshell-audio.",
       "installing": "Установка аудиодвижка AxShell...",
       "up_to_date": "-> Аудиодвижок AxShell {version} уже установлен."
     },
     "core": {
       "checksum_failed": "Загруженные основные службы не прошли проверку контрольной суммы, пропуск.",
-      "download_failed": "Не удалось загрузить основные службы AxShell, пропуск. Вы можете установить их позже с github.com/ilyamiro/serpantinum-core.",
+      "download_failed": "Не удалось загрузить основные службы AxShell, пропуск. Вы можете установить их позже с github.com/mora1ss/axshell-core.",
       "installed": "Основные службы AxShell {version} установлены",
-      "install_failed": "Не удалось установить основные службы AxShell. Использование системы, индикаторы блокировки клавиатуры и буфер обмена не будут работать, пока их не установят с github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "Не удалось установить основные службы AxShell. Использование системы, индикаторы блокировки клавиатуры и буфер обмена не будут работать, пока их не установят с github.com/mora1ss/axshell-core.",
       "installing": "Установка основных служб AxShell...",
       "unsupported_arch": "Готовые пакеты основных служб существуют только для x86_64, пропуск.",
       "up_to_date": "-> Основные службы AxShell {version} уже установлены."
     },
     "gamma": {
       "checksum_failed": "Загруженный фильтр синего света не прошёл проверку контрольной суммы, пропуск.",
-      "download_failed": "Не удалось загрузить фильтр синего света AxShell, пропуск. Вы можете установить его позже с github.com/ilyamiro/serpantinum-gamma.",
+      "download_failed": "Не удалось загрузить фильтр синего света AxShell, пропуск. Вы можете установить его позже с github.com/mora1ss/axshell-gamma.",
       "installed": "Фильтр синего света AxShell {version} установлен",
-      "install_failed": "Не удалось установить фильтр синего света AxShell. Он не будет работать, пока его не установят с github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "Не удалось установить фильтр синего света AxShell. Он не будет работать, пока его не установят с github.com/mora1ss/axshell-gamma.",
       "installing": "Установка фильтра синего света AxShell...",
       "unsupported_arch": "Готовые пакеты фильтра синего света существуют только для x86_64, пропуск.",
       "up_to_date": "-> Фильтр синего света AxShell {version} уже установлен."

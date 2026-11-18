@@ -465,7 +465,7 @@ QtObject {
     }
 
     property Process fingerprintProbe: Process {
-        command: ["serpantinum-core", "system", "fingerprint"]
+        command: ["axshell-core", "system", "fingerprint"]
         running: true
         onExited: (exitCode) => root.setFingerprintSupported(exitCode === 0)
     }

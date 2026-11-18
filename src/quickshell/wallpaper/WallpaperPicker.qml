@@ -179,7 +179,7 @@ Item {
     Process {
         id: monitorDetector
         running: false
-        command: ["serpantinum-core", "monitors"]
+        command: ["axshell-core", "monitors"]
         stdout: StdioCollector {
             onStreamFinished: {
                 let names = [];
@@ -1111,7 +1111,7 @@ Item {
         id: indexProcess
         running: false
         command: [
-            "serpantinum-core",
+            "axshell-core",
             "wallpaper",
             "index",
             window.srcDir,

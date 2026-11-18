@@ -37,9 +37,9 @@ const sidebars: SidebarsConfig = {
       label: 'Components',
       collapsible: false,
       items: [
-        'components/serpantinum-audio',
-        'components/serpantinum-core',
-        'components/serpantinum-gamma',
+        'components/axshell-audio',
+        'components/axshell-core',
+        'components/axshell-gamma',
       ],
     },
     {

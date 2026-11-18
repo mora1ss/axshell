@@ -40,10 +40,10 @@ log_widget_launch() {
         esac
     fi
 
-    if command -v serpantinum-core &>/dev/null; then
-        serpantinum-core launcher log "$target" >/dev/null 2>&1 &
+    if command -v axshell-core &>/dev/null; then
+        axshell-core launcher log "$target" >/dev/null 2>&1 &
         if [[ -n "$app_name" && "$app_name" != "$target" && "$app_name" != "widgets."* ]]; then
-            serpantinum-core launcher log "$app_name" >/dev/null 2>&1 &
+            axshell-core launcher log "$app_name" >/dev/null 2>&1 &
         fi
     fi
 }

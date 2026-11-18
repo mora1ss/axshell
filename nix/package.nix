@@ -33,9 +33,9 @@
 , quickshell
 , libpulseaudio
 , pipewire
-, serpantinum-audio ? callPackage ./audio.nix { }
-, serpantinum-gamma ? callPackage ./gamma.nix { }
-, serpantinum-core ? callPackage ./core.nix { }
+, axshell-audio ? callPackage ./audio.nix { }
+, axshell-gamma ? callPackage ./gamma.nix { }
+, axshell-core ? callPackage ./core.nix { }
 , ...
 }:
 let
@@ -69,9 +69,9 @@ let
     tesseract
     zbar
     quickshell
-    serpantinum-audio
-    serpantinum-gamma
-    serpantinum-core
+    axshell-audio
+    axshell-gamma
+    axshell-core
   ];
   qtDeps = [
     quickshell
@@ -104,9 +104,9 @@ stdenv.mkDerivation (finalAttrs: {
     find "$out/share/${finalAttrs.pname}" -type f \( -name "*.sh" -o -name "*.py" \) -exec chmod +x {} +
     install -Dm755 bin/axshell  "$out/bin/.axshell-wrapped"
     install -Dm755 bin/axshelld "$out/bin/.axshelld-wrapped"
-    ln -s "${lib.getExe serpantinum-audio}" "$out/bin/serpantinum-audio"
-    ln -s "${lib.getExe serpantinum-gamma}" "$out/bin/serpantinum-gamma"
-    ln -s "${lib.getExe serpantinum-core}" "$out/bin/serpantinum-core"
+    ln -s "${lib.getExe axshell-audio}" "$out/bin/axshell-audio"
+    ln -s "${lib.getExe axshell-gamma}" "$out/bin/axshell-gamma"
+    ln -s "${lib.getExe axshell-core}" "$out/bin/axshell-core"
     runHook postInstall
   '';
   postFixup = ''
@@ -120,7 +120,7 @@ stdenv.mkDerivation (finalAttrs: {
         --prefix PATH : "${lib.makeBinPath pathDeps}"
     done
   '';
-  passthru = { inherit pathDeps qtDeps serpantinum-audio serpantinum-gamma serpantinum-core; };
+  passthru = { inherit pathDeps qtDeps axshell-audio axshell-gamma axshell-core; };
   meta = with lib; {
     description = "A desktop shell built for YOU";
     homepage = "https://github.com/mora1ss/axshell";

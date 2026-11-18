@@ -33,6 +33,6 @@ Recolor GTK, Qt, terminals, editors and other apps with the shell palette: [App 
 
 ## Components
 
-- [serpantinum-audio](./components/serpantinum-audio.md)
-- [serpantinum-core](./components/serpantinum-core.md)
-- [serpantinum-gamma](./components/serpantinum-gamma.md)
+- [axshell-audio](./components/axshell-audio.md)
+- [axshell-core](./components/axshell-core.md)
+- [axshell-gamma](./components/axshell-gamma.md)

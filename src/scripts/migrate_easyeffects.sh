@@ -5,7 +5,7 @@ source "$SCRIPT_DIR/caching.sh"
 
 MARKER="$QS_STATE_DIR/easyeffects-migrated"
 [ -f "$MARKER" ] && exit 0
-command -v serpantinum-audio >/dev/null 2>&1 || exit 0
+command -v axshell-audio >/dev/null 2>&1 || exit 0
 
 CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
@@ -102,7 +102,7 @@ announce() {
         return
     fi
 
-    command -v serpantinum-core >/dev/null 2>&1 || return
+    command -v axshell-core >/dev/null 2>&1 || return
     app="$(t "daemon.app_name")"
     (
         waited=0
@@ -110,7 +110,7 @@ announce() {
             sleep 1
             waited=$((waited + 1))
         done
-        serpantinum-core notify --app "$app" -- "$title" "$body"
+        axshell-core notify --app "$app" -- "$title" "$body"
     ) >/dev/null 2>&1 &
 }
 

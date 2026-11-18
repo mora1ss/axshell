@@ -156,7 +156,7 @@ Rectangle {
                     briCmdThrottle.targetPct = -1;
                     let target = panel.sysBrightness > 0 ? 0 : 100;
                     panel.sysBrightness = target;
-                    Quickshell.execDetached(["serpantinum-core", "brightness", "set", target.toString()]);
+                    Quickshell.execDetached(["axshell-core", "brightness", "set", target.toString()]);
                 }
             }
 
@@ -166,7 +166,7 @@ Rectangle {
                 property int targetPct: -1
                 onTriggered: {
                     if (targetPct >= 0) {
-                        Quickshell.execDetached(["serpantinum-core", "brightness", "set", targetPct.toString()]);
+                        Quickshell.execDetached(["axshell-core", "brightness", "set", targetPct.toString()]);
                         targetPct = -1;
                     }
                 }
@@ -202,7 +202,7 @@ Rectangle {
                 onDragFinished: {
                     if (briCmdThrottle.targetPct >= 0) {
                         briCmdThrottle.stop();
-                        Quickshell.execDetached(["serpantinum-core", "brightness", "set", briCmdThrottle.targetPct.toString()]);
+                        Quickshell.execDetached(["axshell-core", "brightness", "set", briCmdThrottle.targetPct.toString()]);
                         briCmdThrottle.targetPct = -1;
                     }
                     briSyncDelay.restart();

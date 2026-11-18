@@ -86,9 +86,9 @@ Do not run the installer script on a system where AxShell is installed this way.
 | Install dependencies | Done, including Iosevka Nerd Font |
 | Replace `quickshell-git` with `quickshell` | Done, the package conflicts with `quickshell-git` and installs `quickshell` |
 | Install `axshell` and `axshelld` | Done, in `/usr/bin` |
-| Install [serpantinum-audio](/audio) | Done, `serpantinum-audio` in `/usr/bin` |
-| Install [serpantinum-gamma](/gamma) | Done, `serpantinum-gamma` in `/usr/bin` |
-| Install [serpantinum-core](/core) | Done, `serpantinum-core` in `/usr/bin` |
+| Install [axshell-audio](/audio) | Done, `axshell-audio` in `/usr/bin` |
+| Install [axshell-gamma](/gamma) | Done, `axshell-gamma` in `/usr/bin` |
+| Install [axshell-core](/core) | Done, `axshell-core` in `/usr/bin` |
 | Lock screen PAM service | Done, `/etc/pam.d/axshell` |
 | SDDM theme files | Done, in `/usr/share/sddm/themes/material-you` |
 | Compositor configs | Manual, step 1 |

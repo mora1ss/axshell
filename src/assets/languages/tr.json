@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Uyarı komutu",
         "desc": "Eylemden önce çalıştırılacak uzaklık ve komut",
-        "placeholder": "örn. serpantinum-core notify 'uyarı'"
+        "placeholder": "örn. axshell-core notify 'uyarı'"
       },
       "before_command": {
         "title": "Önceki komut",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Devam etme komutu",
         "desc": "Kullanıcı etkinliği devam ettiğinde çalıştırılır",
-        "placeholder": "örn. serpantinum-core notify 'devam edildi'"
+        "placeholder": "örn. axshell-core notify 'devam edildi'"
       },
       "dim": {
         "title": "Ekranı karart",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "Bu sistem için hazır ses motoru yok, kaynaktan derleniyor...",
       "checksum_failed": "Ses motoru indirmesi sağlama toplamı denetimini geçemedi, atlanıyor.",
-      "download_failed": "AxShell ses motoru indirilemedi, atlanıyor. Daha sonra github.com/ilyamiro/serpantinum-audio adresinden kurabilirsiniz.",
+      "download_failed": "AxShell ses motoru indirilemedi, atlanıyor. Daha sonra github.com/mora1ss/axshell-audio adresinden kurabilirsiniz.",
       "installed": "AxShell ses motoru {version} kuruldu",
-      "install_failed": "AxShell ses motoru kurulamadı. Ekolayzer, github.com/ilyamiro/serpantinum-audio adresinden kurulana kadar çalışmayacak.",
+      "install_failed": "AxShell ses motoru kurulamadı. Ekolayzer, github.com/mora1ss/axshell-audio adresinden kurulana kadar çalışmayacak.",
       "installing": "AxShell ses motoru kuruluyor...",
       "up_to_date": "-> AxShell ses motoru {version} zaten kurulu."
     },
     "core": {
       "checksum_failed": "Çekirdek hizmetler indirmesi sağlama toplamı denetimini geçemedi, atlanıyor.",
-      "download_failed": "AxShell çekirdek hizmetleri indirilemedi, atlanıyor. Daha sonra github.com/ilyamiro/serpantinum-core adresinden kurabilirsiniz.",
+      "download_failed": "AxShell çekirdek hizmetleri indirilemedi, atlanıyor. Daha sonra github.com/mora1ss/axshell-core adresinden kurabilirsiniz.",
       "installed": "AxShell çekirdek hizmetleri {version} kuruldu",
-      "install_failed": "AxShell çekirdek hizmetleri kurulamadı. Sistem kullanımı, klavye kilidi göstergeleri ve pano, github.com/ilyamiro/serpantinum-core adresinden kurulana kadar çalışmayacak.",
+      "install_failed": "AxShell çekirdek hizmetleri kurulamadı. Sistem kullanımı, klavye kilidi göstergeleri ve pano, github.com/mora1ss/axshell-core adresinden kurulana kadar çalışmayacak.",
       "installing": "AxShell çekirdek hizmetleri kuruluyor...",
       "unsupported_arch": "Hazır çekirdek hizmet paketleri yalnızca x86_64 için mevcut, atlanıyor.",
       "up_to_date": "-> AxShell çekirdek hizmetleri {version} zaten kurulu."
     },
     "gamma": {
       "checksum_failed": "Mavi ışık filtresi indirmesi sağlama toplamı denetimini geçemedi, atlanıyor.",
-      "download_failed": "AxShell mavi ışık filtresi indirilemedi, atlanıyor. Daha sonra github.com/ilyamiro/serpantinum-gamma adresinden kurabilirsiniz.",
+      "download_failed": "AxShell mavi ışık filtresi indirilemedi, atlanıyor. Daha sonra github.com/mora1ss/axshell-gamma adresinden kurabilirsiniz.",
       "installed": "AxShell mavi ışık filtresi {version} kuruldu",
-      "install_failed": "AxShell mavi ışık filtresi kurulamadı. github.com/ilyamiro/serpantinum-gamma adresinden kurulana kadar çalışmayacak.",
+      "install_failed": "AxShell mavi ışık filtresi kurulamadı. github.com/mora1ss/axshell-gamma adresinden kurulana kadar çalışmayacak.",
       "installing": "AxShell mavi ışık filtresi kuruluyor...",
       "unsupported_arch": "Hazır mavi ışık filtresi paketleri yalnızca x86_64 için mevcut, atlanıyor.",
       "up_to_date": "-> AxShell mavi ışık filtresi {version} zaten kurulu."

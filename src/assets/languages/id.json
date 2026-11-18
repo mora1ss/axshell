@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Perintah peringatan",
         "desc": "Selang waktu dan perintah untuk dieksekusi sebelum tindakan",
-        "placeholder": "misalnya serpantinum-core notify 'peringatan'"
+        "placeholder": "misalnya axshell-core notify 'peringatan'"
       },
       "before_command": {
         "title": "Perintah sebelum tindakan",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Perintah saat kembali aktif",
         "desc": "Dieksekusi saat aktivitas pengguna kembali dilanjutkan",
-        "placeholder": "misalnya serpantinum-core notify 'dilanjutkan'"
+        "placeholder": "misalnya axshell-core notify 'dilanjutkan'"
       },
       "dim": {
         "title": "Redupkan layar",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "Tidak ada mesin audio prakompilasi untuk sistem ini, membangun dari sumber...",
       "checksum_failed": "Unduhan mesin audio gagal pemeriksaan checksum, dilewati.",
-      "download_failed": "Tidak dapat mengunduh mesin audio AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-audio.",
+      "download_failed": "Tidak dapat mengunduh mesin audio AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/mora1ss/axshell-audio.",
       "installed": "Mesin audio AxShell {version} terpasang",
-      "install_failed": "Gagal memasang mesin audio AxShell. Equalizer tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "Gagal memasang mesin audio AxShell. Equalizer tidak akan berfungsi sampai dipasang dari github.com/mora1ss/axshell-audio.",
       "installing": "Memasang mesin audio AxShell...",
       "up_to_date": "-> Mesin audio AxShell {version} sudah terpasang."
     },
     "core": {
       "checksum_failed": "Unduhan layanan inti gagal pemeriksaan checksum, dilewati.",
-      "download_failed": "Tidak dapat mengunduh layanan inti AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-core.",
+      "download_failed": "Tidak dapat mengunduh layanan inti AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/mora1ss/axshell-core.",
       "installed": "Layanan inti AxShell {version} terpasang",
-      "install_failed": "Gagal memasang layanan inti AxShell. Penggunaan sistem, indikator kunci keyboard, dan papan klip tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "Gagal memasang layanan inti AxShell. Penggunaan sistem, indikator kunci keyboard, dan papan klip tidak akan berfungsi sampai dipasang dari github.com/mora1ss/axshell-core.",
       "installing": "Memasang layanan inti AxShell...",
       "unsupported_arch": "Paket prakompilasi layanan inti hanya tersedia untuk x86_64, dilewati.",
       "up_to_date": "-> Layanan inti AxShell {version} sudah terpasang."
     },
     "gamma": {
       "checksum_failed": "Unduhan filter cahaya biru gagal pemeriksaan checksum, dilewati.",
-      "download_failed": "Tidak dapat mengunduh filter cahaya biru AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/serpantinum-gamma.",
+      "download_failed": "Tidak dapat mengunduh filter cahaya biru AxShell, dilewati. Anda dapat memasangnya nanti dari github.com/mora1ss/axshell-gamma.",
       "installed": "Filter cahaya biru AxShell {version} terpasang",
-      "install_failed": "Gagal memasang filter cahaya biru AxShell. Filter tidak akan berfungsi sampai dipasang dari github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "Gagal memasang filter cahaya biru AxShell. Filter tidak akan berfungsi sampai dipasang dari github.com/mora1ss/axshell-gamma.",
       "installing": "Memasang filter cahaya biru AxShell...",
       "unsupported_arch": "Paket prakompilasi filter cahaya biru hanya tersedia untuk x86_64, dilewati.",
       "up_to_date": "-> Filter cahaya biru AxShell {version} sudah terpasang."

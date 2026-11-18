@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "预警命令",
         "desc": "操作触发前执行的偏移时间与命令",
-        "placeholder": "例如 serpantinum-core notify '警告'"
+        "placeholder": "例如 axshell-core notify '警告'"
       },
       "before_command": {
         "title": "前置命令",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "恢复命令",
         "desc": "用户活动恢复时执行的命令",
-        "placeholder": "例如 serpantinum-core notify '已恢复'"
+        "placeholder": "例如 axshell-core notify '已恢复'"
       },
       "dim": {
         "title": "调暗屏幕",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "此系统没有预编译的音频引擎，正在从源代码构建...",
       "checksum_failed": "音频引擎下载未通过校验和检查，已跳过。",
-      "download_failed": "无法下载 AxShell 音频引擎，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-audio 安装。",
+      "download_failed": "无法下载 AxShell 音频引擎，已跳过。您可以稍后从 github.com/mora1ss/axshell-audio 安装。",
       "installed": "已安装 AxShell 音频引擎 {version}",
-      "install_failed": "安装 AxShell 音频引擎失败。在从 github.com/ilyamiro/serpantinum-audio 安装之前，均衡器将无法使用。",
+      "install_failed": "安装 AxShell 音频引擎失败。在从 github.com/mora1ss/axshell-audio 安装之前，均衡器将无法使用。",
       "installing": "正在安装 AxShell 音频引擎...",
       "up_to_date": "-> AxShell 音频引擎 {version} 已安装。"
     },
     "core": {
       "checksum_failed": "核心服务下载未通过校验和检查，已跳过。",
-      "download_failed": "无法下载 AxShell 核心服务，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-core 安装。",
+      "download_failed": "无法下载 AxShell 核心服务，已跳过。您可以稍后从 github.com/mora1ss/axshell-core 安装。",
       "installed": "已安装 AxShell 核心服务 {version}",
-      "install_failed": "安装 AxShell 核心服务失败。在从 github.com/ilyamiro/serpantinum-core 安装之前，系统使用情况、键盘锁定指示器和剪贴板将无法使用。",
+      "install_failed": "安装 AxShell 核心服务失败。在从 github.com/mora1ss/axshell-core 安装之前，系统使用情况、键盘锁定指示器和剪贴板将无法使用。",
       "installing": "正在安装 AxShell 核心服务...",
       "unsupported_arch": "预编译的核心服务包仅提供 x86_64 版本，已跳过。",
       "up_to_date": "-> AxShell 核心服务 {version} 已安装。"
     },
     "gamma": {
       "checksum_failed": "蓝光过滤器下载未通过校验和检查，已跳过。",
-      "download_failed": "无法下载 AxShell 蓝光过滤器，已跳过。您可以稍后从 github.com/ilyamiro/serpantinum-gamma 安装。",
+      "download_failed": "无法下载 AxShell 蓝光过滤器，已跳过。您可以稍后从 github.com/mora1ss/axshell-gamma 安装。",
       "installed": "已安装 AxShell 蓝光过滤器 {version}",
-      "install_failed": "安装 AxShell 蓝光过滤器失败。在从 github.com/ilyamiro/serpantinum-gamma 安装之前，它将无法使用。",
+      "install_failed": "安装 AxShell 蓝光过滤器失败。在从 github.com/mora1ss/axshell-gamma 安装之前，它将无法使用。",
       "installing": "正在安装 AxShell 蓝光过滤器...",
       "unsupported_arch": "预编译的蓝光过滤器包仅提供 x86_64 版本，已跳过。",
       "up_to_date": "-> AxShell 蓝光过滤器 {version} 已安装。"

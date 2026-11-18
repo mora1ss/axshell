@@ -23,7 +23,7 @@ slug: /cli/daemon
 
 ### `stop`
 
-- `axshelld stop`: Stop the running daemon and all background shell processes (`serpantinum-core screentime track`, `quickshell`).
+- `axshelld stop`: Stop the running daemon and all background shell processes (`axshell-core screentime track`, `quickshell`).
 
 ### `status`
 

@@ -123,7 +123,7 @@ Item {
     Process {
         id: kbWatcher
         running: true
-        command: ["serpantinum-core", "watch", "locks"]
+        command: ["axshell-core", "watch", "locks"]
         stdout: SplitParser {
             onRead: data => {
                 let locks;
@@ -155,7 +155,7 @@ Item {
     Process {
         id: briWatcher
         running: true
-        command: ["serpantinum-core", "watch", "brightness"]
+        command: ["axshell-core", "watch", "brightness"]
         stdout: SplitParser {
             onRead: data => {
                 let state;

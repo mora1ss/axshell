@@ -34,13 +34,13 @@ See the NixOS installation guide in the repository documentation for flake setup
 
 ## Audio engine
 
-The equalizer, balance, mono, channel swap, dynamic range modes and the dynamic EQ run on [serpantinum-audio](https://github.com/ilyamiro/serpantinum-audio), a small PipeWire processor that replaces EasyEffects. The installer and the packages install it, and on the first start after updating, AxShell hands your audio over from EasyEffects.
+The equalizer, balance, mono, channel swap, dynamic range modes and the dynamic EQ run on [axshell-audio](https://github.com/mora1ss/axshell-audio), a small PipeWire processor that replaces EasyEffects. The installer and the packages install it, and on the first start after updating, AxShell hands your audio over from EasyEffects.
 
 ---
 
 ## Blue light filter
 
-The blue light filter and its day and night schedule run on [serpantinum-gamma](https://github.com/ilyamiro/serpantinum-gamma), a small Wayland daemon that replaces wl-gammarelay-rs. The installer and the packages install it. AxShell starts it the first time a filter is turned on and stops it on exit.
+The blue light filter and its day and night schedule run on [axshell-gamma](https://github.com/mora1ss/axshell-gamma), a small Wayland daemon that replaces wl-gammarelay-rs. The installer and the packages install it. AxShell starts it the first time a filter is turned on and stops it on exit.
 
 ---
 

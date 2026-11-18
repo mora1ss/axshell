@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Warnbefehl",
         "desc": "Vorlaufzeit und Befehl vor Aktionsausführung",
-        "placeholder": "z. B. serpantinum-core notify 'Warnung'"
+        "placeholder": "z. B. axshell-core notify 'Warnung'"
       },
       "before_command": {
         "title": "Befehl davor",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Befehl bei Reaktivierung",
         "desc": "Wird bei erneuter Benutzeraktivität ausgeführt",
-        "placeholder": "z. B. serpantinum-core notify 'fortgesetzt'"
+        "placeholder": "z. B. axshell-core notify 'fortgesetzt'"
       },
       "dim": {
         "title": "Bildschirm abdunkeln",
@@ -2069,26 +2069,26 @@
     "audio": {
       "building": "Keine vorkompilierte Audio-Engine für dieses System, wird aus dem Quellcode gebaut...",
       "checksum_failed": "Der Download der Audio-Engine hat die Prüfsummenprüfung nicht bestanden, wird übersprungen.",
-      "download_failed": "Die AxShell-Audio-Engine konnte nicht heruntergeladen werden, wird übersprungen. Du kannst sie später über github.com/ilyamiro/serpantinum-audio installieren.",
+      "download_failed": "Die AxShell-Audio-Engine konnte nicht heruntergeladen werden, wird übersprungen. Du kannst sie später über github.com/mora1ss/axshell-audio installieren.",
       "installed": "AxShell-Audio-Engine {version} installiert",
-      "install_failed": "Die AxShell-Audio-Engine konnte nicht installiert werden. Der Equalizer funktioniert erst, wenn sie über github.com/ilyamiro/serpantinum-audio installiert wird.",
+      "install_failed": "Die AxShell-Audio-Engine konnte nicht installiert werden. Der Equalizer funktioniert erst, wenn sie über github.com/mora1ss/axshell-audio installiert wird.",
       "installing": "AxShell-Audio-Engine wird installiert...",
       "up_to_date": "-> AxShell-Audio-Engine {version} ist bereits installiert."
     },
     "core": {
       "checksum_failed": "Der Download der Kerndienste hat die Prüfsummenprüfung nicht bestanden, wird übersprungen.",
-      "download_failed": "Die AxShell-Kerndienste konnten nicht heruntergeladen werden, wird übersprungen. Du kannst sie später über github.com/ilyamiro/serpantinum-core installieren.",
+      "download_failed": "Die AxShell-Kerndienste konnten nicht heruntergeladen werden, wird übersprungen. Du kannst sie später über github.com/mora1ss/axshell-core installieren.",
       "installed": "AxShell-Kerndienste {version} installiert",
-      "install_failed": "Die AxShell-Kerndienste konnten nicht installiert werden. Systemauslastung, Tastatursperranzeigen und die Zwischenablage funktionieren erst, wenn sie über github.com/ilyamiro/serpantinum-core installiert werden.",
+      "install_failed": "Die AxShell-Kerndienste konnten nicht installiert werden. Systemauslastung, Tastatursperranzeigen und die Zwischenablage funktionieren erst, wenn sie über github.com/mora1ss/axshell-core installiert werden.",
       "installing": "AxShell-Kerndienste werden installiert...",
       "unsupported_arch": "Vorkompilierte Pakete der Kerndienste gibt es nur für x86_64, wird übersprungen.",
       "up_to_date": "-> AxShell-Kerndienste {version} sind bereits installiert."
     },
     "gamma": {
       "checksum_failed": "Der Download des Blaulichtfilters hat die Prüfsummenprüfung nicht bestanden, wird übersprungen.",
-      "download_failed": "Der AxShell-Blaulichtfilter konnte nicht heruntergeladen werden, wird übersprungen. Du kannst ihn später über github.com/ilyamiro/serpantinum-gamma installieren.",
+      "download_failed": "Der AxShell-Blaulichtfilter konnte nicht heruntergeladen werden, wird übersprungen. Du kannst ihn später über github.com/mora1ss/axshell-gamma installieren.",
       "installed": "AxShell-Blaulichtfilter {version} installiert",
-      "install_failed": "Der AxShell-Blaulichtfilter konnte nicht installiert werden. Er funktioniert erst, wenn er über github.com/ilyamiro/serpantinum-gamma installiert wird.",
+      "install_failed": "Der AxShell-Blaulichtfilter konnte nicht installiert werden. Er funktioniert erst, wenn er über github.com/mora1ss/axshell-gamma installiert wird.",
       "installing": "AxShell-Blaulichtfilter wird installiert...",
       "unsupported_arch": "Vorkompilierte Pakete des Blaulichtfilters gibt es nur für x86_64, wird übersprungen.",
       "up_to_date": "-> AxShell-Blaulichtfilter {version} ist bereits installiert."

@@ -35,7 +35,7 @@ Item {
     Process {
         id: coreWatch
         running: base.watching
-        command: ["serpantinum-core", "watch", "compositor"]
+        command: ["axshell-core", "watch", "compositor"]
         stdout: SplitParser {
             splitMarker: "\n"
             onRead: data => {

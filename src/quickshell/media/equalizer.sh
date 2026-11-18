@@ -70,10 +70,10 @@ elif ! jq -e 'has("balance") and has("mono") and has("swap") and has("dynamics")
 fi
 
 audio_ctl() {
-    command -v serpantinum-audio >/dev/null 2>&1 || return 1
-    serpantinum-audio ctl "$@" >/dev/null 2>&1 && return 0
-    serpantinum-audio start >/dev/null 2>&1 || return 1
-    serpantinum-audio ctl "$@" >/dev/null 2>&1
+    command -v axshell-audio >/dev/null 2>&1 || return 1
+    axshell-audio ctl "$@" >/dev/null 2>&1 && return 0
+    axshell-audio start >/dev/null 2>&1 || return 1
+    axshell-audio ctl "$@" >/dev/null 2>&1
 }
 
 apply_eq() {
@@ -171,7 +171,7 @@ with wave.open(path, 'wb') as out:
 PY
     fi
 
-    command -v serpantinum-audio >/dev/null 2>&1 && serpantinum-audio start >/dev/null 2>&1
+    command -v axshell-audio >/dev/null 2>&1 && axshell-audio start >/dev/null 2>&1
     target=()
     if command -v pw-dump >/dev/null 2>&1 &&
        pw-dump 2>/dev/null | jq -e --arg n "$SINK_NAME" 'any(.[]; .info.props["node.name"] == $n)' >/dev/null 2>&1; then
@@ -188,7 +188,7 @@ PY
         }
         trap cleanup_test EXIT TERM INT
         pw-play "${target[@]}" \
-            -P '{"application.id":"serpantinum-audio-test","application.name":"AxShell audio test","media.role":"music"}' \
+            -P '{"application.id":"axshell-audio-test","application.name":"AxShell audio test","media.role":"music"}' \
             "$TEST_FILE" >/dev/null 2>&1 &
         player_pid=$!
         wait "$player_pid"

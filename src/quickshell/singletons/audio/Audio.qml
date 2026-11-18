@@ -50,7 +50,7 @@ Singleton {
         let appName = p["application.name"] || "";
         if (appId === "axshell-sfx" || appId === "axshell" || appId === "org.axshell.sfx") return true;
         if (appName === "axshell-sfx" || appName === "axshell") return true;
-        if (p["node.group"] === "serpantinum-audio" || p["node.link-group"] === "serpantinum-audio") return true;
+        if (p["node.group"] === "axshell-audio" || p["node.link-group"] === "axshell-audio") return true;
         let mediaFile = p["media.filename"] || p["media.name"] || "";
         if (mediaFile.indexOf("assets/sounds/") !== -1) return true;
         return false;

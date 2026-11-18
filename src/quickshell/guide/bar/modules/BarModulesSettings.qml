@@ -51,7 +51,7 @@ GuideTab {
     Process {
         id: workspaceMonitorDetector
         running: false
-        command: ["serpantinum-core", "monitors"]
+        command: ["axshell-core", "monitors"]
         stdout: StdioCollector {
             onStreamFinished: {
                 try {

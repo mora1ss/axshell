@@ -82,7 +82,7 @@ Item {
     Process {
         id: streamProc
         running: false
-        command: ["serpantinum-core", "watch", "sysinfo", "--interval", String(root.streamInterval)]
+        command: ["axshell-core", "watch", "sysinfo", "--interval", String(root.streamInterval)]
         stdout: SplitParser {
             onRead: data => root.applyUsage(data, true)
         }
@@ -91,7 +91,7 @@ Item {
     Process {
         id: fetchProc
         running: false
-        command: ["serpantinum-core", "sysinfo"]
+        command: ["axshell-core", "sysinfo"]
         stdout: StdioCollector {
             onStreamFinished: root.applyUsage(this.text)
         }

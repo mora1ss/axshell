@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-title: serpantinum-audio
-sidebar_label: serpantinum-audio
+title: axshell-audio
+sidebar_label: axshell-audio
 slug: /audio
 ---
 
-# serpantinum-audio
+# axshell-audio
 
-AxShell ships its own small audio processor, [serpantinum-audio](https://github.com/ilyamiro/serpantinum-audio). It replaces EasyEffects and depends only on PipeWire. The equalizer, balance, mono, channel swap, dynamic range modes and the dynamic EQ in the music popup all run on it.
+AxShell ships its own small audio processor, [axshell-audio](https://github.com/mora1ss/axshell-audio). It replaces EasyEffects and depends only on PipeWire. The equalizer, balance, mono, channel swap, dynamic range modes and the dynamic EQ in the music popup all run on it.
 
 It creates a virtual output called **AxShell**, processes everything sent to it and plays the result on your real output device. The shell talks to it over a local socket, so changing a slider is instant.
 
@@ -40,11 +40,11 @@ Calls in Telegram and in a browser are still processed, because their call audio
 
 The **Dynamic** button on the equalizer page turns on an adaptive tonal balance. It listens to the last few seconds of audio and gently moves the balance toward the typical balance of commercial recordings, without changing loudness. It replaces the manual equalizer while it is on, so the sliders and presets are dimmed until you turn it off.
 
-The design and the research behind each number are described in the [serpantinum-audio README](https://github.com/ilyamiro/serpantinum-audio#dynamic-eq).
+The design and the research behind each number are described in the [axshell-audio README](https://github.com/mora1ss/axshell-audio#dynamic-eq).
 
 ## Visualizer
 
-The bar, widget, lock screen and music popup visualizers read their spectrum from `serpantinum-audio visualizer`, a port of cava's processing, so cava is no longer needed. The shell starts it only while music plays and a visualizer is on screen, and stops it shortly after the music stops. It runs separately from the engine, so the visualizer also works when the engine is off. The options are listed in the [serpantinum-audio README](https://github.com/ilyamiro/serpantinum-audio#visualizer).
+The bar, widget, lock screen and music popup visualizers read their spectrum from `axshell-audio visualizer`, a port of cava's processing, so cava is no longer needed. The shell starts it only while music plays and a visualizer is on screen, and stops it shortly after the music stops. It runs separately from the engine, so the visualizer also works when the engine is off. The options are listed in the [axshell-audio README](https://github.com/mora1ss/axshell-audio#visualizer).
 
 ## Installation
 

@@ -1,13 +1,13 @@
 ---
 sidebar_position: 3
-title: serpantinum-gamma
-sidebar_label: serpantinum-gamma
+title: axshell-gamma
+sidebar_label: axshell-gamma
 slug: /gamma
 ---
 
-# serpantinum-gamma
+# axshell-gamma
 
-AxShell ships its own blue light filter, [serpantinum-gamma](https://github.com/ilyamiro/serpantinum-gamma). It sets the color temperature, brightness, gamma and inversion of your displays on Wayland, with a day and night schedule that follows the sun.
+AxShell ships its own blue light filter, [axshell-gamma](https://github.com/mora1ss/axshell-gamma). It sets the color temperature, brightness, gamma and inversion of your displays on Wayland, with a day and night schedule that follows the sun.
 
 It is a small daemon, and the same binary is its command line client. They talk over the D-Bus session bus, so it needs no systemd. The binary links only glibc.
 
@@ -31,18 +31,18 @@ The colors last only while the daemon runs, since the compositor restores normal
 ## Commands
 
 ```sh
-serpantinum-gamma start                         # the daemon, in the background
-serpantinum-gamma set --temperature 4000        # every output
-serpantinum-gamma set -o eDP-1 --brightness 0.8 # one output
-serpantinum-gamma auto on --night 3500          # follow the schedule
-serpantinum-gamma location 55.75 37.62          # by the sun at this place
-serpantinum-gamma fallback 06:30 19:00          # or, without a location, by the clock
-serpantinum-gamma status -o eDP-1
-serpantinum-gamma reset
-serpantinum-gamma quit                          # the compositor restores normal colors
+axshell-gamma start                         # the daemon, in the background
+axshell-gamma set --temperature 4000        # every output
+axshell-gamma set -o eDP-1 --brightness 0.8 # one output
+axshell-gamma auto on --night 3500          # follow the schedule
+axshell-gamma location 55.75 37.62          # by the sun at this place
+axshell-gamma fallback 06:30 19:00          # or, without a location, by the clock
+axshell-gamma status -o eDP-1
+axshell-gamma reset
+axshell-gamma quit                          # the compositor restores normal colors
 ```
 
-`serpantinum-gamma --help` lists every command.
+`axshell-gamma --help` lists every command.
 
 - `set` takes `--temperature K`, `--brightness 0-1`, `--gamma G` and `--inverted on|off`. Setting a temperature turns the schedule off.
 - `reset` returns to a neutral temperature, full brightness, gamma 1 and not inverted.
@@ -95,7 +95,7 @@ busctl --user tree org.axshell.Gamma
 
 The schedule lives on the `org.axshell.Gamma.Schedule` interface, with `Auto`, `DayTemperature`, `NightTemperature`, `SetLocation`, `ClearLocation`, the fallback times and read-only values for the sun. Reading `/` gives the average of all outputs, and writing to `/` changes every output, including outputs connected later.
 
-All properties emit `PropertiesChanged`. The full list of members is in the [serpantinum-gamma README](https://github.com/ilyamiro/serpantinum-gamma#d-bus).
+All properties emit `PropertiesChanged`. The full list of members is in the [axshell-gamma README](https://github.com/mora1ss/axshell-gamma#d-bus).
 
 ## Installation
 
@@ -108,10 +108,10 @@ The Arch packages bundle a release, and the Nix flake builds it from source.
 ### Checking the installation
 
 ```sh
-serpantinum-gamma --version
-serpantinum-gamma start
-serpantinum-gamma set --temperature 4000
-serpantinum-gamma reset
+axshell-gamma --version
+axshell-gamma start
+axshell-gamma set --temperature 4000
+axshell-gamma reset
 ```
 
 The screen should turn warmer and then return to normal. If it doesn't, see below.
@@ -139,7 +139,7 @@ Any Rust toolchain with edition 2024 works. `stage.sh` lays out `usr/bin`, the D
 On NixOS, add the package to both lists, so that D-Bus can start the daemon:
 
 ```nix
-let gamma = pkgs.callPackage /path/to/serpantinum-gamma { }; in {
+let gamma = pkgs.callPackage /path/to/axshell-gamma { }; in {
   environment.systemPackages = [ gamma ];
   services.dbus.packages = [ gamma ];
 }

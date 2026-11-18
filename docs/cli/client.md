@@ -95,7 +95,7 @@ Sends raw IPC calls directly to the running shell:
 
 ### `kill`
 
-Stops the daemon and terminates all background shell workers (`serpantinum-core screentime track`, `quickshell`, `axshelld`).
+Stops the daemon and terminates all background shell workers (`axshell-core screentime track`, `quickshell`, `axshelld`).
 
 ### `restart`
 
@@ -229,13 +229,13 @@ Sets geographic coordinates manually:
 
 ### `gamma`
 
-Controls color temperature and the day/night schedule through [serpantinum-gamma](https://github.com/ilyamiro/serpantinum-gamma), which it starts when needed. AxShell stops it on exit, and the compositor then restores normal colors.
+Controls color temperature and the day/night schedule through [axshell-gamma](https://github.com/mora1ss/axshell-gamma), which it starts when needed. AxShell stops it on exit, and the compositor then restores normal colors.
 
 - `axshell gamma set <temperature> [output] [mode] [latitude] [longitude]`: Set temperature (1000-10000K) manually (`mode=manual`), or use it as the night temperature of the solar schedule (`mode=auto`). Without coordinates, or with `0 0`, the schedule fades to night at 19:00 and to day at 06:30. Without an output, every output is changed.
 - `axshell gamma reset [output]`: Reset color temperature to 6500K daylight neutral and turn the schedule off.
 - `axshell gamma status [output]`: Print status (`running` or `stopped`).
-- `axshell gamma start`: Start serpantinum-gamma if it is not running.
-- `axshell gamma stop`: Stop serpantinum-gamma.
+- `axshell gamma start`: Start axshell-gamma if it is not running.
+- `axshell gamma stop`: Stop axshell-gamma.
 - `axshell gamma --verbose` (`-v`): Print verbose output with current Kelvin, brightness and schedule state.
 
 ### `lock`

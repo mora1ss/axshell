@@ -1,21 +1,21 @@
 ---
 sidebar_position: 2
-title: serpantinum-core
-sidebar_label: serpantinum-core
+title: axshell-core
+sidebar_label: axshell-core
 slug: /core
 ---
 
-# serpantinum-core
+# axshell-core
 
-AxShell ships a small background service written in Rust, [serpantinum-core](https://github.com/ilyamiro/serpantinum-core). It serves system usage, compositor state, brightness, idle inhibition, screen time, launcher ranking and clipboard history to the shell. These used to be scripts and Python helpers that the shell ran on a timer or on every event. Now one long-running process answers them, so the shell no longer starts a process for each poll and no longer needs `brightnessctl` or `python-jeepney`.
+AxShell ships a small background service written in Rust, [axshell-core](https://github.com/mora1ss/axshell-core). It serves system usage, compositor state, brightness, idle inhibition, screen time, launcher ranking and clipboard history to the shell. These used to be scripts and Python helpers that the shell ran on a timer or on every event. Now one long-running process answers them, so the shell no longer starts a process for each poll and no longer needs `brightnessctl` or `python-jeepney`.
 
 It talks to the shell over the D-Bus session bus, works on any compositor and links only glibc. The same binary is its command line client, and every command prints JSON, one object or array per line.
 
 ## In the shell
 
 - The daemon starts the first time anything asks for it, and every command except `quit` starts it when it is not running. `watch` starts it again if it goes away.
-- `axshelld start` runs `serpantinum-core screentime track` for the digital wellbeing tab, and `axshelld stop` ends it.
-- The daemon can outlive a login. `serpantinum-core quit` stops it.
+- `axshelld start` runs `axshell-core screentime track` for the digital wellbeing tab, and `axshelld stop` ends it.
+- The daemon can outlive a login. `axshell-core quit` stops it.
 
 ## Feeds cost nothing when unused
 
@@ -36,7 +36,7 @@ The daemon samples a feed only while a client holds a lease on it. A lease ends 
 | `system can-hibernate`, `system fingerprint` | Whether the system panel offers hibernate, and whether fingerprint unlock is set up |
 | `clipboard list\|pin\|delete\|wipe` | The clipboard history |
 
-`serpantinum-core --help` lists every command.
+`axshell-core --help` lists every command.
 
 ### System usage
 
@@ -98,7 +98,7 @@ busctl --user call org.axshell.Core /sysinfo org.axshell.Core.SysInfo Subscribe 
 busctl --user get-property org.axshell.Core /sysinfo org.axshell.Core.SysInfo Cpu
 ```
 
-The full list of members is in the [serpantinum-core README](https://github.com/ilyamiro/serpantinum-core#d-bus).
+The full list of members is in the [axshell-core README](https://github.com/mora1ss/axshell-core#d-bus).
 
 ## Installation
 
@@ -111,8 +111,8 @@ The Arch packages bundle a release, and the Nix flake builds it from source.
 ### Checking the installation
 
 ```sh
-serpantinum-core --version
-serpantinum-core sysinfo
+axshell-core --version
+axshell-core sysinfo
 ```
 
 The second command should print one JSON object with your CPU, memory, temperature, network and disk usage. It starts the daemon if it is not running.
@@ -137,6 +137,6 @@ Any Rust toolchain with edition 2024 works. `stage.sh` lays out `usr/bin`, the D
 Stop the daemon and run any command again to start a fresh one:
 
 ```sh
-serpantinum-core quit
-serpantinum-core sysinfo
+axshell-core quit
+axshell-core sysinfo
 ```

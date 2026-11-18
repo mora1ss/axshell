@@ -318,7 +318,7 @@ GuideTab {
             liveFileReader.reload();
         } else {
             tabRoot.lastLiveRaw = "";
-            let cmd = ["serpantinum-core", "screentime", "stats", getIsoDate(tabRoot.activeDate)];
+            let cmd = ["axshell-core", "screentime", "stats", getIsoDate(tabRoot.activeDate)];
             if (tabRoot.selectedAppClass !== "") {
                 cmd.push("--app");
                 cmd.push(tabRoot.selectedAppClass);

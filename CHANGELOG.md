@@ -44,9 +44,9 @@
 - feat(calendar): scrolling curved hourly strip with current-hour focus, restyled sun arc and configured time format for sun times
 - perf(launcher): speed up spring open animation for launcher and clipboard
 - feat(dashboard): rework calendar into a bar-attached dashboard with spring reveal shared by launcher, clipboard and dock
-- refactor(settings): manage presets through serpantinum-core instead of an embedded python script
+- refactor(settings): manage presets through axshell-core instead of an embedded python script
 - perf(settings): show display, widgets and presets tabs instantly on reopen
-- chore: pin serpantinum-core 0.6.0
+- chore: pin axshell-core 0.6.0
 - perf(website): optimize image preloading, layout stability and animation loops
 - perf(settings): load only the current page, save the search index and build heavy pages progressively
 - feat(i18n): translate lock screen prompt background setting
@@ -73,20 +73,20 @@
 - fix(wallpaper): declare tint on transition mask shaders to silence missing property warnings
 - style(wallpaper): lay transition previews out in a three-column grid like the bar style cards
 - feat(wallpaper): add paint transition that grows the new wallpaper in from cell colonies
-- feat: quit serpantinum-core, -audio and -gamma when axshelld stops, and leave gamma running through installer updates
+- feat: quit axshell-core, -audio and -gamma when axshelld stops, and leave gamma running through installer updates
 - feat(installer): restart running core and gamma daemons after updating them, with one helper shared with audio
-- Revert "feat: restart serpantinum-core, -audio and -gamma daemons left running from an older install"
-- feat: restart serpantinum-core, -audio and -gamma daemons left running from an older install
-- feat(wallpaper): index wallpapers with serpantinum-core and drop indexer.py
-- feat(network): read addresses, Wi-Fi frequency and connectivity from serpantinum-core instead of polling nmcli, ip and iw
-- chore: pin serpantinum-core 0.5.0 and drop iw
-- feat(visualizer): read the spectrum from serpantinum-audio instead of cava
+- Revert "feat: restart axshell-core, -audio and -gamma daemons left running from an older install"
+- feat: restart axshell-core, -audio and -gamma daemons left running from an older install
+- feat(wallpaper): index wallpapers with axshell-core and drop indexer.py
+- feat(network): read addresses, Wi-Fi frequency and connectivity from axshell-core instead of polling nmcli, ip and iw
+- chore: pin axshell-core 0.5.0 and drop iw
+- feat(visualizer): read the spectrum from axshell-audio instead of cava
 - feat(quickactions): add floating open, close and toggle IPC
 - chore(deps): drop pavucontrol, bluez-utils, and git and unzip as runtime dependencies
 - fix(updater): pass notification text as arguments so the shell never expands it
-- chore: pin serpantinum-core 0.4.1 and drop libnotify
-- fix(i18n): suggest serpantinum-core notify in idle command examples
-- refactor(notifications): send notifications with serpantinum-core notify instead of notify-send
+- chore: pin axshell-core 0.4.1 and drop libnotify
+- fix(i18n): suggest axshell-core notify in idle command examples
+- refactor(notifications): send notifications with axshell-core notify instead of notify-send
 - chore(deps): drop inotify-tools
 - refactor(recording): watch the recording pid file with FileView instead of inotifywait
 - refactor(quickactions): remove unused dock quick action
@@ -103,25 +103,25 @@
 - fix(lock): start password auth immediately after resume and queue early enter presses (#564)
 - fix(fillets): stop toggling ear visibility so the blur mask no longer randomly renders empty on reopen
 - fix(launcher): offset attached launcher by the solid bar's edge margin so it no longer overlaps the bar
-- refactor: list monitors with serpantinum-core monitors and remove the monitors_detect script and its cli entry
-- chore: pin serpantinum-core 0.3.0
+- refactor: list monitors with axshell-core monitors and remove the monitors_detect script and its cli entry
+- chore: pin axshell-core 0.3.0
 - refactor: rename the blue light filter command, script and qml singleton to gamma
 - refactor: remove the unused current_focus script and its cli entry, docs and translations
 - docs: group the package pages under components with one page per package
-- docs: add serpantinum-gamma pages and name the docs sections after their packages
-- docs: add serpantinum-core pages and link them from the sidebar and install table
+- docs: add axshell-gamma pages and name the docs sections after their packages
+- docs: add axshell-core pages and link them from the sidebar and install table
 
 ### 2.4.2
 
-- chore: pin serpantinum-core 0.2.0 and drop brightnessctl and python-jeepney dependencies
-- feat: move launcher ranking, file search and the hibernate and fingerprint checks to serpantinum-core
-- feat: track screen time and read wellbeing stats through serpantinum-core instead of the Python focus daemon
-- feat: replace the Python idle helper with serpantinum-core watch idle
-- feat: read and set brightness through serpantinum-core and drop brightness.sh
-- feat: read Sway, Niri and Mango state from serpantinum-core instead of compositor CLI processes
-- chore: bump serpantinum-gamma to 0.7.0
-- fix: update serpantinum-core to 0.1.2 for event-driven lock detection and the Hyprland LED check
-- feat: read system usage, keyboard locks and clipboard history from serpantinum-core
+- chore: pin axshell-core 0.2.0 and drop brightnessctl and python-jeepney dependencies
+- feat: move launcher ranking, file search and the hibernate and fingerprint checks to axshell-core
+- feat: track screen time and read wellbeing stats through axshell-core instead of the Python focus daemon
+- feat: replace the Python idle helper with axshell-core watch idle
+- feat: read and set brightness through axshell-core and drop brightness.sh
+- feat: read Sway, Niri and Mango state from axshell-core instead of compositor CLI processes
+- chore: bump axshell-gamma to 0.7.0
+- fix: update axshell-core to 0.1.2 for event-driven lock detection and the Hyprland LED check
+- feat: read system usage, keyboard locks and clipboard history from axshell-core
 - feat(guide): animate search view, add section labels, faint highlights and upfront search indexing
 - revert(guide): restore original settings tab spacing and row styling
 - refactor(guide): tidy settings layout and sidebar, fix search ids for non-Latin titles
@@ -173,22 +173,22 @@
 - feat(workspaces): add optional per-monitor workspace numbering on Hyprland
 - fix(dock): hide over hyprland special workspaces and check fullscreen per monitor (#542)
 - fix(weather): show 0.0 instead of -0.0 for temperatures that round to zero (#541)
-- chore: bump serpantinum-gamma to 0.6.0
+- chore: bump axshell-gamma to 0.6.0
 - refactor(theme): move telegram and obs into .backup
 - refactor(theme): move discord and steam into .backup
 - fix(zen): set the background variables on the element Zen paints the sidebar with
 - refactor(theme): move zed, tilix, xfce terminal, fcitx5 and spicetify into .backup
 - refactor(theme): move app themes that could not be verified into .backup
 - docs(audio): split the audio engine page and document excluded voice chat apps
-- fix(audio): update serpantinum-audio to 0.3.1 to keep voice chat apps off the engine
+- fix(audio): update axshell-audio to 0.3.1 to keep voice chat apps off the engine
 - fix(theme): restore the original JSON bytes on undo
 - fix(theme): remove the padding blank line added before a block on undo
 - fix(theme): remove ini config files created by app theming when switching off
 - fix(lsd): point color.theme at the generated file so lsd loads it
 - fix(wofi): import the theme by absolute path so GTK can resolve it
 - fix(spotify-player): use a valid color name for the playing track
-- refactor(bluelight): drive serpantinum-gamma through its own CLI instead of busctl
-- feat(bluelight): replace wl-gammarelay-rs with serpantinum-gamma
+- refactor(bluelight): drive axshell-gamma through its own CLI instead of busctl
+- feat(bluelight): replace wl-gammarelay-rs with axshell-gamma
 - fix(weather): retranslate cached forecast on language change without refetching
 - feat(theme): add 42 themed apps and json, each and lines_from integrations
 - feat(theme): pick themed apps from a searchable popup instead of a dropdown
@@ -245,7 +245,7 @@
 - chore: update flake.lock
 - fix(nix): keep the saved version in sync with the installed package so updates show the new version
 - chore: bump bundled Ski to 0.4.6 in the AUR packages and flake lock
-- chore: bump bundled serpantinum-audio to 0.3.0
+- chore: bump bundled axshell-audio to 0.3.0
 - fix(install): fall back to a full system upgrade when Quickshell can't be upgraded alone on Void
 - fix(install): parse lowercase Quickshell versions and upgrade Fedora installs from the COPR
 - fix(music): size device and source pills from the popup width so they no longer collapse to ellipses
@@ -264,22 +264,22 @@
 - fix(widgets): polish the widget picker layout, search and category placement
 - feat(widgets): group the redactor widget picker into categories with search
 - feat(widgets): add text widget
-- fix(audio): ignore the serpantinum-audio output stream when detecting active playback
+- fix(audio): ignore the axshell-audio output stream when detecting active playback
 - fix(lock): don't auto-repeat characters in the password field (#513)
 - chore: bump bundled Ski to 0.4.3 in the AUR packages and flake lock
-- fix(audio): use the real default output now that serpantinum-audio 0.2.0 routes streams instead of taking the default
+- fix(audio): use the real default output now that axshell-audio 0.2.0 routes streams instead of taking the default
 - chore: bump bundled Ski to 0.4.1 in the AUR packages and flake lock
 - fix(network): connect after pairing once the pairing link drops (#514)
 
 ### 2.3.2
 
-- fix(media): restore the test tone paths so the audio test plays through serpantinum-audio
+- fix(media): restore the test tone paths so the audio test plays through axshell-audio
 - docs: describe the narrower EasyEffects handover and how to turn EasyEffects off
 - fix(audio): limit the EasyEffects handover to what AxShell set up and notify once instead of killing it on every start
-- fix(nix): put serpantinum-audio on PATH alongside the shell binaries
+- fix(nix): put axshell-audio on PATH alongside the shell binaries
 - feat(media): show the dynamic EQ as a labelled button with a toggle and let Toggle take a track size
-- feat(audio): replace EasyEffects with the serpantinum-audio engine and add a dynamic EQ toggle
-- docs: document the serpantinum-audio engine and drop EasyEffects from the guides
+- feat(audio): replace EasyEffects with the axshell-audio engine and add a dynamic EQ toggle
+- docs: document the axshell-audio engine and drop EasyEffects from the guides
 - feat(install): add Void Linux support with an xbps backend
 - chore: bump bundled Ski to 0.4.0 in the AUR packages
 - fix(bluelight): anchor wl-gammarelay-rs process match and guard AXSHELL_DIR under nounset

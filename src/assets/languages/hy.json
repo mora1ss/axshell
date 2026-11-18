@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Նախազգուշացման հրաման",
         "desc": "Գործողությունից առաջ կատարվող հրամանն ու ժամանակային շեղումը",
-        "placeholder": "օր.՝ serpantinum-core notify 'warning'"
+        "placeholder": "օր.՝ axshell-core notify 'warning'"
       },
       "before_command": {
         "title": "Նախորդող հրաման",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Վերսկսման հրաման",
         "desc": "Կատարվում է օգտատիրոջ ակտիվության վերսկսման ժամանակ",
-        "placeholder": "օր.՝ serpantinum-core notify 'resumed'"
+        "placeholder": "օր.՝ axshell-core notify 'resumed'"
       },
       "dim": {
         "title": "Մգացնել էկրանը",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "Այս համակարգի համար պատրաստի աուդիո շարժիչ չկա, կառուցվում է սկզբնական կոդից...",
       "checksum_failed": "Աուդիո շարժիչի ներբեռնումը չանցավ վերահսկիչ գումարի ստուգումը, բաց է թողնվում։",
-      "download_failed": "Չհաջողվեց ներբեռնել AxShell աուդիո շարժիչը, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/ilyamiro/serpantinum-audio-ից։",
+      "download_failed": "Չհաջողվեց ներբեռնել AxShell աուդիո շարժիչը, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/mora1ss/axshell-audio-ից։",
       "installed": "AxShell աուդիո շարժիչ {version} տեղադրվեց",
-      "install_failed": "Չհաջողվեց տեղադրել AxShell աուդիո շարժիչը։ Էկվալայզերը չի աշխատի, մինչև այն չտեղադրվի github.com/ilyamiro/serpantinum-audio-ից։",
+      "install_failed": "Չհաջողվեց տեղադրել AxShell աուդիո շարժիչը։ Էկվալայզերը չի աշխատի, մինչև այն չտեղադրվի github.com/mora1ss/axshell-audio-ից։",
       "installing": "AxShell աուդիո շարժիչը տեղադրվում է...",
       "up_to_date": "-> AxShell աուդիո շարժիչ {version}-ը արդեն տեղադրված է։"
     },
     "core": {
       "checksum_failed": "Հիմնական ծառայությունների ներբեռնումը չանցավ վերահսկիչ գումարի ստուգումը, բաց է թողնվում։",
-      "download_failed": "Չհաջողվեց ներբեռնել AxShell հիմնական ծառայությունները, բաց է թողնվում։ Կարող եք տեղադրել դրանք ավելի ուշ github.com/ilyamiro/serpantinum-core-ից։",
+      "download_failed": "Չհաջողվեց ներբեռնել AxShell հիմնական ծառայությունները, բաց է թողնվում։ Կարող եք տեղադրել դրանք ավելի ուշ github.com/mora1ss/axshell-core-ից։",
       "installed": "AxShell հիմնական ծառայություններ {version} տեղադրվեցին",
-      "install_failed": "Չհաջողվեց տեղադրել AxShell հիմնական ծառայությունները։ Համակարգի օգտագործումը, ստեղնաշարի կողպման ցուցիչները և clipboard-ը չեն աշխատի, մինչև դրանք չտեղադրվեն github.com/ilyamiro/serpantinum-core-ից։",
+      "install_failed": "Չհաջողվեց տեղադրել AxShell հիմնական ծառայությունները։ Համակարգի օգտագործումը, ստեղնաշարի կողպման ցուցիչները և clipboard-ը չեն աշխատի, մինչև դրանք չտեղադրվեն github.com/mora1ss/axshell-core-ից։",
       "installing": "AxShell հիմնական ծառայությունները տեղադրվում են...",
       "unsupported_arch": "Հիմնական ծառայությունների պատրաստի փաթեթներ կան միայն x86_64-ի համար, բաց է թողնվում։",
       "up_to_date": "-> AxShell հիմնական ծառայություններ {version}-ը արդեն տեղադրված են։"
     },
     "gamma": {
       "checksum_failed": "Կապույտ լույսի զտիչի ներբեռնումը չանցավ վերահսկիչ գումարի ստուգումը, բաց է թողնվում։",
-      "download_failed": "Չհաջողվեց ներբեռնել AxShell կապույտ լույսի զտիչը, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/ilyamiro/serpantinum-gamma-ից։",
+      "download_failed": "Չհաջողվեց ներբեռնել AxShell կապույտ լույսի զտիչը, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/mora1ss/axshell-gamma-ից։",
       "installed": "AxShell կապույտ լույսի զտիչ {version} տեղադրվեց",
-      "install_failed": "Չհաջողվեց տեղադրել AxShell կապույտ լույսի զտիչը։ Այն չի աշխատի, մինչև չտեղադրվի github.com/ilyamiro/serpantinum-gamma-ից։",
+      "install_failed": "Չհաջողվեց տեղադրել AxShell կապույտ լույսի զտիչը։ Այն չի աշխատի, մինչև չտեղադրվի github.com/mora1ss/axshell-gamma-ից։",
       "installing": "AxShell կապույտ լույսի զտիչը տեղադրվում է...",
       "unsupported_arch": "Կապույտ լույսի զտիչի պատրաստի փաթեթներ կան միայն x86_64-ի համար, բաց է թողնվում։",
       "up_to_date": "-> AxShell կապույտ լույսի զտիչ {version}-ը արդեն տեղադրված է։"

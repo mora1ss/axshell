@@ -271,7 +271,7 @@ PanelWindow {
         property int targetPct: -1
         onTriggered: {
             if (targetPct >= 0) {
-                Quickshell.execDetached(["serpantinum-core", "brightness", "set", targetPct.toString()]);
+                Quickshell.execDetached(["axshell-core", "brightness", "set", targetPct.toString()]);
                 targetPct = -1;
             }
         }
@@ -446,7 +446,7 @@ PanelWindow {
                             briCmdThrottle.targetPct = -1;
                             let target = osdWindow.briVal > 0 ? 0 : 100;
                             OsdController.briVal = target;
-                            Quickshell.execDetached(["serpantinum-core", "brightness", "set", target.toString()]);
+                            Quickshell.execDetached(["axshell-core", "brightness", "set", target.toString()]);
                         }
                     }
                 }
@@ -509,7 +509,7 @@ PanelWindow {
                         OsdController.restartTimer();
                         if (osdWindow.kind === "brightness" && briCmdThrottle.targetPct >= 0) {
                             briCmdThrottle.stop();
-                            Quickshell.execDetached(["serpantinum-core", "brightness", "set", briCmdThrottle.targetPct.toString()]);
+                            Quickshell.execDetached(["axshell-core", "brightness", "set", briCmdThrottle.targetPct.toString()]);
                             briCmdThrottle.targetPct = -1;
                         }
                     }
@@ -614,7 +614,7 @@ PanelWindow {
                                 briCmdThrottle.targetPct = -1;
                                 let target = osdWindow.briVal > 0 ? 0 : 100;
                                 OsdController.briVal = target;
-                                Quickshell.execDetached(["serpantinum-core", "brightness", "set", target.toString()]);
+                                Quickshell.execDetached(["axshell-core", "brightness", "set", target.toString()]);
                             }
                         }
                     }
@@ -713,7 +713,7 @@ PanelWindow {
                         OsdController.restartTimer();
                         if (osdWindow.kind === "brightness" && briCmdThrottle.targetPct >= 0) {
                             briCmdThrottle.stop();
-                            Quickshell.execDetached(["serpantinum-core", "brightness", "set", briCmdThrottle.targetPct.toString()]);
+                            Quickshell.execDetached(["axshell-core", "brightness", "set", briCmdThrottle.targetPct.toString()]);
                             briCmdThrottle.targetPct = -1;
                         }
                     }

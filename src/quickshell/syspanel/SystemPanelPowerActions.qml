@@ -196,7 +196,7 @@ RowLayout {
                     if (isDisabled) {
                         actionCapsule.triggerError();
                         Quickshell.execDetached([
-                            "serpantinum-core", "notify",
+                            "axshell-core", "notify",
                             "--app", I18n.t("syspanel.actions.system_name"),
                             "--urgency", "normal",
                             "--icon", "dialog-warning",

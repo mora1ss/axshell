@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Warning command",
         "desc": "Offset and command to execute before action",
-        "placeholder": "e.g. serpantinum-core notify 'warning'"
+        "placeholder": "e.g. axshell-core notify 'warning'"
       },
       "before_command": {
         "title": "Before command",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Resume command",
         "desc": "Executed when user activity resumes",
-        "placeholder": "e.g. serpantinum-core notify 'resumed'"
+        "placeholder": "e.g. axshell-core notify 'resumed'"
       },
       "dim": {
         "title": "Dim screen",
@@ -2070,8 +2070,8 @@
       "up_to_date": "-> AxShell audio engine {version} is already installed.",
       "installed": "Installed the AxShell audio engine {version}",
       "building": "No prebuilt audio engine for this system, building it from source...",
-      "install_failed": "Failed to install the AxShell audio engine. The equalizer will not work until it is installed from github.com/ilyamiro/serpantinum-audio.",
-      "download_failed": "Could not download the AxShell audio engine, skipping. You can install it later from github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "Failed to install the AxShell audio engine. The equalizer will not work until it is installed from github.com/mora1ss/axshell-audio.",
+      "download_failed": "Could not download the AxShell audio engine, skipping. You can install it later from github.com/mora1ss/axshell-audio.",
       "checksum_failed": "The audio engine download failed its checksum check, skipping."
     },
     "deploy": {
@@ -2087,8 +2087,8 @@
       "installing": "Installing the AxShell blue light filter...",
       "up_to_date": "-> AxShell blue light filter {version} is already installed.",
       "installed": "Installed the AxShell blue light filter {version}",
-      "install_failed": "Failed to install the AxShell blue light filter. It will not work until it is installed from github.com/ilyamiro/serpantinum-gamma.",
-      "download_failed": "Could not download the AxShell blue light filter, skipping. You can install it later from github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "Failed to install the AxShell blue light filter. It will not work until it is installed from github.com/mora1ss/axshell-gamma.",
+      "download_failed": "Could not download the AxShell blue light filter, skipping. You can install it later from github.com/mora1ss/axshell-gamma.",
       "checksum_failed": "The blue light filter download failed its checksum check, skipping.",
       "unsupported_arch": "Prebuilt blue light filter packages exist only for x86_64, skipping."
     },
@@ -2096,8 +2096,8 @@
       "installing": "Installing the AxShell core services...",
       "up_to_date": "-> AxShell core services {version} are already installed.",
       "installed": "Installed the AxShell core services {version}",
-      "install_failed": "Failed to install the AxShell core services. System usage, keyboard lock indicators and the clipboard will not work until they are installed from github.com/ilyamiro/serpantinum-core.",
-      "download_failed": "Could not download the AxShell core services, skipping. You can install them later from github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "Failed to install the AxShell core services. System usage, keyboard lock indicators and the clipboard will not work until they are installed from github.com/mora1ss/axshell-core.",
+      "download_failed": "Could not download the AxShell core services, skipping. You can install them later from github.com/mora1ss/axshell-core.",
       "checksum_failed": "The core services download failed its checksum check, skipping.",
       "unsupported_arch": "Prebuilt core services packages exist only for x86_64, skipping."
     }

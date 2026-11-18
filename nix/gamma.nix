@@ -3,23 +3,23 @@
 , fetchFromGitHub
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
-  pname = "serpantinum-gamma";
-  version = "0.7.0";
+  pname = "axshell-gamma";
+  version = "0.7.1";
 
   src = fetchFromGitHub {
     owner = "mora1ss";
-    repo = "serpantinum-gamma";
+    repo = "axshell-gamma";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-1+vPg5TvFeEAT+LEhOIAtl0qZhGlNqRx5py7vr5a+vM=";
+    hash = "sha256-U8dkEc1H7Qancs1br59LurohKF2V0riw7P+V0u6HliY=";
   };
 
   cargoHash = "sha256-3UeKkkzuINTKjvASjxc2BvKnLcHosFryO/N81pNl+ic=";
 
   meta = {
     description = "Display temperature, brightness and gamma over D-Bus on Wayland";
-    homepage = "https://github.com/ilyamiro/serpantinum-gamma";
+    homepage = "https://github.com/mora1ss/axshell-gamma";
     license = lib.licenses.agpl3Plus;
-    mainProgram = "serpantinum-gamma";
+    mainProgram = "axshell-gamma";
     platforms = lib.platforms.linux;
   };
 })

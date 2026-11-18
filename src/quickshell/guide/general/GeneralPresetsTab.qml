@@ -30,7 +30,7 @@ GuideTab {
             pendingRuns = pendingRuns.concat([args]);
             return;
         }
-        presetsProc.command = ["serpantinum-core", "presets"].concat(args);
+        presetsProc.command = ["axshell-core", "presets"].concat(args);
         presetsProc.running = true;
     }
 

@@ -1,5 +1,5 @@
 pkgname=axshell
-pkgver=2.5.1
+pkgver=2.5.2
 pkgrel=1
 pkgdesc='A shell for Wayland compositors built on Quickshell'
 arch=('x86_64')
@@ -31,19 +31,19 @@ conflicts=('quickshell-git')
 backup=('etc/pam.d/axshell')
 install=axshell.install
 _skiver=0.6.4
-_audiover=0.4.0
-_gammaver=0.7.0
-_corever=0.6.1
+_audiover=0.4.1
+_gammaver=0.7.1
+_corever=0.6.2
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz"
         "ski-$_skiver-x86_64-linux.tar.gz::https://github.com/mora1ss/Ski/releases/download/v$_skiver/ski-$_skiver-x86_64-linux.tar.gz"
-        "serpantinum-audio-$_audiover-x86_64-linux.tar.gz::https://github.com/ilyamiro/serpantinum-audio/releases/download/v$_audiover/serpantinum-audio-$_audiover-x86_64-linux.tar.gz"
-        "serpantinum-gamma-$_gammaver-x86_64-linux.tar.gz::https://github.com/ilyamiro/serpantinum-gamma/releases/download/v$_gammaver/serpantinum-gamma-$_gammaver-x86_64-linux.tar.gz"
-        "serpantinum-core-$_corever-x86_64-linux.tar.gz::https://github.com/ilyamiro/serpantinum-core/releases/download/v$_corever/serpantinum-core-$_corever-x86_64-linux.tar.gz")
+        "axshell-audio-$_audiover-x86_64-linux.tar.gz::https://github.com/mora1ss/axshell-audio/releases/download/v$_audiover/axshell-audio-$_audiover-x86_64-linux.tar.gz"
+        "axshell-gamma-$_gammaver-x86_64-linux.tar.gz::https://github.com/mora1ss/axshell-gamma/releases/download/v$_gammaver/axshell-gamma-$_gammaver-x86_64-linux.tar.gz"
+        "axshell-core-$_corever-x86_64-linux.tar.gz::https://github.com/mora1ss/axshell-core/releases/download/v$_corever/axshell-core-$_corever-x86_64-linux.tar.gz")
 sha256sums=('886eff7f5b2a3e2d8f7f44e8d2e99d6e7912d560744c87ecbc147e2a23a89bef'
             'c0bab1f4ea630df7ece3b680b0b52d7442190fe9969360aceef1f556f1f9eb0f'
-            '8c1ac960b3bf6a6f06ac9d0ffb6a7a92ef32b06be7aec28de5d915db6b46f28d'
-            '942ba54eab4ad7fdce634e61b6c212bbfc14c2771115f4f1b2d370f32646ae04'
-            '6ec59251655c4c646330890a5cf0c04231ea1cac87434bdbc7e38f1ee4f201df')
+            '82648900985873b760e493be62641bf636d98a98e7d5a90b5b3658125cfe7f73'
+            'e6cf2471ff6c363888e957744e9a395585646920f76f942a3198a7865c6e15b2'
+            'e4534574c312df26f4a1f668e7f7d8d207bec4a320f5696b705d0be7e2340137')
 
 package() {
     cd "$pkgname-$pkgver"

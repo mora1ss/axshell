@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "경고 명령",
         "desc": "동작 실행 전 오프셋과 실행할 명령",
-        "placeholder": "예: serpantinum-core notify 'warning'"
+        "placeholder": "예: axshell-core notify 'warning'"
       },
       "before_command": {
         "title": "사전 명령",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "복귀 명령",
         "desc": "사용자 활동이 재개될 때 실행됩니다",
-        "placeholder": "예: serpantinum-core notify 'resumed'"
+        "placeholder": "예: axshell-core notify 'resumed'"
       },
       "dim": {
         "title": "화면 어둡게",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "이 시스템용 사전 빌드 오디오 엔진이 없어 소스에서 빌드하는 중...",
       "checksum_failed": "오디오 엔진 다운로드가 체크섬 검사에 실패하여 건너뜁니다.",
-      "download_failed": "AxShell 오디오 엔진을 다운로드할 수 없어 건너뜁니다. 나중에 github.com/ilyamiro/serpantinum-audio에서 설치할 수 있습니다.",
+      "download_failed": "AxShell 오디오 엔진을 다운로드할 수 없어 건너뜁니다. 나중에 github.com/mora1ss/axshell-audio에서 설치할 수 있습니다.",
       "installed": "AxShell 오디오 엔진 {version} 설치됨",
-      "install_failed": "AxShell 오디오 엔진 설치에 실패했습니다. github.com/ilyamiro/serpantinum-audio에서 설치하기 전까지 이퀄라이저가 작동하지 않습니다.",
+      "install_failed": "AxShell 오디오 엔진 설치에 실패했습니다. github.com/mora1ss/axshell-audio에서 설치하기 전까지 이퀄라이저가 작동하지 않습니다.",
       "installing": "AxShell 오디오 엔진 설치 중...",
       "up_to_date": "-> AxShell 오디오 엔진 {version}이(가) 이미 설치되어 있습니다."
     },
     "core": {
       "checksum_failed": "핵심 서비스 다운로드가 체크섬 검사에 실패하여 건너뜁니다.",
-      "download_failed": "AxShell 핵심 서비스를 다운로드할 수 없어 건너뜁니다. 나중에 github.com/ilyamiro/serpantinum-core에서 설치할 수 있습니다.",
+      "download_failed": "AxShell 핵심 서비스를 다운로드할 수 없어 건너뜁니다. 나중에 github.com/mora1ss/axshell-core에서 설치할 수 있습니다.",
       "installed": "AxShell 핵심 서비스 {version} 설치됨",
-      "install_failed": "AxShell 핵심 서비스 설치에 실패했습니다. github.com/ilyamiro/serpantinum-core에서 설치하기 전까지 시스템 사용량, 키보드 잠금 표시기, 클립보드가 작동하지 않습니다.",
+      "install_failed": "AxShell 핵심 서비스 설치에 실패했습니다. github.com/mora1ss/axshell-core에서 설치하기 전까지 시스템 사용량, 키보드 잠금 표시기, 클립보드가 작동하지 않습니다.",
       "installing": "AxShell 핵심 서비스 설치 중...",
       "unsupported_arch": "사전 빌드된 핵심 서비스 패키지는 x86_64에만 있어 건너뜁니다.",
       "up_to_date": "-> AxShell 핵심 서비스 {version}이(가) 이미 설치되어 있습니다."
     },
     "gamma": {
       "checksum_failed": "블루라이트 필터 다운로드가 체크섬 검사에 실패하여 건너뜁니다.",
-      "download_failed": "AxShell 블루라이트 필터를 다운로드할 수 없어 건너뜁니다. 나중에 github.com/ilyamiro/serpantinum-gamma에서 설치할 수 있습니다.",
+      "download_failed": "AxShell 블루라이트 필터를 다운로드할 수 없어 건너뜁니다. 나중에 github.com/mora1ss/axshell-gamma에서 설치할 수 있습니다.",
       "installed": "AxShell 블루라이트 필터 {version} 설치됨",
-      "install_failed": "AxShell 블루라이트 필터 설치에 실패했습니다. github.com/ilyamiro/serpantinum-gamma에서 설치하기 전까지 작동하지 않습니다.",
+      "install_failed": "AxShell 블루라이트 필터 설치에 실패했습니다. github.com/mora1ss/axshell-gamma에서 설치하기 전까지 작동하지 않습니다.",
       "installing": "AxShell 블루라이트 필터 설치 중...",
       "unsupported_arch": "사전 빌드된 블루라이트 필터 패키지는 x86_64에만 있어 건너뜁니다.",
       "up_to_date": "-> AxShell 블루라이트 필터 {version}이(가) 이미 설치되어 있습니다."

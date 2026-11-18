@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-AUDIO_REPO="ilyamiro/serpantinum-audio"
+AUDIO_REPO="mora1ss/axshell-audio"
 AUDIO_PREFIX="/usr/local"
 
 audio_release_json() {
@@ -8,8 +8,8 @@ audio_release_json() {
 }
 
 audio_installed_version() {
-    command -v serpantinum-audio >/dev/null 2>&1 || return 0
-    serpantinum-audio version 2>/dev/null | awk '{print $2}'
+    command -v axshell-audio >/dev/null 2>&1 || return 0
+    axshell-audio version 2>/dev/null | awk '{print $2}'
 }
 
 audio_arch() {
@@ -38,11 +38,11 @@ audio_install_prebuilt() {
 
     mkdir -p "$work/stage"
     tar -xzf "$archive" -C "$work/stage" || return 1
-    "$work/stage/usr/bin/serpantinum-audio" version >/dev/null 2>&1 || return 1
+    "$work/stage/usr/bin/axshell-audio" version >/dev/null 2>&1 || return 1
 
-    sudo install -Dm755 "$work/stage/usr/bin/serpantinum-audio" "$AUDIO_PREFIX/bin/serpantinum-audio" || return 1
-    if [ -f "$work/stage/usr/share/licenses/serpantinum-audio/LICENSE" ]; then
-        sudo install -Dm644 "$work/stage/usr/share/licenses/serpantinum-audio/LICENSE" "$AUDIO_PREFIX/share/licenses/serpantinum-audio/LICENSE" || return 1
+    sudo install -Dm755 "$work/stage/usr/bin/axshell-audio" "$AUDIO_PREFIX/bin/axshell-audio" || return 1
+    if [ -f "$work/stage/usr/share/licenses/axshell-audio/LICENSE" ]; then
+        sudo install -Dm644 "$work/stage/usr/share/licenses/axshell-audio/LICENSE" "$AUDIO_PREFIX/share/licenses/axshell-audio/LICENSE" || return 1
     fi
 }
 
@@ -71,14 +71,14 @@ audio_build_from_source() {
     src_dir="$work/source"
 
     make -C "$src_dir" >/dev/null || return 1
-    "$src_dir/serpantinum-audio" version >/dev/null 2>&1 || return 1
+    "$src_dir/axshell-audio" version >/dev/null 2>&1 || return 1
     sudo make -C "$src_dir" install PREFIX="$AUDIO_PREFIX" >/dev/null
 }
 
 hand_over_from_easyeffects() {
-    command -v serpantinum-audio >/dev/null 2>&1 || return 0
+    command -v axshell-audio >/dev/null 2>&1 || return 0
     bash "$AXSHELL_DIR/scripts/migrate_easyeffects.sh" 2>/dev/null || true
-    serpantinum-audio start >/dev/null 2>&1 || true
+    axshell-audio start >/dev/null 2>&1 || true
 }
 
 install_audio_daemon() {
@@ -89,13 +89,13 @@ install_audio_daemon() {
 
     if ! json="$(audio_release_json)" || [ -z "$json" ]; then
         echo -e "\e[33m[ WARN ]\e[0m $(t "installer.audio.download_failed")"
-        [ -n "$current" ] || FAILED_PKGS+=("serpantinum-audio")
+        [ -n "$current" ] || FAILED_PKGS+=("axshell-audio")
         return 0
     fi
     tag="$(jq -r '.tag_name // empty' <<< "$json")"
     if [ -z "$tag" ]; then
         echo -e "\e[33m[ WARN ]\e[0m $(t "installer.audio.download_failed")"
-        [ -n "$current" ] || FAILED_PKGS+=("serpantinum-audio")
+        [ -n "$current" ] || FAILED_PKGS+=("axshell-audio")
         return 0
     fi
 
@@ -106,15 +106,15 @@ install_audio_daemon() {
 
     local cache="${XDG_CACHE_HOME:-$HOME/.cache}"
     mkdir -p "$cache"
-    work="$(mktemp -d "$cache/serpantinum-audio.XXXXXX")"
+    work="$(mktemp -d "$cache/axshell-audio.XXXXXX")"
 
     if audio_install_prebuilt "$json" "$work" || audio_build_from_source "$json" "$work"; then
         hash -r
         echo -e "\e[32m[ OK ] $(t "installer.audio.installed" "version=${tag#v}")\e[0m"
-        restart_daemon_if_running serpantinum-audio '(^|/)serpantinum-audio daemon$' ctl quit
+        restart_daemon_if_running axshell-audio '(^|/)axshell-audio daemon$' ctl quit
     else
         echo -e "\e[31m[ FAILED ] $(t "installer.audio.install_failed")\e[0m"
-        FAILED_PKGS+=("serpantinum-audio")
+        FAILED_PKGS+=("axshell-audio")
     fi
     rm -rf "$work"
 }

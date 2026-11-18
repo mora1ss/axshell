@@ -156,7 +156,7 @@ Item {
     Process {
         id: hibernateCheck
         running: false
-        command: ["serpantinum-core", "system", "can-hibernate"]
+        command: ["axshell-core", "system", "can-hibernate"]
         stdout: StdioCollector {
             onStreamFinished: {
                 let out = this.text.trim();
@@ -249,7 +249,7 @@ Item {
 
     Process {
         id: briPoller
-        command: ["serpantinum-core", "brightness", "get"]
+        command: ["axshell-core", "brightness", "get"]
         running: false
         stdout: StdioCollector {
             onStreamFinished: {

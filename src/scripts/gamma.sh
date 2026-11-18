@@ -41,21 +41,21 @@ usage() {
 
 gamma() {
     if [[ "$VERBOSE" -eq 1 ]]; then
-        serpantinum-gamma "$@"
+        axshell-gamma "$@"
     else
-        serpantinum-gamma "$@" 2>/dev/null
+        axshell-gamma "$@" 2>/dev/null
     fi
 }
 
 gamma_installed() {
-    if ! command -v serpantinum-gamma >/dev/null 2>&1; then
-        log "serpantinum-gamma is not installed."
+    if ! command -v axshell-gamma >/dev/null 2>&1; then
+        log "axshell-gamma is not installed."
         return 1
     fi
 }
 
 gamma_running() {
-    gamma_installed 2>/dev/null && serpantinum-gamma status >/dev/null 2>&1
+    gamma_installed 2>/dev/null && axshell-gamma status >/dev/null 2>&1
 }
 
 target_args() {
@@ -80,13 +80,13 @@ gamma_start() {
         done
     fi
 
-    log "Starting serpantinum-gamma."
+    log "Starting axshell-gamma."
     gamma start
 }
 
 gamma_stop() {
-    command -v serpantinum-gamma >/dev/null 2>&1 || return 0
-    log "Stopping serpantinum-gamma."
+    command -v axshell-gamma >/dev/null 2>&1 || return 0
+    log "Stopping axshell-gamma."
     gamma quit
 }
 

@@ -5,14 +5,14 @@
 , pipewire
 }:
 stdenv.mkDerivation (finalAttrs: {
-  pname = "serpantinum-audio";
-  version = "0.4.0";
+  pname = "axshell-audio";
+  version = "0.4.1";
 
   src = fetchFromGitHub {
     owner = "mora1ss";
-    repo = "serpantinum-audio";
+    repo = "axshell-audio";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-lG01hs2rCee2sKFWyWN3V4Z14eAbuFNyGq8UHbD7K6g=";
+    hash = "sha256-6GKbaSBHH3CfzKHIXPcNEkG8z5BBrDBvRQqzRj3iTQ4=";
   };
 
   strictDeps = true;
@@ -26,9 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "PipeWire audio processor for the AxShell shell";
-    homepage = "https://github.com/ilyamiro/serpantinum-audio";
+    homepage = "https://github.com/mora1ss/axshell-audio";
     license = lib.licenses.agpl3Only;
-    mainProgram = "serpantinum-audio";
+    mainProgram = "axshell-audio";
     platforms = lib.platforms.linux;
   };
 })

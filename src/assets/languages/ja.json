@@ -848,26 +848,26 @@
     "audio": {
       "building": "このシステム用のビルド済みオーディオエンジンがないため、ソースからビルドしています...",
       "checksum_failed": "オーディオエンジンのダウンロードがチェックサム検証に失敗したため、スキップします。",
-      "download_failed": "AxShell オーディオエンジンをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-audio からインストールできます。",
+      "download_failed": "AxShell オーディオエンジンをダウンロードできなかったため、スキップします。後で github.com/mora1ss/axshell-audio からインストールできます。",
       "installed": "AxShell オーディオエンジン {version} をインストールしました",
-      "install_failed": "AxShell オーディオエンジンのインストールに失敗しました。github.com/ilyamiro/serpantinum-audio からインストールするまでイコライザーは動作しません。",
+      "install_failed": "AxShell オーディオエンジンのインストールに失敗しました。github.com/mora1ss/axshell-audio からインストールするまでイコライザーは動作しません。",
       "installing": "AxShell オーディオエンジンをインストールしています...",
       "up_to_date": "-> AxShell オーディオエンジン {version} は既にインストールされています。"
     },
     "core": {
       "checksum_failed": "コアサービスのダウンロードがチェックサム検証に失敗したため、スキップします。",
-      "download_failed": "AxShell コアサービスをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-core からインストールできます。",
+      "download_failed": "AxShell コアサービスをダウンロードできなかったため、スキップします。後で github.com/mora1ss/axshell-core からインストールできます。",
       "installed": "AxShell コアサービス {version} をインストールしました",
-      "install_failed": "AxShell コアサービスのインストールに失敗しました。github.com/ilyamiro/serpantinum-core からインストールするまで、システム使用状況、キーボードロック表示、クリップボードは動作しません。",
+      "install_failed": "AxShell コアサービスのインストールに失敗しました。github.com/mora1ss/axshell-core からインストールするまで、システム使用状況、キーボードロック表示、クリップボードは動作しません。",
       "installing": "AxShell コアサービスをインストールしています...",
       "unsupported_arch": "ビルド済みのコアサービスパッケージは x86_64 のみ提供されているため、スキップします。",
       "up_to_date": "-> AxShell コアサービス {version} は既にインストールされています。"
     },
     "gamma": {
       "checksum_failed": "ブルーライトフィルターのダウンロードがチェックサム検証に失敗したため、スキップします。",
-      "download_failed": "AxShell ブルーライトフィルターをダウンロードできなかったため、スキップします。後で github.com/ilyamiro/serpantinum-gamma からインストールできます。",
+      "download_failed": "AxShell ブルーライトフィルターをダウンロードできなかったため、スキップします。後で github.com/mora1ss/axshell-gamma からインストールできます。",
       "installed": "AxShell ブルーライトフィルター {version} をインストールしました",
-      "install_failed": "AxShell ブルーライトフィルターのインストールに失敗しました。github.com/ilyamiro/serpantinum-gamma からインストールするまで動作しません。",
+      "install_failed": "AxShell ブルーライトフィルターのインストールに失敗しました。github.com/mora1ss/axshell-gamma からインストールするまで動作しません。",
       "installing": "AxShell ブルーライトフィルターをインストールしています...",
       "unsupported_arch": "ビルド済みのブルーライトフィルターパッケージは x86_64 のみ提供されているため、スキップします。",
       "up_to_date": "-> AxShell ブルーライトフィルター {version} は既にインストールされています。"
@@ -1037,7 +1037,7 @@
       "warning_command": {
         "title": "警告コマンド",
         "desc": "アクションの前に実行するオフセットとコマンド",
-        "placeholder": "例: serpantinum-core notify 'warning'"
+        "placeholder": "例: axshell-core notify 'warning'"
       },
       "before_command": {
         "title": "直前コマンド",
@@ -1047,7 +1047,7 @@
       "resume_command": {
         "title": "復帰時コマンド",
         "desc": "ユーザーのアクティビティが再開されたときに実行されます",
-        "placeholder": "例: serpantinum-core notify 'resumed'"
+        "placeholder": "例: axshell-core notify 'resumed'"
       },
       "dim": {
         "title": "画面の減光",

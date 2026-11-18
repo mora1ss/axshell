@@ -86,7 +86,7 @@ Item {
         id: visualizerProcess
         running: root.processEnabled
         onExited: root.restartVisualizer()
-        command: ["serpantinum-audio", "visualizer", "--bars", String(root.barCount), "--framerate", "60", "--sensitivity", "150"]
+        command: ["axshell-audio", "visualizer", "--bars", String(root.barCount), "--framerate", "60", "--sensitivity", "150"]
         stdout: SplitParser {
             onRead: data => {
                 if (!root.processEnabled) return;

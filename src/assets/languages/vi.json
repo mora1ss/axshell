@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Lệnh cảnh báo",
         "desc": "Độ trễ và lệnh thực thi trước tác vụ",
-        "placeholder": "VD: serpantinum-core notify 'cảnh báo'"
+        "placeholder": "VD: axshell-core notify 'cảnh báo'"
       },
       "before_command": {
         "title": "Lệnh trước tác vụ",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Lệnh khi khôi phục",
         "desc": "Thực thi khi người dùng tiếp tục hoạt động",
-        "placeholder": "VD: serpantinum-core notify 'đã khôi phục'"
+        "placeholder": "VD: axshell-core notify 'đã khôi phục'"
       },
       "dim": {
         "title": "Làm mờ màn hình",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "Không có công cụ âm thanh dựng sẵn cho hệ thống này, đang biên dịch từ mã nguồn...",
       "checksum_failed": "Bản tải xuống công cụ âm thanh không qua được bước kiểm tra checksum, bỏ qua.",
-      "download_failed": "Không thể tải xuống công cụ âm thanh AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-audio.",
+      "download_failed": "Không thể tải xuống công cụ âm thanh AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/mora1ss/axshell-audio.",
       "installed": "Đã cài đặt công cụ âm thanh AxShell {version}",
-      "install_failed": "Cài đặt công cụ âm thanh AxShell thất bại. Bộ cân bằng âm sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "Cài đặt công cụ âm thanh AxShell thất bại. Bộ cân bằng âm sẽ không hoạt động cho đến khi được cài đặt từ github.com/mora1ss/axshell-audio.",
       "installing": "Đang cài đặt công cụ âm thanh AxShell...",
       "up_to_date": "-> Công cụ âm thanh AxShell {version} đã được cài đặt."
     },
     "core": {
       "checksum_failed": "Bản tải xuống các dịch vụ lõi không qua được bước kiểm tra checksum, bỏ qua.",
-      "download_failed": "Không thể tải xuống các dịch vụ lõi AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-core.",
+      "download_failed": "Không thể tải xuống các dịch vụ lõi AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/mora1ss/axshell-core.",
       "installed": "Đã cài đặt các dịch vụ lõi AxShell {version}",
-      "install_failed": "Cài đặt các dịch vụ lõi AxShell thất bại. Mức sử dụng hệ thống, chỉ báo khóa bàn phím và bộ nhớ tạm sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "Cài đặt các dịch vụ lõi AxShell thất bại. Mức sử dụng hệ thống, chỉ báo khóa bàn phím và bộ nhớ tạm sẽ không hoạt động cho đến khi được cài đặt từ github.com/mora1ss/axshell-core.",
       "installing": "Đang cài đặt các dịch vụ lõi AxShell...",
       "unsupported_arch": "Gói dựng sẵn của các dịch vụ lõi chỉ có cho x86_64, bỏ qua.",
       "up_to_date": "-> Các dịch vụ lõi AxShell {version} đã được cài đặt."
     },
     "gamma": {
       "checksum_failed": "Bản tải xuống bộ lọc ánh sáng xanh không qua được bước kiểm tra checksum, bỏ qua.",
-      "download_failed": "Không thể tải xuống bộ lọc ánh sáng xanh AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/serpantinum-gamma.",
+      "download_failed": "Không thể tải xuống bộ lọc ánh sáng xanh AxShell, bỏ qua. Bạn có thể cài đặt sau từ github.com/mora1ss/axshell-gamma.",
       "installed": "Đã cài đặt bộ lọc ánh sáng xanh AxShell {version}",
-      "install_failed": "Cài đặt bộ lọc ánh sáng xanh AxShell thất bại. Bộ lọc sẽ không hoạt động cho đến khi được cài đặt từ github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "Cài đặt bộ lọc ánh sáng xanh AxShell thất bại. Bộ lọc sẽ không hoạt động cho đến khi được cài đặt từ github.com/mora1ss/axshell-gamma.",
       "installing": "Đang cài đặt bộ lọc ánh sáng xanh AxShell...",
       "unsupported_arch": "Gói dựng sẵn của bộ lọc ánh sáng xanh chỉ có cho x86_64, bỏ qua.",
       "up_to_date": "-> Bộ lọc ánh sáng xanh AxShell {version} đã được cài đặt."

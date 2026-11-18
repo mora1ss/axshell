@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GAMMA_REPO="ilyamiro/serpantinum-gamma"
+GAMMA_REPO="mora1ss/axshell-gamma"
 GAMMA_PREFIX="/usr/local"
 
 gamma_release_json() {
@@ -8,8 +8,8 @@ gamma_release_json() {
 }
 
 gamma_installed_version() {
-    command -v serpantinum-gamma >/dev/null 2>&1 || return 0
-    serpantinum-gamma --version 2>/dev/null | awk '{print $2}'
+    command -v axshell-gamma >/dev/null 2>&1 || return 0
+    axshell-gamma --version 2>/dev/null | awk '{print $2}'
 }
 
 gamma_install_prebuilt() {
@@ -29,11 +29,11 @@ gamma_install_prebuilt() {
 
     mkdir -p "$work/stage"
     tar -xzf "$archive" -C "$work/stage" || return 1
-    "$work/stage/usr/bin/serpantinum-gamma" --version >/dev/null 2>&1 || return 1
+    "$work/stage/usr/bin/axshell-gamma" --version >/dev/null 2>&1 || return 1
 
-    sudo install -Dm755 "$work/stage/usr/bin/serpantinum-gamma" "$GAMMA_PREFIX/bin/serpantinum-gamma" || return 1
-    if [ -f "$work/stage/usr/share/licenses/serpantinum-gamma/LICENSE" ]; then
-        sudo install -Dm644 "$work/stage/usr/share/licenses/serpantinum-gamma/LICENSE" "$GAMMA_PREFIX/share/licenses/serpantinum-gamma/LICENSE" || return 1
+    sudo install -Dm755 "$work/stage/usr/bin/axshell-gamma" "$GAMMA_PREFIX/bin/axshell-gamma" || return 1
+    if [ -f "$work/stage/usr/share/licenses/axshell-gamma/LICENSE" ]; then
+        sudo install -Dm644 "$work/stage/usr/share/licenses/axshell-gamma/LICENSE" "$GAMMA_PREFIX/share/licenses/axshell-gamma/LICENSE" || return 1
     fi
 }
 
@@ -45,19 +45,19 @@ install_gamma_daemon() {
 
     if [ "$(uname -m)" != "x86_64" ]; then
         echo -e "\e[33m[ WARN ]\e[0m $(t "installer.gamma.unsupported_arch")"
-        [ -n "$current" ] || FAILED_PKGS+=("serpantinum-gamma")
+        [ -n "$current" ] || FAILED_PKGS+=("axshell-gamma")
         return 0
     fi
 
     if ! json="$(gamma_release_json)" || [ -z "$json" ]; then
         echo -e "\e[33m[ WARN ]\e[0m $(t "installer.gamma.download_failed")"
-        [ -n "$current" ] || FAILED_PKGS+=("serpantinum-gamma")
+        [ -n "$current" ] || FAILED_PKGS+=("axshell-gamma")
         return 0
     fi
     tag="$(jq -r '.tag_name // empty' <<< "$json")"
     if [ -z "$tag" ]; then
         echo -e "\e[33m[ WARN ]\e[0m $(t "installer.gamma.download_failed")"
-        [ -n "$current" ] || FAILED_PKGS+=("serpantinum-gamma")
+        [ -n "$current" ] || FAILED_PKGS+=("axshell-gamma")
         return 0
     fi
 
@@ -68,14 +68,14 @@ install_gamma_daemon() {
 
     local cache="${XDG_CACHE_HOME:-$HOME/.cache}"
     mkdir -p "$cache"
-    work="$(mktemp -d "$cache/serpantinum-gamma.XXXXXX")"
+    work="$(mktemp -d "$cache/axshell-gamma.XXXXXX")"
 
     if gamma_install_prebuilt "$json" "$work"; then
         hash -r
         echo -e "\e[32m[ OK ] $(t "installer.gamma.installed" "version=${tag#v}")\e[0m"
     else
         echo -e "\e[31m[ FAILED ] $(t "installer.gamma.install_failed")\e[0m"
-        FAILED_PKGS+=("serpantinum-gamma")
+        FAILED_PKGS+=("axshell-gamma")
     fi
     rm -rf "$work"
 }

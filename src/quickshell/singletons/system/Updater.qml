@@ -85,8 +85,8 @@ Item {
         let notifBody = I18n.t("updater.notification.update_available_body", { "local": root.localVersion });
         let actionArg = "default=" + actionText;
 
-        let script = 'command -v serpantinum-core >/dev/null 2>&1 || exit 0; ' +
-            'ACTION=$(serpantinum-core notify --app "$1" --icon software-update-available --action "$2" -- "$3" "$4"); ' +
+        let script = 'command -v axshell-core >/dev/null 2>&1 || exit 0; ' +
+            'ACTION=$(axshell-core notify --app "$1" --icon software-update-available --action "$2" -- "$3" "$4"); ' +
             'if [ "$ACTION" = "default" ] && [ -n "$5" ] && [ -f "$5/scripts/settings.sh" ]; then ' +
             'bash "$5/scripts/settings.sh" open about; ' +
             'fi';

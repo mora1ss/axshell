@@ -163,7 +163,7 @@ Item {
         root.lastDelivered = lasts;
         root.saveState();
         Quickshell.execDetached([
-            "serpantinum-core", "notify",
+            "axshell-core", "notify",
             "--app", "Weather",
             "--urgency", alert.urgency === "critical" ? "critical" : "normal",
             "--icon", "weather-kind-" + alert.kind,

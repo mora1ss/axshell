@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Xəbərdarlıq əmri",
         "desc": "Əməliyyatdan nə qədər əvvəl xəbərdarlıq veriləcəyini və icra olunacaq əmri təyin et",
-        "placeholder": "Məsələn, serpantinum-core notify 'xəbərdarlıq'"
+        "placeholder": "Məsələn, axshell-core notify 'xəbərdarlıq'"
       },
       "before_command": {
         "title": "Əvvəl icra olunan əmr",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Fəaliyyət bərpa olunanda icra olunan əmr",
         "desc": "İstifadəçi fəaliyyəti bərpa olunanda icra olunur",
-        "placeholder": "Məsələn, serpantinum-core notify 'bərpa olundu'"
+        "placeholder": "Məsələn, axshell-core notify 'bərpa olundu'"
       },
       "dim": {
         "title": "Ekranı tutqunlaşdır",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "Bu sistem üçün hazır səs mühərriki yoxdur, mənbədən qurulur...",
       "checksum_failed": "Səs mühərriki yükləməsi yoxlama cəmi yoxlamasından keçmədi, keçilir.",
-      "download_failed": "AxShell səs mühərriki yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-audio ünvanından quraşdıra bilərsiniz.",
+      "download_failed": "AxShell səs mühərriki yüklənə bilmədi, keçilir. Sonra github.com/mora1ss/axshell-audio ünvanından quraşdıra bilərsiniz.",
       "installed": "AxShell səs mühərriki {version} quraşdırıldı",
-      "install_failed": "AxShell səs mühərriki quraşdırıla bilmədi. Ekvalayzer github.com/ilyamiro/serpantinum-audio ünvanından quraşdırılana qədər işləməyəcək.",
+      "install_failed": "AxShell səs mühərriki quraşdırıla bilmədi. Ekvalayzer github.com/mora1ss/axshell-audio ünvanından quraşdırılana qədər işləməyəcək.",
       "installing": "AxShell səs mühərriki quraşdırılır...",
       "up_to_date": "-> AxShell səs mühərriki {version} artıq quraşdırılıb."
     },
     "core": {
       "checksum_failed": "Əsas xidmətlərin yüklənməsi yoxlama cəmi yoxlamasından keçmədi, keçilir.",
-      "download_failed": "AxShell əsas xidmətləri yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-core ünvanından quraşdıra bilərsiniz.",
+      "download_failed": "AxShell əsas xidmətləri yüklənə bilmədi, keçilir. Sonra github.com/mora1ss/axshell-core ünvanından quraşdıra bilərsiniz.",
       "installed": "AxShell əsas xidmətləri {version} quraşdırıldı",
-      "install_failed": "AxShell əsas xidmətləri quraşdırıla bilmədi. Sistem istifadəsi, klaviatura kilidi göstəriciləri və mübadilə buferi github.com/ilyamiro/serpantinum-core ünvanından quraşdırılana qədər işləməyəcək.",
+      "install_failed": "AxShell əsas xidmətləri quraşdırıla bilmədi. Sistem istifadəsi, klaviatura kilidi göstəriciləri və mübadilə buferi github.com/mora1ss/axshell-core ünvanından quraşdırılana qədər işləməyəcək.",
       "installing": "AxShell əsas xidmətləri quraşdırılır...",
       "unsupported_arch": "Əsas xidmətlərin hazır paketləri yalnız x86_64 üçün mövcuddur, keçilir.",
       "up_to_date": "-> AxShell əsas xidmətləri {version} artıq quraşdırılıb."
     },
     "gamma": {
       "checksum_failed": "Mavi işıq filtrinin yüklənməsi yoxlama cəmi yoxlamasından keçmədi, keçilir.",
-      "download_failed": "AxShell mavi işıq filtri yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/serpantinum-gamma ünvanından quraşdıra bilərsiniz.",
+      "download_failed": "AxShell mavi işıq filtri yüklənə bilmədi, keçilir. Sonra github.com/mora1ss/axshell-gamma ünvanından quraşdıra bilərsiniz.",
       "installed": "AxShell mavi işıq filtri {version} quraşdırıldı",
-      "install_failed": "AxShell mavi işıq filtri quraşdırıla bilmədi. github.com/ilyamiro/serpantinum-gamma ünvanından quraşdırılana qədər işləməyəcək.",
+      "install_failed": "AxShell mavi işıq filtri quraşdırıla bilmədi. github.com/mora1ss/axshell-gamma ünvanından quraşdırılana qədər işləməyəcək.",
       "installing": "AxShell mavi işıq filtri quraşdırılır...",
       "unsupported_arch": "Mavi işıq filtrinin hazır paketləri yalnız x86_64 üçün mövcuddur, keçilir.",
       "up_to_date": "-> AxShell mavi işıq filtri {version} artıq quraşdırılıb."

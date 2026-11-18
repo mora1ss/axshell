@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "دستور هشدار",
         "desc": "فاصله زمانی و دستوری که قبل از کنش اجرا می‌شود",
-        "placeholder": "مانند: serpantinum-core notify 'warning'"
+        "placeholder": "مانند: axshell-core notify 'warning'"
       },
       "before_command": {
         "title": "دستور پیش از کنش",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "دستور ازسرگیری",
         "desc": "هنگام ازسرگیری فعالیت کاربر اجرا می‌شود",
-        "placeholder": "مانند: serpantinum-core notify 'resumed'"
+        "placeholder": "مانند: axshell-core notify 'resumed'"
       },
       "dim": {
         "title": "تاریک کردن صفحه",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "موتور صوتی از پیش ساخته‌شده‌ای برای این سیستم وجود ندارد، در حال ساخت از سورس...",
       "checksum_failed": "دانلود موتور صوتی در بررسی چک‌سام رد شد، نادیده گرفته می‌شود.",
-      "download_failed": "دانلود موتور صوتی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/ilyamiro/serpantinum-audio نصب کنید.",
+      "download_failed": "دانلود موتور صوتی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/mora1ss/axshell-audio نصب کنید.",
       "installed": "موتور صوتی AxShell {version} نصب شد",
-      "install_failed": "نصب موتور صوتی AxShell ناموفق بود. اکولایزر تا زمانی که از github.com/ilyamiro/serpantinum-audio نصب نشود کار نمی‌کند.",
+      "install_failed": "نصب موتور صوتی AxShell ناموفق بود. اکولایزر تا زمانی که از github.com/mora1ss/axshell-audio نصب نشود کار نمی‌کند.",
       "installing": "در حال نصب موتور صوتی AxShell...",
       "up_to_date": "-> موتور صوتی AxShell {version} از قبل نصب شده است."
     },
     "core": {
       "checksum_failed": "دانلود سرویس‌های اصلی در بررسی چک‌سام رد شد، نادیده گرفته می‌شود.",
-      "download_failed": "دانلود سرویس‌های اصلی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن‌ها را از github.com/ilyamiro/serpantinum-core نصب کنید.",
+      "download_failed": "دانلود سرویس‌های اصلی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن‌ها را از github.com/mora1ss/axshell-core نصب کنید.",
       "installed": "سرویس‌های اصلی AxShell {version} نصب شدند",
-      "install_failed": "نصب سرویس‌های اصلی AxShell ناموفق بود. میزان استفاده از سیستم، نشانگرهای قفل صفحه‌کلید و کلیپ‌بورد تا زمانی که از github.com/ilyamiro/serpantinum-core نصب نشوند کار نمی‌کنند.",
+      "install_failed": "نصب سرویس‌های اصلی AxShell ناموفق بود. میزان استفاده از سیستم، نشانگرهای قفل صفحه‌کلید و کلیپ‌بورد تا زمانی که از github.com/mora1ss/axshell-core نصب نشوند کار نمی‌کنند.",
       "installing": "در حال نصب سرویس‌های اصلی AxShell...",
       "unsupported_arch": "بسته‌های از پیش ساخته‌شده سرویس‌های اصلی فقط برای x86_64 وجود دارند، نادیده گرفته می‌شود.",
       "up_to_date": "-> سرویس‌های اصلی AxShell {version} از قبل نصب شده‌اند."
     },
     "gamma": {
       "checksum_failed": "دانلود فیلتر نور آبی در بررسی چک‌سام رد شد، نادیده گرفته می‌شود.",
-      "download_failed": "دانلود فیلتر نور آبی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/ilyamiro/serpantinum-gamma نصب کنید.",
+      "download_failed": "دانلود فیلتر نور آبی AxShell ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/mora1ss/axshell-gamma نصب کنید.",
       "installed": "فیلتر نور آبی AxShell {version} نصب شد",
-      "install_failed": "نصب فیلتر نور آبی AxShell ناموفق بود. تا زمانی که از github.com/ilyamiro/serpantinum-gamma نصب نشود کار نمی‌کند.",
+      "install_failed": "نصب فیلتر نور آبی AxShell ناموفق بود. تا زمانی که از github.com/mora1ss/axshell-gamma نصب نشود کار نمی‌کند.",
       "installing": "در حال نصب فیلتر نور آبی AxShell...",
       "unsupported_arch": "بسته‌های از پیش ساخته‌شده فیلتر نور آبی فقط برای x86_64 وجود دارند، نادیده گرفته می‌شود.",
       "up_to_date": "-> فیلتر نور آبی AxShell {version} از قبل نصب شده است."

@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Команда попередження",
         "desc": "Зміщення і команда, що виконується перед дією",
-        "placeholder": "напр. serpantinum-core notify 'попередження'"
+        "placeholder": "напр. axshell-core notify 'попередження'"
       },
       "before_command": {
         "title": "Команда перед дією",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Команда відновлення",
         "desc": "Виконується під час відновлення активності",
-        "placeholder": "напр. serpantinum-core notify 'відновлено'"
+        "placeholder": "напр. axshell-core notify 'відновлено'"
       },
       "dim": {
         "title": "Затемнення екрана",
@@ -2069,26 +2069,26 @@
     "audio": {
       "building": "Для цієї системи немає готового аудіодвигуна, збирання з вихідного коду...",
       "checksum_failed": "Завантажений аудіодвигун не пройшов перевірку контрольної суми, пропуск.",
-      "download_failed": "Не вдалося завантажити аудіодвигун AxShell, пропуск. Ви можете встановити його пізніше з github.com/ilyamiro/serpantinum-audio.",
+      "download_failed": "Не вдалося завантажити аудіодвигун AxShell, пропуск. Ви можете встановити його пізніше з github.com/mora1ss/axshell-audio.",
       "installed": "Аудіодвигун AxShell {version} встановлено",
-      "install_failed": "Не вдалося встановити аудіодвигун AxShell. Еквалайзер не працюватиме, доки його не встановлять із github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "Не вдалося встановити аудіодвигун AxShell. Еквалайзер не працюватиме, доки його не встановлять із github.com/mora1ss/axshell-audio.",
       "installing": "Встановлення аудіодвигуна AxShell...",
       "up_to_date": "-> Аудіодвигун AxShell {version} уже встановлено."
     },
     "core": {
       "checksum_failed": "Завантажені основні служби не пройшли перевірку контрольної суми, пропуск.",
-      "download_failed": "Не вдалося завантажити основні служби AxShell, пропуск. Ви можете встановити їх пізніше з github.com/ilyamiro/serpantinum-core.",
+      "download_failed": "Не вдалося завантажити основні служби AxShell, пропуск. Ви можете встановити їх пізніше з github.com/mora1ss/axshell-core.",
       "installed": "Основні служби AxShell {version} встановлено",
-      "install_failed": "Не вдалося встановити основні служби AxShell. Використання системи, індикатори блокування клавіатури та буфер обміну не працюватимуть, доки їх не встановлять із github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "Не вдалося встановити основні служби AxShell. Використання системи, індикатори блокування клавіатури та буфер обміну не працюватимуть, доки їх не встановлять із github.com/mora1ss/axshell-core.",
       "installing": "Встановлення основних служб AxShell...",
       "unsupported_arch": "Готові пакети основних служб існують лише для x86_64, пропуск.",
       "up_to_date": "-> Основні служби AxShell {version} уже встановлено."
     },
     "gamma": {
       "checksum_failed": "Завантажений фільтр синього світла не пройшов перевірку контрольної суми, пропуск.",
-      "download_failed": "Не вдалося завантажити фільтр синього світла AxShell, пропуск. Ви можете встановити його пізніше з github.com/ilyamiro/serpantinum-gamma.",
+      "download_failed": "Не вдалося завантажити фільтр синього світла AxShell, пропуск. Ви можете встановити його пізніше з github.com/mora1ss/axshell-gamma.",
       "installed": "Фільтр синього світла AxShell {version} встановлено",
-      "install_failed": "Не вдалося встановити фільтр синього світла AxShell. Він не працюватиме, доки його не встановлять із github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "Не вдалося встановити фільтр синього світла AxShell. Він не працюватиме, доки його не встановлять із github.com/mora1ss/axshell-gamma.",
       "installing": "Встановлення фільтра синього світла AxShell...",
       "unsupported_arch": "Готові пакети фільтра синього світла існують лише для x86_64, пропуск.",
       "up_to_date": "-> Фільтр синього світла AxShell {version} уже встановлено."

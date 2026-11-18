@@ -148,7 +148,7 @@
       "warning_command": {
         "title": "Commande d'avertissement",
         "desc": "Délai et commande à exécuter avant l'action",
-        "placeholder": "ex. serpantinum-core notify 'avertissement'"
+        "placeholder": "ex. axshell-core notify 'avertissement'"
       },
       "before_command": {
         "title": "Commande préalable",
@@ -158,7 +158,7 @@
       "resume_command": {
         "title": "Commande de reprise",
         "desc": "Exécutée lorsque l'activité utilisateur reprend",
-        "placeholder": "ex. serpantinum-core notify 'reprise'"
+        "placeholder": "ex. axshell-core notify 'reprise'"
       },
       "dim": {
         "title": "Atténuer l'écran",
@@ -2068,26 +2068,26 @@
     "audio": {
       "building": "Aucun moteur audio précompilé pour ce système, compilation depuis les sources...",
       "checksum_failed": "Le téléchargement du moteur audio a échoué à la vérification de la somme de contrôle, ignoré.",
-      "download_failed": "Impossible de télécharger le moteur audio AxShell, ignoré. Vous pourrez l'installer plus tard depuis github.com/ilyamiro/serpantinum-audio.",
+      "download_failed": "Impossible de télécharger le moteur audio AxShell, ignoré. Vous pourrez l'installer plus tard depuis github.com/mora1ss/axshell-audio.",
       "installed": "Moteur audio AxShell {version} installé",
-      "install_failed": "Échec de l'installation du moteur audio AxShell. L'égaliseur ne fonctionnera pas tant qu'il ne sera pas installé depuis github.com/ilyamiro/serpantinum-audio.",
+      "install_failed": "Échec de l'installation du moteur audio AxShell. L'égaliseur ne fonctionnera pas tant qu'il ne sera pas installé depuis github.com/mora1ss/axshell-audio.",
       "installing": "Installation du moteur audio AxShell...",
       "up_to_date": "-> Le moteur audio AxShell {version} est déjà installé."
     },
     "core": {
       "checksum_failed": "Le téléchargement des services principaux a échoué à la vérification de la somme de contrôle, ignoré.",
-      "download_failed": "Impossible de télécharger les services principaux AxShell, ignoré. Vous pourrez les installer plus tard depuis github.com/ilyamiro/serpantinum-core.",
+      "download_failed": "Impossible de télécharger les services principaux AxShell, ignoré. Vous pourrez les installer plus tard depuis github.com/mora1ss/axshell-core.",
       "installed": "Services principaux AxShell {version} installés",
-      "install_failed": "Échec de l'installation des services principaux AxShell. L'utilisation du système, les indicateurs de verrouillage du clavier et le presse-papiers ne fonctionneront pas tant qu'ils ne seront pas installés depuis github.com/ilyamiro/serpantinum-core.",
+      "install_failed": "Échec de l'installation des services principaux AxShell. L'utilisation du système, les indicateurs de verrouillage du clavier et le presse-papiers ne fonctionneront pas tant qu'ils ne seront pas installés depuis github.com/mora1ss/axshell-core.",
       "installing": "Installation des services principaux AxShell...",
       "unsupported_arch": "Les paquets précompilés des services principaux n'existent que pour x86_64, ignoré.",
       "up_to_date": "-> Les services principaux AxShell {version} sont déjà installés."
     },
     "gamma": {
       "checksum_failed": "Le téléchargement du filtre de lumière bleue a échoué à la vérification de la somme de contrôle, ignoré.",
-      "download_failed": "Impossible de télécharger le filtre de lumière bleue AxShell, ignoré. Vous pourrez l'installer plus tard depuis github.com/ilyamiro/serpantinum-gamma.",
+      "download_failed": "Impossible de télécharger le filtre de lumière bleue AxShell, ignoré. Vous pourrez l'installer plus tard depuis github.com/mora1ss/axshell-gamma.",
       "installed": "Filtre de lumière bleue AxShell {version} installé",
-      "install_failed": "Échec de l'installation du filtre de lumière bleue AxShell. Il ne fonctionnera pas tant qu'il ne sera pas installé depuis github.com/ilyamiro/serpantinum-gamma.",
+      "install_failed": "Échec de l'installation du filtre de lumière bleue AxShell. Il ne fonctionnera pas tant qu'il ne sera pas installé depuis github.com/mora1ss/axshell-gamma.",
       "installing": "Installation du filtre de lumière bleue AxShell...",
       "unsupported_arch": "Les paquets précompilés du filtre de lumière bleue n'existent que pour x86_64, ignoré.",
       "up_to_date": "-> Le filtre de lumière bleue AxShell {version} est déjà installé."

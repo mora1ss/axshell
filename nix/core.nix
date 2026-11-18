@@ -4,14 +4,14 @@
 , fetchFromGitHub
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
-  pname = "serpantinum-core";
-  version = "0.6.1";
+  pname = "axshell-core";
+  version = "0.6.2";
 
   src = fetchFromGitHub {
     owner = "mora1ss";
-    repo = "serpantinum-core";
+    repo = "axshell-core";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-+k+Dn1XrM7IoJv4Sdaaul0MIzlOB1b4Lq/fuo3daoVc=";
+    hash = "sha256-+Zr+RCt3KI+uf2ue5IufozX+WnV7FETaZLUsk6jlP0o=";
   };
 
   buildInputs = [ sqlite ];
@@ -20,9 +20,9 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   meta = {
     description = "A core of services for AxShell shell in Rust";
-    homepage = "https://github.com/ilyamiro/serpantinum-core";
+    homepage = "https://github.com/mora1ss/axshell-core";
     license = lib.licenses.agpl3Plus;
-    mainProgram = "serpantinum-core";
+    mainProgram = "axshell-core";
     platforms = lib.platforms.linux;
   };
 })

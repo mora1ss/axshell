@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Ski 下载未通过校验和检查，已跳过。",
-      "download_failed": "无法下载 Ski，已跳过。您可以稍后从 github.com/ilyamiro/Ski 安装。",
+      "download_failed": "无法下载 Ski，已跳过。您可以稍后从 github.com/mora1ss/Ski 安装。",
       "installed": "已安装 Ski {version}",
       "install_failed": "安装 Ski 失败",
       "installing": "正在安装文件管理器 Ski...",

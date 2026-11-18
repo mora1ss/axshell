@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Ski 下載未通過檢查碼驗證，已略過。",
-      "download_failed": "無法下載 Ski，已略過。您可以稍後從 github.com/ilyamiro/Ski 安裝。",
+      "download_failed": "無法下載 Ski，已略過。您可以稍後從 github.com/mora1ss/Ski 安裝。",
       "installed": "已安裝 Ski {version}",
       "install_failed": "安裝 Ski 失敗",
       "installing": "正在安裝檔案管理員 Ski...",

@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "De download van Ski is niet door de checksumcontrole gekomen, wordt overgeslagen.",
-      "download_failed": "Kon Ski niet downloaden, wordt overgeslagen. Je kunt het later installeren via github.com/ilyamiro/Ski.",
+      "download_failed": "Kon Ski niet downloaden, wordt overgeslagen. Je kunt het later installeren via github.com/mora1ss/Ski.",
       "installed": "Ski {version} geïnstalleerd",
       "install_failed": "Installeren van Ski mislukt",
       "installing": "Bestandsbeheerder Ski wordt geïnstalleerd...",

@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Ski-ի ներբեռնումը չանցավ վերահսկիչ գումարի ստուգումը, բաց է թողնվում։",
-      "download_failed": "Չհաջողվեց ներբեռնել Ski-ն, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/ilyamiro/Ski-ից։",
+      "download_failed": "Չհաջողվեց ներբեռնել Ski-ն, բաց է թողնվում։ Կարող եք տեղադրել այն ավելի ուշ github.com/mora1ss/Ski-ից։",
       "installed": "Ski {version} տեղադրվեց",
       "install_failed": "Չհաջողվեց տեղադրել Ski-ն",
       "installing": "Ski ֆայլերի կառավարիչը տեղադրվում է...",

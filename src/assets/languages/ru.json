@@ -2095,7 +2095,7 @@
     },
     "ski": {
       "checksum_failed": "Загруженный Ski не прошёл проверку контрольной суммы, пропуск.",
-      "download_failed": "Не удалось загрузить Ski, пропуск. Вы можете установить его позже с github.com/ilyamiro/Ski.",
+      "download_failed": "Не удалось загрузить Ski, пропуск. Вы можете установить его позже с github.com/mora1ss/Ski.",
       "installed": "Ski {version} установлен",
       "install_failed": "Не удалось установить Ski",
       "installing": "Установка файлового менеджера Ski...",

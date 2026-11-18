@@ -874,7 +874,7 @@
     },
     "ski": {
       "checksum_failed": "Ski のダウンロードがチェックサム検証に失敗したため、スキップします。",
-      "download_failed": "Ski をダウンロードできなかったため、スキップします。後で github.com/ilyamiro/Ski からインストールできます。",
+      "download_failed": "Ski をダウンロードできなかったため、スキップします。後で github.com/mora1ss/Ski からインストールできます。",
       "installed": "Ski {version} をインストールしました",
       "install_failed": "Ski のインストールに失敗しました",
       "installing": "ファイルマネージャー Ski をインストールしています...",

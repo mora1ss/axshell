@@ -42,15 +42,15 @@
     "ski": {
       "flake": false,
       "locked": {
-        "lastModified": 1794135603,
-        "narHash": "sha256-qiNSb+vTGfmaTW62hgHC+uEj/xWyrbxgNAyObMTgne8=",
-        "owner": "ilyamiro",
+        "lastModified": 1795021652,
+        "narHash": "sha256-9IwkExGV2mdye5+LDp7jOMLxF0N/3Pl3M3siJuVIMP8=",
+        "owner": "mora1ss",
         "repo": "Ski",
-        "rev": "afff38b542c0dc74d204b275e70a5d0d0a8f5de9",
+        "rev": "be7f2a0e9d50a81681d89c939d1c7957f709a10d",
         "type": "github"
       },
       "original": {
-        "owner": "ilyamiro",
+        "owner": "mora1ss",
         "repo": "Ski",
         "type": "github"
       }

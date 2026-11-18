@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Ski का डाउनलोड चेकसम जाँच में विफल रहा, छोड़ा जा रहा है।",
-      "download_failed": "Ski डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/ilyamiro/Ski से इंस्टॉल कर सकते हैं।",
+      "download_failed": "Ski डाउनलोड नहीं हो सका, छोड़ा जा रहा है। आप इसे बाद में github.com/mora1ss/Ski से इंस्टॉल कर सकते हैं।",
       "installed": "Ski {version} इंस्टॉल हो गया",
       "install_failed": "Ski इंस्टॉल नहीं हो सका",
       "installing": "फ़ाइल मैनेजर Ski इंस्टॉल हो रहा है...",

@@ -2095,7 +2095,7 @@
     },
     "ski": {
       "checksum_failed": "Der Download von Ski hat die Prüfsummenprüfung nicht bestanden, wird übersprungen.",
-      "download_failed": "Ski konnte nicht heruntergeladen werden, wird übersprungen. Du kannst es später über github.com/ilyamiro/Ski installieren.",
+      "download_failed": "Ski konnte nicht heruntergeladen werden, wird übersprungen. Du kannst es später über github.com/mora1ss/Ski installieren.",
       "installed": "Ski {version} installiert",
       "install_failed": "Ski konnte nicht installiert werden",
       "installing": "Dateimanager Ski wird installiert...",

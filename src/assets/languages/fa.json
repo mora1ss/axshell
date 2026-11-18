@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "دانلود Ski در بررسی چک‌سام رد شد، نادیده گرفته می‌شود.",
-      "download_failed": "دانلود Ski ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/ilyamiro/Ski نصب کنید.",
+      "download_failed": "دانلود Ski ممکن نشد، نادیده گرفته می‌شود. می‌توانید بعداً آن را از github.com/mora1ss/Ski نصب کنید.",
       "installed": "Ski {version} نصب شد",
       "install_failed": "نصب Ski ناموفق بود",
       "installing": "در حال نصب مدیر فایل Ski...",

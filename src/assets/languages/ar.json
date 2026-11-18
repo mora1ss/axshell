@@ -1492,7 +1492,7 @@
     },
     "ski": {
       "checksum_failed": "فشل تنزيل Ski في فحص المجموع الاختباري، سيتم التخطي.",
-      "download_failed": "تعذّر تنزيل Ski، سيتم التخطي. يمكنك تثبيته لاحقًا من github.com/ilyamiro/Ski.",
+      "download_failed": "تعذّر تنزيل Ski، سيتم التخطي. يمكنك تثبيته لاحقًا من github.com/mora1ss/Ski.",
       "installed": "تم تثبيت Ski {version}",
       "install_failed": "فشل تثبيت Ski",
       "installing": "جارٍ تثبيت مدير الملفات Ski...",

@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Ski yüklənməsi yoxlama cəmi yoxlamasından keçmədi, keçilir.",
-      "download_failed": "Ski yüklənə bilmədi, keçilir. Sonra github.com/ilyamiro/Ski ünvanından quraşdıra bilərsiniz.",
+      "download_failed": "Ski yüklənə bilmədi, keçilir. Sonra github.com/mora1ss/Ski ünvanından quraşdıra bilərsiniz.",
       "installed": "Ski {version} quraşdırıldı",
       "install_failed": "Ski quraşdırıla bilmədi",
       "installing": "Ski fayl meneceri quraşdırılır...",

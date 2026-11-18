@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     ski = {
-      url = "github:ilyamiro/Ski";
+      url = "github:mora1ss/Ski";
       flake = false;
     };
 

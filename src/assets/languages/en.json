@@ -2061,7 +2061,7 @@
       "up_to_date": "-> Ski {version} is already installed.",
       "installed": "Installed Ski {version}",
       "install_failed": "Failed to install Ski",
-      "download_failed": "Could not download Ski, skipping. You can install it later from github.com/ilyamiro/Ski.",
+      "download_failed": "Could not download Ski, skipping. You can install it later from github.com/mora1ss/Ski.",
       "checksum_failed": "Ski download failed its checksum check, skipping.",
       "unsupported_arch": "Prebuilt Ski packages exist only for x86_64, skipping."
     },

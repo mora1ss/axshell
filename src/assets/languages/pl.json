@@ -880,7 +880,7 @@
     },
     "ski": {
       "checksum_failed": "Pobrany Ski nie przeszedł weryfikacji sumy kontrolnej, pomijanie.",
-      "download_failed": "Nie można pobrać Ski, pomijanie. Możesz zainstalować go później z github.com/ilyamiro/Ski.",
+      "download_failed": "Nie można pobrać Ski, pomijanie. Możesz zainstalować go później z github.com/mora1ss/Ski.",
       "installed": "Zainstalowano Ski {version}",
       "install_failed": "Nie udało się zainstalować Ski",
       "installing": "Instalowanie menedżera plików Ski...",

@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Il download di Ski non ha superato il controllo del checksum, saltato.",
-      "download_failed": "Impossibile scaricare Ski, saltato. Puoi installarlo più tardi da github.com/ilyamiro/Ski.",
+      "download_failed": "Impossibile scaricare Ski, saltato. Puoi installarlo più tardi da github.com/mora1ss/Ski.",
       "installed": "Ski {version} installato",
       "install_failed": "Installazione di Ski non riuscita",
       "installing": "Installazione del file manager Ski...",

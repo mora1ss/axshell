@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Ski indirmesi sağlama toplamı denetimini geçemedi, atlanıyor.",
-      "download_failed": "Ski indirilemedi, atlanıyor. Daha sonra github.com/ilyamiro/Ski adresinden kurabilirsiniz.",
+      "download_failed": "Ski indirilemedi, atlanıyor. Daha sonra github.com/mora1ss/Ski adresinden kurabilirsiniz.",
       "installed": "Ski {version} kuruldu",
       "install_failed": "Ski kurulamadı",
       "installing": "Ski dosya yöneticisi kuruluyor...",

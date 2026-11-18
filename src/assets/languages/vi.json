@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Bản tải xuống Ski không qua được bước kiểm tra checksum, bỏ qua.",
-      "download_failed": "Không thể tải xuống Ski, bỏ qua. Bạn có thể cài đặt sau từ github.com/ilyamiro/Ski.",
+      "download_failed": "Không thể tải xuống Ski, bỏ qua. Bạn có thể cài đặt sau từ github.com/mora1ss/Ski.",
       "installed": "Đã cài đặt Ski {version}",
       "install_failed": "Cài đặt Ski thất bại",
       "installing": "Đang cài đặt trình quản lý tệp Ski...",

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SKI_REPO="ilyamiro/Ski"
+SKI_REPO="mora1ss/Ski"
 SKI_PREFIX="/usr/local"
 
 ski_release_json() {

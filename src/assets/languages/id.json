@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "Unduhan Ski gagal pemeriksaan checksum, dilewati.",
-      "download_failed": "Tidak dapat mengunduh Ski, dilewati. Anda dapat memasangnya nanti dari github.com/ilyamiro/Ski.",
+      "download_failed": "Tidak dapat mengunduh Ski, dilewati. Anda dapat memasangnya nanti dari github.com/mora1ss/Ski.",
       "installed": "Ski {version} terpasang",
       "install_failed": "Gagal memasang Ski",
       "installing": "Memasang pengelola file Ski...",

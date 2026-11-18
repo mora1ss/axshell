@@ -2094,7 +2094,7 @@
     },
     "ski": {
       "checksum_failed": "O download do Ski falhou na verificação de checksum, ignorado.",
-      "download_failed": "Não foi possível baixar o Ski, ignorado. Você pode instalá-lo depois em github.com/ilyamiro/Ski.",
+      "download_failed": "Não foi possível baixar o Ski, ignorado. Você pode instalá-lo depois em github.com/mora1ss/Ski.",
       "installed": "Ski {version} instalado",
       "install_failed": "Falha ao instalar o Ski",
       "installing": "Instalando o gerenciador de arquivos Ski...",

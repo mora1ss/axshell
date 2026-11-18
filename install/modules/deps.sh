@@ -53,7 +53,7 @@ REQUIRED_PKGS=(
     "pipewire" "wireplumber" "pipewire-pulse" "pipewire-alsa" "libpulse" "python"
     "imagemagick" "file"
     "ffmpeg" "fastfetch" "quickshell"
-    "grim" "playerctl" "satty" "xdg-desktop-portal-gtk" "power-profiles-daemon" "qt6-wayland"
+    "grim" "playerctl" "satty" "xdg-desktop-portal-gtk" "power-profiles-daemon" "udisks2" "qt6-wayland"
     "qt6ct" "adwaita-icon-theme" "gpu-screen-recorder" "wf-recorder" "adw-gtk-theme"
 )
 

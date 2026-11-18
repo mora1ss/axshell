@@ -22,6 +22,7 @@
 , playerctl
 , power-profiles-daemon
 , satty
+, udisks2
 , util-linux
 , wf-recorder
 , wireplumber
@@ -59,6 +60,7 @@ let
     power-profiles-daemon
     python3
     satty
+    udisks2
     util-linux
     wf-recorder
     wireplumber

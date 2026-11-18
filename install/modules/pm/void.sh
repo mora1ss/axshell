@@ -308,11 +308,13 @@ pm_setup_services() {
         enable_system_service "bluetoothd" "$init_sys"
         enable_system_service "NetworkManager" "$init_sys"
         enable_system_service "power-profiles-daemon" "$init_sys"
+        enable_system_service "udisks2" "$init_sys"
         return 0
     fi
     void_link_service dbus || true
     void_link_service bluetoothd || true
     void_link_service power-profiles-daemon || true
+    void_link_service udisks2 || true
     void_switch_to_networkmanager
 }
 

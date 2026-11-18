@@ -40,7 +40,7 @@ Void Linux, both glibc and musl, is installed with `xbps`. Everything comes from
 - **Hyprland**, which Void does not package. When you select it, the installer adds the third-party [black-hole.dev](https://mirror.black-hole.dev) repository in `/etc/xbps.d/20-axshell-hyprland.conf` and accepts its signing key. Niri, Sway, and Mango come from the official repositories.
 - **adw-gtk3** and **JetBrains Mono**, which are downloaded from their latest GitHub releases into `/usr/share/themes` and `/usr/share/fonts`.
 
-Services are enabled through runit. `dbus`, `bluetoothd`, and `power-profiles-daemon` start right away. `NetworkManager` and `sddm` start from the next boot, so the installer does not cut your network or take over the screen while it runs. If `dhcpcd` or `wpa_supplicant` were enabled, they are kept from starting at the next boot, since they conflict with NetworkManager. Wi-Fi networks must then be connected again through AxShell or `nmcli`. Display managers being replaced keep running until you reboot.
+Services are enabled through runit. `dbus`, `bluetoothd`, `power-profiles-daemon`, and `udisks2` start right away. `NetworkManager` and `sddm` start from the next boot, so the installer does not cut your network or take over the screen while it runs. If `dhcpcd` or `wpa_supplicant` were enabled, they are kept from starting at the next boot, since they conflict with NetworkManager. Wi-Fi networks must then be connected again through AxShell or `nmcli`. Display managers being replaced keep running until you reboot.
 
 PipeWire is configured system-wide to launch WirePlumber and `pipewire-pulse`, with ALSA routed through it. Sessions started from SDDM get a D-Bus session bus and PipeWire automatically. If you start your compositor from a TTY instead, launch it with `dbus-run-session` and start `pipewire` from its autostart.
 
@@ -186,15 +186,15 @@ The last command detects your location for the weather widget. Skip it if you pr
 
 #### 5. Services
 
-On systemd, enable the audio stack, networking, and power profiles:
+On systemd, enable the audio stack, networking, power profiles, and the disk service:
 
 ```bash
 sudo systemctl --global enable pipewire wireplumber pipewire-pulse
 systemctl --user enable --now pipewire wireplumber pipewire-pulse
-sudo systemctl enable --now NetworkManager power-profiles-daemon
+sudo systemctl enable --now NetworkManager power-profiles-daemon udisks2
 ```
 
-On OpenRC, dinit, runit, or s6, enable `NetworkManager` and `power-profiles-daemon` with your init system's tools, and make sure PipeWire and WirePlumber start with your session.
+On OpenRC, dinit, runit, or s6, enable `NetworkManager`, `power-profiles-daemon`, and `udisks2` with your init system's tools, and make sure PipeWire and WirePlumber start with your session.
 
 #### 6. Qt icon theme
 

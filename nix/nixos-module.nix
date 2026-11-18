@@ -16,6 +16,7 @@ in
     hardware.bluetooth.enable = mkDefault true;
     hardware.i2c.enable = mkDefault true;
     services.power-profiles-daemon.enable = mkDefault true;
+    services.udisks2.enable = mkDefault true;
     security.rtkit.enable = mkDefault true;
     security.pam.services.axshell = { };
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+declare -F qs_ensure_cache >/dev/null && return 0
+
 if [ -z "${AXSHELL_DIR:-}" ]; then
     SCRIPT_DIR="$(dirname "$(realpath "${BASH_SOURCE[0]}")")"
     export AXSHELL_DIR="$(dirname "$SCRIPT_DIR")"
@@ -49,9 +51,9 @@ qs_ensure_cache "focustime"
 if [ -z "${AXSHELL_INSTALLER:-}" ]; then
     ver=""
     if [ -f "$AXSHELL_DIR/version.txt" ]; then
-        ver="$(cat "$AXSHELL_DIR/version.txt" 2>/dev/null | xargs)"
+        read -r ver < "$AXSHELL_DIR/version.txt" 2>/dev/null
     elif [ -f "$(dirname "$AXSHELL_DIR")/version.txt" ]; then
-        ver="$(cat "$(dirname "$AXSHELL_DIR")/version.txt" 2>/dev/null | xargs)"
+        read -r ver < "$(dirname "$AXSHELL_DIR")/version.txt" 2>/dev/null
     fi
     if [ ! -f "$QS_STATE_DIR/version" ]; then
         [ -z "$ver" ] && ver="${AXSHELL_VERSION:-2.0.0}"

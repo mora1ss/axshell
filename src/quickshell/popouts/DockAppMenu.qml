@@ -8,6 +8,7 @@ import Quickshell.Io
 import "../reusables"
 import "../singletons/widgetcontrols"
 import "../"
+import "../AppLaunch.js" as AppLaunch
 
 PanelWindow {
     id: dockAppMenuWindow
@@ -259,7 +260,10 @@ PanelWindow {
                                     }
                                 } else if (typeof DesktopEntries !== "undefined" && DockAppMenuController.desktopId) {
                                     let entry = DesktopEntries.byId(DockAppMenuController.desktopId) || DesktopEntries.byId(String(DockAppMenuController.desktopId).replace(/\.desktop$/, ""));
-                                    if (entry) entry.execute();
+                                    if (entry) {
+                                        let argv = AppLaunch.argvFor(entry, "kitty -e");
+                                        if (argv) Quickshell.execDetached(argv); else entry.execute();
+                                    }
                                 }
                                 DockAppMenuController.hide();
                             }
@@ -430,7 +434,10 @@ PanelWindow {
                             onClicked: {
                                 if (typeof DesktopEntries !== "undefined" && DockAppMenuController.desktopId) {
                                     let entry = DesktopEntries.byId(DockAppMenuController.desktopId) || DesktopEntries.byId(String(DockAppMenuController.desktopId).replace(/\.desktop$/, ""));
-                                    if (entry) entry.execute();
+                                    if (entry) {
+                                        let argv = AppLaunch.argvFor(entry, "kitty -e");
+                                        if (argv) Quickshell.execDetached(argv); else entry.execute();
+                                    }
                                 }
                                 DockAppMenuController.hide();
                             }

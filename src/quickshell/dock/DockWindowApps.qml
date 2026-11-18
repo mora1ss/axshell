@@ -1,6 +1,7 @@
 import QtQuick
 import Quickshell
 import "../"
+import "../AppLaunch.js" as AppLaunch
 
 DockWindowState {
     id: dockWindow
@@ -428,7 +429,12 @@ DockWindowState {
         if (typeof DesktopEntries !== "undefined") {
             let entry = DesktopEntries.byId(desktopId) || DesktopEntries.byId(String(desktopId).replace(/\.desktop$/, ""));
             if (entry) {
-                entry.execute();
+                let argv = AppLaunch.argvFor(entry, "kitty -e");
+                if (argv) {
+                    Quickshell.execDetached(argv);
+                } else {
+                    entry.execute();
+                }
             }
         }
     }

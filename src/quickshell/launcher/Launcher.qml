@@ -11,6 +11,7 @@ import "../"
 import "../reusables"
 import "../WindowRegistry.js" as WindowRegistry
 import "./SearchProviders.js" as SearchProviders
+import "../AppLaunch.js" as AppLaunch
 
 PanelWindow {
     id: launcherWindow
@@ -1137,7 +1138,12 @@ PanelWindow {
     function launchApp(appName, desktopId) {
         let entry = DesktopEntries.byId(desktopId);
         if (entry) {
-            entry.execute();
+            let argv = AppLaunch.argvFor(entry, launcherWindow.terminalCommand);
+            if (argv) {
+                Quickshell.execDetached(argv);
+            } else {
+                entry.execute();
+            }
         }
         if (Caching.qsDir) {
             Quickshell.execDetached(["serpantinum-core", "launcher", "log", appName]);

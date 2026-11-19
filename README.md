@@ -22,6 +22,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/mora1ss/axshell/master/i
 ```
 
 > [!NOTE]
+> After installation, if you selected any optional configurations such as Fastfetch or Starship run the installer again, re-select those options, and choose "update." Once you restart, everything will be configured.
+
 > To update, run the script again and choose "update".
 
 ---
@@ -62,6 +64,7 @@ For configuration, see the repository documentation.
   <h3>Thanks to all contributors</h3>
   <br>
 
+  <a href="https://github.com/ilyamiro"><img src="https://avatars.githubusercontent.com/u/142908366?v=4&s=48" width="48" height="48" alt="ilyamiro"></a>
   <a href="https://github.com/TheRinder2"><img src="https://avatars.githubusercontent.com/u/48689803?v=4&s=48" width="48" height="48" alt="TheRinder2"></a>
   <a href="https://github.com/bizneskind-droid"><img src="https://avatars.githubusercontent.com/u/245046997?v=4&s=48" width="48" height="48" alt="bizneskind-droid"></a>
   <a href="https://github.com/Pigeon78"><img src="https://avatars.githubusercontent.com/u/151051379?v=4&s=48" width="48" height="48" alt="Pigeon78"></a>

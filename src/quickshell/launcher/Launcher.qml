@@ -304,7 +304,7 @@ PanelWindow {
     property real barInset: barHeight + (barStyle === "solid" && !barAutohide ? Math.round(s(4)) : 0)
 
     property bool isBarAttachable: barStyle === "solid" || barStyle === "fill" || barStyle === "convex"
-    property bool barMatchesLauncher: isBarAttachable && (attachEdge === barPosition) && !isBarEffectivelyHidden
+    property bool barMatchesLauncher: barStyle !== "convex" && isBarAttachable && (attachEdge === barPosition) && !isBarEffectivelyHidden
 
     property string attachEdge: launcherPosition
     property bool isSideAttached: attachEdge === "left" || attachEdge === "right"

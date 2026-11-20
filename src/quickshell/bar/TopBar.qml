@@ -23,17 +23,54 @@ Item {
             if (typeof s === "object") {
                 if (s.fill || s.mode === "fill") return "fill";
                 if (s.solid || s.mode === "solid") return "solid";
+                if (s.convex || s.mode === "convex") return "convex";
             }
         }
         return "modular";
     }
     property bool isFill: barStyle === "fill"
-    property bool isSolid: barStyle === "solid" || barStyle === "fill"
-    property bool distinctPills: barWindow ? (barWindow.distinctPills !== undefined ? barWindow.distinctPills : false) : false
+    property bool isConvex: barStyle === "convex"
+    property bool isSolid: barStyle === "solid" || barStyle === "fill" || barStyle === "convex"
+    property bool distinctPills: (barWindow ? (barWindow.distinctPills !== undefined ? barWindow.distinctPills : false) : false) && !isConvex
     property real cornerRadius: barWindow ? barWindow.cornerRadius : 12
     property bool barAtBottom: !!barWindow && barWindow.barPosition === "bottom"
     property real fillAttachProgress: (isFill && barWindow && barWindow.fillAttached) ? 1.0 : 0.0
     property real fillFarRadius: Math.min(cornerRadius, barWindow ? barWindow.barHeight / 2 : cornerRadius) * fillAttachProgress
+
+    property real convexPad: barWindow ? barWindow.s(4) : 4
+    property real convexBridge: barWindow ? barWindow.s(10) : 10
+    property real convexRadius: barWindow ? barWindow.s(16) : 16
+    property real convexSmoothing: barWindow ? barWindow.s(10) : 10
+    property real convexBarHeight: barWindow ? barWindow.barHeight : 40
+    property real convexTop: barWindow ? barWindow.baseOffsetY : 0
+    property var convexRects: {
+        let W = contentWrapper.width;
+        let H = contentWrapper.convexBarHeight;
+        let top = contentWrapper.convexTop;
+        let pad = contentWrapper.convexPad;
+        let br = contentWrapper.convexRadius;
+        let stripY = contentWrapper.barAtBottom ? (top + H - contentWrapper.convexBridge) : top;
+        let rects = [{ x: 0, y: stripY, w: W, h: contentWrapper.convexBridge, r: [0, 0, 0, 0] }];
+
+        if (contentWrapper.lWidthTarget > 0) {
+            let lw = Math.min(W, Math.max(0, contentWrapper.lFinalX + contentWrapper.lWidthTarget + pad));
+            if (lw > 0) rects.push({ x: 0, y: top, w: lw, h: H, r: contentWrapper.barAtBottom ? [0, br, 0, 0] : [0, 0, br, 0] });
+        }
+
+        if (contentWrapper.cWidthTarget > 0) {
+            let cx = Math.max(0, Math.min(W, contentWrapper.cFinalX - pad));
+            let cw = Math.max(0, Math.min(W - cx, contentWrapper.cWidthTarget + pad * 2));
+            if (cw > 0) rects.push({ x: cx, y: top, w: cw, h: H, r: contentWrapper.barAtBottom ? [br, br, 0, 0] : [0, 0, br, br] });
+        }
+
+        if (contentWrapper.rWidthTarget > 0) {
+            let rx = Math.max(0, Math.min(W, contentWrapper.rFinalClampedX - pad));
+            let rw = Math.max(0, W - rx);
+            if (rw > 0) rects.push({ x: rx, y: top, w: rw, h: H, r: contentWrapper.barAtBottom ? [br, 0, 0, 0] : [0, 0, 0, br] });
+        }
+
+        return rects;
+    }
 
     Behavior on fillAttachProgress {
         enabled: contentWrapper.layoutAnimationsEnabled
@@ -563,7 +600,7 @@ Item {
         topRightRadius: isFill ? (contentWrapper.barAtBottom ? contentWrapper.fillFarRadius : 0) : radius
         bottomLeftRadius: isFill ? (contentWrapper.barAtBottom ? 0 : contentWrapper.fillFarRadius) : radius
         bottomRightRadius: isFill ? (contentWrapper.barAtBottom ? 0 : contentWrapper.fillFarRadius) : radius
-        visible: (isSolid || isFill) && (barWindow ? !barWindow.positionChanging : true)
+        visible: (isSolid || isFill) && !contentWrapper.isConvex && (barWindow ? !barWindow.positionChanging : true)
         opacity: visible ? 1.0 : 0.0
 
         Behavior on x {
@@ -586,11 +623,12 @@ Item {
         id: barSurface
         kind: "bar"
         publishShape: true
-        filletRadius: Math.max(contentWrapper.isFill ? contentWrapper.cornerRadius : 0, solidBackground.topLeftRadius, solidBackground.topRightRadius, solidBackground.bottomRightRadius, solidBackground.bottomLeftRadius)
-        visible: solidBackground.visible
-        opacity: solidBackground.opacity
+        filletRadius: contentWrapper.isConvex ? contentWrapper.convexSmoothing : Math.max(contentWrapper.isFill ? contentWrapper.cornerRadius : 0, solidBackground.topLeftRadius, solidBackground.topRightRadius, solidBackground.bottomRightRadius, solidBackground.bottomLeftRadius)
+        publishBounds: contentWrapper.isConvex
+        visible: (solidBackground.visible || contentWrapper.isConvex) && (barWindow ? !barWindow.positionChanging : true)
+        opacity: visible ? 1.0 : 0.0
         color: Qt.alpha(ThemeBackend.base, (barWindow && barWindow.barOpacity !== undefined) ? barWindow.barOpacity : 1.0)
-        rects: [{ x: solidBackground.x, y: solidBackground.y, w: solidBackground.width, h: solidBackground.height, r: [solidBackground.topLeftRadius, solidBackground.topRightRadius, solidBackground.bottomRightRadius, solidBackground.bottomLeftRadius] }]
+        rects: contentWrapper.isConvex ? contentWrapper.convexRects : [{ x: solidBackground.x, y: solidBackground.y, w: solidBackground.width, h: solidBackground.height, r: [solidBackground.topLeftRadius, solidBackground.topRightRadius, solidBackground.bottomRightRadius, solidBackground.bottomLeftRadius] }]
         offset: Qt.point(0, hideShift.y)
         readonly property var scr: barWindow && barWindow.screen ? barWindow.screen : null
         screenRects: contentWrapper.isFill && scr ? [

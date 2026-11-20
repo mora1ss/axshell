@@ -61,11 +61,13 @@ PanelWindow {
         if (typeof st === "object") {
             if (st.fill || st.mode === "fill") return "fill";
             if (st.solid || st.mode === "solid") return "solid";
+            if (st.convex || st.mode === "convex") return "convex";
         }
         return "modular";
     }
     property bool isBarFill: barStyle === "fill"
-    property int barThickness: s(40) + (isBarFill || isBarEffectivelyHidden ? 0 : s(4))
+    property bool isBarConvex: barStyle === "convex"
+    property int barThickness: s(40) + ((isBarFill || isBarConvex) || isBarEffectivelyHidden ? 0 : s(4))
 
     property var notifSettings: Config.getSetting("notifications", { "dnd": false, "position": "top right", "horizontalPosition": 95, "verticalPosition": 5 })
     property string position: notifSettings.position !== undefined ? notifSettings.position : "top right"

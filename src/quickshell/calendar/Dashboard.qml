@@ -108,6 +108,7 @@ PanelWindow {
         if (s && typeof s === "object") {
             if (s.fill || s.mode === "fill") return "fill";
             if (s.solid || s.mode === "solid") return "solid";
+            if (s.convex || s.mode === "convex") return "convex";
         }
         return "modular";
     }
@@ -157,7 +158,7 @@ PanelWindow {
 
     property real barInset: barHeight + (barStyle === "solid" && !barAutohide ? Math.round(s(4)) : 0)
 
-    readonly property bool isSolid: barStyle === "solid" || barStyle === "fill"
+    readonly property bool isSolid: barStyle === "solid" || barStyle === "fill" || barStyle === "convex"
     property real cornerRadius: Math.min(ThemeBackend.borderRadius || s(12), s(28))
 
     readonly property bool isSideBar: barPosition === "left" || barPosition === "right"

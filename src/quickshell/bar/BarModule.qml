@@ -16,7 +16,7 @@ Rectangle {
     property string variant: ""
     property var barWindow: null
     property bool isSolid: false
-    property bool distinctPills: barWindow ? (barWindow.distinctPills !== undefined ? barWindow.distinctPills : false) : false
+    property bool distinctPills: (barWindow ? (barWindow.distinctPills !== undefined ? barWindow.distinctPills : false) : false) && !(barWindow && barWindow.isConvex)
     property bool moduleActive: true
     property bool isGrouped: false
     property bool isCompact: isGrouped || (isSolid && distinctPills)

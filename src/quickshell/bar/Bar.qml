@@ -86,11 +86,13 @@ Variants {
                 if (s && typeof s === "object") {
                     if (s.fill || s.mode === "fill") return "fill";
                     if (s.solid || s.mode === "solid") return "solid";
+                    if (s.convex || s.mode === "convex") return "convex";
                 }
                 return "modular";
             }
             property bool isFill: barStyle === "fill"
-            property bool isSolid: barStyle === "solid" || barStyle === "fill"
+            property bool isConvex: barStyle === "convex"
+            property bool isSolid: barStyle === "solid" || barStyle === "fill" || barStyle === "convex"
             property bool distinctPills: {
                 let dummy = configRevision;
                 return (typeof Config !== "undefined" && Config.rawSettings && Config.rawSettings.bar && Config.rawSettings.bar.distinctPills !== undefined) ? Config.rawSettings.bar.distinctPills : false;
@@ -200,11 +202,11 @@ Variants {
                 let dummy = configRevision;
                 return (typeof Config !== "undefined" && Config.rawSettings && Config.rawSettings.bar && Config.rawSettings.bar.width !== undefined) ? Config.rawSettings.bar.width : 100;
             }
-            property real edgePadding: (autohide && !isFill) ? s(4) : 0
-            property real effectiveBarWidth: Math.round(isVertical ? barWindowRoot.width : ((barWindowRoot.width - (autohide ? edgePadding * 2 : 0)) * (barWidthPercent / 100.0)))
+            property real edgePadding: (autohide && !isFill && !isConvex) ? s(4) : 0
+            property real effectiveBarWidth: Math.round(isVertical ? barWindowRoot.width : (isConvex ? barWindowRoot.width : ((barWindowRoot.width - (autohide ? edgePadding * 2 : 0)) * (barWidthPercent / 100.0))))
             property real horizontalOffset: Math.round(isVertical ? 0 : ((barWindowRoot.width - effectiveBarWidth) / 2))
 
-            property real effectiveBarHeight: Math.round(!isVertical ? barWindowRoot.height : ((barWindowRoot.height - (autohide ? edgePadding * 2 : 0)) * (barWidthPercent / 100.0)))
+            property real effectiveBarHeight: Math.round(!isVertical ? barWindowRoot.height : (isConvex ? barWindowRoot.height : ((barWindowRoot.height - (autohide ? edgePadding * 2 : 0)) * (barWidthPercent / 100.0))))
             property real verticalOffset: Math.round(!isVertical ? 0 : ((barWindowRoot.height - effectiveBarHeight) / 2))
 
             readonly property var horizontalLayout: horizontalLoader.item
@@ -276,24 +278,65 @@ Variants {
             implicitWidth: barWindowRoot.isVertical ? (barHeight + (isFill ? cornerRadius : edgePadding)) : 0
 
             margins {
-                top: isFill ? 0 : (barPosition === "bottom" ? 0 : (autohide ? 0 : s(4)))
-                bottom: isFill ? 0 : (barPosition === "top" ? 0 : (autohide ? 0 : s(4)))
-                left: isFill ? 0 : (barPosition === "right" ? 0 : (autohide ? 0 : s(4)))
-                right: isFill ? 0 : (barPosition === "left" ? 0 : (autohide ? 0 : s(4)))
+                top: (isFill || isConvex) ? 0 : (barPosition === "bottom" ? 0 : (autohide ? 0 : s(4)))
+                bottom: (isFill || isConvex) ? 0 : (barPosition === "top" ? 0 : (autohide ? 0 : s(4)))
+                left: (isFill || isConvex) ? 0 : (barPosition === "right" ? 0 : (autohide ? 0 : s(4)))
+                right: (isFill || isConvex) ? 0 : (barPosition === "left" ? 0 : (autohide ? 0 : s(4)))
             }
 
             exclusiveZone: (!barConfigReady || autohide || shouldHideForRedact) ? 0 : barHeight
             color: "transparent"
 
-            property real activeMaskHeight: shouldHideForRedact ? 0 : ((autohide && !isRevealed) ? s(4) : (isVertical ? (isFill ? barWindowRoot.height : (effectiveBarHeight + edgePadding * 2)) : (isFill ? (barHeight + cornerRadius) : (barHeight + edgePadding))))
-            property real activeMaskWidth: shouldHideForRedact ? 0 : ((autohide && !isRevealed) ? s(4) : (isVertical ? (isFill ? (barHeight + cornerRadius) : (barHeight + edgePadding)) : (isFill ? barWindowRoot.width : (effectiveBarWidth + edgePadding * 2))))
+            property real activeMaskHeight: shouldHideForRedact ? 0 : ((autohide && !isRevealed) ? s(4) : (isVertical ? (isConvex ? barWindowRoot.height : (isFill ? barWindowRoot.height : (effectiveBarHeight + edgePadding * 2))) : (isFill ? (barHeight + cornerRadius) : (barHeight + edgePadding))))
+            property real activeMaskWidth: shouldHideForRedact ? 0 : ((autohide && !isRevealed) ? s(4) : (isVertical ? (isFill ? (barHeight + cornerRadius) : (barHeight + edgePadding)) : (isConvex ? barWindowRoot.width : (isFill ? barWindowRoot.width : (effectiveBarWidth + edgePadding * 2)))))
+
+            property var convexMaskRects: {
+                if (!isConvex || shouldHideForRedact) return [];
+                if (autohide && !isRevealed) {
+                    let t = s(4);
+                    if (isVertical) return [{ x: barPosition === "right" ? width - t : 0, y: 0, w: t, h: height }];
+                    return [{ x: 0, y: barPosition === "bottom" ? height - t : 0, w: width, h: t }];
+                }
+                let lay = isVertical ? verticalLayout : horizontalLayout;
+                if (!lay || !lay.convexRects) return [];
+                return lay.convexRects;
+            }
+
+            function convexMaskRect(index, key) {
+                let r = convexMaskRects[index];
+                return r ? (r[key] !== undefined ? r[key] : 0) : 0;
+            }
 
             mask: Region {
                 Region {
-                    x: barWindowRoot.isVertical ? (barWindowRoot.barPosition === "right" ? (barWindowRoot.width - barWindowRoot.activeMaskWidth) : 0) : barWindowRoot.currentBarMinX
-                    y: barWindowRoot.isVertical ? barWindowRoot.currentBarMinY : (barWindowRoot.barPosition === "bottom" ? barWindowRoot.baseOffsetY : 0)
-                    width: barWindowRoot.isVertical ? barWindowRoot.activeMaskWidth : (barWindowRoot.currentBarMaxX - barWindowRoot.currentBarMinX)
-                    height: barWindowRoot.isVertical ? (barWindowRoot.currentBarMaxY - barWindowRoot.currentBarMinY) : (isFill ? barWindowRoot.barHeight : barWindowRoot.activeMaskHeight)
+                    x: barWindowRoot.isVertical ? (barWindowRoot.barPosition === "right" ? (barWindowRoot.width - barWindowRoot.activeMaskWidth) : 0) : (barWindowRoot.isConvex ? 0 : barWindowRoot.currentBarMinX)
+                    y: barWindowRoot.isVertical ? (barWindowRoot.isConvex ? 0 : barWindowRoot.currentBarMinY) : (barWindowRoot.barPosition === "bottom" ? barWindowRoot.baseOffsetY : 0)
+                    width: barWindowRoot.isConvex ? 0 : (barWindowRoot.isVertical ? barWindowRoot.activeMaskWidth : (barWindowRoot.currentBarMaxX - barWindowRoot.currentBarMinX))
+                    height: barWindowRoot.isConvex ? 0 : (barWindowRoot.isVertical ? (barWindowRoot.currentBarMaxY - barWindowRoot.currentBarMinY) : (barWindowRoot.isFill ? barWindowRoot.barHeight : barWindowRoot.activeMaskHeight))
+                }
+                Region {
+                    x: barWindowRoot.convexMaskRect(0, "x")
+                    y: barWindowRoot.convexMaskRect(0, "y")
+                    width: barWindowRoot.convexMaskRect(0, "w")
+                    height: barWindowRoot.convexMaskRect(0, "h")
+                }
+                Region {
+                    x: barWindowRoot.convexMaskRect(1, "x")
+                    y: barWindowRoot.convexMaskRect(1, "y")
+                    width: barWindowRoot.convexMaskRect(1, "w")
+                    height: barWindowRoot.convexMaskRect(1, "h")
+                }
+                Region {
+                    x: barWindowRoot.convexMaskRect(2, "x")
+                    y: barWindowRoot.convexMaskRect(2, "y")
+                    width: barWindowRoot.convexMaskRect(2, "w")
+                    height: barWindowRoot.convexMaskRect(2, "h")
+                }
+                Region {
+                    x: barWindowRoot.convexMaskRect(3, "x")
+                    y: barWindowRoot.convexMaskRect(3, "y")
+                    width: barWindowRoot.convexMaskRect(3, "w")
+                    height: barWindowRoot.convexMaskRect(3, "h")
                 }
                 Region {
                     x: barWindowRoot.isVertical ? (barWindowRoot.barPosition === "right" ? (barWindowRoot.width - barWindowRoot.barHeight - barWindowRoot.cornerRadius) : barWindowRoot.barHeight) : 0

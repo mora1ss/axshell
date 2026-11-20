@@ -96,7 +96,7 @@ The configuration file is located at `~/.config/axshell/settings.json` (or `${XD
 | `bar.position` | `string` | `"top"` | Screen edge where the bar attaches: `"top"`, `"bottom"`, `"left"`, or `"right"`. |
 | `bar.width` | `number` | `100` | Bar length percentage (`10` to `100`). Values below 100 render a floating dock-style bar, or in `"fill"` style a bar that rounds down into the screen edge. |
 | `bar.opacity` | `number` | `100` | Background opacity percentage (`0` to `100`). |
-| `bar.style` | `string` | `"modular"` | Visual bar style: `"modular"`, `"fill"`, or `"solid"`. |
+| `bar.style` | `string` | `"modular"` | Visual bar style: `"modular"`, `"fill"`, `"solid"`, or `"convex"`. `"convex"` draws the bar as an edge-to-edge organic frame with curved section lobes. |
 | `bar.distinctPills` | `boolean` | `false` | Renders each module inside an isolated, detached capsule pill. |
 | `bar.centerByEdges` | `boolean` | `true` | Keeps equal margins on both ends of the bar (left and right, or top and bottom for a vertical bar) instead of centering by the middle module. |
 | `bar.autohide` | `boolean` | `false` | Automatically hides the bar until cursor enters the screen trigger area. |

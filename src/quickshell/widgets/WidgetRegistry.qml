@@ -1119,22 +1119,22 @@ QtObject {
     function getBarOffsets() {
         let pos = "top";
         let autohide = false;
-        let isFill = false;
+        let isFlush = false;
 
         if (typeof Config !== "undefined" && Config.rawSettings && Config.rawSettings.bar) {
             let b = Config.rawSettings.bar;
             if (b.position !== undefined) pos = String(b.position).toLowerCase().trim();
             if (b.autohide !== undefined) autohide = !!b.autohide;
             let s = b.style;
-            if (typeof s === "string" && s === "fill") isFill = true;
-            else if (s && typeof s === "object" && (s.fill || s.mode === "fill")) isFill = true;
+            if (typeof s === "string" && (s === "fill" || s === "convex")) isFlush = true;
+            else if (s && typeof s === "object" && (s.fill || s.mode === "fill" || s.convex || s.mode === "convex")) isFlush = true;
         }
 
         if (autohide) {
             return { top: 0, bottom: 0, left: 0, right: 0 };
         }
 
-        let margin = isFill ? 0 : Scaler.s(4);
+        let margin = isFlush ? 0 : Scaler.s(4);
         let barSize = Scaler.s(40) + margin;
 
         let offsets = { top: 0, bottom: 0, left: 0, right: 0 };

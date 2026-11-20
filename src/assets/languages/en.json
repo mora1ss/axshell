@@ -434,10 +434,11 @@
       },
       "style": {
         "title": "Bar style",
-        "desc": "Choose between modular, solid or a filled bar look",
+        "desc": "Choose between modular, solid, filled or a convex organic frame look",
         "modular": "Modular",
         "solid": "Solid",
-        "fill": "Fill"
+        "fill": "Fill",
+        "convex": "Convex"
       },
       "time": {
         "title": "Time format",

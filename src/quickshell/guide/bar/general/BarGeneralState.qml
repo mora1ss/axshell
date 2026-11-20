@@ -37,6 +37,7 @@ GuideTab {
         if (s && typeof s === "object") {
             if (s.fill || s.mode === "fill") return "fill";
             if (s.solid || s.mode === "solid") return "solid";
+            if (s.convex || s.mode === "convex") return "convex";
         }
         return "modular";
     }
@@ -699,6 +700,7 @@ GuideTab {
         } else if (ts.style && typeof ts.style === "object") {
             if (ts.style.fill || ts.style.mode === "fill") barTabRoot.barStyle = "fill";
             else if (ts.style.solid || ts.style.mode === "solid") barTabRoot.barStyle = "solid";
+            else if (ts.style.convex || ts.style.mode === "convex") barTabRoot.barStyle = "convex";
             else barTabRoot.barStyle = "modular";
         } else {
             barTabRoot.barStyle = "modular";

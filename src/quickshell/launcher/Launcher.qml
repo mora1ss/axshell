@@ -253,6 +253,7 @@ PanelWindow {
         if (s && typeof s === "object") {
             if (s.fill || s.mode === "fill") return "fill";
             if (s.solid || s.mode === "solid") return "solid";
+            if (s.convex || s.mode === "convex") return "convex";
         }
         return "modular";
     }
@@ -302,7 +303,7 @@ PanelWindow {
 
     property real barInset: barHeight + (barStyle === "solid" && !barAutohide ? Math.round(s(4)) : 0)
 
-    property bool isBarAttachable: barStyle === "solid" || barStyle === "fill"
+    property bool isBarAttachable: barStyle === "solid" || barStyle === "fill" || barStyle === "convex"
     property bool barMatchesLauncher: isBarAttachable && (attachEdge === barPosition) && !isBarEffectivelyHidden
 
     property string attachEdge: launcherPosition

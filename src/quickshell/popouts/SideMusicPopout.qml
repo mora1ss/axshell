@@ -57,6 +57,7 @@ PanelWindow {
         if (s && typeof s === "object") {
             if (s.fill || s.mode === "fill") return "fill";
             if (s.solid || s.mode === "solid") return "solid";
+            if (s.convex || s.mode === "convex") return "convex";
         }
         return "modular";
     }
@@ -66,7 +67,7 @@ PanelWindow {
     }
 
     property bool isFill: barStyle === "fill"
-    property bool isSolid: barStyle === "solid" || barStyle === "fill"
+    property bool isSolid: barStyle === "solid" || barStyle === "fill" || barStyle === "convex"
 
     property real barHeight: {
         let dummy = configRevision;

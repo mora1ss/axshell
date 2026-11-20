@@ -14,6 +14,7 @@ Item {
     property string kind: ""
     property var attachTo: []
     property bool publishShape: false
+    property bool publishBounds: false
     property real filletRadius: 0
     property color color: Qt.alpha(ThemeBackend.base, ThemeBackend.elementOpacity)
     property bool blur: true
@@ -61,6 +62,7 @@ Item {
     onFilletRadiusChanged: schedule()
     onAttachToChanged: schedule()
     onPublishShapeChanged: schedule()
+    onPublishBoundsChanged: schedule()
     onKindChanged: schedule()
     onVisibleChanged: schedule()
     onLiveChanged: schedule()
@@ -280,7 +282,20 @@ Item {
         putV4("o1", os[4], os[5], 0, 0);
 
         if (publishShape && isLive && shapes.length > 0) {
-            const v = shapeNear(shapes[0], k, owners);
+            let v;
+            if (publishBounds) {
+                let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+                for (let i = 0; i < shapes.length; i++) {
+                    const s = shapes[i];
+                    x0 = Math.min(x0, s.x);
+                    y0 = Math.min(y0, s.y);
+                    x1 = Math.max(x1, s.x + s.w);
+                    y1 = Math.max(y1, s.y + s.h);
+                }
+                v = { x: x0, y: y0, w: Math.max(0, x1 - x0), h: Math.max(0, y1 - y0), r: [0, 0, 0, 0] };
+            } else {
+                v = shapeNear(shapes[0], k, owners);
+            }
             SurfaceField.publish(screenName, surfaceId, { kind: kind, attachTo: attachTo, smoothing: filletRadius, x: v.x, y: v.y, w: v.w, h: v.h, r: v.r });
         } else {
             SurfaceField.withdraw(screenName, surfaceId);

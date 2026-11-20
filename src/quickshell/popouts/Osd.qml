@@ -159,6 +159,7 @@ PanelWindow {
         if (s && typeof s === "object") {
             if (s.fill || s.mode === "fill") return "fill";
             if (s.solid || s.mode === "solid") return "solid";
+            if (s.convex || s.mode === "convex") return "convex";
         }
         return "modular";
     }
@@ -178,7 +179,7 @@ PanelWindow {
     property bool isRightBar: barPosition === "right"
     property bool isBottomBar: barPosition === "bottom"
     property bool isFill: barStyle === "fill"
-    property bool isSolid: barStyle === "solid" || barStyle === "fill"
+    property bool isSolid: barStyle === "solid" || barStyle === "fill" || barStyle === "convex"
     readonly property bool isAttached: attachToBar && isSolid && !isBarEffectivelyHidden && (!isSideBar || !isToggleKind) && (isSideBar ? isVertical : !isVertical)
     readonly property bool isVerticalLayout: isAttached ? isSideBar : isVertical
 
